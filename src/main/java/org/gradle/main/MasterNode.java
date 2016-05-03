@@ -99,6 +99,7 @@ public class MasterNode {
 	}
 
 	/*---- Main ----*/
+	@SuppressWarnings("unused")
 	public static void main(String[] args) throws UnexpectedInputException, ParseException, Exception {
 
 		ConfigurableApplicationContext context = SpringApplication.run(MasterNode.class, args);

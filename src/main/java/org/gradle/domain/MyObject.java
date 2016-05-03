@@ -7,14 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlValue;
 
-import org.springframework.stereotype.Component;
-
-@Component
 @Entity
 @Table(name="MYOBJECT")
 @XmlRootElement
@@ -29,7 +23,7 @@ public class MyObject {
 	@Lob
 	@Column(name="Content",length = 100000)
 	private String content;
-
+	
 	public MyObject() {
 	}
 
