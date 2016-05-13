@@ -1,11 +1,10 @@
 package org.gradle.dataBaseRepositories;
 
-import org.gradle.domain.MyAtom;
-import org.gradle.domain.SimpleAtom;
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.gradle.domain.Atom;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface AtomRepository extends JpaRepository<MyAtom, Long>{
-
+public interface AtomRepository extends CrudRepository<Atom, String>{
+	
 }

@@ -1,168 +1,184 @@
 package org.gradle.config;
 
 import java.io.IOException;
-import java.util.Arrays;
 
-import javax.xml.bind.JAXBElement;
+import javax.jms.ConnectionFactory;
+import javax.sql.DataSource;
 
-import org.gradle.domain.DatablockType;
-import org.gradle.domain.MyObject;
+import org.apache.activemq.ActiveMQConnectionFactory;
+import org.gradle.domain.MolecularSystem;
+import org.gradle.interfaces.DatablockTypeInterface;
+import org.gradle.pdbml.v40.generated.DatablockType;
+import org.gradle.processor.PdbmlProcessor;
+import org.gradle.reader.PdbmlFileReader;
+import org.gradle.writer.DatabaseWriter;
+import org.gradle.writer.JmsMessageWriter;
+import org.neo4j.graphdb.GraphDatabaseService;
+import org.neo4j.graphdb.factory.GraphDatabaseBuilder;
+import org.neo4j.graphdb.factory.GraphDatabaseFactory;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
-import org.springframework.batch.item.ItemStreamReader;
+import org.springframework.batch.item.ItemProcessor;
+import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
+import org.springframework.batch.item.NonTransientResourceException;
+import org.springframework.batch.item.ParseException;
+import org.springframework.batch.item.UnexpectedInputException;
+import org.springframework.batch.item.database.JdbcCursorItemReader;
 import org.springframework.batch.item.file.MultiResourceItemReader;
 import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
-import org.springframework.batch.item.xml.StaxEventItemReader;
-import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.oxm.Unmarshaller;
-import org.springframework.oxm.jaxb.Jaxb2Marshaller;
+import org.springframework.data.neo4j.config.EnableNeo4jRepositories;
+import org.springframework.data.neo4j.config.Neo4jConfiguration;
+import org.springframework.data.neo4j.core.GraphDatabase;
+import org.springframework.data.neo4j.support.Neo4jTemplate;
+import org.springframework.data.neo4j.support.mapping.Neo4jMappingContext;
+import org.springframework.jms.annotation.EnableJms;
+import org.springframework.jms.config.JmsListenerContainerFactory;
+import org.springframework.jms.config.SimpleJmsListenerContainerFactory;
+import org.springframework.jms.core.JmsTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableBatchProcessing
 @EnableTransactionManagement
+@EnableJms
 @ComponentScan("org.gradle")
-public class BatchConfig {
-	
-	@Autowired
-	ApplicationContext context;
-	
-	
-	/*################################### MyObjectJob ########################################*/
-	
-	@Autowired
-	@Qualifier("myObjectStep")
-	private Step myObjectUnmarshallStep;
-	
+public class BatchConfig{
+
+	 @Autowired
+	 ConfigurableApplicationContext context;
+	 
 	@Bean
-	public Job myObjectJob(JobBuilderFactory jbf) throws IOException{
-		return jbf.get("myObjectJob")
-				.incrementer(new RunIdIncrementer())
-				.flow(myObjectUnmarshallStep)
-				.end()
+	static ConnectionFactory connectionFactory() {
+		ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
+		return connectionFactory;
+	}
+
+	@Bean
+	JmsListenerContainerFactory<?> myJmsContainerFactory(ConnectionFactory connectionFactory) {
+		SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
+		factory.setConnectionFactory(connectionFactory);
+		return factory;
+	}
+
+
+
+	/*
+	 * ################################## bootstrapJob ######################################
+	 */
+
+	@Autowired
+	@Qualifier("bootstrapStep")
+	private Step bootstrapStep;
+
+	@Autowired
+	StepBuilderFactory sbf;
+
+	@Bean
+	public Job bootstrapJob(JobBuilderFactory jbf) throws IOException {
+		return jbf.get("bootstrap").incrementer(new RunIdIncrementer()).flow(bootstrapStep).end().build();
+	}
+
+	@Bean
+	public Step bootstrapStep(StepBuilderFactory sbf) throws IOException {
+		return sbf.get("bootstrapStep").chunk(1)
+				.reader(multiReader())
+				.processor((ItemProcessor) context.getBean("pdbmlProcessor"))
+				.writer((ItemWriter) context.getBean("databaseWriter"))
 				.build();
 	}
 
-	@SuppressWarnings("unchecked")
-	@Bean(name="myObjectStep")
-	public Step myObjectUnmarshallStep(StepBuilderFactory sbf) throws IOException{
-		return sbf.get("myObjectStep").chunk(1)
-				.reader(myObjectReader())
-				.writer((ItemWriter<MyObject>)context.getBean("myObjectWriter"))
-				.build() ;
-	}
-	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
 	@Bean
-	public MultiResourceItemReader myObjectReader() throws IOException {
-		MultiResourceItemReader mrir = new MultiResourceItemReader();
+	public ItemReader multiReader() throws IOException {
+		MultiResourceItemReader reader = new MultiResourceItemReader();
 		PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-		Resource[] resources =  pathMatchinResolver.getResources("classpath:/org/gradle/**/*.xml");
-		mrir.setResources(resources);
-		//mrir.setStrict(true);
-		mrir.setDelegate((ResourceAwareItemReaderItemStream) myObjectFileReader());
-		return mrir;
-	}
-	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	@Bean
-	public StaxEventItemReader<JAXBElement> myObjectFileReader(){
-		StaxEventItemReader reader = new StaxEventItemReader();
-		reader.setUnmarshaller(myObjectUnmarshaller());
-		reader.setFragmentRootElementName("myObject");
+		Resource[] resources = pathMatchinResolver.getResources("file:/scratch/c_oual01/pdb/**/*.xml");
+		reader.setResources(resources);
+		reader.setDelegate((ResourceAwareItemReaderItemStream) context.getBean("pdbmlFileReader"));
 		return reader;
 	}
-	
-	org.springframework.oxm.Unmarshaller myObjectUnmarshaller() {
-		Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-		marshaller.setClassesToBeBound(MyObject.class);
-		return (Unmarshaller) marshaller;
-	}
 
-	/*################################### pdbJob ########################################*/
+	/*
+	 * ################################### masterJob ########################################
+	 */
 
 	@Autowired
-	@Qualifier("pdbStep")
-	private Step pdbStep;
-	
-	
-	@Bean
-	public Job pdbJob(JobBuilderFactory jbf){
-		return jbf.get("pdbJob")
-				.incrementer(new RunIdIncrementer())
-				.flow(pdbStep)
-				.end()
-				.build();
-	
-	}
-	
-	@SuppressWarnings("unchecked")
-	@Bean
-	public Step pdbStep(StepBuilderFactory sbf) throws BeansException, IOException{
-		return sbf.get("pdbStep").chunk(1)
-				.reader(pdbReader())
-				.writer((ItemWriter<? super Object>) context.getBean("testItemWriter")/*(ItemWriter<? super Object>)context.getBean("pdbWriter")*/)
-				.build() ;
-	
-	}
-	
-	@SuppressWarnings({ "rawtypes", "unchecked" })
-	@Bean
-	public ItemStreamReader<DatablockType> pdbReader() throws IOException {
-		MultiResourceItemReader mrir = new MultiResourceItemReader();
-		PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-		Resource[] resources =  pathMatchinResolver.getResources("classpath:/org/gradle/**/*.xml");
-		System.out.println(Arrays.toString(resources));
-		mrir.setResources(resources);
-		mrir.setStrict(true);
-		mrir.setDelegate(myItemReader());
-		return (ItemStreamReader<DatablockType>) mrir;
-	}
-	
-//	@SuppressWarnings({ "rawtypes", "unchecked" })
-//	@Bean
-//	public StaxEventItemReader<JAXBElement> pdbFileReader(){
-//		StaxEventItemReader reader = new StaxEventItemReader();
-//		reader.setUnmarshaller(pdbUnmarshaller());
-//		reader.setFragmentRootElementName("datablockType");
-//		return reader;
-//	}
+	@Qualifier("masterStep")
+	private Step masterStep;
 
 	@Bean
-	public ResourceAwareItemReaderItemStream<DatablockType> myItemReader() throws IOException {
-		MyItemReader reader = new org.gradle.config.MyItemReader();
-		return reader;
+	JmsTemplate jmsTemplate() {
+		JmsTemplate jmsTemplate = new JmsTemplate();
+		jmsTemplate.setConnectionFactory(connectionFactory());
+		jmsTemplate.setDefaultDestinationName("yoink-request");
+		return jmsTemplate;
 	}
-	
-	
-//    @Bean
-//    public ResourceAwareItemReaderItemStream<DatablockType> reader() throws IOException {
-//    		StaxEventItemReader<DatablockType> reader = new StaxEventItemReader<DatablockType>();
-//    		reader.setUnmarshaller((org.springframework.oxm.Unmarshaller) unmarshaller());
-//    		reader.setFragmentRootElementName("datablockType"); 
-//    		
-//    		return reader;
-//    }
-    
-	
-//    @Bean 
-//    Jaxb2Marshaller unmarshaller(){
-//    	Jaxb2Marshaller  unmarshaller = new Jaxb2Marshaller();
-//    	unmarshaller.setClassesToBeBound(DatablockType.class);
-//    	return unmarshaller;
-//    }
-	
+
+	@Bean
+	public ItemWriter<? super String> writer() {
+		JmsMessageWriter itemWriter = new JmsMessageWriter();
+		itemWriter.setJmsTemplate(jmsTemplate());
+		return itemWriter;
+	}
+
+	static class CmlReader implements ItemReader<String> {
+
+		@Override
+		public String read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
+			return new String("/scratch/c_oual01/workspace_for_sts/MasterNode/src/main/resources/distance_abrupt.xml");
+		}
+
+	}
+
+	@Bean
+	public CmlReader cmlReader() {
+		return new CmlReader();
+	}
+
+	@Bean
+	public Job masterJob(JobBuilderFactory jbf) throws IOException {
+		return jbf.get("master").incrementer(new RunIdIncrementer()).flow(masterStep).end().build();
+	}
+
+	@Bean
+	public Step masterStep(StepBuilderFactory sbf) throws IOException {
+		return sbf.get("masterStep").chunk(1).reader(cmlReader()).writer((ItemWriter<? super Object>) writer()).build();
+	}
+
+	// @Bean
+	// public JdbcCursorItemReader<String> stringItemReader() {
+	// JdbcCursorItemReader<String> reader = new JdbcCursorItemReader<String>();
+	// reader.setDataSource(dataSource);
+	// reader.setSql("select * from molecular_system");
+	// return reader;
+	// }
+
+	private int responseCounter = 0;
+
+	// @JmsListener(destination = "mailbox-answer", containerFactory =
+	// "myJmsContainerFactory", concurrency = "1")
+	// public void receiveMessage(String message) throws JMSException,
+	// InterruptedException {
+	// responseCounter++;
+	// System.out.println("#---------- Getting answer: " + message.toString() +
+	// ". ----------#");
+	// if (responseCounter == 1)
+	// context.close();
+	// Thread.sleep(1000);
+	// FileSystemUtils.deleteRecursively(new File("activemq-data"));
+	// }
+
 }
