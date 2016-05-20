@@ -1,7 +1,7 @@
 package org.gradle.domain;
 
-import org.springframework.data.neo4j.annotation.GraphId;
-import org.springframework.data.neo4j.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.GraphId;
+import org.neo4j.ogm.annotation.NodeEntity;
 
 @NodeEntity
 public class Atom {
@@ -9,15 +9,23 @@ public class Atom {
 	@GraphId
 	private Long id;
 	
+	
 	private String index;
+	
 	private String element;
 
+	
 	private String groupPDBx;
+	
 	private String labelCompId;
+	
 	private String chain;
 
+	
 	private Double x;
+	
 	private Double y;
+	
 	private Double z;
 
 	public String getIndex() {

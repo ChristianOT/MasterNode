@@ -25,7 +25,6 @@ public class AtomTranslatorV40 {
 				String chain = dt.getAtomSiteCategory().getAtomSite().get(i).getAuthAsymId();
 				String compId = dt.getAtomSiteCategory().getAtomSite().get(i).getLabelCompId();
 				String groupPDBx = dt.getAtomSiteCategory().getAtomSite().get(i).getGroupPDB().getValue().toString();
-				System.out.println("###########################################################################" + groupPDBx);
 				//##################################################################################################################//
 				Atom atom = new Atom();
 				atom.setX(cx);

@@ -1,10 +1,10 @@
 package org.gradle.domain;
 
 import java.util.HashSet;
-import java.util.Set;
 
-import org.springframework.data.neo4j.annotation.GraphId;
-import org.springframework.data.neo4j.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.GraphId;
+import org.neo4j.ogm.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.Relationship;
 
 @NodeEntity
 public class MolecularSystem {
@@ -12,10 +12,20 @@ public class MolecularSystem {
 	@GraphId
 	private Long id;
 	
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	private String nameOfSystem;
 	public Integer numberOfMolecules;
 	public Integer numberOfAtoms;
-	public Set<Molecule> molecules = new HashSet<Molecule>();
+	
+	/*@RelatedTo*/@Relationship(type="MOLECULE", direction=Relationship.UNDIRECTED)
+	public /*@Fetch */HashSet<Molecule> molecules = new HashSet<Molecule>();
 
 	public String getNameOfSystem() {
 		return nameOfSystem;
@@ -41,11 +51,11 @@ public class MolecularSystem {
 		this.numberOfAtoms = numberOfAtoms;
 	}
 
-	public Set<Molecule> getMolecules() {
+	public HashSet<Molecule> getMolecules() {
 		return molecules;
 	}
 
-	public void setMolecules(Set<Molecule> molecules) {
+	public void setMolecules(HashSet<Molecule> molecules) {
 		this.molecules = molecules;
 	}
 
@@ -53,6 +63,11 @@ public class MolecularSystem {
 	public String toString() {
 		return "MolecularSystem [nameOfSystem=" + nameOfSystem + ", numberOfMolecules=" + numberOfMolecules
 				+ ", numberOfAtoms=" + numberOfAtoms + ", molecules=" + molecules + "]";
+	}
+
+	public Object getID() {
+		// TODO Auto-generated method stub
+		return id;
 	}
 
 }

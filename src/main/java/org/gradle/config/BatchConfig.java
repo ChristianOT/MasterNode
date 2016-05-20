@@ -1,21 +1,12 @@
 package org.gradle.config;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.jms.ConnectionFactory;
-import javax.sql.DataSource;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
-import org.gradle.domain.MolecularSystem;
-import org.gradle.interfaces.DatablockTypeInterface;
-import org.gradle.pdbml.v40.generated.DatablockType;
-import org.gradle.processor.PdbmlProcessor;
-import org.gradle.reader.PdbmlFileReader;
-import org.gradle.writer.DatabaseWriter;
 import org.gradle.writer.JmsMessageWriter;
-import org.neo4j.graphdb.GraphDatabaseService;
-import org.neo4j.graphdb.factory.GraphDatabaseBuilder;
-import org.neo4j.graphdb.factory.GraphDatabaseFactory;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -25,10 +16,6 @@ import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
-import org.springframework.batch.item.NonTransientResourceException;
-import org.springframework.batch.item.ParseException;
-import org.springframework.batch.item.UnexpectedInputException;
-import org.springframework.batch.item.database.JdbcCursorItemReader;
 import org.springframework.batch.item.file.MultiResourceItemReader;
 import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,17 +24,9 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.aspectj.EnableSpringConfigured;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.data.neo4j.config.EnableNeo4jRepositories;
-import org.springframework.data.neo4j.config.Neo4jConfiguration;
-import org.springframework.data.neo4j.core.GraphDatabase;
-import org.springframework.data.neo4j.support.Neo4jTemplate;
-import org.springframework.data.neo4j.support.mapping.Neo4jMappingContext;
 import org.springframework.jms.annotation.EnableJms;
-import org.springframework.jms.config.JmsListenerContainerFactory;
-import org.springframework.jms.config.SimpleJmsListenerContainerFactory;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
@@ -67,12 +46,7 @@ public class BatchConfig{
 		return connectionFactory;
 	}
 
-	@Bean
-	JmsListenerContainerFactory<?> myJmsContainerFactory(ConnectionFactory connectionFactory) {
-		SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
-		factory.setConnectionFactory(connectionFactory);
-		return factory;
-	}
+
 
 
 
@@ -105,7 +79,7 @@ public class BatchConfig{
 	public ItemReader multiReader() throws IOException {
 		MultiResourceItemReader reader = new MultiResourceItemReader();
 		PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-		Resource[] resources = pathMatchinResolver.getResources("file:/scratch/c_oual01/pdb/**/*.xml");
+		Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/gradle/aa/*.xml");//"file:/scratch/c_oual01/pdb/**/*.xml");
 		reader.setResources(resources);
 		reader.setDelegate((ResourceAwareItemReaderItemStream) context.getBean("pdbmlFileReader"));
 		return reader;
@@ -128,26 +102,12 @@ public class BatchConfig{
 	}
 
 	@Bean
-	public ItemWriter<? super String> writer() {
+	public ItemWriter<? super List<String>> writer() {
 		JmsMessageWriter itemWriter = new JmsMessageWriter();
 		itemWriter.setJmsTemplate(jmsTemplate());
 		return itemWriter;
 	}
-
-	static class CmlReader implements ItemReader<String> {
-
-		@Override
-		public String read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
-			return new String("/scratch/c_oual01/workspace_for_sts/MasterNode/src/main/resources/distance_abrupt.xml");
-		}
-
-	}
-
-	@Bean
-	public CmlReader cmlReader() {
-		return new CmlReader();
-	}
-
+	
 	@Bean
 	public Job masterJob(JobBuilderFactory jbf) throws IOException {
 		return jbf.get("master").incrementer(new RunIdIncrementer()).flow(masterStep).end().build();
@@ -155,16 +115,20 @@ public class BatchConfig{
 
 	@Bean
 	public Step masterStep(StepBuilderFactory sbf) throws IOException {
-		return sbf.get("masterStep").chunk(1).reader(cmlReader()).writer((ItemWriter<? super Object>) writer()).build();
+		return sbf.get("masterStep").chunk(1)
+				.reader((ItemReader<? extends Object>) context.getBean("dbReader"))
+				.writer((ItemWriter<? super Object>) writer())
+				.build();
 	}
-
-	// @Bean
-	// public JdbcCursorItemReader<String> stringItemReader() {
-	// JdbcCursorItemReader<String> reader = new JdbcCursorItemReader<String>();
-	// reader.setDataSource(dataSource);
-	// reader.setSql("select * from molecular_system");
-	// return reader;
-	// }
+	
+	
+//	@Bean
+//	public JdbcCursorItemReader<String> stringItemReader() {
+//		JdbcCursorItemReader<String> reader = new JdbcCursorItemReader<String>();
+//		reader.setDataSource(dataSource);
+//		reader.setSql("select * from molecular_system");
+//		return reader;
+//	}
 
 	private int responseCounter = 0;
 

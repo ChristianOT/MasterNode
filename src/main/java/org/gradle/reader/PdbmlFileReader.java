@@ -33,13 +33,14 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<Databl
 
 	private Resource resource;
 	
-	public DatablockTypeInterface read(Resource resource) throws IOException, JAXBException{
+	public DatablockTypeInterface readv40(Resource resource) throws IOException, JAXBException{
 		if(resource != null){
-			System.out.println("File: " + resource.getFile());
+			System.out.println("File V40: " + resource.getFile());
 			JAXBContext jaxbContext = JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			JAXBElement<org.gradle.pdbml.v40.generated.DatablockType> pdb = (JAXBElement<org.gradle.pdbml.v40.generated.DatablockType>) jaxbUnmarshaller.unmarshal(resource.getInputStream());
 			System.out.println("done reading : " + pdb.getValue().getDatablockName());
+			resource.getFile().delete();
 			resource = null;
 			return (DatablockTypeInterface) pdb.getValue();
 		}else{
@@ -49,11 +50,12 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<Databl
 	
 	public DatablockTypeInterface readv42(Resource resource) throws IOException, JAXBException{
 		if(resource != null){
-			System.out.println("File: " + resource.getFile());
+			System.out.println("File V42: " + resource.getFile());
 			JAXBContext jaxbContext = JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class);
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			JAXBElement<org.gradle.pdbml.v42.generated.DatablockType> pdb = (JAXBElement<org.gradle.pdbml.v42.generated.DatablockType>) jaxbUnmarshaller.unmarshal(resource.getInputStream());
 			System.out.println("done reading : " + pdb.getValue().getDatablockName());
+			resource.getFile().delete();
 			resource = null;
 			return (DatablockTypeInterface) pdb.getValue();
 		}else{
@@ -66,7 +68,7 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<Databl
 
 		DatablockTypeInterface dti;
 		try{
-			dti = read(resource);
+			dti = readv40(resource);
 		}catch(UnmarshalException e){
 			dti = readv42(resource);
 		}

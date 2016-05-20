@@ -1,10 +1,10 @@
 package org.gradle.domain;
 
 import java.util.HashSet;
-import java.util.Set;
 
-import org.springframework.data.neo4j.annotation.GraphId;
-import org.springframework.data.neo4j.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.GraphId;
+import org.neo4j.ogm.annotation.NodeEntity;
+import org.neo4j.ogm.annotation.Relationship;
 
 
 @NodeEntity
@@ -15,7 +15,9 @@ public class Molecule {
 	
 	private String fileName;
 	public Integer atomCount = 0;
-	public Set<Atom> atoms = new HashSet<Atom>();
+	
+	@Relationship(type="ATOM",direction=Relationship.UNDIRECTED)//@RelatedTo(type="ATOM", direction=Direction.BOTH)
+	public /*@Fetch */HashSet<Atom> atoms = new HashSet<Atom>();
 
 	public Integer getAtomCount() {
 		return atomCount;
@@ -33,11 +35,11 @@ public class Molecule {
 		this.fileName = fileName;
 	}
 
-	public Set<Atom> getAtoms() {
+	public HashSet<Atom> getAtoms() {
 		return atoms;
 	}
 
-	public void setAtoms(Set<Atom> atoms) {
+	public void setAtoms(HashSet<Atom> atoms) {
 		this.atoms = atoms;
 	}
 
