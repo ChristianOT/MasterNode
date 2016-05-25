@@ -8,6 +8,11 @@ import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * ItemWriter for saving a MolecularSystem into the database. For bootstrapStep.
+ *
+ * @author Christian Ouali Turki
+ */
 @Service
 public class DatabaseWriter implements ItemWriter<MolecularSystem>{
 

@@ -19,31 +19,25 @@ import org.springframework.jms.core.JmsTemplate;
 import org.springframework.jms.core.MessageCreator;
 import org.springframework.stereotype.Service;
 
+/**
+ * ItemWriter for sending the id of an entry in the database to a jms queue. For
+ * masterStep.
+ *
+ * @author Christian Ouali Turki
+ */
 @Service
 public class JmsMessageWriter implements ItemWriter<List<String>> {
 
 	@Autowired
 	ConfigurableApplicationContext context;
 
-	@Bean
-	JmsListenerContainerFactory<?> myJmsContainerFactory(ConnectionFactory connectionFactory) {
-		SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
-		factory.setConnectionFactory(connectionFactory);
-		return factory;
-	}
-	
-	private Integer messageCounter = 0;
-	private Integer answerCounter = 0;
+	public Integer messageCounter = 0;
+
 	private JmsTemplate jmsTemplate;
 
-	public JmsTemplate getJmsTemplate() {
-		return jmsTemplate;
-	}
-
-	public void setJmsTemplate(JmsTemplate jmsTemplate) {
-		this.jmsTemplate = jmsTemplate;
-	}
-
+	/*
+	 * send a message for every String in List<String>
+	 */
 	@Override
 	public void write(List<? extends List<String>> items) throws Exception {
 		System.out.println("########### Creating Message ###########");
@@ -56,20 +50,20 @@ public class JmsMessageWriter implements ItemWriter<List<String>> {
 					}
 				};
 				System.out.println("Sending message.");
-				jmsTemplate.send("yoink-request", messageCreator);
+				jmsTemplate.send("request", messageCreator);
 				System.out.println("Waiting for answer.");
-//				if (messageCounter==mss.size())
-//					receiveMessage();
+				// if (messageCounter==mss.size())
+				// receiveMessage();
 			}
 		}
-		
 	}
 
-	@JmsListener(destination="mailbox-answer",containerFactory = "myJmsContainerFactory")
-	public void receiveMessage(String answer){
-		answerCounter++;
-		System.out.println("******** Job done ************ " + answer);
-		if (messageCounter==answerCounter)
-			context.close();
+	public JmsTemplate getJmsTemplate() {
+		return jmsTemplate;
 	}
+
+	public void setJmsTemplate(JmsTemplate jmsTemplate) {
+		this.jmsTemplate = jmsTemplate;
+	}
+
 }

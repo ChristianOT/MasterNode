@@ -12,6 +12,11 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 
+/**
+ * Main class of the MasterNode. Uses spring boot to run the application.
+ *
+ * @author Christian Ouali Turki
+ */
 @SpringBootApplication
 @Import(BatchConfig.class)
 public class MasterNode {
@@ -21,17 +26,6 @@ public class MasterNode {
 		@SuppressWarnings("unused")
 		ApplicationContext context = SpringApplication.run(MasterNode.class, args);
 		
-		boolean stop = false;
-		while(stop){
-			try {
-				Thread.sleep(1000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		}
 	}
-
-	
 
 }

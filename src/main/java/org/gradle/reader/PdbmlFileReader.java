@@ -21,6 +21,11 @@ import javax.xml.bind.Unmarshaller;
 
 import org.gradle.interfaces.DatablockTypeInterface;
 
+/**
+ * ResourceAwareItemReaderItemStream for reading a pdbml file. For bootstrapStep.
+ *
+ * @author Christian Ouali Turki
+ */
 @Service
 public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<DatablockTypeInterface>{
 	
@@ -33,6 +38,10 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<Databl
 
 	private Resource resource;
 	
+	/*
+	 * Method for reading pdbml file format v40.
+	 * Deletes the file after done with the unmarshalling.
+	 */
 	public DatablockTypeInterface readv40(Resource resource) throws IOException, JAXBException{
 		if(resource != null){
 			System.out.println("File V40: " + resource.getFile());
@@ -48,6 +57,10 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<Databl
 		}
 	}
 	
+	/*
+	 * Method for reading pdbml file format v42.
+	 * Deletes the file after done with the unmarshalling.
+	 */
 	public DatablockTypeInterface readv42(Resource resource) throws IOException, JAXBException{
 		if(resource != null){
 			System.out.println("File V42: " + resource.getFile());
@@ -63,6 +76,9 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<Databl
 		}
 	}
 
+	/*
+	 * Implemented read method. Dynamically reads pdbml files of both formats. 
+	 */
 	@Override
 	public DatablockTypeInterface read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
 

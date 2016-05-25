@@ -8,6 +8,11 @@ import org.gradle.translator.MolecularSystemTranslatorV42;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Service;
 
+/**
+ * ItemProcessor for translating DatablockType objects into the domain models.
+ *
+ * @author Christian Ouali Turki
+ */
 @Service
 public class PdbmlProcessor implements ItemProcessor<DatablockTypeInterface, MolecularSystem>{
 
