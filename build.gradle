@@ -11,6 +11,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+apply plugin: 'groovy'
 
 jar {
     baseName = 'MasterNode'
@@ -34,10 +35,7 @@ dependencies {
     compile 'org.springframework.boot:spring-boot-starter'
 	compile 'org.springframework.batch:spring-batch-integration:3.0.6.RELEASE'
 	compile 'org.springframework.boot:spring-boot-starter-batch'
-	// http://mvnrepository.com/artifact/org.springframework.data/spring-data-neo4j
 	compile group: 'org.springframework.data', name: 'spring-data-neo4j', version: '4.1.1.RELEASE'
-	
-	//compile 'org.springframework.data:spring-data-neo4j'
 	compile 'org.hibernate:hibernate-validator'
     testCompile("junit:junit")
 }

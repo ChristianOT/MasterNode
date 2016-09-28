@@ -18,7 +18,6 @@ public class Molecule {
 
 	@GraphId
 	private Long id;
-	
 	private String fileName;
 	public Integer atomCount = 0;
 	

@@ -14,16 +14,16 @@ import org.springframework.stereotype.Service;
  * @author Christian Ouali Turki
  */
 @Service
-public class PdbmlProcessor implements ItemProcessor<DatablockTypeInterface, MolecularSystem>{
+public class PdbmlProcessor implements ItemProcessor<DatablockTypeInterface, MolecularSystem> {
 
 	@Override
 	public MolecularSystem process(DatablockTypeInterface item) throws Exception {
-		if(item.getClass() == DatablockType.class){
-		MolecularSystemTranslatorV40 mV40 = new MolecularSystemTranslatorV40();
-		return mV40.translateToMolecularSystem((org.gradle.pdbml.v40.generated.DatablockType)item);
-		}else{
-		MolecularSystemTranslatorV42 mV42 = new MolecularSystemTranslatorV42();
-		return mV42.translateToMolecularSystem((org.gradle.pdbml.v42.generated.DatablockType)item);
+		if (item.getClass() == DatablockType.class) {
+			MolecularSystemTranslatorV40 mV40 = new MolecularSystemTranslatorV40();
+			return mV40.translateToMolecularSystem((org.gradle.pdbml.v40.generated.DatablockType) item);
+		} else {
+			MolecularSystemTranslatorV42 mV42 = new MolecularSystemTranslatorV42();
+			return mV42.translateToMolecularSystem((org.gradle.pdbml.v42.generated.DatablockType) item);
 		}
 	}
 

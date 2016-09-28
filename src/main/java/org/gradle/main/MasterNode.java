@@ -11,6 +11,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
+import org.wallerlab.yoink.Yoink;
 
 /**
  * Main class of the MasterNode. Uses spring boot to run the application.
@@ -22,7 +23,6 @@ import org.springframework.context.annotation.Import;
 public class MasterNode {
 
 	public static void main(String[] args) throws IOException {
-		
 		@SuppressWarnings("unused")
 		ApplicationContext context = SpringApplication.run(MasterNode.class, args);
 		

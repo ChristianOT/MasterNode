@@ -49,7 +49,7 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<Databl
 			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
 			JAXBElement<org.gradle.pdbml.v40.generated.DatablockType> pdb = (JAXBElement<org.gradle.pdbml.v40.generated.DatablockType>) jaxbUnmarshaller.unmarshal(resource.getInputStream());
 			System.out.println("done reading : " + pdb.getValue().getDatablockName());
-			resource.getFile().delete();
+//			resource.getFile().delete();
 			resource = null;
 			return (DatablockTypeInterface) pdb.getValue();
 		}else{

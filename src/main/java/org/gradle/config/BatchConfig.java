@@ -47,7 +47,7 @@ import org.springframework.util.FileSystemUtils;
 @Configuration
 @EnableBatchProcessing
 @EnableTransactionManagement
-@EnableJms
+//@EnableJms
 @ComponentScan("org.gradle")
 public class BatchConfig{
 
@@ -57,23 +57,23 @@ public class BatchConfig{
 	 @Autowired
 	 ConfigurableApplicationContext context;
 	 
-	 /**
-	  * setting the ConnectionFactory for jms communication
-	  * 
-	  * @return a ConnectionFactory
-	  */
-	@Bean
-	static ConnectionFactory connectionFactory() {
-		ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
-		return connectionFactory;
-	}
-
-	@Bean
-	JmsListenerContainerFactory<?> myJmsContainerFactory(ConnectionFactory connectionFactory) {
-		SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
-		factory.setConnectionFactory(connectionFactory);
-		return factory;
-	}
+//	 /**
+//	  * setting the ConnectionFactory for jms communication
+//	  * 
+//	  * @return a ConnectionFactory
+//	  */
+//	@Bean
+//	static ConnectionFactory connectionFactory() {
+//		ConnectionFactory connectionFactory = new ActiveMQConnectionFactory("tcp://localhost:61616");
+//		return connectionFactory;
+//	}
+//
+//	@Bean
+//	JmsListenerContainerFactory<?> myJmsContainerFactory(ConnectionFactory connectionFactory) {
+//		SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
+//		factory.setConnectionFactory(connectionFactory);
+//		return factory;
+//	}
 	
 	/*
 	 * bootstrapJob
@@ -116,6 +116,8 @@ public class BatchConfig{
 	 * PathMatchingResourcePatternResolver for setting the file path. Delegates
 	 * to the PdbmlFileReader to handle the pdbml files.
 	 * 
+	 * ISSUE: trying to read same file multiple times!!!
+	 * 
 	 * @return reader
 	 * @throws IOException
 	 */
@@ -123,99 +125,105 @@ public class BatchConfig{
 	public ItemReader multiReader() throws IOException {
 		MultiResourceItemReader reader = new MultiResourceItemReader();
 		PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-		Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/gradle/aa/*.xml");
-		reader.setResources(resources);
-		reader.setDelegate((ResourceAwareItemReaderItemStream) context.getBean("pdbmlFileReader"));
+		Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/gradle/*.xml");
+		if(resources != null){
+			System.out.println(resources.length);
+			reader.setResources(resources);
+			reader.setDelegate((ResourceAwareItemReaderItemStream) context.getBean("pdbmlFileReader"));
+		}else{
+			System.out.println("No file to read!");
+			//context.close();
+		}
 		return reader;
 	}
 
-	/*
-	 * masterJob
-	 */
-
-	@Autowired
-	@Qualifier("masterStep")
-	private Step masterStep;
-
-	/**
-	 * Configuration of the JmsTemplate allowing interaction with jms
-	 * queues. The name of the queue is set with 
-	 *     jmsTemplate.setDefaultDestinationName("name of the queue")
-	 *     
-	 * @return jmsTemplate
-	 */
-	@Bean
-	JmsTemplate jmsTemplate() {
-		JmsTemplate jmsTemplate = new JmsTemplate();
-		jmsTemplate.setConnectionFactory(connectionFactory());
-		jmsTemplate.setDefaultDestinationName("yoink-request");
-		return jmsTemplate;
-	}
-
-	/**
-	 * Setting the ItemWriter for masterStep as a {@link org.gradle.writer.JmsMessageWriter}.
-	 * Needs JmsTemplate to interact with jms queues.
-	 * 
-	 * @return itemWriter
-	 */
-	@Bean
-	public ItemWriter<? super List<String>> writer() {
-		JmsMessageWriter itemWriter = new JmsMessageWriter();
-		itemWriter.setJmsTemplate(jmsTemplate());
-		return itemWriter;
-	}
-	
-	/**
-	 * Bean for building the master job executing masterStep.
-	 * 
-	 * @param jbf, JobBuilderFactory
-	 * @return master
-	 * @throws IOException
-	 */
-	@Bean
-	public Job masterJob(JobBuilderFactory jbf) throws IOException {
-		return jbf.get("master").incrementer(new RunIdIncrementer()).flow(masterStep).end().build();
-	}
-
-	/**
-	 * Bean for building masterStep. No processor necessary.
-	 * 
-	 * @param sbf StepBuilderFactory
-	 * @return masterStep
-	 * @throws IOException
-	 */
-	@Bean
-	public Step masterStep(StepBuilderFactory sbf) throws IOException {
-		return sbf.get("masterStep").chunk(1)
-				.reader((ItemReader<? extends Object>) context.getBean("dbReader"))
-				.writer((ItemWriter<? super Object>) writer())
-				.build();
-	}
-
-	/**
-	 * Variable for counting number of receiveMessage executions. If number equals 
-	 * the number of messages send, the applications context will be closed.
-	 */
-	private int responseCounter = 0;
-
-	/**
-	 * JmsListener, that is waiting for messages to arrive in the respond queue. The
-	 * message is printed out in the console. Concurrency is set to 1, but can be increased
-	 * to get more messages at once from the queue. The messages will than also be processed 
-	 * concurrently.
-	 * 
-	 * @param message
-	 * @throws JMSException
-	 * @throws InterruptedException
-	 */
-    @JmsListener(destination = "respond", containerFactory = "myJmsContainerFactory", concurrency = "1")
-	public void receiveMessage(String message) throws JMSException,
-	InterruptedException {
-	responseCounter++;
-	System.out.println("#---------- Getting answer: " + message.toString() + ". ----------#");
-	if (responseCounter == 1)
-	    context.close();
-	FileSystemUtils.deleteRecursively(new File("activemq-data"));
-	}
+//	/*
+//	 * masterJob
+//	 */
+//
+//	@Autowired
+//	@Qualifier("masterStep")
+//	private Step masterStep;
+//
+//	/**
+//	 * Configuration of the JmsTemplate allowing interaction with jms
+//	 * queues. The name of the queue is set with 
+//	 *     jmsTemplate.setDefaultDestinationName("name of the queue")
+//	 *     
+//	 * @return jmsTemplate
+//	 */
+//	@Bean
+//	JmsTemplate jmsTemplate() {
+//		JmsTemplate jmsTemplate = new JmsTemplate();
+//		jmsTemplate.setConnectionFactory(connectionFactory());
+//		jmsTemplate.setDefaultDestinationName("yoink-request");
+//		return jmsTemplate;
+//	}
+//
+//	/**
+//	 * Setting the ItemWriter for masterStep as a {@link org.gradle.writer.JmsMessageWriter}.
+//	 * Needs JmsTemplate to interact with jms queues.
+//	 * 
+//	 * @return itemWriter
+//	 */
+//	@Bean
+//	public ItemWriter<? super List<String>> writer() {
+//		JmsMessageWriter itemWriter = new JmsMessageWriter();
+//		itemWriter.setJmsTemplate(jmsTemplate());
+//		return itemWriter;
+//	}
+//	
+//	/**
+//	 * Bean for building the master job executing masterStep.
+//	 * 
+//	 * @param jbf, JobBuilderFactory
+//	 * @return master
+//	 * @throws IOException
+//	 */
+//	@Bean
+//	public Job masterJob(JobBuilderFactory jbf) throws IOException {
+//		return jbf.get("master").incrementer(new RunIdIncrementer()).flow(masterStep).end().build();
+//	}
+//
+//	/**
+//	 * Bean for building masterStep. No processor necessary.
+//	 * 
+//	 * @param sbf StepBuilderFactory
+//	 * @return masterStep
+//	 * @throws IOException
+//	 */
+//	@Bean
+//	public Step masterStep(StepBuilderFactory sbf) throws IOException {
+//		return sbf.get("masterStep").chunk(1)
+//				.reader((ItemReader<? extends Object>) context.getBean("dbReader"))
+//				.writer((ItemWriter<? super Object>) writer())
+//				.build();
+//	}
+//
+//	/**
+//	 * Variable for counting number of receiveMessage executions. If number equals 
+//	 * the number of messages send, the applications context will be closed.
+//	 */
+//	private int responseCounter = 0;
+//
+//	/**
+//	 * JmsListener, that is waiting for messages to arrive in the respond queue. The
+//	 * message is printed out in the console. Concurrency is set to 1, but can be increased
+//	 * to get more messages at once from the queue. The messages will than also be processed 
+//	 * concurrently.
+//	 * 
+//	 * @param message
+//	 * @throws JMSException
+//	 * @throws InterruptedException
+//	 */
+//    @JmsListener(destination = "respond", containerFactory = "myJmsContainerFactory", concurrency = "1")
+//	public void receiveMessage(String message) throws JMSException,
+//	InterruptedException {
+//	responseCounter++;
+//	System.out.println("#---------- Getting answer: " + message.toString() + ". ----------#");
+//	if (responseCounter == 1)
+//	    context.close();
+//	FileSystemUtils.deleteRecursively(new File("activemq-data"));
+//	}
 
 }
