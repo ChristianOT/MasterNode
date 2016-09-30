@@ -14,7 +14,8 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-import org.gradle.interfaces.DatablockTypeInterface;
+import org.gradle.pdbml.IAtomSiteType;
+import org.gradle.pdbml.IDatablockType;
 
 
 /**
@@ -418,10 +419,10 @@ import org.gradle.interfaces.DatablockTypeInterface;
 @XmlType(name = "datablockType", propOrder = {
 
 })
-public class DatablockType implements DatablockTypeInterface{
+public class DatablockType implements IDatablockType {
 
     @XmlElement(name = "atom_siteCategory")
-    protected AtomSiteType atomSiteCategory;
+    protected IAtomSiteType atomSiteCategory;
     @XmlElement(name = "atom_site_anisotropCategory")
     protected AtomSiteAnisotropType atomSiteAnisotropCategory;
     @XmlElement(name = "atom_sitesCategory")
@@ -1167,7 +1168,7 @@ public class DatablockType implements DatablockTypeInterface{
      *     {@link AtomSiteType }
      *     
      */
-    public AtomSiteType getAtomSiteCategory() {
+    public IAtomSiteType getAtomSiteCategory() {
         return atomSiteCategory;
     }
 
@@ -1179,7 +1180,7 @@ public class DatablockType implements DatablockTypeInterface{
      *     {@link AtomSiteType }
      *     
      */
-    public void setAtomSiteCategory(AtomSiteType value) {
+    public void setAtomSiteCategory(IAtomSiteType value) {
         this.atomSiteCategory = value;
     }
 

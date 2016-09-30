@@ -1,7 +1,7 @@
 package org.gradle.processor;
 
 import org.gradle.domain.MolecularSystem;
-import org.gradle.interfaces.DatablockTypeInterface;
+import org.gradle.pdbml.IDatablockType;
 import org.gradle.pdbml.v40.generated.DatablockType;
 import org.gradle.translator.MolecularSystemTranslatorV40;
 import org.gradle.translator.MolecularSystemTranslatorV42;
@@ -14,10 +14,10 @@ import org.springframework.stereotype.Service;
  * @author Christian Ouali Turki
  */
 @Service
-public class PdbmlProcessor implements ItemProcessor<DatablockTypeInterface, MolecularSystem> {
+public class PdbmlProcessor implements ItemProcessor<IDatablockType, MolecularSystem> {
 
 	@Override
-	public MolecularSystem process(DatablockTypeInterface item) throws Exception {
+	public MolecularSystem process(IDatablockType item) throws Exception {
 		if (item.getClass() == DatablockType.class) {
 			MolecularSystemTranslatorV40 mV40 = new MolecularSystemTranslatorV40();
 			return mV40.translateToMolecularSystem((org.gradle.pdbml.v40.generated.DatablockType) item);

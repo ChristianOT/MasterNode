@@ -6,18 +6,18 @@ import java.util.List;
 import javax.annotation.Resource;
 
 import org.gradle.domain.Atom;
-import org.gradle.pdbml.v40.generated.AtomSiteType.AtomSite;
-import org.gradle.pdbml.v40.generated.DatablockType;
+import org.gradle.pdbml.IAtomSiteType;
+import org.gradle.pdbml.IDatablockType;
 import org.springframework.stereotype.Service;
 
 
 @Service
 public class AtomTranslatorV40 {
 
-	public List<Atom> translateToAtom(DatablockType item) {
+	public List<Atom> translateToAtom(IDatablockType item) {
 		List<Atom> atoms = new ArrayList<Atom>();
 			System.out.println("number of Atoms: " + item.getAtomSiteCategory().getAtomSite().size());
-			List<AtomSite> dt = item.getAtomSiteCategory().getAtomSite();
+			List<IAtomSiteType.AtomSite> dt = item.getAtomSiteCategory().getAtomSite();
 			int nAtoms = item.getAtomSiteCategory().getAtomSite().size();
 			int i = 0;
 			for (i=0; i < nAtoms; i++) {

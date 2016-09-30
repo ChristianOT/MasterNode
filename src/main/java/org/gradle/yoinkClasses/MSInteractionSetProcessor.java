@@ -1,3 +1,4 @@
+/*
 package org.gradle.yoinkClasses;
 
 import java.util.Map;
@@ -31,3 +32,4 @@ public class MSInteractionSetProcessor implements MSAdaptiveProcessor{
 	}
 	
 }
+*/

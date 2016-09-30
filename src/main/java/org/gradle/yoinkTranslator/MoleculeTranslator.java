@@ -1,3 +1,4 @@
+/*
 package org.gradle.yoinkTranslator;
 
 import java.util.ArrayList;
@@ -29,3 +30,4 @@ public class MoleculeTranslator implements Translator<Molecule, DatablockType>{
 		
 	}
 }
+*/

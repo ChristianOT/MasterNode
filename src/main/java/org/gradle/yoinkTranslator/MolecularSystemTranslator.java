@@ -1,3 +1,4 @@
+/*
 package org.gradle.yoinkTranslator;
 
 import java.util.List;
@@ -26,3 +27,4 @@ public class MolecularSystemTranslator implements Translator<MolecularSystem, Da
 		return msList;
 	}
 }
+*/

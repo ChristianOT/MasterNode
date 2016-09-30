@@ -8,6 +8,8 @@
 
 package org.gradle.pdbml.v40.generated;
 
+import org.gradle.pdbml.IAtomSiteType;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import javax.xml.bind.JAXBElement;
@@ -3655,16 +3657,16 @@ public class ObjectFactory {
      * Create an instance of {@link AtomSiteType }
      * 
      */
-    public AtomSiteType createAtomSiteType() {
+    public IAtomSiteType createAtomSiteType() {
         return new AtomSiteType();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite }
+     * Create an instance of {@link IAtomSiteType.AtomSite }
      * 
      */
-    public AtomSiteType.AtomSite createAtomSiteTypeAtomSite() {
-        return new AtomSiteType.AtomSite();
+    public IAtomSiteType.AtomSite createAtomSiteTypeAtomSite() {
+        return new IAtomSiteType.AtomSite();
     }
 
     /**
@@ -7852,283 +7854,283 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.BEquivGeomMeanEsd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.BEquivGeomMeanEsd }
      * 
      */
-    public AtomSiteType.AtomSite.BEquivGeomMeanEsd createAtomSiteTypeAtomSiteBEquivGeomMeanEsd() {
-        return new AtomSiteType.AtomSite.BEquivGeomMeanEsd();
+    public IAtomSiteType.AtomSite.BEquivGeomMeanEsd createAtomSiteTypeAtomSiteBEquivGeomMeanEsd() {
+        return new IAtomSiteType.AtomSite.BEquivGeomMeanEsd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.BIsoOrEquiv }
+     * Create an instance of {@link IAtomSiteType.AtomSite.BIsoOrEquiv }
      * 
      */
-    public AtomSiteType.AtomSite.BIsoOrEquiv createAtomSiteTypeAtomSiteBIsoOrEquiv() {
-        return new AtomSiteType.AtomSite.BIsoOrEquiv();
+    public IAtomSiteType.AtomSite.BIsoOrEquiv createAtomSiteTypeAtomSiteBIsoOrEquiv() {
+        return new IAtomSiteType.AtomSite.BIsoOrEquiv();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.BIsoOrEquivEsd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.BIsoOrEquivEsd }
      * 
      */
-    public AtomSiteType.AtomSite.BIsoOrEquivEsd createAtomSiteTypeAtomSiteBIsoOrEquivEsd() {
-        return new AtomSiteType.AtomSite.BIsoOrEquivEsd();
+    public IAtomSiteType.AtomSite.BIsoOrEquivEsd createAtomSiteTypeAtomSiteBIsoOrEquivEsd() {
+        return new IAtomSiteType.AtomSite.BIsoOrEquivEsd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.CartnX }
+     * Create an instance of {@link IAtomSiteType.AtomSite.CartnX }
      * 
      */
-    public AtomSiteType.AtomSite.CartnX createAtomSiteTypeAtomSiteCartnX() {
-        return new AtomSiteType.AtomSite.CartnX();
+    public IAtomSiteType.AtomSite.CartnX createAtomSiteTypeAtomSiteCartnX() {
+        return new IAtomSiteType.AtomSite.CartnX();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.CartnXEsd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.CartnXEsd }
      * 
      */
-    public AtomSiteType.AtomSite.CartnXEsd createAtomSiteTypeAtomSiteCartnXEsd() {
-        return new AtomSiteType.AtomSite.CartnXEsd();
+    public IAtomSiteType.AtomSite.CartnXEsd createAtomSiteTypeAtomSiteCartnXEsd() {
+        return new IAtomSiteType.AtomSite.CartnXEsd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.CartnY }
+     * Create an instance of {@link IAtomSiteType.AtomSite.CartnY }
      * 
      */
-    public AtomSiteType.AtomSite.CartnY createAtomSiteTypeAtomSiteCartnY() {
-        return new AtomSiteType.AtomSite.CartnY();
+    public IAtomSiteType.AtomSite.CartnY createAtomSiteTypeAtomSiteCartnY() {
+        return new IAtomSiteType.AtomSite.CartnY();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.CartnYEsd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.CartnYEsd }
      * 
      */
-    public AtomSiteType.AtomSite.CartnYEsd createAtomSiteTypeAtomSiteCartnYEsd() {
-        return new AtomSiteType.AtomSite.CartnYEsd();
+    public IAtomSiteType.AtomSite.CartnYEsd createAtomSiteTypeAtomSiteCartnYEsd() {
+        return new IAtomSiteType.AtomSite.CartnYEsd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.CartnZ }
+     * Create an instance of {@link IAtomSiteType.AtomSite.CartnZ }
      * 
      */
-    public AtomSiteType.AtomSite.CartnZ createAtomSiteTypeAtomSiteCartnZ() {
-        return new AtomSiteType.AtomSite.CartnZ();
+    public IAtomSiteType.AtomSite.CartnZ createAtomSiteTypeAtomSiteCartnZ() {
+        return new IAtomSiteType.AtomSite.CartnZ();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.CartnZEsd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.CartnZEsd }
      * 
      */
-    public AtomSiteType.AtomSite.CartnZEsd createAtomSiteTypeAtomSiteCartnZEsd() {
-        return new AtomSiteType.AtomSite.CartnZEsd();
+    public IAtomSiteType.AtomSite.CartnZEsd createAtomSiteTypeAtomSiteCartnZEsd() {
+        return new IAtomSiteType.AtomSite.CartnZEsd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.UEquivGeomMeanEsd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.UEquivGeomMeanEsd }
      * 
      */
-    public AtomSiteType.AtomSite.UEquivGeomMeanEsd createAtomSiteTypeAtomSiteUEquivGeomMeanEsd() {
-        return new AtomSiteType.AtomSite.UEquivGeomMeanEsd();
+    public IAtomSiteType.AtomSite.UEquivGeomMeanEsd createAtomSiteTypeAtomSiteUEquivGeomMeanEsd() {
+        return new IAtomSiteType.AtomSite.UEquivGeomMeanEsd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.UIsoOrEquivEsd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.UIsoOrEquivEsd }
      * 
      */
-    public AtomSiteType.AtomSite.UIsoOrEquivEsd createAtomSiteTypeAtomSiteUIsoOrEquivEsd() {
-        return new AtomSiteType.AtomSite.UIsoOrEquivEsd();
+    public IAtomSiteType.AtomSite.UIsoOrEquivEsd createAtomSiteTypeAtomSiteUIsoOrEquivEsd() {
+        return new IAtomSiteType.AtomSite.UIsoOrEquivEsd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB11 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB11 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB11 createAtomSiteTypeAtomSiteAnisoB11() {
-        return new AtomSiteType.AtomSite.AnisoB11();
+    public IAtomSiteType.AtomSite.AnisoB11 createAtomSiteTypeAtomSiteAnisoB11() {
+        return new IAtomSiteType.AtomSite.AnisoB11();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB11Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB11Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB11Esd createAtomSiteTypeAtomSiteAnisoB11Esd() {
-        return new AtomSiteType.AtomSite.AnisoB11Esd();
+    public IAtomSiteType.AtomSite.AnisoB11Esd createAtomSiteTypeAtomSiteAnisoB11Esd() {
+        return new IAtomSiteType.AtomSite.AnisoB11Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB12 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB12 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB12 createAtomSiteTypeAtomSiteAnisoB12() {
-        return new AtomSiteType.AtomSite.AnisoB12();
+    public IAtomSiteType.AtomSite.AnisoB12 createAtomSiteTypeAtomSiteAnisoB12() {
+        return new IAtomSiteType.AtomSite.AnisoB12();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB12Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB12Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB12Esd createAtomSiteTypeAtomSiteAnisoB12Esd() {
-        return new AtomSiteType.AtomSite.AnisoB12Esd();
+    public IAtomSiteType.AtomSite.AnisoB12Esd createAtomSiteTypeAtomSiteAnisoB12Esd() {
+        return new IAtomSiteType.AtomSite.AnisoB12Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB13 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB13 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB13 createAtomSiteTypeAtomSiteAnisoB13() {
-        return new AtomSiteType.AtomSite.AnisoB13();
+    public IAtomSiteType.AtomSite.AnisoB13 createAtomSiteTypeAtomSiteAnisoB13() {
+        return new IAtomSiteType.AtomSite.AnisoB13();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB13Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB13Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB13Esd createAtomSiteTypeAtomSiteAnisoB13Esd() {
-        return new AtomSiteType.AtomSite.AnisoB13Esd();
+    public IAtomSiteType.AtomSite.AnisoB13Esd createAtomSiteTypeAtomSiteAnisoB13Esd() {
+        return new IAtomSiteType.AtomSite.AnisoB13Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB22 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB22 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB22 createAtomSiteTypeAtomSiteAnisoB22() {
-        return new AtomSiteType.AtomSite.AnisoB22();
+    public IAtomSiteType.AtomSite.AnisoB22 createAtomSiteTypeAtomSiteAnisoB22() {
+        return new IAtomSiteType.AtomSite.AnisoB22();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB22Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB22Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB22Esd createAtomSiteTypeAtomSiteAnisoB22Esd() {
-        return new AtomSiteType.AtomSite.AnisoB22Esd();
+    public IAtomSiteType.AtomSite.AnisoB22Esd createAtomSiteTypeAtomSiteAnisoB22Esd() {
+        return new IAtomSiteType.AtomSite.AnisoB22Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB23 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB23 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB23 createAtomSiteTypeAtomSiteAnisoB23() {
-        return new AtomSiteType.AtomSite.AnisoB23();
+    public IAtomSiteType.AtomSite.AnisoB23 createAtomSiteTypeAtomSiteAnisoB23() {
+        return new IAtomSiteType.AtomSite.AnisoB23();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB23Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB23Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB23Esd createAtomSiteTypeAtomSiteAnisoB23Esd() {
-        return new AtomSiteType.AtomSite.AnisoB23Esd();
+    public IAtomSiteType.AtomSite.AnisoB23Esd createAtomSiteTypeAtomSiteAnisoB23Esd() {
+        return new IAtomSiteType.AtomSite.AnisoB23Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB33 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB33 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB33 createAtomSiteTypeAtomSiteAnisoB33() {
-        return new AtomSiteType.AtomSite.AnisoB33();
+    public IAtomSiteType.AtomSite.AnisoB33 createAtomSiteTypeAtomSiteAnisoB33() {
+        return new IAtomSiteType.AtomSite.AnisoB33();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoB33Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoB33Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoB33Esd createAtomSiteTypeAtomSiteAnisoB33Esd() {
-        return new AtomSiteType.AtomSite.AnisoB33Esd();
+    public IAtomSiteType.AtomSite.AnisoB33Esd createAtomSiteTypeAtomSiteAnisoB33Esd() {
+        return new IAtomSiteType.AtomSite.AnisoB33Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU11 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU11 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU11 createAtomSiteTypeAtomSiteAnisoU11() {
-        return new AtomSiteType.AtomSite.AnisoU11();
+    public IAtomSiteType.AtomSite.AnisoU11 createAtomSiteTypeAtomSiteAnisoU11() {
+        return new IAtomSiteType.AtomSite.AnisoU11();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU11Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU11Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU11Esd createAtomSiteTypeAtomSiteAnisoU11Esd() {
-        return new AtomSiteType.AtomSite.AnisoU11Esd();
+    public IAtomSiteType.AtomSite.AnisoU11Esd createAtomSiteTypeAtomSiteAnisoU11Esd() {
+        return new IAtomSiteType.AtomSite.AnisoU11Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU12 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU12 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU12 createAtomSiteTypeAtomSiteAnisoU12() {
-        return new AtomSiteType.AtomSite.AnisoU12();
+    public IAtomSiteType.AtomSite.AnisoU12 createAtomSiteTypeAtomSiteAnisoU12() {
+        return new IAtomSiteType.AtomSite.AnisoU12();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU12Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU12Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU12Esd createAtomSiteTypeAtomSiteAnisoU12Esd() {
-        return new AtomSiteType.AtomSite.AnisoU12Esd();
+    public IAtomSiteType.AtomSite.AnisoU12Esd createAtomSiteTypeAtomSiteAnisoU12Esd() {
+        return new IAtomSiteType.AtomSite.AnisoU12Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU13 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU13 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU13 createAtomSiteTypeAtomSiteAnisoU13() {
-        return new AtomSiteType.AtomSite.AnisoU13();
+    public IAtomSiteType.AtomSite.AnisoU13 createAtomSiteTypeAtomSiteAnisoU13() {
+        return new IAtomSiteType.AtomSite.AnisoU13();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU13Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU13Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU13Esd createAtomSiteTypeAtomSiteAnisoU13Esd() {
-        return new AtomSiteType.AtomSite.AnisoU13Esd();
+    public IAtomSiteType.AtomSite.AnisoU13Esd createAtomSiteTypeAtomSiteAnisoU13Esd() {
+        return new IAtomSiteType.AtomSite.AnisoU13Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU22 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU22 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU22 createAtomSiteTypeAtomSiteAnisoU22() {
-        return new AtomSiteType.AtomSite.AnisoU22();
+    public IAtomSiteType.AtomSite.AnisoU22 createAtomSiteTypeAtomSiteAnisoU22() {
+        return new IAtomSiteType.AtomSite.AnisoU22();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU22Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU22Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU22Esd createAtomSiteTypeAtomSiteAnisoU22Esd() {
-        return new AtomSiteType.AtomSite.AnisoU22Esd();
+    public IAtomSiteType.AtomSite.AnisoU22Esd createAtomSiteTypeAtomSiteAnisoU22Esd() {
+        return new IAtomSiteType.AtomSite.AnisoU22Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU23 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU23 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU23 createAtomSiteTypeAtomSiteAnisoU23() {
-        return new AtomSiteType.AtomSite.AnisoU23();
+    public IAtomSiteType.AtomSite.AnisoU23 createAtomSiteTypeAtomSiteAnisoU23() {
+        return new IAtomSiteType.AtomSite.AnisoU23();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU23Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU23Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU23Esd createAtomSiteTypeAtomSiteAnisoU23Esd() {
-        return new AtomSiteType.AtomSite.AnisoU23Esd();
+    public IAtomSiteType.AtomSite.AnisoU23Esd createAtomSiteTypeAtomSiteAnisoU23Esd() {
+        return new IAtomSiteType.AtomSite.AnisoU23Esd();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU33 }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU33 }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU33 createAtomSiteTypeAtomSiteAnisoU33() {
-        return new AtomSiteType.AtomSite.AnisoU33();
+    public IAtomSiteType.AtomSite.AnisoU33 createAtomSiteTypeAtomSiteAnisoU33() {
+        return new IAtomSiteType.AtomSite.AnisoU33();
     }
 
     /**
-     * Create an instance of {@link AtomSiteType.AtomSite.AnisoU33Esd }
+     * Create an instance of {@link IAtomSiteType.AtomSite.AnisoU33Esd }
      * 
      */
-    public AtomSiteType.AtomSite.AnisoU33Esd createAtomSiteTypeAtomSiteAnisoU33Esd() {
-        return new AtomSiteType.AtomSite.AnisoU33Esd();
+    public IAtomSiteType.AtomSite.AnisoU33Esd createAtomSiteTypeAtomSiteAnisoU33Esd() {
+        return new IAtomSiteType.AtomSite.AnisoU33Esd();
     }
 
     /**
@@ -18451,759 +18453,759 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB12Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B12_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB12Esd> createAtomSiteTypeAtomSiteAnisoB12Esd(AtomSiteType.AtomSite.AnisoB12Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB12Esd>(_AtomSiteTypeAtomSiteAnisoB12Esd_QNAME, AtomSiteType.AtomSite.AnisoB12Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B12_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB12Esd> createAtomSiteTypeAtomSiteAnisoB12Esd(IAtomSiteType.AtomSite.AnisoB12Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB12Esd>(_AtomSiteTypeAtomSiteAnisoB12Esd_QNAME, IAtomSiteType.AtomSite.AnisoB12Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_formal_charge", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_formal_charge", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxFormalCharge(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxFormalCharge_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxFormalCharge_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_x", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_x", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigDecimal> createAtomSiteTypeAtomSiteFractX(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractX_QNAME, BigDecimal.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractX_QNAME, BigDecimal.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB11 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B11", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB11> createAtomSiteTypeAtomSiteAnisoB11(AtomSiteType.AtomSite.AnisoB11 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB11>(_AtomSiteTypeAtomSiteAnisoB11_QNAME, AtomSiteType.AtomSite.AnisoB11 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B11", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB11> createAtomSiteTypeAtomSiteAnisoB11(IAtomSiteType.AtomSite.AnisoB11 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB11>(_AtomSiteTypeAtomSiteAnisoB11_QNAME, IAtomSiteType.AtomSite.AnisoB11 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_x_esd", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_x_esd", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigDecimal> createAtomSiteTypeAtomSiteFractXEsd(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractXEsd_QNAME, BigDecimal.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractXEsd_QNAME, BigDecimal.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "thermal_displace_type", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "thermal_displace_type", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteThermalDisplaceType(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteThermalDisplaceType_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteThermalDisplaceType_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "disorder_assembly", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "disorder_assembly", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteDisorderAssembly(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteDisorderAssembly_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteDisorderAssembly_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB12 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B12", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB12> createAtomSiteTypeAtomSiteAnisoB12(AtomSiteType.AtomSite.AnisoB12 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB12>(_AtomSiteTypeAtomSiteAnisoB12_QNAME, AtomSiteType.AtomSite.AnisoB12 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B12", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB12> createAtomSiteTypeAtomSiteAnisoB12(IAtomSiteType.AtomSite.AnisoB12 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB12>(_AtomSiteTypeAtomSiteAnisoB12_QNAME, IAtomSiteType.AtomSite.AnisoB12 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZEsd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.CartnZEsd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_z_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.CartnZEsd> createAtomSiteTypeAtomSiteCartnZEsd(AtomSiteType.AtomSite.CartnZEsd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.CartnZEsd>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnZEsd_QNAME, AtomSiteType.AtomSite.CartnZEsd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_z_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.CartnZEsd> createAtomSiteTypeAtomSiteCartnZEsd(IAtomSiteType.AtomSite.CartnZEsd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.CartnZEsd>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnZEsd_QNAME, IAtomSiteType.AtomSite.CartnZEsd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB13 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B13", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB13> createAtomSiteTypeAtomSiteAnisoB13(AtomSiteType.AtomSite.AnisoB13 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB13>(_AtomSiteTypeAtomSiteAnisoB13_QNAME, AtomSiteType.AtomSite.AnisoB13 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B13", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB13> createAtomSiteTypeAtomSiteAnisoB13(IAtomSiteType.AtomSite.AnisoB13 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB13>(_AtomSiteTypeAtomSiteAnisoB13_QNAME, IAtomSiteType.AtomSite.AnisoB13 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "occupancy_esd", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "occupancy_esd", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigDecimal> createAtomSiteTypeAtomSiteOccupancyEsd(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteOccupancyEsd_QNAME, BigDecimal.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteOccupancyEsd_QNAME, BigDecimal.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB13Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B13_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB13Esd> createAtomSiteTypeAtomSiteAnisoB13Esd(AtomSiteType.AtomSite.AnisoB13Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB13Esd>(_AtomSiteTypeAtomSiteAnisoB13Esd_QNAME, AtomSiteType.AtomSite.AnisoB13Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B13_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB13Esd> createAtomSiteTypeAtomSiteAnisoB13Esd(IAtomSiteType.AtomSite.AnisoB13Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB13Esd>(_AtomSiteTypeAtomSiteAnisoB13Esd_QNAME, IAtomSiteType.AtomSite.AnisoB13Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnX }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.CartnX }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_x", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.CartnX> createAtomSiteTypeAtomSiteCartnX(AtomSiteType.AtomSite.CartnX value) {
-        return new JAXBElement<AtomSiteType.AtomSite.CartnX>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnX_QNAME, AtomSiteType.AtomSite.CartnX.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_x", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.CartnX> createAtomSiteTypeAtomSiteCartnX(IAtomSiteType.AtomSite.CartnX value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.CartnX>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnX_QNAME, IAtomSiteType.AtomSite.CartnX.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "refinement_flags", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "refinement_flags", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteRefinementFlags(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRefinementFlags_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRefinementFlags_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_alt_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_alt_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxAuthAltId(String value) {
-        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxAuthAltId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxAuthAltId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZ }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.CartnZ }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_z", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.CartnZ> createAtomSiteTypeAtomSiteCartnZ(AtomSiteType.AtomSite.CartnZ value) {
-        return new JAXBElement<AtomSiteType.AtomSite.CartnZ>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnZ_QNAME, AtomSiteType.AtomSite.CartnZ.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_z", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.CartnZ> createAtomSiteTypeAtomSiteCartnZ(IAtomSiteType.AtomSite.CartnZ value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.CartnZ>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnZ_QNAME, IAtomSiteType.AtomSite.CartnZ.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU22 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U22", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU22> createAtomSiteTypeAtomSiteAnisoU22(AtomSiteType.AtomSite.AnisoU22 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU22>(_AtomSiteTypeAtomSiteAnisoU22_QNAME, AtomSiteType.AtomSite.AnisoU22 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U22", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU22> createAtomSiteTypeAtomSiteAnisoU22(IAtomSiteType.AtomSite.AnisoU22 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU22>(_AtomSiteTypeAtomSiteAnisoU22_QNAME, IAtomSiteType.AtomSite.AnisoU22 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnY }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.CartnY }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_y", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.CartnY> createAtomSiteTypeAtomSiteCartnY(AtomSiteType.AtomSite.CartnY value) {
-        return new JAXBElement<AtomSiteType.AtomSite.CartnY>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnY_QNAME, AtomSiteType.AtomSite.CartnY.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_y", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.CartnY> createAtomSiteTypeAtomSiteCartnY(IAtomSiteType.AtomSite.CartnY value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.CartnY>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnY_QNAME, IAtomSiteType.AtomSite.CartnY.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU13Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U13_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU13Esd> createAtomSiteTypeAtomSiteAnisoU13Esd(AtomSiteType.AtomSite.AnisoU13Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU13Esd>(_AtomSiteTypeAtomSiteAnisoU13Esd_QNAME, AtomSiteType.AtomSite.AnisoU13Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U13_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU13Esd> createAtomSiteTypeAtomSiteAnisoU13Esd(IAtomSiteType.AtomSite.AnisoU13Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU13Esd>(_AtomSiteTypeAtomSiteAnisoU13Esd_QNAME, IAtomSiteType.AtomSite.AnisoU13Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU23 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U23", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU23> createAtomSiteTypeAtomSiteAnisoU23(AtomSiteType.AtomSite.AnisoU23 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU23>(_AtomSiteTypeAtomSiteAnisoU23_QNAME, AtomSiteType.AtomSite.AnisoU23 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U23", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU23> createAtomSiteTypeAtomSiteAnisoU23(IAtomSiteType.AtomSite.AnisoU23 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU23>(_AtomSiteTypeAtomSiteAnisoU23_QNAME, IAtomSiteType.AtomSite.AnisoU23 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_y_esd", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_y_esd", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigDecimal> createAtomSiteTypeAtomSiteFractYEsd(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractYEsd_QNAME, BigDecimal.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractYEsd_QNAME, BigDecimal.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_atom_name", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_atom_name", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxPDBAtomName(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxPDBAtomName_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxPDBAtomName_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "refinement_flags_adp", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "refinement_flags_adp", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteRefinementFlagsAdp(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRefinementFlagsAdp_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRefinementFlagsAdp_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_z_esd", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_z_esd", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigDecimal> createAtomSiteTypeAtomSiteFractZEsd(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractZEsd_QNAME, BigDecimal.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractZEsd_QNAME, BigDecimal.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_atom_name", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_atom_name", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxAuthAtomName(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxAuthAtomName_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxAuthAtomName_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU33Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U33_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU33Esd> createAtomSiteTypeAtomSiteAnisoU33Esd(AtomSiteType.AtomSite.AnisoU33Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU33Esd>(_AtomSiteTypeAtomSiteAnisoU33Esd_QNAME, AtomSiteType.AtomSite.AnisoU33Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U33_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU33Esd> createAtomSiteTypeAtomSiteAnisoU33Esd(IAtomSiteType.AtomSite.AnisoU33Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU33Esd>(_AtomSiteTypeAtomSiteAnisoU33Esd_QNAME, IAtomSiteType.AtomSite.AnisoU33Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "calc_flag", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "calc_flag", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteCalcFlag(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteCalcFlag_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteCalcFlag_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "auth_seq_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "auth_seq_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteAuthSeqId(String value) {
-        return new JAXBElement<String>(_StructSiteGenTypeStructSiteGenAuthSeqId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_StructSiteGenTypeStructSiteGenAuthSeqId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "refinement_flags_posn", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "refinement_flags_posn", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteRefinementFlagsPosn(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRefinementFlagsPosn_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRefinementFlagsPosn_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "restraints", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "restraints", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteRestraints(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRestraints_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRestraints_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB22 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B22", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB22> createAtomSiteTypeAtomSiteAnisoB22(AtomSiteType.AtomSite.AnisoB22 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB22>(_AtomSiteTypeAtomSiteAnisoB22_QNAME, AtomSiteType.AtomSite.AnisoB22 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B22", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB22> createAtomSiteTypeAtomSiteAnisoB22(IAtomSiteType.AtomSite.AnisoB22 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB22>(_AtomSiteTypeAtomSiteAnisoB22_QNAME, IAtomSiteType.AtomSite.AnisoB22 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "chemical_conn_number", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "chemical_conn_number", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigInteger> createAtomSiteTypeAtomSiteChemicalConnNumber(BigInteger value) {
-        return new JAXBElement<BigInteger>(_AtomSiteTypeAtomSiteChemicalConnNumber_QNAME, BigInteger.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigInteger>(_AtomSiteTypeAtomSiteChemicalConnNumber_QNAME, BigInteger.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "U_iso_or_equiv", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "U_iso_or_equiv", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteUIsoOrEquiv(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteUIsoOrEquiv_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteUIsoOrEquiv_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "adp_type", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "adp_type", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteAdpType(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteAdpType_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteAdpType_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_asym_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_asym_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxAuthAsymId(String value) {
-        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxAuthAsymId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxAuthAsymId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnXEsd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.CartnXEsd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_x_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.CartnXEsd> createAtomSiteTypeAtomSiteCartnXEsd(AtomSiteType.AtomSite.CartnXEsd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.CartnXEsd>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnXEsd_QNAME, AtomSiteType.AtomSite.CartnXEsd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_x_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.CartnXEsd> createAtomSiteTypeAtomSiteCartnXEsd(IAtomSiteType.AtomSite.CartnXEsd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.CartnXEsd>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnXEsd_QNAME, IAtomSiteType.AtomSite.CartnXEsd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB23 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B23", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB23> createAtomSiteTypeAtomSiteAnisoB23(AtomSiteType.AtomSite.AnisoB23 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB23>(_AtomSiteTypeAtomSiteAnisoB23_QNAME, AtomSiteType.AtomSite.AnisoB23 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B23", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB23> createAtomSiteTypeAtomSiteAnisoB23(IAtomSiteType.AtomSite.AnisoB23 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB23>(_AtomSiteTypeAtomSiteAnisoB23_QNAME, IAtomSiteType.AtomSite.AnisoB23 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BEquivGeomMeanEsd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.BEquivGeomMeanEsd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "B_equiv_geom_mean_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.BEquivGeomMeanEsd> createAtomSiteTypeAtomSiteBEquivGeomMeanEsd(AtomSiteType.AtomSite.BEquivGeomMeanEsd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.BEquivGeomMeanEsd>(_AtomSiteTypeAtomSiteBEquivGeomMeanEsd_QNAME, AtomSiteType.AtomSite.BEquivGeomMeanEsd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "B_equiv_geom_mean_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.BEquivGeomMeanEsd> createAtomSiteTypeAtomSiteBEquivGeomMeanEsd(IAtomSiteType.AtomSite.BEquivGeomMeanEsd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.BEquivGeomMeanEsd>(_AtomSiteTypeAtomSiteBEquivGeomMeanEsd_QNAME, IAtomSiteType.AtomSite.BEquivGeomMeanEsd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "auth_atom_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "auth_atom_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteAuthAtomId(String value) {
-        return new JAXBElement<String>(_StructSiteGenTypeStructSiteGenAuthAtomId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_StructSiteGenTypeStructSiteGenAuthAtomId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "calc_attached_atom", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "calc_attached_atom", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteCalcAttachedAtom(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteCalcAttachedAtom_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteCalcAttachedAtom_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU23Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U23_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU23Esd> createAtomSiteTypeAtomSiteAnisoU23Esd(AtomSiteType.AtomSite.AnisoU23Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU23Esd>(_AtomSiteTypeAtomSiteAnisoU23Esd_QNAME, AtomSiteType.AtomSite.AnisoU23Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U23_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU23Esd> createAtomSiteTypeAtomSiteAnisoU23Esd(IAtomSiteType.AtomSite.AnisoU23Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU23Esd>(_AtomSiteTypeAtomSiteAnisoU23Esd_QNAME, IAtomSiteType.AtomSite.AnisoU23Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "refinement_flags_occupancy", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "refinement_flags_occupancy", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteRefinementFlagsOccupancy(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRefinementFlagsOccupancy_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteRefinementFlagsOccupancy_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB11Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B11_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB11Esd> createAtomSiteTypeAtomSiteAnisoB11Esd(AtomSiteType.AtomSite.AnisoB11Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB11Esd>(_AtomSiteTypeAtomSiteAnisoB11Esd_QNAME, AtomSiteType.AtomSite.AnisoB11Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B11_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB11Esd> createAtomSiteTypeAtomSiteAnisoB11Esd(IAtomSiteType.AtomSite.AnisoB11Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB11Esd>(_AtomSiteTypeAtomSiteAnisoB11Esd_QNAME, IAtomSiteType.AtomSite.AnisoB11Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_struct_group_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_struct_group_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxStructGroupId(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxStructGroupId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxStructGroupId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU33 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U33", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU33> createAtomSiteTypeAtomSiteAnisoU33(AtomSiteType.AtomSite.AnisoU33 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU33>(_AtomSiteTypeAtomSiteAnisoU33_QNAME, AtomSiteType.AtomSite.AnisoU33 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U33", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU33> createAtomSiteTypeAtomSiteAnisoU33(IAtomSiteType.AtomSite.AnisoU33 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU33>(_AtomSiteTypeAtomSiteAnisoU33_QNAME, IAtomSiteType.AtomSite.AnisoU33 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "B_equiv_geom_mean", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "B_equiv_geom_mean", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteBEquivGeomMean(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteBEquivGeomMean_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteBEquivGeomMean_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnYEsd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.CartnYEsd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_y_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.CartnYEsd> createAtomSiteTypeAtomSiteCartnYEsd(AtomSiteType.AtomSite.CartnYEsd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.CartnYEsd>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnYEsd_QNAME, AtomSiteType.AtomSite.CartnYEsd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Cartn_y_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.CartnYEsd> createAtomSiteTypeAtomSiteCartnYEsd(IAtomSiteType.AtomSite.CartnYEsd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.CartnYEsd>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteCartnYEsd_QNAME, IAtomSiteType.AtomSite.CartnYEsd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "footnote_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "footnote_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteFootnoteId(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteFootnoteId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteFootnoteId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_ncs_dom_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_ncs_dom_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxNcsDomId(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxNcsDomId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxNcsDomId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU22Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U22_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU22Esd> createAtomSiteTypeAtomSiteAnisoU22Esd(AtomSiteType.AtomSite.AnisoU22Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU22Esd>(_AtomSiteTypeAtomSiteAnisoU22Esd_QNAME, AtomSiteType.AtomSite.AnisoU22Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U22_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU22Esd> createAtomSiteTypeAtomSiteAnisoU22Esd(IAtomSiteType.AtomSite.AnisoU22Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU22Esd>(_AtomSiteTypeAtomSiteAnisoU22Esd_QNAME, IAtomSiteType.AtomSite.AnisoU22Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB33 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B33", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB33> createAtomSiteTypeAtomSiteAnisoB33(AtomSiteType.AtomSite.AnisoB33 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB33>(_AtomSiteTypeAtomSiteAnisoB33_QNAME, AtomSiteType.AtomSite.AnisoB33 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B33", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB33> createAtomSiteTypeAtomSiteAnisoB33(IAtomSiteType.AtomSite.AnisoB33 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB33>(_AtomSiteTypeAtomSiteAnisoB33_QNAME, IAtomSiteType.AtomSite.AnisoB33 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigInteger }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_model_num", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_model_num", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigInteger> createAtomSiteTypeAtomSitePdbxPDBModelNum(BigInteger value) {
-        return new JAXBElement<BigInteger>(_GeomContactTypeGeomContactPdbxPDBModelNum_QNAME, BigInteger.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigInteger>(_GeomContactTypeGeomContactPdbxPDBModelNum_QNAME, BigInteger.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "U_equiv_geom_mean", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "U_equiv_geom_mean", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteUEquivGeomMean(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteUEquivGeomMean_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteUEquivGeomMean_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "disorder_group", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "disorder_group", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteDisorderGroup(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteDisorderGroup_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteDisorderGroup_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_ins_code", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_ins_code", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxPDBInsCode(String value) {
-        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxPDBInsCode_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxPDBInsCode_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Wyckoff_symbol", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "Wyckoff_symbol", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteWyckoffSymbol(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteWyckoffSymbol_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteWyckoffSymbol_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_residue_name", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_residue_name", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxPDBResidueName(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxPDBResidueName_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxPDBResidueName_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_residue_no", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_residue_no", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxPDBResidueNo(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxPDBResidueNo_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxPDBResidueNo_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB22Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B22_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB22Esd> createAtomSiteTypeAtomSiteAnisoB22Esd(AtomSiteType.AtomSite.AnisoB22Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB22Esd>(_AtomSiteTypeAtomSiteAnisoB22Esd_QNAME, AtomSiteType.AtomSite.AnisoB22Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B22_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB22Esd> createAtomSiteTypeAtomSiteAnisoB22Esd(IAtomSiteType.AtomSite.AnisoB22Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB22Esd>(_AtomSiteTypeAtomSiteAnisoB22Esd_QNAME, IAtomSiteType.AtomSite.AnisoB22Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "group_PDB", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "group_PDB", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteGroupPDB(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteGroupPDB_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteGroupPDB_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU13 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U13", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU13> createAtomSiteTypeAtomSiteAnisoU13(AtomSiteType.AtomSite.AnisoU13 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU13>(_AtomSiteTypeAtomSiteAnisoU13_QNAME, AtomSiteType.AtomSite.AnisoU13 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U13", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU13> createAtomSiteTypeAtomSiteAnisoU13(IAtomSiteType.AtomSite.AnisoU13 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU13>(_AtomSiteTypeAtomSiteAnisoU13_QNAME, IAtomSiteType.AtomSite.AnisoU13 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "auth_comp_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "auth_comp_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteAuthCompId(String value) {
-        return new JAXBElement<String>(_StructSiteGenTypeStructSiteGenAuthCompId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_StructSiteGenTypeStructSiteGenAuthCompId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_ratio", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_ratio", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteAnisoRatio(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteAnisoRatio_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteAnisoRatio_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_seq_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_seq_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxAuthSeqId(String value) {
-        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxAuthSeqId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxAuthSeqId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB23Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B23_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB23Esd> createAtomSiteTypeAtomSiteAnisoB23Esd(AtomSiteType.AtomSite.AnisoB23Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB23Esd>(_AtomSiteTypeAtomSiteAnisoB23Esd_QNAME, AtomSiteType.AtomSite.AnisoB23Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B23_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB23Esd> createAtomSiteTypeAtomSiteAnisoB23Esd(IAtomSiteType.AtomSite.AnisoB23Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB23Esd>(_AtomSiteTypeAtomSiteAnisoB23Esd_QNAME, IAtomSiteType.AtomSite.AnisoB23Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UEquivGeomMeanEsd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.UEquivGeomMeanEsd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "U_equiv_geom_mean_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.UEquivGeomMeanEsd> createAtomSiteTypeAtomSiteUEquivGeomMeanEsd(AtomSiteType.AtomSite.UEquivGeomMeanEsd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.UEquivGeomMeanEsd>(_AtomSiteTypeAtomSiteUEquivGeomMeanEsd_QNAME, AtomSiteType.AtomSite.UEquivGeomMeanEsd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "U_equiv_geom_mean_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.UEquivGeomMeanEsd> createAtomSiteTypeAtomSiteUEquivGeomMeanEsd(IAtomSiteType.AtomSite.UEquivGeomMeanEsd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.UEquivGeomMeanEsd>(_AtomSiteTypeAtomSiteUEquivGeomMeanEsd_QNAME, IAtomSiteType.AtomSite.UEquivGeomMeanEsd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_tls_group_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_tls_group_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxTlsGroupId(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxTlsGroupId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxTlsGroupId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU12Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U12_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU12Esd> createAtomSiteTypeAtomSiteAnisoU12Esd(AtomSiteType.AtomSite.AnisoU12Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU12Esd>(_AtomSiteTypeAtomSiteAnisoU12Esd_QNAME, AtomSiteType.AtomSite.AnisoU12Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U12_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU12Esd> createAtomSiteTypeAtomSiteAnisoU12Esd(IAtomSiteType.AtomSite.AnisoU12Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU12Esd>(_AtomSiteTypeAtomSiteAnisoU12Esd_QNAME, IAtomSiteType.AtomSite.AnisoU12Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "details", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "details", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteDetails(String value) {
-        return new JAXBElement<String>(_PhasingMIRTypePhasingMIRDetails_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_PhasingMIRTypePhasingMIRDetails_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_strand_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_PDB_strand_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxPDBStrandId(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxPDBStrandId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSitePdbxPDBStrandId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquiv }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.BIsoOrEquiv }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "B_iso_or_equiv", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.BIsoOrEquiv> createAtomSiteTypeAtomSiteBIsoOrEquiv(AtomSiteType.AtomSite.BIsoOrEquiv value) {
-        return new JAXBElement<AtomSiteType.AtomSite.BIsoOrEquiv>(_AtomSiteTypeAtomSiteBIsoOrEquiv_QNAME, AtomSiteType.AtomSite.BIsoOrEquiv.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "B_iso_or_equiv", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.BIsoOrEquiv> createAtomSiteTypeAtomSiteBIsoOrEquiv(IAtomSiteType.AtomSite.BIsoOrEquiv value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.BIsoOrEquiv>(_AtomSiteTypeAtomSiteBIsoOrEquiv_QNAME, IAtomSiteType.AtomSite.BIsoOrEquiv.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "attached_hydrogens", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "attached_hydrogens", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteAttachedHydrogens(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteAttachedHydrogens_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteAttachedHydrogens_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquivEsd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.BIsoOrEquivEsd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "B_iso_or_equiv_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.BIsoOrEquivEsd> createAtomSiteTypeAtomSiteBIsoOrEquivEsd(AtomSiteType.AtomSite.BIsoOrEquivEsd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.BIsoOrEquivEsd>(_AtomSiteTypeAtomSiteBIsoOrEquivEsd_QNAME, AtomSiteType.AtomSite.BIsoOrEquivEsd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "B_iso_or_equiv_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.BIsoOrEquivEsd> createAtomSiteTypeAtomSiteBIsoOrEquivEsd(IAtomSiteType.AtomSite.BIsoOrEquivEsd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.BIsoOrEquivEsd>(_AtomSiteTypeAtomSiteBIsoOrEquivEsd_QNAME, IAtomSiteType.AtomSite.BIsoOrEquivEsd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "symmetry_multiplicity", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "symmetry_multiplicity", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteSymmetryMultiplicity(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteSymmetryMultiplicity_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteSymmetryMultiplicity_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "occupancy", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "occupancy", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigDecimal> createAtomSiteTypeAtomSiteOccupancy(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteOccupancy_QNAME, BigDecimal.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteOccupancy_QNAME, BigDecimal.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_y", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_y", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigDecimal> createAtomSiteTypeAtomSiteFractY(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractY_QNAME, BigDecimal.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractY_QNAME, BigDecimal.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_comp_id", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "pdbx_auth_comp_id", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSitePdbxAuthCompId(String value) {
-        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxAuthCompId_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteAnisotropTypeAtomSiteAnisotropPdbxAuthCompId_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UIsoOrEquivEsd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.UIsoOrEquivEsd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "U_iso_or_equiv_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.UIsoOrEquivEsd> createAtomSiteTypeAtomSiteUIsoOrEquivEsd(AtomSiteType.AtomSite.UIsoOrEquivEsd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.UIsoOrEquivEsd>(_AtomSiteTypeAtomSiteUIsoOrEquivEsd_QNAME, AtomSiteType.AtomSite.UIsoOrEquivEsd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "U_iso_or_equiv_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.UIsoOrEquivEsd> createAtomSiteTypeAtomSiteUIsoOrEquivEsd(IAtomSiteType.AtomSite.UIsoOrEquivEsd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.UIsoOrEquivEsd>(_AtomSiteTypeAtomSiteUIsoOrEquivEsd_QNAME, IAtomSiteType.AtomSite.UIsoOrEquivEsd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_z", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "fract_z", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<BigDecimal> createAtomSiteTypeAtomSiteFractZ(BigDecimal value) {
-        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractZ_QNAME, BigDecimal.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<BigDecimal>(_PdbxPhasingMADSetSiteTypePdbxPhasingMADSetSiteFractZ_QNAME, BigDecimal.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU11Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U11_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU11Esd> createAtomSiteTypeAtomSiteAnisoU11Esd(AtomSiteType.AtomSite.AnisoU11Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU11Esd>(_AtomSiteTypeAtomSiteAnisoU11Esd_QNAME, AtomSiteType.AtomSite.AnisoU11Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U11_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU11Esd> createAtomSiteTypeAtomSiteAnisoU11Esd(IAtomSiteType.AtomSite.AnisoU11Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU11Esd>(_AtomSiteTypeAtomSiteAnisoU11Esd_QNAME, IAtomSiteType.AtomSite.AnisoU11Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33Esd }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoB33Esd }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B33_esd", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoB33Esd> createAtomSiteTypeAtomSiteAnisoB33Esd(AtomSiteType.AtomSite.AnisoB33Esd value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoB33Esd>(_AtomSiteTypeAtomSiteAnisoB33Esd_QNAME, AtomSiteType.AtomSite.AnisoB33Esd.class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_B33_esd", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoB33Esd> createAtomSiteTypeAtomSiteAnisoB33Esd(IAtomSiteType.AtomSite.AnisoB33Esd value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoB33Esd>(_AtomSiteTypeAtomSiteAnisoB33Esd_QNAME, IAtomSiteType.AtomSite.AnisoB33Esd.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU11 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U11", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU11> createAtomSiteTypeAtomSiteAnisoU11(AtomSiteType.AtomSite.AnisoU11 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU11>(_AtomSiteTypeAtomSiteAnisoU11_QNAME, AtomSiteType.AtomSite.AnisoU11 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U11", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU11> createAtomSiteTypeAtomSiteAnisoU11(IAtomSiteType.AtomSite.AnisoU11 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU11>(_AtomSiteTypeAtomSiteAnisoU11_QNAME, IAtomSiteType.AtomSite.AnisoU11 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "constraints", scope = AtomSiteType.AtomSite.class)
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "constraints", scope = IAtomSiteType.AtomSite.class)
     public JAXBElement<String> createAtomSiteTypeAtomSiteConstraints(String value) {
-        return new JAXBElement<String>(_AtomSiteTypeAtomSiteConstraints_QNAME, String.class, AtomSiteType.AtomSite.class, value);
+        return new JAXBElement<String>(_AtomSiteTypeAtomSiteConstraints_QNAME, String.class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link IAtomSiteType.AtomSite.AnisoU12 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U12", scope = AtomSiteType.AtomSite.class)
-    public JAXBElement<AtomSiteType.AtomSite.AnisoU12> createAtomSiteTypeAtomSiteAnisoU12(AtomSiteType.AtomSite.AnisoU12 value) {
-        return new JAXBElement<AtomSiteType.AtomSite.AnisoU12>(_AtomSiteTypeAtomSiteAnisoU12_QNAME, AtomSiteType.AtomSite.AnisoU12 .class, AtomSiteType.AtomSite.class, value);
+    @XmlElementDecl(namespace = "http://pdbml.pdb.org/schema/pdbx-v40.xsd", name = "aniso_U12", scope = IAtomSiteType.AtomSite.class)
+    public JAXBElement<IAtomSiteType.AtomSite.AnisoU12> createAtomSiteTypeAtomSiteAnisoU12(IAtomSiteType.AtomSite.AnisoU12 value) {
+        return new JAXBElement<IAtomSiteType.AtomSite.AnisoU12>(_AtomSiteTypeAtomSiteAnisoU12_QNAME, IAtomSiteType.AtomSite.AnisoU12 .class, IAtomSiteType.AtomSite.class, value);
     }
 
     /**

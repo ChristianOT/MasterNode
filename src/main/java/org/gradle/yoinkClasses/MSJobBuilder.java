@@ -1,3 +1,4 @@
+/*
 package org.gradle.yoinkClasses;
 
 import org.wallerlab.yoink.api.model.bootstrap.Job;
@@ -7,3 +8,4 @@ interface MSJobBuilder {
 
 	public Job buildFromMS(MolecularSystem MS, String parameters);
 }
+*/

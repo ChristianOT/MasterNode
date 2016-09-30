@@ -1,3 +1,4 @@
+/*
 package org.gradle.yoinkTranslator;
 
 import java.util.ArrayList;
@@ -12,10 +13,10 @@ import org.wallerlab.yoink.api.model.molecular.Element;
 import org.wallerlab.yoink.math.linear.SimpleVector3DFactory;
 import org.wallerlab.yoink.molecular.domain.SimpleAtom;
 import org.wallerlab.yoink.molecular.domain.SimpleCoordFactory;
-import org.gradle.interfaces.DatablockTypeInterface;
+import org.gradle.interfaces.IDatablockType;
 import org.gradle.interfaces.Translator;
 
-public class AtomTranslator implements Translator<Atom,DatablockTypeInterface>{
+public class AtomTranslator implements Translator<Atom,IDatablockType>{
 
 	@Resource
 	private SimpleVector3DFactory myVector3D;
@@ -24,7 +25,7 @@ public class AtomTranslator implements Translator<Atom,DatablockTypeInterface>{
 	private SimpleCoordFactory coordFactory;
 
 	@Override
-	public List<Atom> translate(DatablockTypeInterface item) {
+	public List<Atom> translate(IDatablockType item) {
 		List<Atom> atoms = new ArrayList<Atom>();
 		System.out.println("number of Atoms: " + item.getAtomSiteCategory().getAtomSite().size());
 		List<AtomSite> dt = item.getAtomSiteCategory().getAtomSite();
@@ -49,3 +50,4 @@ public class AtomTranslator implements Translator<Atom,DatablockTypeInterface>{
 	}
 
 }
+*/

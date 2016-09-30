@@ -14,7 +14,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
-import org.gradle.interfaces.DatablockTypeInterface;
+import org.gradle.pdbml.IDatablockType;
 
 
 /**
@@ -410,7 +410,7 @@ import org.gradle.interfaces.DatablockTypeInterface;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "datablockType", propOrder = {
 })
-public class DatablockType implements DatablockTypeInterface{
+public class DatablockType implements IDatablockType {
 
 	@XmlElement(name = "atom_siteCategory")
      private AtomSiteType atomSiteCategory;

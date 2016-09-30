@@ -1,3 +1,4 @@
+/*
 package org.gradle.yoinkClasses;
 
 import java.util.List;
@@ -52,3 +53,4 @@ public class MSAdaptiveQMMMProcessor implements MSAdaptiveProcessor{
 		return regions;
 	}
 }
+*/

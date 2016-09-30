@@ -5,13 +5,10 @@ import java.io.IOException;
 
 import org.gradle.config.BatchConfig;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
-import org.wallerlab.yoink.Yoink;
+
 
 /**
  * Main class of the MasterNode. Uses spring boot to run the application.
