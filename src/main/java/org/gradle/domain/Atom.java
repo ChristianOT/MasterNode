@@ -44,6 +44,20 @@ public class Atom {
 	 */
 	private String chain;
 
+	public Atom() {
+	}
+
+	public Atom(String element, Double x, Double y, Double z, String index, String groupPDBx, String labelCompId) {
+		this.element = element;
+		this.x = x;
+		this.y = y;
+		this.z = z;
+		this.index = index;
+		this.groupPDBx = groupPDBx;
+		this.labelCompId = labelCompId;
+
+	}
+
 	public String getElement() {
 		return element;
 	}

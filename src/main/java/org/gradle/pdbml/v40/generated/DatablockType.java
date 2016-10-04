@@ -14,14 +14,17 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.gradle.pdbml.IAtomSiteType;
 import org.gradle.pdbml.IDatablockType;
+
+import java.util.List;
 
 
 /**
  * <p>Java class for datablockType complex type.
- * 
+ * <p>
  * <p>The following schema fragment specifies the expected content contained within this class.
- * 
+ * <p>
  * <pre>
  * &lt;complexType name="datablockType">
  *   &lt;complexContent>
@@ -404,746 +407,742 @@ import org.gradle.pdbml.IDatablockType;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
- * 
- * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "datablockType", propOrder = {
 })
 public class DatablockType implements IDatablockType {
 
-	@XmlElement(name = "atom_siteCategory")
-     private AtomSiteType atomSiteCategory;
+    @XmlElement(name = "atom_siteCategory")
+    private AtomSiteType atomSiteCategory;
     @XmlElement(name = "atom_site_anisotropCategory")
-     private AtomSiteAnisotropType atomSiteAnisotropCategory;
+    private AtomSiteAnisotropType atomSiteAnisotropCategory;
     @XmlElement(name = "atom_sitesCategory")
-     private AtomSitesType atomSitesCategory;
+    private AtomSitesType atomSitesCategory;
     @XmlElement(name = "atom_sites_altCategory")
-     private AtomSitesAltType atomSitesAltCategory;
+    private AtomSitesAltType atomSitesAltCategory;
     @XmlElement(name = "atom_sites_alt_ensCategory")
-     private AtomSitesAltEnsType atomSitesAltEnsCategory;
+    private AtomSitesAltEnsType atomSitesAltEnsCategory;
     @XmlElement(name = "atom_sites_alt_genCategory")
-     private AtomSitesAltGenType atomSitesAltGenCategory;
+    private AtomSitesAltGenType atomSitesAltGenCategory;
     @XmlElement(name = "atom_sites_footnoteCategory")
-     private AtomSitesFootnoteType atomSitesFootnoteCategory;
+    private AtomSitesFootnoteType atomSitesFootnoteCategory;
     @XmlElement(name = "atom_typeCategory")
-     private AtomTypeType atomTypeCategory;
-     private AuditType auditCategory;
+    private AtomTypeType atomTypeCategory;
+    private AuditType auditCategory;
     @XmlElement(name = "audit_authorCategory")
-     private AuditAuthorType auditAuthorCategory;
+    private AuditAuthorType auditAuthorCategory;
     @XmlElement(name = "audit_conformCategory")
-     private AuditConformType auditConformCategory;
+    private AuditConformType auditConformCategory;
     @XmlElement(name = "audit_contact_authorCategory")
-     private AuditContactAuthorType auditContactAuthorCategory;
+    private AuditContactAuthorType auditContactAuthorCategory;
     @XmlElement(name = "audit_linkCategory")
-     private AuditLinkType auditLinkCategory;
-     private CellType cellCategory;
+    private AuditLinkType auditLinkCategory;
+    private CellType cellCategory;
     @XmlElement(name = "cell_measurementCategory")
-     private CellMeasurementType cellMeasurementCategory;
+    private CellMeasurementType cellMeasurementCategory;
     @XmlElement(name = "cell_measurement_reflnCategory")
-     private CellMeasurementReflnType cellMeasurementReflnCategory;
+    private CellMeasurementReflnType cellMeasurementReflnCategory;
     @XmlElement(name = "chem_compCategory")
-     private ChemCompType chemCompCategory;
+    private ChemCompType chemCompCategory;
     @XmlElement(name = "chem_comp_angleCategory")
-     private ChemCompAngleType chemCompAngleCategory;
+    private ChemCompAngleType chemCompAngleCategory;
     @XmlElement(name = "chem_comp_atomCategory")
-     private ChemCompAtomType chemCompAtomCategory;
+    private ChemCompAtomType chemCompAtomCategory;
     @XmlElement(name = "chem_comp_bondCategory")
-     private ChemCompBondType chemCompBondCategory;
+    private ChemCompBondType chemCompBondCategory;
     @XmlElement(name = "chem_comp_chirCategory")
-     private ChemCompChirType chemCompChirCategory;
+    private ChemCompChirType chemCompChirCategory;
     @XmlElement(name = "chem_comp_chir_atomCategory")
-     private ChemCompChirAtomType chemCompChirAtomCategory;
+    private ChemCompChirAtomType chemCompChirAtomCategory;
     @XmlElement(name = "chem_comp_linkCategory")
-     private ChemCompLinkType chemCompLinkCategory;
+    private ChemCompLinkType chemCompLinkCategory;
     @XmlElement(name = "chem_comp_planeCategory")
-     private ChemCompPlaneType chemCompPlaneCategory;
+    private ChemCompPlaneType chemCompPlaneCategory;
     @XmlElement(name = "chem_comp_plane_atomCategory")
-     private ChemCompPlaneAtomType chemCompPlaneAtomCategory;
+    private ChemCompPlaneAtomType chemCompPlaneAtomCategory;
     @XmlElement(name = "chem_comp_torCategory")
-     private ChemCompTorType chemCompTorCategory;
+    private ChemCompTorType chemCompTorCategory;
     @XmlElement(name = "chem_comp_tor_valueCategory")
-     private ChemCompTorValueType chemCompTorValueCategory;
+    private ChemCompTorValueType chemCompTorValueCategory;
     @XmlElement(name = "chem_linkCategory")
-     private ChemLinkType chemLinkCategory;
+    private ChemLinkType chemLinkCategory;
     @XmlElement(name = "chem_link_angleCategory")
-     private ChemLinkAngleType chemLinkAngleCategory;
+    private ChemLinkAngleType chemLinkAngleCategory;
     @XmlElement(name = "chem_link_bondCategory")
-     private ChemLinkBondType chemLinkBondCategory;
+    private ChemLinkBondType chemLinkBondCategory;
     @XmlElement(name = "chem_link_chirCategory")
-     private ChemLinkChirType chemLinkChirCategory;
+    private ChemLinkChirType chemLinkChirCategory;
     @XmlElement(name = "chem_link_chir_atomCategory")
-     private ChemLinkChirAtomType chemLinkChirAtomCategory;
+    private ChemLinkChirAtomType chemLinkChirAtomCategory;
     @XmlElement(name = "chem_link_planeCategory")
-     private ChemLinkPlaneType chemLinkPlaneCategory;
+    private ChemLinkPlaneType chemLinkPlaneCategory;
     @XmlElement(name = "chem_link_plane_atomCategory")
-     private ChemLinkPlaneAtomType chemLinkPlaneAtomCategory;
+    private ChemLinkPlaneAtomType chemLinkPlaneAtomCategory;
     @XmlElement(name = "chem_link_torCategory")
-     private ChemLinkTorType chemLinkTorCategory;
+    private ChemLinkTorType chemLinkTorCategory;
     @XmlElement(name = "chem_link_tor_valueCategory")
-     private ChemLinkTorValueType chemLinkTorValueCategory;
-     private ChemicalType chemicalCategory;
+    private ChemLinkTorValueType chemLinkTorValueCategory;
+    private ChemicalType chemicalCategory;
     @XmlElement(name = "chemical_conn_atomCategory")
-     private ChemicalConnAtomType chemicalConnAtomCategory;
+    private ChemicalConnAtomType chemicalConnAtomCategory;
     @XmlElement(name = "chemical_conn_bondCategory")
-     private ChemicalConnBondType chemicalConnBondCategory;
+    private ChemicalConnBondType chemicalConnBondCategory;
     @XmlElement(name = "chemical_formulaCategory")
-     private ChemicalFormulaType chemicalFormulaCategory;
-     private CitationType citationCategory;
+    private ChemicalFormulaType chemicalFormulaCategory;
+    private CitationType citationCategory;
     @XmlElement(name = "citation_authorCategory")
-     private CitationAuthorType citationAuthorCategory;
+    private CitationAuthorType citationAuthorCategory;
     @XmlElement(name = "citation_editorCategory")
-     private CitationEditorType citationEditorCategory;
-     private ComputingType computingCategory;
-     private DatabaseType databaseCategory;
+    private CitationEditorType citationEditorCategory;
+    private ComputingType computingCategory;
+    private DatabaseType databaseCategory;
     @XmlElement(name = "database_2Category")
-     private Database2Type database2Category;
+    private Database2Type database2Category;
     @XmlElement(name = "database_PDB_caveatCategory")
-     private DatabasePDBCaveatType databasePDBCaveatCategory;
+    private DatabasePDBCaveatType databasePDBCaveatCategory;
     @XmlElement(name = "database_PDB_matrixCategory")
-     private DatabasePDBMatrixType databasePDBMatrixCategory;
+    private DatabasePDBMatrixType databasePDBMatrixCategory;
     @XmlElement(name = "database_PDB_remarkCategory")
-     private DatabasePDBRemarkType databasePDBRemarkCategory;
+    private DatabasePDBRemarkType databasePDBRemarkCategory;
     @XmlElement(name = "database_PDB_revCategory")
-     private DatabasePDBRevType databasePDBRevCategory;
+    private DatabasePDBRevType databasePDBRevCategory;
     @XmlElement(name = "database_PDB_rev_recordCategory")
-     private DatabasePDBRevRecordType databasePDBRevRecordCategory;
+    private DatabasePDBRevRecordType databasePDBRevRecordCategory;
     @XmlElement(name = "database_PDB_tvectCategory")
-     private DatabasePDBTvectType databasePDBTvectCategory;
-     private DiffrnType diffrnCategory;
+    private DatabasePDBTvectType databasePDBTvectCategory;
+    private DiffrnType diffrnCategory;
     @XmlElement(name = "diffrn_attenuatorCategory")
-     private DiffrnAttenuatorType diffrnAttenuatorCategory;
+    private DiffrnAttenuatorType diffrnAttenuatorCategory;
     @XmlElement(name = "diffrn_detectorCategory")
-     private DiffrnDetectorType diffrnDetectorCategory;
+    private DiffrnDetectorType diffrnDetectorCategory;
     @XmlElement(name = "diffrn_measurementCategory")
-     private DiffrnMeasurementType diffrnMeasurementCategory;
+    private DiffrnMeasurementType diffrnMeasurementCategory;
     @XmlElement(name = "diffrn_orient_matrixCategory")
-     private DiffrnOrientMatrixType diffrnOrientMatrixCategory;
+    private DiffrnOrientMatrixType diffrnOrientMatrixCategory;
     @XmlElement(name = "diffrn_orient_reflnCategory")
-     private DiffrnOrientReflnType diffrnOrientReflnCategory;
+    private DiffrnOrientReflnType diffrnOrientReflnCategory;
     @XmlElement(name = "diffrn_radiationCategory")
-     private DiffrnRadiationType diffrnRadiationCategory;
+    private DiffrnRadiationType diffrnRadiationCategory;
     @XmlElement(name = "diffrn_radiation_wavelengthCategory")
-     private DiffrnRadiationWavelengthType diffrnRadiationWavelengthCategory;
+    private DiffrnRadiationWavelengthType diffrnRadiationWavelengthCategory;
     @XmlElement(name = "diffrn_reflnCategory")
-     private DiffrnReflnType diffrnReflnCategory;
+    private DiffrnReflnType diffrnReflnCategory;
     @XmlElement(name = "diffrn_reflnsCategory")
-     private DiffrnReflnsType diffrnReflnsCategory;
+    private DiffrnReflnsType diffrnReflnsCategory;
     @XmlElement(name = "diffrn_reflns_classCategory")
-     private DiffrnReflnsClassType diffrnReflnsClassCategory;
+    private DiffrnReflnsClassType diffrnReflnsClassCategory;
     @XmlElement(name = "diffrn_scale_groupCategory")
-     private DiffrnScaleGroupType diffrnScaleGroupCategory;
+    private DiffrnScaleGroupType diffrnScaleGroupCategory;
     @XmlElement(name = "diffrn_sourceCategory")
-     private DiffrnSourceType diffrnSourceCategory;
+    private DiffrnSourceType diffrnSourceCategory;
     @XmlElement(name = "diffrn_standard_reflnCategory")
-     private DiffrnStandardReflnType diffrnStandardReflnCategory;
+    private DiffrnStandardReflnType diffrnStandardReflnCategory;
     @XmlElement(name = "diffrn_standardsCategory")
-     private DiffrnStandardsType diffrnStandardsCategory;
+    private DiffrnStandardsType diffrnStandardsCategory;
     @XmlElement(name = "em_2d_crystal_entityCategory")
-     private Em2DCrystalEntityType em2DCrystalEntityCategory;
+    private Em2DCrystalEntityType em2DCrystalEntityCategory;
     @XmlElement(name = "em_2d_crystal_growCategory")
-     private Em2DCrystalGrowType em2DCrystalGrowCategory;
+    private Em2DCrystalGrowType em2DCrystalGrowCategory;
     @XmlElement(name = "em_2d_projection_selectionCategory")
-     private Em2DProjectionSelectionType em2DProjectionSelectionCategory;
+    private Em2DProjectionSelectionType em2DProjectionSelectionCategory;
     @XmlElement(name = "em_3d_fittingCategory")
-     private Em3DFittingType em3DFittingCategory;
+    private Em3DFittingType em3DFittingCategory;
     @XmlElement(name = "em_3d_fitting_listCategory")
-     private Em3DFittingListType em3DFittingListCategory;
+    private Em3DFittingListType em3DFittingListCategory;
     @XmlElement(name = "em_3d_reconstructionCategory")
-     private Em3DReconstructionType em3DReconstructionCategory;
+    private Em3DReconstructionType em3DReconstructionCategory;
     @XmlElement(name = "em_assemblyCategory")
-     private EmAssemblyType emAssemblyCategory;
+    private EmAssemblyType emAssemblyCategory;
     @XmlElement(name = "em_bufferCategory")
-     private EmBufferType emBufferCategory;
+    private EmBufferType emBufferCategory;
     @XmlElement(name = "em_buffer_componentsCategory")
-     private EmBufferComponentsType emBufferComponentsCategory;
+    private EmBufferComponentsType emBufferComponentsCategory;
     @XmlElement(name = "em_detectorCategory")
-     private EmDetectorType emDetectorCategory;
+    private EmDetectorType emDetectorCategory;
     @XmlElement(name = "em_electron_diffractionCategory")
-     private EmElectronDiffractionType emElectronDiffractionCategory;
+    private EmElectronDiffractionType emElectronDiffractionCategory;
     @XmlElement(name = "em_electron_diffraction_patternCategory")
-     private EmElectronDiffractionPatternType emElectronDiffractionPatternCategory;
+    private EmElectronDiffractionPatternType emElectronDiffractionPatternCategory;
     @XmlElement(name = "em_electron_diffraction_phaseCategory")
-     private EmElectronDiffractionPhaseType emElectronDiffractionPhaseCategory;
+    private EmElectronDiffractionPhaseType emElectronDiffractionPhaseCategory;
     @XmlElement(name = "em_entity_assemblyCategory")
-     private EmEntityAssemblyType emEntityAssemblyCategory;
+    private EmEntityAssemblyType emEntityAssemblyCategory;
     @XmlElement(name = "em_entity_assembly_listCategory")
-     private EmEntityAssemblyListType emEntityAssemblyListCategory;
+    private EmEntityAssemblyListType emEntityAssemblyListCategory;
     @XmlElement(name = "em_euler_angle_distributionCategory")
-     private EmEulerAngleDistributionType emEulerAngleDistributionCategory;
+    private EmEulerAngleDistributionType emEulerAngleDistributionCategory;
     @XmlElement(name = "em_experimentCategory")
-     private EmExperimentType emExperimentCategory;
+    private EmExperimentType emExperimentCategory;
     @XmlElement(name = "em_helical_entityCategory")
-     private EmHelicalEntityType emHelicalEntityCategory;
+    private EmHelicalEntityType emHelicalEntityCategory;
     @XmlElement(name = "em_icos_virus_shellsCategory")
-     private EmIcosVirusShellsType emIcosVirusShellsCategory;
+    private EmIcosVirusShellsType emIcosVirusShellsCategory;
     @XmlElement(name = "em_image_scansCategory")
-     private EmImageScansType emImageScansCategory;
+    private EmImageScansType emImageScansCategory;
     @XmlElement(name = "em_imagingCategory")
-     private EmImagingType emImagingCategory;
+    private EmImagingType emImagingCategory;
     @XmlElement(name = "em_sample_preparationCategory")
-     private EmSamplePreparationType emSamplePreparationCategory;
+    private EmSamplePreparationType emSamplePreparationCategory;
     @XmlElement(name = "em_sample_supportCategory")
-     private EmSampleSupportType emSampleSupportCategory;
+    private EmSampleSupportType emSampleSupportCategory;
     @XmlElement(name = "em_single_particle_entityCategory")
-     private EmSingleParticleEntityType emSingleParticleEntityCategory;
+    private EmSingleParticleEntityType emSingleParticleEntityCategory;
     @XmlElement(name = "em_virus_entityCategory")
-     private EmVirusEntityType emVirusEntityCategory;
+    private EmVirusEntityType emVirusEntityCategory;
     @XmlElement(name = "em_vitrificationCategory")
-     private EmVitrificationType emVitrificationCategory;
-     private EntityType entityCategory;
+    private EmVitrificationType emVitrificationCategory;
+    private EntityType entityCategory;
     @XmlElement(name = "entity_keywordsCategory")
-     private EntityKeywordsType entityKeywordsCategory;
+    private EntityKeywordsType entityKeywordsCategory;
     @XmlElement(name = "entity_linkCategory")
-     private EntityLinkType entityLinkCategory;
+    private EntityLinkType entityLinkCategory;
     @XmlElement(name = "entity_name_comCategory")
-     private EntityNameComType entityNameComCategory;
+    private EntityNameComType entityNameComCategory;
     @XmlElement(name = "entity_name_sysCategory")
-     private EntityNameSysType entityNameSysCategory;
+    private EntityNameSysType entityNameSysCategory;
     @XmlElement(name = "entity_polyCategory")
-     private EntityPolyType entityPolyCategory;
+    private EntityPolyType entityPolyCategory;
     @XmlElement(name = "entity_poly_seqCategory")
-     private EntityPolySeqType entityPolySeqCategory;
+    private EntityPolySeqType entityPolySeqCategory;
     @XmlElement(name = "entity_src_genCategory")
-     private EntitySrcGenType entitySrcGenCategory;
+    private EntitySrcGenType entitySrcGenCategory;
     @XmlElement(name = "entity_src_natCategory")
-     private EntitySrcNatType entitySrcNatCategory;
-     private EntryType entryCategory;
+    private EntitySrcNatType entitySrcNatCategory;
+    private EntryType entryCategory;
     @XmlElement(name = "entry_linkCategory")
-     private EntryLinkType entryLinkCategory;
-     private ExptlType exptlCategory;
+    private EntryLinkType entryLinkCategory;
+    private ExptlType exptlCategory;
     @XmlElement(name = "exptl_crystalCategory")
-     private ExptlCrystalType exptlCrystalCategory;
+    private ExptlCrystalType exptlCrystalCategory;
     @XmlElement(name = "exptl_crystal_faceCategory")
-     private ExptlCrystalFaceType exptlCrystalFaceCategory;
+    private ExptlCrystalFaceType exptlCrystalFaceCategory;
     @XmlElement(name = "exptl_crystal_growCategory")
-     private ExptlCrystalGrowType exptlCrystalGrowCategory;
+    private ExptlCrystalGrowType exptlCrystalGrowCategory;
     @XmlElement(name = "exptl_crystal_grow_compCategory")
-     private ExptlCrystalGrowCompType exptlCrystalGrowCompCategory;
-     private GeomType geomCategory;
+    private ExptlCrystalGrowCompType exptlCrystalGrowCompCategory;
+    private GeomType geomCategory;
     @XmlElement(name = "geom_angleCategory")
-     private GeomAngleType geomAngleCategory;
+    private GeomAngleType geomAngleCategory;
     @XmlElement(name = "geom_bondCategory")
-     private GeomBondType geomBondCategory;
+    private GeomBondType geomBondCategory;
     @XmlElement(name = "geom_contactCategory")
-     private GeomContactType geomContactCategory;
+    private GeomContactType geomContactCategory;
     @XmlElement(name = "geom_hbondCategory")
-     private GeomHbondType geomHbondCategory;
+    private GeomHbondType geomHbondCategory;
     @XmlElement(name = "geom_torsionCategory")
-     private GeomTorsionType geomTorsionCategory;
-     private JournalType journalCategory;
+    private GeomTorsionType geomTorsionCategory;
+    private JournalType journalCategory;
     @XmlElement(name = "journal_indexCategory")
-     private JournalIndexType journalIndexCategory;
+    private JournalIndexType journalIndexCategory;
     @XmlElement(name = "ndb_original_ndb_coordinatesCategory")
-     private NdbOriginalNdbCoordinatesType ndbOriginalNdbCoordinatesCategory;
+    private NdbOriginalNdbCoordinatesType ndbOriginalNdbCoordinatesCategory;
     @XmlElement(name = "ndb_struct_conf_naCategory")
-     private NdbStructConfNaType ndbStructConfNaCategory;
+    private NdbStructConfNaType ndbStructConfNaCategory;
     @XmlElement(name = "ndb_struct_feature_naCategory")
-     private NdbStructFeatureNaType ndbStructFeatureNaCategory;
+    private NdbStructFeatureNaType ndbStructFeatureNaCategory;
     @XmlElement(name = "ndb_struct_na_base_pairCategory")
-     private NdbStructNaBasePairType ndbStructNaBasePairCategory;
+    private NdbStructNaBasePairType ndbStructNaBasePairCategory;
     @XmlElement(name = "ndb_struct_na_base_pair_stepCategory")
-     private NdbStructNaBasePairStepType ndbStructNaBasePairStepCategory;
+    private NdbStructNaBasePairStepType ndbStructNaBasePairStepCategory;
     @XmlElement(name = "pdbx_SG_projectCategory")
-     private PdbxSGProjectType pdbxSGProjectCategory;
+    private PdbxSGProjectType pdbxSGProjectCategory;
     @XmlElement(name = "pdbx_atom_site_aniso_tlsCategory")
-     private PdbxAtomSiteAnisoTlsType pdbxAtomSiteAnisoTlsCategory;
+    private PdbxAtomSiteAnisoTlsType pdbxAtomSiteAnisoTlsCategory;
     @XmlElement(name = "pdbx_auditCategory")
-     private PdbxAuditType pdbxAuditCategory;
+    private PdbxAuditType pdbxAuditCategory;
     @XmlElement(name = "pdbx_audit_authorCategory")
-     private PdbxAuditAuthorType pdbxAuditAuthorCategory;
+    private PdbxAuditAuthorType pdbxAuditAuthorCategory;
     @XmlElement(name = "pdbx_audit_supportCategory")
-     private PdbxAuditSupportType pdbxAuditSupportCategory;
+    private PdbxAuditSupportType pdbxAuditSupportCategory;
     @XmlElement(name = "pdbx_bond_distance_limitsCategory")
-     private PdbxBondDistanceLimitsType pdbxBondDistanceLimitsCategory;
+    private PdbxBondDistanceLimitsType pdbxBondDistanceLimitsCategory;
     @XmlElement(name = "pdbx_bufferCategory")
-     private PdbxBufferType pdbxBufferCategory;
+    private PdbxBufferType pdbxBufferCategory;
     @XmlElement(name = "pdbx_buffer_componentsCategory")
-     private PdbxBufferComponentsType pdbxBufferComponentsCategory;
+    private PdbxBufferComponentsType pdbxBufferComponentsCategory;
     @XmlElement(name = "pdbx_chem_comp_atom_editCategory")
-     private PdbxChemCompAtomEditType pdbxChemCompAtomEditCategory;
+    private PdbxChemCompAtomEditType pdbxChemCompAtomEditCategory;
     @XmlElement(name = "pdbx_chem_comp_atom_featureCategory")
-     private PdbxChemCompAtomFeatureType pdbxChemCompAtomFeatureCategory;
+    private PdbxChemCompAtomFeatureType pdbxChemCompAtomFeatureCategory;
     @XmlElement(name = "pdbx_chem_comp_auditCategory")
-     private PdbxChemCompAuditType pdbxChemCompAuditCategory;
+    private PdbxChemCompAuditType pdbxChemCompAuditCategory;
     @XmlElement(name = "pdbx_chem_comp_bond_editCategory")
-     private PdbxChemCompBondEditType pdbxChemCompBondEditCategory;
+    private PdbxChemCompBondEditType pdbxChemCompBondEditCategory;
     @XmlElement(name = "pdbx_chem_comp_descriptorCategory")
-     private PdbxChemCompDescriptorType pdbxChemCompDescriptorCategory;
+    private PdbxChemCompDescriptorType pdbxChemCompDescriptorCategory;
     @XmlElement(name = "pdbx_chem_comp_featureCategory")
-     private PdbxChemCompFeatureType pdbxChemCompFeatureCategory;
+    private PdbxChemCompFeatureType pdbxChemCompFeatureCategory;
     @XmlElement(name = "pdbx_chem_comp_identifierCategory")
-     private PdbxChemCompIdentifierType pdbxChemCompIdentifierCategory;
+    private PdbxChemCompIdentifierType pdbxChemCompIdentifierCategory;
     @XmlElement(name = "pdbx_chem_comp_importCategory")
-     private PdbxChemCompImportType pdbxChemCompImportCategory;
+    private PdbxChemCompImportType pdbxChemCompImportCategory;
     @XmlElement(name = "pdbx_chem_comp_subcomponent_entity_listCategory")
-     private PdbxChemCompSubcomponentEntityListType pdbxChemCompSubcomponentEntityListCategory;
+    private PdbxChemCompSubcomponentEntityListType pdbxChemCompSubcomponentEntityListCategory;
     @XmlElement(name = "pdbx_chem_comp_subcomponent_struct_connCategory")
-     private PdbxChemCompSubcomponentStructConnType pdbxChemCompSubcomponentStructConnCategory;
+    private PdbxChemCompSubcomponentStructConnType pdbxChemCompSubcomponentStructConnCategory;
     @XmlElement(name = "pdbx_constructCategory")
-     private PdbxConstructType pdbxConstructCategory;
+    private PdbxConstructType pdbxConstructCategory;
     @XmlElement(name = "pdbx_construct_featureCategory")
-     private PdbxConstructFeatureType pdbxConstructFeatureCategory;
+    private PdbxConstructFeatureType pdbxConstructFeatureCategory;
     @XmlElement(name = "pdbx_contact_authorCategory")
-     private PdbxContactAuthorType pdbxContactAuthorCategory;
+    private PdbxContactAuthorType pdbxContactAuthorCategory;
     @XmlElement(name = "pdbx_coordinate_modelCategory")
-     private PdbxCoordinateModelType pdbxCoordinateModelCategory;
+    private PdbxCoordinateModelType pdbxCoordinateModelCategory;
     @XmlElement(name = "pdbx_database_PDB_obs_sprCategory")
-     private PdbxDatabasePDBObsSprType pdbxDatabasePDBObsSprCategory;
+    private PdbxDatabasePDBObsSprType pdbxDatabasePDBObsSprCategory;
     @XmlElement(name = "pdbx_database_messageCategory")
-     private PdbxDatabaseMessageType pdbxDatabaseMessageCategory;
+    private PdbxDatabaseMessageType pdbxDatabaseMessageCategory;
     @XmlElement(name = "pdbx_database_procCategory")
-     private PdbxDatabaseProcType pdbxDatabaseProcCategory;
+    private PdbxDatabaseProcType pdbxDatabaseProcCategory;
     @XmlElement(name = "pdbx_database_relatedCategory")
-     private PdbxDatabaseRelatedType pdbxDatabaseRelatedCategory;
+    private PdbxDatabaseRelatedType pdbxDatabaseRelatedCategory;
     @XmlElement(name = "pdbx_database_remarkCategory")
-     private PdbxDatabaseRemarkType pdbxDatabaseRemarkCategory;
+    private PdbxDatabaseRemarkType pdbxDatabaseRemarkCategory;
     @XmlElement(name = "pdbx_database_statusCategory")
-     private PdbxDatabaseStatusType pdbxDatabaseStatusCategory;
+    private PdbxDatabaseStatusType pdbxDatabaseStatusCategory;
     @XmlElement(name = "pdbx_diffrn_reflns_shellCategory")
-     private PdbxDiffrnReflnsShellType pdbxDiffrnReflnsShellCategory;
+    private PdbxDiffrnReflnsShellType pdbxDiffrnReflnsShellCategory;
     @XmlElement(name = "pdbx_distant_solvent_atomsCategory")
-     private PdbxDistantSolventAtomsType pdbxDistantSolventAtomsCategory;
+    private PdbxDistantSolventAtomsType pdbxDistantSolventAtomsCategory;
     @XmlElement(name = "pdbx_domainCategory")
-     private PdbxDomainType pdbxDomainCategory;
+    private PdbxDomainType pdbxDomainCategory;
     @XmlElement(name = "pdbx_domain_rangeCategory")
-     private PdbxDomainRangeType pdbxDomainRangeCategory;
+    private PdbxDomainRangeType pdbxDomainRangeCategory;
     @XmlElement(name = "pdbx_entity_assemblyCategory")
-     private PdbxEntityAssemblyType pdbxEntityAssemblyCategory;
+    private PdbxEntityAssemblyType pdbxEntityAssemblyCategory;
     @XmlElement(name = "pdbx_entity_nameCategory")
-     private PdbxEntityNameType pdbxEntityNameCategory;
+    private PdbxEntityNameType pdbxEntityNameCategory;
     @XmlElement(name = "pdbx_entity_nonpolyCategory")
-     private PdbxEntityNonpolyType pdbxEntityNonpolyCategory;
+    private PdbxEntityNonpolyType pdbxEntityNonpolyCategory;
     @XmlElement(name = "pdbx_entity_prod_protocolCategory")
-     private PdbxEntityProdProtocolType pdbxEntityProdProtocolCategory;
+    private PdbxEntityProdProtocolType pdbxEntityProdProtocolCategory;
     @XmlElement(name = "pdbx_entity_src_gen_characterCategory")
-     private PdbxEntitySrcGenCharacterType pdbxEntitySrcGenCharacterCategory;
+    private PdbxEntitySrcGenCharacterType pdbxEntitySrcGenCharacterCategory;
     @XmlElement(name = "pdbx_entity_src_gen_chromCategory")
-     private PdbxEntitySrcGenChromType pdbxEntitySrcGenChromCategory;
+    private PdbxEntitySrcGenChromType pdbxEntitySrcGenChromCategory;
     @XmlElement(name = "pdbx_entity_src_gen_cloneCategory")
-     private PdbxEntitySrcGenCloneType pdbxEntitySrcGenCloneCategory;
+    private PdbxEntitySrcGenCloneType pdbxEntitySrcGenCloneCategory;
     @XmlElement(name = "pdbx_entity_src_gen_clone_ligationCategory")
-     private PdbxEntitySrcGenCloneLigationType pdbxEntitySrcGenCloneLigationCategory;
+    private PdbxEntitySrcGenCloneLigationType pdbxEntitySrcGenCloneLigationCategory;
     @XmlElement(name = "pdbx_entity_src_gen_clone_recombinationCategory")
-     private PdbxEntitySrcGenCloneRecombinationType pdbxEntitySrcGenCloneRecombinationCategory;
+    private PdbxEntitySrcGenCloneRecombinationType pdbxEntitySrcGenCloneRecombinationCategory;
     @XmlElement(name = "pdbx_entity_src_gen_expressCategory")
-     private PdbxEntitySrcGenExpressType pdbxEntitySrcGenExpressCategory;
+    private PdbxEntitySrcGenExpressType pdbxEntitySrcGenExpressCategory;
     @XmlElement(name = "pdbx_entity_src_gen_express_timepointCategory")
-     private PdbxEntitySrcGenExpressTimepointType pdbxEntitySrcGenExpressTimepointCategory;
+    private PdbxEntitySrcGenExpressTimepointType pdbxEntitySrcGenExpressTimepointCategory;
     @XmlElement(name = "pdbx_entity_src_gen_fractCategory")
-     private PdbxEntitySrcGenFractType pdbxEntitySrcGenFractCategory;
+    private PdbxEntitySrcGenFractType pdbxEntitySrcGenFractCategory;
     @XmlElement(name = "pdbx_entity_src_gen_lysisCategory")
-     private PdbxEntitySrcGenLysisType pdbxEntitySrcGenLysisCategory;
+    private PdbxEntitySrcGenLysisType pdbxEntitySrcGenLysisCategory;
     @XmlElement(name = "pdbx_entity_src_gen_prod_digestCategory")
-     private PdbxEntitySrcGenProdDigestType pdbxEntitySrcGenProdDigestCategory;
+    private PdbxEntitySrcGenProdDigestType pdbxEntitySrcGenProdDigestCategory;
     @XmlElement(name = "pdbx_entity_src_gen_prod_otherCategory")
-     private PdbxEntitySrcGenProdOtherType pdbxEntitySrcGenProdOtherCategory;
+    private PdbxEntitySrcGenProdOtherType pdbxEntitySrcGenProdOtherCategory;
     @XmlElement(name = "pdbx_entity_src_gen_prod_other_parameterCategory")
-     private PdbxEntitySrcGenProdOtherParameterType pdbxEntitySrcGenProdOtherParameterCategory;
+    private PdbxEntitySrcGenProdOtherParameterType pdbxEntitySrcGenProdOtherParameterCategory;
     @XmlElement(name = "pdbx_entity_src_gen_prod_pcrCategory")
-     private PdbxEntitySrcGenProdPcrType pdbxEntitySrcGenProdPcrCategory;
+    private PdbxEntitySrcGenProdPcrType pdbxEntitySrcGenProdPcrCategory;
     @XmlElement(name = "pdbx_entity_src_gen_proteolysisCategory")
-     private PdbxEntitySrcGenProteolysisType pdbxEntitySrcGenProteolysisCategory;
+    private PdbxEntitySrcGenProteolysisType pdbxEntitySrcGenProteolysisCategory;
     @XmlElement(name = "pdbx_entity_src_gen_pureCategory")
-     private PdbxEntitySrcGenPureType pdbxEntitySrcGenPureCategory;
+    private PdbxEntitySrcGenPureType pdbxEntitySrcGenPureCategory;
     @XmlElement(name = "pdbx_entity_src_gen_refoldCategory")
-     private PdbxEntitySrcGenRefoldType pdbxEntitySrcGenRefoldCategory;
+    private PdbxEntitySrcGenRefoldType pdbxEntitySrcGenRefoldCategory;
     @XmlElement(name = "pdbx_entity_src_synCategory")
-     private PdbxEntitySrcSynType pdbxEntitySrcSynCategory;
+    private PdbxEntitySrcSynType pdbxEntitySrcSynCategory;
     @XmlElement(name = "pdbx_entry_detailsCategory")
-     private PdbxEntryDetailsType pdbxEntryDetailsCategory;
+    private PdbxEntryDetailsType pdbxEntryDetailsCategory;
     @XmlElement(name = "pdbx_exptl_crystal_cryo_treatmentCategory")
-     private PdbxExptlCrystalCryoTreatmentType pdbxExptlCrystalCryoTreatmentCategory;
+    private PdbxExptlCrystalCryoTreatmentType pdbxExptlCrystalCryoTreatmentCategory;
     @XmlElement(name = "pdbx_exptl_crystal_grow_compCategory")
-     private PdbxExptlCrystalGrowCompType pdbxExptlCrystalGrowCompCategory;
+    private PdbxExptlCrystalGrowCompType pdbxExptlCrystalGrowCompCategory;
     @XmlElement(name = "pdbx_exptl_crystal_grow_solCategory")
-     private PdbxExptlCrystalGrowSolType pdbxExptlCrystalGrowSolCategory;
+    private PdbxExptlCrystalGrowSolType pdbxExptlCrystalGrowSolCategory;
     @XmlElement(name = "pdbx_exptl_pdCategory")
-     private PdbxExptlPdType pdbxExptlPdCategory;
+    private PdbxExptlPdType pdbxExptlPdCategory;
     @XmlElement(name = "pdbx_family_group_indexCategory")
-     private PdbxFamilyGroupIndexType pdbxFamilyGroupIndexCategory;
+    private PdbxFamilyGroupIndexType pdbxFamilyGroupIndexCategory;
     @XmlElement(name = "pdbx_family_prd_auditCategory")
-     private PdbxFamilyPrdAuditType pdbxFamilyPrdAuditCategory;
+    private PdbxFamilyPrdAuditType pdbxFamilyPrdAuditCategory;
     @XmlElement(name = "pdbx_feature_assemblyCategory")
-     private PdbxFeatureAssemblyType pdbxFeatureAssemblyCategory;
+    private PdbxFeatureAssemblyType pdbxFeatureAssemblyCategory;
     @XmlElement(name = "pdbx_feature_domainCategory")
-     private PdbxFeatureDomainType pdbxFeatureDomainCategory;
+    private PdbxFeatureDomainType pdbxFeatureDomainCategory;
     @XmlElement(name = "pdbx_feature_entryCategory")
-     private PdbxFeatureEntryType pdbxFeatureEntryCategory;
+    private PdbxFeatureEntryType pdbxFeatureEntryCategory;
     @XmlElement(name = "pdbx_feature_monomerCategory")
-     private PdbxFeatureMonomerType pdbxFeatureMonomerCategory;
+    private PdbxFeatureMonomerType pdbxFeatureMonomerCategory;
     @XmlElement(name = "pdbx_feature_sequence_rangeCategory")
-     private PdbxFeatureSequenceRangeType pdbxFeatureSequenceRangeCategory;
+    private PdbxFeatureSequenceRangeType pdbxFeatureSequenceRangeCategory;
     @XmlElement(name = "pdbx_helical_symmetryCategory")
-     private PdbxHelicalSymmetryType pdbxHelicalSymmetryCategory;
+    private PdbxHelicalSymmetryType pdbxHelicalSymmetryCategory;
     @XmlElement(name = "pdbx_moleculeCategory")
-     private PdbxMoleculeType pdbxMoleculeCategory;
+    private PdbxMoleculeType pdbxMoleculeCategory;
     @XmlElement(name = "pdbx_molecule_featuresCategory")
-     private PdbxMoleculeFeaturesType pdbxMoleculeFeaturesCategory;
+    private PdbxMoleculeFeaturesType pdbxMoleculeFeaturesCategory;
     @XmlElement(name = "pdbx_nmr_assigned_chem_shift_listCategory")
-     private PdbxNmrAssignedChemShiftListType pdbxNmrAssignedChemShiftListCategory;
+    private PdbxNmrAssignedChemShiftListType pdbxNmrAssignedChemShiftListCategory;
     @XmlElement(name = "pdbx_nmr_chem_shift_experimentCategory")
-     private PdbxNmrChemShiftExperimentType pdbxNmrChemShiftExperimentCategory;
+    private PdbxNmrChemShiftExperimentType pdbxNmrChemShiftExperimentCategory;
     @XmlElement(name = "pdbx_nmr_chem_shift_refCategory")
-     private PdbxNmrChemShiftRefType pdbxNmrChemShiftRefCategory;
+    private PdbxNmrChemShiftRefType pdbxNmrChemShiftRefCategory;
     @XmlElement(name = "pdbx_nmr_chem_shift_referenceCategory")
-     private PdbxNmrChemShiftReferenceType pdbxNmrChemShiftReferenceCategory;
+    private PdbxNmrChemShiftReferenceType pdbxNmrChemShiftReferenceCategory;
     @XmlElement(name = "pdbx_nmr_chem_shift_softwareCategory")
-     private PdbxNmrChemShiftSoftwareType pdbxNmrChemShiftSoftwareCategory;
+    private PdbxNmrChemShiftSoftwareType pdbxNmrChemShiftSoftwareCategory;
     @XmlElement(name = "pdbx_nmr_constraint_fileCategory")
-     private PdbxNmrConstraintFileType pdbxNmrConstraintFileCategory;
+    private PdbxNmrConstraintFileType pdbxNmrConstraintFileCategory;
     @XmlElement(name = "pdbx_nmr_constraintsCategory")
-     private PdbxNmrConstraintsType pdbxNmrConstraintsCategory;
+    private PdbxNmrConstraintsType pdbxNmrConstraintsCategory;
     @XmlElement(name = "pdbx_nmr_detailsCategory")
-     private PdbxNmrDetailsType pdbxNmrDetailsCategory;
+    private PdbxNmrDetailsType pdbxNmrDetailsCategory;
     @XmlElement(name = "pdbx_nmr_ensembleCategory")
-     private PdbxNmrEnsembleType pdbxNmrEnsembleCategory;
+    private PdbxNmrEnsembleType pdbxNmrEnsembleCategory;
     @XmlElement(name = "pdbx_nmr_ensemble_rmsCategory")
-     private PdbxNmrEnsembleRmsType pdbxNmrEnsembleRmsCategory;
+    private PdbxNmrEnsembleRmsType pdbxNmrEnsembleRmsCategory;
     @XmlElement(name = "pdbx_nmr_exptlCategory")
-     private PdbxNmrExptlType pdbxNmrExptlCategory;
+    private PdbxNmrExptlType pdbxNmrExptlCategory;
     @XmlElement(name = "pdbx_nmr_exptl_sampleCategory")
-     private PdbxNmrExptlSampleType pdbxNmrExptlSampleCategory;
+    private PdbxNmrExptlSampleType pdbxNmrExptlSampleCategory;
     @XmlElement(name = "pdbx_nmr_exptl_sample_conditionsCategory")
-     private PdbxNmrExptlSampleConditionsType pdbxNmrExptlSampleConditionsCategory;
+    private PdbxNmrExptlSampleConditionsType pdbxNmrExptlSampleConditionsCategory;
     @XmlElement(name = "pdbx_nmr_force_constantsCategory")
-     private PdbxNmrForceConstantsType pdbxNmrForceConstantsCategory;
+    private PdbxNmrForceConstantsType pdbxNmrForceConstantsCategory;
     @XmlElement(name = "pdbx_nmr_refineCategory")
-     private PdbxNmrRefineType pdbxNmrRefineCategory;
+    private PdbxNmrRefineType pdbxNmrRefineCategory;
     @XmlElement(name = "pdbx_nmr_representativeCategory")
-     private PdbxNmrRepresentativeType pdbxNmrRepresentativeCategory;
+    private PdbxNmrRepresentativeType pdbxNmrRepresentativeCategory;
     @XmlElement(name = "pdbx_nmr_sample_detailsCategory")
-     private PdbxNmrSampleDetailsType pdbxNmrSampleDetailsCategory;
+    private PdbxNmrSampleDetailsType pdbxNmrSampleDetailsCategory;
     @XmlElement(name = "pdbx_nmr_softwareCategory")
-     private PdbxNmrSoftwareType pdbxNmrSoftwareCategory;
+    private PdbxNmrSoftwareType pdbxNmrSoftwareCategory;
     @XmlElement(name = "pdbx_nmr_software_taskCategory")
-     private PdbxNmrSoftwareTaskType pdbxNmrSoftwareTaskCategory;
+    private PdbxNmrSoftwareTaskType pdbxNmrSoftwareTaskCategory;
     @XmlElement(name = "pdbx_nmr_spectral_dimCategory")
-     private PdbxNmrSpectralDimType pdbxNmrSpectralDimCategory;
+    private PdbxNmrSpectralDimType pdbxNmrSpectralDimCategory;
     @XmlElement(name = "pdbx_nmr_spectral_peak_listCategory")
-     private PdbxNmrSpectralPeakListType pdbxNmrSpectralPeakListCategory;
+    private PdbxNmrSpectralPeakListType pdbxNmrSpectralPeakListCategory;
     @XmlElement(name = "pdbx_nmr_spectral_peak_softwareCategory")
-     private PdbxNmrSpectralPeakSoftwareType pdbxNmrSpectralPeakSoftwareCategory;
+    private PdbxNmrSpectralPeakSoftwareType pdbxNmrSpectralPeakSoftwareCategory;
     @XmlElement(name = "pdbx_nmr_spectrometerCategory")
-     private PdbxNmrSpectrometerType pdbxNmrSpectrometerCategory;
+    private PdbxNmrSpectrometerType pdbxNmrSpectrometerCategory;
     @XmlElement(name = "pdbx_nmr_systematic_chem_shift_offsetCategory")
-     private PdbxNmrSystematicChemShiftOffsetType pdbxNmrSystematicChemShiftOffsetCategory;
+    private PdbxNmrSystematicChemShiftOffsetType pdbxNmrSystematicChemShiftOffsetCategory;
     @XmlElement(name = "pdbx_nmr_uploadCategory")
-     private PdbxNmrUploadType pdbxNmrUploadCategory;
+    private PdbxNmrUploadType pdbxNmrUploadCategory;
     @XmlElement(name = "pdbx_nonpoly_schemeCategory")
-     private PdbxNonpolySchemeType pdbxNonpolySchemeCategory;
+    private PdbxNonpolySchemeType pdbxNonpolySchemeCategory;
     @XmlElement(name = "pdbx_phasing_MAD_setCategory")
-     private PdbxPhasingMADSetType pdbxPhasingMADSetCategory;
+    private PdbxPhasingMADSetType pdbxPhasingMADSetCategory;
     @XmlElement(name = "pdbx_phasing_MAD_set_shellCategory")
-     private PdbxPhasingMADSetShellType pdbxPhasingMADSetShellCategory;
+    private PdbxPhasingMADSetShellType pdbxPhasingMADSetShellCategory;
     @XmlElement(name = "pdbx_phasing_MAD_set_siteCategory")
-     private PdbxPhasingMADSetSiteType pdbxPhasingMADSetSiteCategory;
+    private PdbxPhasingMADSetSiteType pdbxPhasingMADSetSiteCategory;
     @XmlElement(name = "pdbx_phasing_MAD_shellCategory")
-     private PdbxPhasingMADShellType pdbxPhasingMADShellCategory;
+    private PdbxPhasingMADShellType pdbxPhasingMADShellCategory;
     @XmlElement(name = "pdbx_phasing_MRCategory")
-     private PdbxPhasingMRType pdbxPhasingMRCategory;
+    private PdbxPhasingMRType pdbxPhasingMRCategory;
     @XmlElement(name = "pdbx_phasing_dmCategory")
-     private PdbxPhasingDmType pdbxPhasingDmCategory;
+    private PdbxPhasingDmType pdbxPhasingDmCategory;
     @XmlElement(name = "pdbx_phasing_dm_shellCategory")
-     private PdbxPhasingDmShellType pdbxPhasingDmShellCategory;
+    private PdbxPhasingDmShellType pdbxPhasingDmShellCategory;
     @XmlElement(name = "pdbx_point_symmetryCategory")
-     private PdbxPointSymmetryType pdbxPointSymmetryCategory;
+    private PdbxPointSymmetryType pdbxPointSymmetryCategory;
     @XmlElement(name = "pdbx_poly_seq_schemeCategory")
-     private PdbxPolySeqSchemeType pdbxPolySeqSchemeCategory;
+    private PdbxPolySeqSchemeType pdbxPolySeqSchemeCategory;
     @XmlElement(name = "pdbx_prd_auditCategory")
-     private PdbxPrdAuditType pdbxPrdAuditCategory;
+    private PdbxPrdAuditType pdbxPrdAuditCategory;
     @XmlElement(name = "pdbx_prerelease_seqCategory")
-     private PdbxPrereleaseSeqType pdbxPrereleaseSeqCategory;
+    private PdbxPrereleaseSeqType pdbxPrereleaseSeqCategory;
     @XmlElement(name = "pdbx_re_refinementCategory")
-     private PdbxReRefinementType pdbxReRefinementCategory;
+    private PdbxReRefinementType pdbxReRefinementCategory;
     @XmlElement(name = "pdbx_reference_entity_linkCategory")
-     private PdbxReferenceEntityLinkType pdbxReferenceEntityLinkCategory;
+    private PdbxReferenceEntityLinkType pdbxReferenceEntityLinkCategory;
     @XmlElement(name = "pdbx_reference_entity_listCategory")
-     private PdbxReferenceEntityListType pdbxReferenceEntityListCategory;
+    private PdbxReferenceEntityListType pdbxReferenceEntityListCategory;
     @XmlElement(name = "pdbx_reference_entity_nonpolyCategory")
-     private PdbxReferenceEntityNonpolyType pdbxReferenceEntityNonpolyCategory;
+    private PdbxReferenceEntityNonpolyType pdbxReferenceEntityNonpolyCategory;
     @XmlElement(name = "pdbx_reference_entity_polyCategory")
-     private PdbxReferenceEntityPolyType pdbxReferenceEntityPolyCategory;
+    private PdbxReferenceEntityPolyType pdbxReferenceEntityPolyCategory;
     @XmlElement(name = "pdbx_reference_entity_poly_linkCategory")
-     private PdbxReferenceEntityPolyLinkType pdbxReferenceEntityPolyLinkCategory;
+    private PdbxReferenceEntityPolyLinkType pdbxReferenceEntityPolyLinkCategory;
     @XmlElement(name = "pdbx_reference_entity_poly_seqCategory")
-     private PdbxReferenceEntityPolySeqType pdbxReferenceEntityPolySeqCategory;
+    private PdbxReferenceEntityPolySeqType pdbxReferenceEntityPolySeqCategory;
     @XmlElement(name = "pdbx_reference_entity_sequenceCategory")
-     private PdbxReferenceEntitySequenceType pdbxReferenceEntitySequenceCategory;
+    private PdbxReferenceEntitySequenceType pdbxReferenceEntitySequenceCategory;
     @XmlElement(name = "pdbx_reference_entity_src_natCategory")
-     private PdbxReferenceEntitySrcNatType pdbxReferenceEntitySrcNatCategory;
+    private PdbxReferenceEntitySrcNatType pdbxReferenceEntitySrcNatCategory;
     @XmlElement(name = "pdbx_reference_entity_subcomponentsCategory")
-     private PdbxReferenceEntitySubcomponentsType pdbxReferenceEntitySubcomponentsCategory;
+    private PdbxReferenceEntitySubcomponentsType pdbxReferenceEntitySubcomponentsCategory;
     @XmlElement(name = "pdbx_reference_moleculeCategory")
-     private PdbxReferenceMoleculeType pdbxReferenceMoleculeCategory;
+    private PdbxReferenceMoleculeType pdbxReferenceMoleculeCategory;
     @XmlElement(name = "pdbx_reference_molecule_annotationCategory")
-     private PdbxReferenceMoleculeAnnotationType pdbxReferenceMoleculeAnnotationCategory;
+    private PdbxReferenceMoleculeAnnotationType pdbxReferenceMoleculeAnnotationCategory;
     @XmlElement(name = "pdbx_reference_molecule_detailsCategory")
-     private PdbxReferenceMoleculeDetailsType pdbxReferenceMoleculeDetailsCategory;
+    private PdbxReferenceMoleculeDetailsType pdbxReferenceMoleculeDetailsCategory;
     @XmlElement(name = "pdbx_reference_molecule_familyCategory")
-     private PdbxReferenceMoleculeFamilyType pdbxReferenceMoleculeFamilyCategory;
+    private PdbxReferenceMoleculeFamilyType pdbxReferenceMoleculeFamilyCategory;
     @XmlElement(name = "pdbx_reference_molecule_featuresCategory")
-     private PdbxReferenceMoleculeFeaturesType pdbxReferenceMoleculeFeaturesCategory;
+    private PdbxReferenceMoleculeFeaturesType pdbxReferenceMoleculeFeaturesCategory;
     @XmlElement(name = "pdbx_reference_molecule_listCategory")
-     private PdbxReferenceMoleculeListType pdbxReferenceMoleculeListCategory;
+    private PdbxReferenceMoleculeListType pdbxReferenceMoleculeListCategory;
     @XmlElement(name = "pdbx_reference_molecule_related_structuresCategory")
-     private PdbxReferenceMoleculeRelatedStructuresType pdbxReferenceMoleculeRelatedStructuresCategory;
+    private PdbxReferenceMoleculeRelatedStructuresType pdbxReferenceMoleculeRelatedStructuresCategory;
     @XmlElement(name = "pdbx_reference_molecule_synonymsCategory")
-     private PdbxReferenceMoleculeSynonymsType pdbxReferenceMoleculeSynonymsCategory;
+    private PdbxReferenceMoleculeSynonymsType pdbxReferenceMoleculeSynonymsCategory;
     @XmlElement(name = "pdbx_reference_publication_listCategory")
-     private PdbxReferencePublicationListType pdbxReferencePublicationListCategory;
+    private PdbxReferencePublicationListType pdbxReferencePublicationListCategory;
     @XmlElement(name = "pdbx_refineCategory")
-     private PdbxRefineType pdbxRefineCategory;
+    private PdbxRefineType pdbxRefineCategory;
     @XmlElement(name = "pdbx_refine_aux_fileCategory")
-     private PdbxRefineAuxFileType pdbxRefineAuxFileCategory;
+    private PdbxRefineAuxFileType pdbxRefineAuxFileCategory;
     @XmlElement(name = "pdbx_refine_componentCategory")
-     private PdbxRefineComponentType pdbxRefineComponentCategory;
+    private PdbxRefineComponentType pdbxRefineComponentCategory;
     @XmlElement(name = "pdbx_refine_tlsCategory")
-     private PdbxRefineTlsType pdbxRefineTlsCategory;
+    private PdbxRefineTlsType pdbxRefineTlsCategory;
     @XmlElement(name = "pdbx_refine_tls_groupCategory")
-     private PdbxRefineTlsGroupType pdbxRefineTlsGroupCategory;
+    private PdbxRefineTlsGroupType pdbxRefineTlsGroupCategory;
     @XmlElement(name = "pdbx_reflns_twinCategory")
-     private PdbxReflnsTwinType pdbxReflnsTwinCategory;
+    private PdbxReflnsTwinType pdbxReflnsTwinCategory;
     @XmlElement(name = "pdbx_related_exp_data_setCategory")
-     private PdbxRelatedExpDataSetType pdbxRelatedExpDataSetCategory;
+    private PdbxRelatedExpDataSetType pdbxRelatedExpDataSetCategory;
     @XmlElement(name = "pdbx_remediation_atom_site_mappingCategory")
-     private PdbxRemediationAtomSiteMappingType pdbxRemediationAtomSiteMappingCategory;
+    private PdbxRemediationAtomSiteMappingType pdbxRemediationAtomSiteMappingCategory;
     @XmlElement(name = "pdbx_robot_systemCategory")
-     private PdbxRobotSystemType pdbxRobotSystemCategory;
+    private PdbxRobotSystemType pdbxRobotSystemCategory;
     @XmlElement(name = "pdbx_sequence_rangeCategory")
-     private PdbxSequenceRangeType pdbxSequenceRangeCategory;
+    private PdbxSequenceRangeType pdbxSequenceRangeCategory;
     @XmlElement(name = "pdbx_soln_scatterCategory")
-     private PdbxSolnScatterType pdbxSolnScatterCategory;
+    private PdbxSolnScatterType pdbxSolnScatterCategory;
     @XmlElement(name = "pdbx_soln_scatter_modelCategory")
-     private PdbxSolnScatterModelType pdbxSolnScatterModelCategory;
+    private PdbxSolnScatterModelType pdbxSolnScatterModelCategory;
     @XmlElement(name = "pdbx_struct_assemblyCategory")
-     private PdbxStructAssemblyType pdbxStructAssemblyCategory;
+    private PdbxStructAssemblyType pdbxStructAssemblyCategory;
     @XmlElement(name = "pdbx_struct_assembly_genCategory")
-     private PdbxStructAssemblyGenType pdbxStructAssemblyGenCategory;
+    private PdbxStructAssemblyGenType pdbxStructAssemblyGenCategory;
     @XmlElement(name = "pdbx_struct_assembly_propCategory")
-     private PdbxStructAssemblyPropType pdbxStructAssemblyPropCategory;
+    private PdbxStructAssemblyPropType pdbxStructAssemblyPropCategory;
     @XmlElement(name = "pdbx_struct_asym_genCategory")
-     private PdbxStructAsymGenType pdbxStructAsymGenCategory;
+    private PdbxStructAsymGenType pdbxStructAsymGenCategory;
     @XmlElement(name = "pdbx_struct_chem_comp_diagnosticsCategory")
-     private PdbxStructChemCompDiagnosticsType pdbxStructChemCompDiagnosticsCategory;
+    private PdbxStructChemCompDiagnosticsType pdbxStructChemCompDiagnosticsCategory;
     @XmlElement(name = "pdbx_struct_chem_comp_featureCategory")
-     private PdbxStructChemCompFeatureType pdbxStructChemCompFeatureCategory;
+    private PdbxStructChemCompFeatureType pdbxStructChemCompFeatureCategory;
     @XmlElement(name = "pdbx_struct_conn_angleCategory")
-     private PdbxStructConnAngleType pdbxStructConnAngleCategory;
+    private PdbxStructConnAngleType pdbxStructConnAngleCategory;
     @XmlElement(name = "pdbx_struct_entity_instCategory")
-     private PdbxStructEntityInstType pdbxStructEntityInstCategory;
+    private PdbxStructEntityInstType pdbxStructEntityInstCategory;
     @XmlElement(name = "pdbx_struct_group_component_rangeCategory")
-     private PdbxStructGroupComponentRangeType pdbxStructGroupComponentRangeCategory;
+    private PdbxStructGroupComponentRangeType pdbxStructGroupComponentRangeCategory;
     @XmlElement(name = "pdbx_struct_group_componentsCategory")
-     private PdbxStructGroupComponentsType pdbxStructGroupComponentsCategory;
+    private PdbxStructGroupComponentsType pdbxStructGroupComponentsCategory;
     @XmlElement(name = "pdbx_struct_group_listCategory")
-     private PdbxStructGroupListType pdbxStructGroupListCategory;
+    private PdbxStructGroupListType pdbxStructGroupListCategory;
     @XmlElement(name = "pdbx_struct_infoCategory")
-     private PdbxStructInfoType pdbxStructInfoCategory;
+    private PdbxStructInfoType pdbxStructInfoCategory;
     @XmlElement(name = "pdbx_struct_legacy_oper_listCategory")
-     private PdbxStructLegacyOperListType pdbxStructLegacyOperListCategory;
+    private PdbxStructLegacyOperListType pdbxStructLegacyOperListCategory;
     @XmlElement(name = "pdbx_struct_mod_residueCategory")
-     private PdbxStructModResidueType pdbxStructModResidueCategory;
+    private PdbxStructModResidueType pdbxStructModResidueCategory;
     @XmlElement(name = "pdbx_struct_msym_genCategory")
-     private PdbxStructMsymGenType pdbxStructMsymGenCategory;
+    private PdbxStructMsymGenType pdbxStructMsymGenCategory;
     @XmlElement(name = "pdbx_struct_oper_listCategory")
-     private PdbxStructOperListType pdbxStructOperListCategory;
+    private PdbxStructOperListType pdbxStructOperListCategory;
     @XmlElement(name = "pdbx_struct_ref_seq_deletionCategory")
-     private PdbxStructRefSeqDeletionType pdbxStructRefSeqDeletionCategory;
+    private PdbxStructRefSeqDeletionType pdbxStructRefSeqDeletionCategory;
     @XmlElement(name = "pdbx_struct_ref_seq_featureCategory")
-     private PdbxStructRefSeqFeatureType pdbxStructRefSeqFeatureCategory;
+    private PdbxStructRefSeqFeatureType pdbxStructRefSeqFeatureCategory;
     @XmlElement(name = "pdbx_struct_ref_seq_feature_propCategory")
-     private PdbxStructRefSeqFeaturePropType pdbxStructRefSeqFeaturePropCategory;
+    private PdbxStructRefSeqFeaturePropType pdbxStructRefSeqFeaturePropCategory;
     @XmlElement(name = "pdbx_struct_ref_seq_insertionCategory")
-     private PdbxStructRefSeqInsertionType pdbxStructRefSeqInsertionCategory;
+    private PdbxStructRefSeqInsertionType pdbxStructRefSeqInsertionCategory;
     @XmlElement(name = "pdbx_struct_sheet_hbondCategory")
-     private PdbxStructSheetHbondType pdbxStructSheetHbondCategory;
+    private PdbxStructSheetHbondType pdbxStructSheetHbondCategory;
     @XmlElement(name = "pdbx_struct_special_symmetryCategory")
-     private PdbxStructSpecialSymmetryType pdbxStructSpecialSymmetryCategory;
+    private PdbxStructSpecialSymmetryType pdbxStructSpecialSymmetryCategory;
     @XmlElement(name = "pdbx_unobs_or_zero_occ_atomsCategory")
-     private PdbxUnobsOrZeroOccAtomsType pdbxUnobsOrZeroOccAtomsCategory;
+    private PdbxUnobsOrZeroOccAtomsType pdbxUnobsOrZeroOccAtomsCategory;
     @XmlElement(name = "pdbx_unobs_or_zero_occ_residuesCategory")
-     private PdbxUnobsOrZeroOccResiduesType pdbxUnobsOrZeroOccResiduesCategory;
+    private PdbxUnobsOrZeroOccResiduesType pdbxUnobsOrZeroOccResiduesCategory;
     @XmlElement(name = "pdbx_validate_chiralCategory")
-     private PdbxValidateChiralType pdbxValidateChiralCategory;
+    private PdbxValidateChiralType pdbxValidateChiralCategory;
     @XmlElement(name = "pdbx_validate_close_contactCategory")
-     private PdbxValidateCloseContactType pdbxValidateCloseContactCategory;
+    private PdbxValidateCloseContactType pdbxValidateCloseContactCategory;
     @XmlElement(name = "pdbx_validate_main_chain_planeCategory")
-     private PdbxValidateMainChainPlaneType pdbxValidateMainChainPlaneCategory;
+    private PdbxValidateMainChainPlaneType pdbxValidateMainChainPlaneCategory;
     @XmlElement(name = "pdbx_validate_peptide_omegaCategory")
-     private PdbxValidatePeptideOmegaType pdbxValidatePeptideOmegaCategory;
+    private PdbxValidatePeptideOmegaType pdbxValidatePeptideOmegaCategory;
     @XmlElement(name = "pdbx_validate_planesCategory")
-     private PdbxValidatePlanesType pdbxValidatePlanesCategory;
+    private PdbxValidatePlanesType pdbxValidatePlanesCategory;
     @XmlElement(name = "pdbx_validate_planes_atomCategory")
-     private PdbxValidatePlanesAtomType pdbxValidatePlanesAtomCategory;
+    private PdbxValidatePlanesAtomType pdbxValidatePlanesAtomCategory;
     @XmlElement(name = "pdbx_validate_polymer_linkageCategory")
-     private PdbxValidatePolymerLinkageType pdbxValidatePolymerLinkageCategory;
+    private PdbxValidatePolymerLinkageType pdbxValidatePolymerLinkageCategory;
     @XmlElement(name = "pdbx_validate_rmsd_angleCategory")
-     private PdbxValidateRmsdAngleType pdbxValidateRmsdAngleCategory;
+    private PdbxValidateRmsdAngleType pdbxValidateRmsdAngleCategory;
     @XmlElement(name = "pdbx_validate_rmsd_bondCategory")
-     private PdbxValidateRmsdBondType pdbxValidateRmsdBondCategory;
+    private PdbxValidateRmsdBondType pdbxValidateRmsdBondCategory;
     @XmlElement(name = "pdbx_validate_symm_contactCategory")
-     private PdbxValidateSymmContactType pdbxValidateSymmContactCategory;
+    private PdbxValidateSymmContactType pdbxValidateSymmContactCategory;
     @XmlElement(name = "pdbx_validate_torsionCategory")
-     private PdbxValidateTorsionType pdbxValidateTorsionCategory;
+    private PdbxValidateTorsionType pdbxValidateTorsionCategory;
     @XmlElement(name = "pdbx_versionCategory")
-     private PdbxVersionType pdbxVersionCategory;
+    private PdbxVersionType pdbxVersionCategory;
     @XmlElement(name = "pdbx_xplor_fileCategory")
-     private PdbxXplorFileType pdbxXplorFileCategory;
-     private PhasingType phasingCategory;
+    private PdbxXplorFileType pdbxXplorFileCategory;
+    private PhasingType phasingCategory;
     @XmlElement(name = "phasing_MADCategory")
-     private PhasingMADType phasingMADCategory;
+    private PhasingMADType phasingMADCategory;
     @XmlElement(name = "phasing_MAD_clustCategory")
-     private PhasingMADClustType phasingMADClustCategory;
+    private PhasingMADClustType phasingMADClustCategory;
     @XmlElement(name = "phasing_MAD_exptCategory")
-     private PhasingMADExptType phasingMADExptCategory;
+    private PhasingMADExptType phasingMADExptCategory;
     @XmlElement(name = "phasing_MAD_ratioCategory")
-     private PhasingMADRatioType phasingMADRatioCategory;
+    private PhasingMADRatioType phasingMADRatioCategory;
     @XmlElement(name = "phasing_MAD_setCategory")
-     private PhasingMADSetType phasingMADSetCategory;
+    private PhasingMADSetType phasingMADSetCategory;
     @XmlElement(name = "phasing_MIRCategory")
-     private PhasingMIRType phasingMIRCategory;
+    private PhasingMIRType phasingMIRCategory;
     @XmlElement(name = "phasing_MIR_derCategory")
-     private PhasingMIRDerType phasingMIRDerCategory;
+    private PhasingMIRDerType phasingMIRDerCategory;
     @XmlElement(name = "phasing_MIR_der_reflnCategory")
-     private PhasingMIRDerReflnType phasingMIRDerReflnCategory;
+    private PhasingMIRDerReflnType phasingMIRDerReflnCategory;
     @XmlElement(name = "phasing_MIR_der_shellCategory")
-     private PhasingMIRDerShellType phasingMIRDerShellCategory;
+    private PhasingMIRDerShellType phasingMIRDerShellCategory;
     @XmlElement(name = "phasing_MIR_der_siteCategory")
-     private PhasingMIRDerSiteType phasingMIRDerSiteCategory;
+    private PhasingMIRDerSiteType phasingMIRDerSiteCategory;
     @XmlElement(name = "phasing_MIR_shellCategory")
-     private PhasingMIRShellType phasingMIRShellCategory;
+    private PhasingMIRShellType phasingMIRShellCategory;
     @XmlElement(name = "phasing_averagingCategory")
-     private PhasingAveragingType phasingAveragingCategory;
+    private PhasingAveragingType phasingAveragingCategory;
     @XmlElement(name = "phasing_isomorphousCategory")
-     private PhasingIsomorphousType phasingIsomorphousCategory;
+    private PhasingIsomorphousType phasingIsomorphousCategory;
     @XmlElement(name = "phasing_setCategory")
-     private PhasingSetType phasingSetCategory;
+    private PhasingSetType phasingSetCategory;
     @XmlElement(name = "phasing_set_reflnCategory")
-     private PhasingSetReflnType phasingSetReflnCategory;
-     private PublType publCategory;
+    private PhasingSetReflnType phasingSetReflnCategory;
+    private PublType publCategory;
     @XmlElement(name = "publ_authorCategory")
-     private PublAuthorType publAuthorCategory;
+    private PublAuthorType publAuthorCategory;
     @XmlElement(name = "publ_bodyCategory")
-     private PublBodyType publBodyCategory;
+    private PublBodyType publBodyCategory;
     @XmlElement(name = "publ_manuscript_inclCategory")
-     private PublManuscriptInclType publManuscriptInclCategory;
-     private RefineType refineCategory;
+    private PublManuscriptInclType publManuscriptInclCategory;
+    private RefineType refineCategory;
     @XmlElement(name = "refine_B_isoCategory")
-     private RefineBIsoType refineBIsoCategory;
+    private RefineBIsoType refineBIsoCategory;
     @XmlElement(name = "refine_analyzeCategory")
-     private RefineAnalyzeType refineAnalyzeCategory;
+    private RefineAnalyzeType refineAnalyzeCategory;
     @XmlElement(name = "refine_funct_minimizedCategory")
-     private RefineFunctMinimizedType refineFunctMinimizedCategory;
+    private RefineFunctMinimizedType refineFunctMinimizedCategory;
     @XmlElement(name = "refine_histCategory")
-     private RefineHistType refineHistCategory;
+    private RefineHistType refineHistCategory;
     @XmlElement(name = "refine_ls_classCategory")
-     private RefineLsClassType refineLsClassCategory;
+    private RefineLsClassType refineLsClassCategory;
     @XmlElement(name = "refine_ls_restrCategory")
-     private RefineLsRestrType refineLsRestrCategory;
+    private RefineLsRestrType refineLsRestrCategory;
     @XmlElement(name = "refine_ls_restr_ncsCategory")
-     private RefineLsRestrNcsType refineLsRestrNcsCategory;
+    private RefineLsRestrNcsType refineLsRestrNcsCategory;
     @XmlElement(name = "refine_ls_restr_typeCategory")
-     private RefineLsRestrTypeType refineLsRestrTypeCategory;
+    private RefineLsRestrTypeType refineLsRestrTypeCategory;
     @XmlElement(name = "refine_ls_shellCategory")
-     private RefineLsShellType refineLsShellCategory;
+    private RefineLsShellType refineLsShellCategory;
     @XmlElement(name = "refine_occupancyCategory")
-     private RefineOccupancyType refineOccupancyCategory;
-     private ReflnType reflnCategory;
+    private RefineOccupancyType refineOccupancyCategory;
+    private ReflnType reflnCategory;
     @XmlElement(name = "refln_sys_absCategory")
-     private ReflnSysAbsType reflnSysAbsCategory;
-     private ReflnsType reflnsCategory;
+    private ReflnSysAbsType reflnSysAbsCategory;
+    private ReflnsType reflnsCategory;
     @XmlElement(name = "reflns_classCategory")
-     private ReflnsClassType reflnsClassCategory;
+    private ReflnsClassType reflnsClassCategory;
     @XmlElement(name = "reflns_scaleCategory")
-     private ReflnsScaleType reflnsScaleCategory;
+    private ReflnsScaleType reflnsScaleCategory;
     @XmlElement(name = "reflns_shellCategory")
-     private ReflnsShellType reflnsShellCategory;
-     private SoftwareType softwareCategory;
+    private ReflnsShellType reflnsShellCategory;
+    private SoftwareType softwareCategory;
     @XmlElement(name = "space_groupCategory")
-     private SpaceGroupType spaceGroupCategory;
+    private SpaceGroupType spaceGroupCategory;
     @XmlElement(name = "space_group_symopCategory")
-     private SpaceGroupSymopType spaceGroupSymopCategory;
-     private StructType structCategory;
+    private SpaceGroupSymopType spaceGroupSymopCategory;
+    private StructType structCategory;
     @XmlElement(name = "struct_asymCategory")
-     private StructAsymType structAsymCategory;
+    private StructAsymType structAsymCategory;
     @XmlElement(name = "struct_biolCategory")
-     private StructBiolType structBiolCategory;
+    private StructBiolType structBiolCategory;
     @XmlElement(name = "struct_biol_genCategory")
-     private StructBiolGenType structBiolGenCategory;
+    private StructBiolGenType structBiolGenCategory;
     @XmlElement(name = "struct_biol_keywordsCategory")
-     private StructBiolKeywordsType structBiolKeywordsCategory;
+    private StructBiolKeywordsType structBiolKeywordsCategory;
     @XmlElement(name = "struct_biol_viewCategory")
-     private StructBiolViewType structBiolViewCategory;
+    private StructBiolViewType structBiolViewCategory;
     @XmlElement(name = "struct_confCategory")
-     private StructConfType structConfCategory;
+    private StructConfType structConfCategory;
     @XmlElement(name = "struct_conf_typeCategory")
-     private StructConfTypeType structConfTypeCategory;
+    private StructConfTypeType structConfTypeCategory;
     @XmlElement(name = "struct_connCategory")
-     private StructConnType structConnCategory;
+    private StructConnType structConnCategory;
     @XmlElement(name = "struct_conn_typeCategory")
-     private StructConnTypeType structConnTypeCategory;
+    private StructConnTypeType structConnTypeCategory;
     @XmlElement(name = "struct_keywordsCategory")
-     private StructKeywordsType structKeywordsCategory;
+    private StructKeywordsType structKeywordsCategory;
     @XmlElement(name = "struct_mon_detailsCategory")
-     private StructMonDetailsType structMonDetailsCategory;
+    private StructMonDetailsType structMonDetailsCategory;
     @XmlElement(name = "struct_mon_nuclCategory")
-     private StructMonNuclType structMonNuclCategory;
+    private StructMonNuclType structMonNuclCategory;
     @XmlElement(name = "struct_mon_protCategory")
-     private StructMonProtType structMonProtCategory;
+    private StructMonProtType structMonProtCategory;
     @XmlElement(name = "struct_mon_prot_cisCategory")
-     private StructMonProtCisType structMonProtCisCategory;
+    private StructMonProtCisType structMonProtCisCategory;
     @XmlElement(name = "struct_ncs_domCategory")
-     private StructNcsDomType structNcsDomCategory;
+    private StructNcsDomType structNcsDomCategory;
     @XmlElement(name = "struct_ncs_dom_limCategory")
-     private StructNcsDomLimType structNcsDomLimCategory;
+    private StructNcsDomLimType structNcsDomLimCategory;
     @XmlElement(name = "struct_ncs_ensCategory")
-     private StructNcsEnsType structNcsEnsCategory;
+    private StructNcsEnsType structNcsEnsCategory;
     @XmlElement(name = "struct_ncs_ens_genCategory")
-     private StructNcsEnsGenType structNcsEnsGenCategory;
+    private StructNcsEnsGenType structNcsEnsGenCategory;
     @XmlElement(name = "struct_ncs_operCategory")
-     private StructNcsOperType structNcsOperCategory;
+    private StructNcsOperType structNcsOperCategory;
     @XmlElement(name = "struct_refCategory")
-     private StructRefType structRefCategory;
+    private StructRefType structRefCategory;
     @XmlElement(name = "struct_ref_seqCategory")
-     private StructRefSeqType structRefSeqCategory;
+    private StructRefSeqType structRefSeqCategory;
     @XmlElement(name = "struct_ref_seq_difCategory")
-     private StructRefSeqDifType structRefSeqDifCategory;
+    private StructRefSeqDifType structRefSeqDifCategory;
     @XmlElement(name = "struct_sheetCategory")
-     private StructSheetType structSheetCategory;
+    private StructSheetType structSheetCategory;
     @XmlElement(name = "struct_sheet_hbondCategory")
-     private StructSheetHbondType structSheetHbondCategory;
+    private StructSheetHbondType structSheetHbondCategory;
     @XmlElement(name = "struct_sheet_orderCategory")
-     private StructSheetOrderType structSheetOrderCategory;
+    private StructSheetOrderType structSheetOrderCategory;
     @XmlElement(name = "struct_sheet_rangeCategory")
-     private StructSheetRangeType structSheetRangeCategory;
+    private StructSheetRangeType structSheetRangeCategory;
     @XmlElement(name = "struct_sheet_topologyCategory")
-     private StructSheetTopologyType structSheetTopologyCategory;
+    private StructSheetTopologyType structSheetTopologyCategory;
     @XmlElement(name = "struct_siteCategory")
-     private StructSiteType structSiteCategory;
+    private StructSiteType structSiteCategory;
     @XmlElement(name = "struct_site_genCategory")
-     private StructSiteGenType structSiteGenCategory;
+    private StructSiteGenType structSiteGenCategory;
     @XmlElement(name = "struct_site_keywordsCategory")
-     private StructSiteKeywordsType structSiteKeywordsCategory;
+    private StructSiteKeywordsType structSiteKeywordsCategory;
     @XmlElement(name = "struct_site_viewCategory")
-     private StructSiteViewType structSiteViewCategory;
-     private SymmetryType symmetryCategory;
+    private StructSiteViewType structSiteViewCategory;
+    private SymmetryType symmetryCategory;
     @XmlElement(name = "symmetry_equivCategory")
-     private SymmetryEquivType symmetryEquivCategory;
+    private SymmetryEquivType symmetryEquivCategory;
     @XmlElement(name = "valence_paramCategory")
-     private ValenceParamType valenceParamCategory;
+    private ValenceParamType valenceParamCategory;
     @XmlElement(name = "valence_refCategory")
-     private ValenceRefType valenceRefCategory;
+    private ValenceRefType valenceRefCategory;
     @XmlAttribute(name = "datablockName")
-     private String datablockName;
+    private String datablockName;
 
     /**
      * Gets the value of the atomSiteCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AtomSiteType }
-     *     
+     *
+     * @return possible object is
+     * {@link AtomSiteType }
      */
     public AtomSiteType getAtomSiteCategory() {
         return atomSiteCategory;
@@ -1151,11 +1150,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the atomSiteCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AtomSiteType }
-     *     
+     * <p>
+     * allowed object is
+     * {@link AtomSiteType }
      */
     public void setAtomSiteCategory(AtomSiteType value) {
         this.atomSiteCategory = value;
@@ -1163,11 +1160,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the atomSiteAnisotropCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AtomSiteAnisotropType }
-     *     
+     *
+     * @return possible object is
+     * {@link AtomSiteAnisotropType }
      */
     public AtomSiteAnisotropType getAtomSiteAnisotropCategory() {
         return atomSiteAnisotropCategory;
@@ -1175,11 +1170,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the atomSiteAnisotropCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AtomSiteAnisotropType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AtomSiteAnisotropType }
      */
     public void setAtomSiteAnisotropCategory(AtomSiteAnisotropType value) {
         this.atomSiteAnisotropCategory = value;
@@ -1187,11 +1180,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the atomSitesCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AtomSitesType }
-     *     
+     *
+     * @return possible object is
+     * {@link AtomSitesType }
      */
     public AtomSitesType getAtomSitesCategory() {
         return atomSitesCategory;
@@ -1199,11 +1190,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the atomSitesCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AtomSitesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AtomSitesType }
      */
     public void setAtomSitesCategory(AtomSitesType value) {
         this.atomSitesCategory = value;
@@ -1211,11 +1200,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the atomSitesAltCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AtomSitesAltType }
-     *     
+     *
+     * @return possible object is
+     * {@link AtomSitesAltType }
      */
     public AtomSitesAltType getAtomSitesAltCategory() {
         return atomSitesAltCategory;
@@ -1223,11 +1210,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the atomSitesAltCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AtomSitesAltType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AtomSitesAltType }
      */
     public void setAtomSitesAltCategory(AtomSitesAltType value) {
         this.atomSitesAltCategory = value;
@@ -1235,11 +1220,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the atomSitesAltEnsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AtomSitesAltEnsType }
-     *     
+     *
+     * @return possible object is
+     * {@link AtomSitesAltEnsType }
      */
     public AtomSitesAltEnsType getAtomSitesAltEnsCategory() {
         return atomSitesAltEnsCategory;
@@ -1247,11 +1230,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the atomSitesAltEnsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AtomSitesAltEnsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AtomSitesAltEnsType }
      */
     public void setAtomSitesAltEnsCategory(AtomSitesAltEnsType value) {
         this.atomSitesAltEnsCategory = value;
@@ -1259,11 +1240,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the atomSitesAltGenCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AtomSitesAltGenType }
-     *     
+     *
+     * @return possible object is
+     * {@link AtomSitesAltGenType }
      */
     public AtomSitesAltGenType getAtomSitesAltGenCategory() {
         return atomSitesAltGenCategory;
@@ -1271,11 +1250,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the atomSitesAltGenCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AtomSitesAltGenType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AtomSitesAltGenType }
      */
     public void setAtomSitesAltGenCategory(AtomSitesAltGenType value) {
         this.atomSitesAltGenCategory = value;
@@ -1283,11 +1260,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the atomSitesFootnoteCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AtomSitesFootnoteType }
-     *     
+     *
+     * @return possible object is
+     * {@link AtomSitesFootnoteType }
      */
     public AtomSitesFootnoteType getAtomSitesFootnoteCategory() {
         return atomSitesFootnoteCategory;
@@ -1295,11 +1270,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the atomSitesFootnoteCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AtomSitesFootnoteType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AtomSitesFootnoteType }
      */
     public void setAtomSitesFootnoteCategory(AtomSitesFootnoteType value) {
         this.atomSitesFootnoteCategory = value;
@@ -1307,11 +1280,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the atomTypeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AtomTypeType }
-     *     
+     *
+     * @return possible object is
+     * {@link AtomTypeType }
      */
     public AtomTypeType getAtomTypeCategory() {
         return atomTypeCategory;
@@ -1319,11 +1290,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the atomTypeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AtomTypeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AtomTypeType }
      */
     public void setAtomTypeCategory(AtomTypeType value) {
         this.atomTypeCategory = value;
@@ -1331,11 +1300,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the auditCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AuditType }
-     *     
+     *
+     * @return possible object is
+     * {@link AuditType }
      */
     public AuditType getAuditCategory() {
         return auditCategory;
@@ -1343,11 +1310,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the auditCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AuditType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AuditType }
      */
     public void setAuditCategory(AuditType value) {
         this.auditCategory = value;
@@ -1355,11 +1320,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the auditAuthorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AuditAuthorType }
-     *     
+     *
+     * @return possible object is
+     * {@link AuditAuthorType }
      */
     public AuditAuthorType getAuditAuthorCategory() {
         return auditAuthorCategory;
@@ -1367,11 +1330,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the auditAuthorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AuditAuthorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AuditAuthorType }
      */
     public void setAuditAuthorCategory(AuditAuthorType value) {
         this.auditAuthorCategory = value;
@@ -1379,11 +1340,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the auditConformCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AuditConformType }
-     *     
+     *
+     * @return possible object is
+     * {@link AuditConformType }
      */
     public AuditConformType getAuditConformCategory() {
         return auditConformCategory;
@@ -1391,11 +1350,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the auditConformCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AuditConformType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AuditConformType }
      */
     public void setAuditConformCategory(AuditConformType value) {
         this.auditConformCategory = value;
@@ -1403,11 +1360,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the auditContactAuthorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AuditContactAuthorType }
-     *     
+     *
+     * @return possible object is
+     * {@link AuditContactAuthorType }
      */
     public AuditContactAuthorType getAuditContactAuthorCategory() {
         return auditContactAuthorCategory;
@@ -1415,11 +1370,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the auditContactAuthorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AuditContactAuthorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AuditContactAuthorType }
      */
     public void setAuditContactAuthorCategory(AuditContactAuthorType value) {
         this.auditContactAuthorCategory = value;
@@ -1427,11 +1380,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the auditLinkCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link AuditLinkType }
-     *     
+     *
+     * @return possible object is
+     * {@link AuditLinkType }
      */
     public AuditLinkType getAuditLinkCategory() {
         return auditLinkCategory;
@@ -1439,11 +1390,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the auditLinkCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AuditLinkType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link AuditLinkType }
      */
     public void setAuditLinkCategory(AuditLinkType value) {
         this.auditLinkCategory = value;
@@ -1451,11 +1400,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the cellCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CellType }
-     *     
+     *
+     * @return possible object is
+     * {@link CellType }
      */
     public CellType getCellCategory() {
         return cellCategory;
@@ -1463,11 +1410,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the cellCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CellType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CellType }
      */
     public void setCellCategory(CellType value) {
         this.cellCategory = value;
@@ -1475,11 +1420,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the cellMeasurementCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CellMeasurementType }
-     *     
+     *
+     * @return possible object is
+     * {@link CellMeasurementType }
      */
     public CellMeasurementType getCellMeasurementCategory() {
         return cellMeasurementCategory;
@@ -1487,11 +1430,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the cellMeasurementCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CellMeasurementType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CellMeasurementType }
      */
     public void setCellMeasurementCategory(CellMeasurementType value) {
         this.cellMeasurementCategory = value;
@@ -1499,11 +1440,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the cellMeasurementReflnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CellMeasurementReflnType }
-     *     
+     *
+     * @return possible object is
+     * {@link CellMeasurementReflnType }
      */
     public CellMeasurementReflnType getCellMeasurementReflnCategory() {
         return cellMeasurementReflnCategory;
@@ -1511,11 +1450,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the cellMeasurementReflnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CellMeasurementReflnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CellMeasurementReflnType }
      */
     public void setCellMeasurementReflnCategory(CellMeasurementReflnType value) {
         this.cellMeasurementReflnCategory = value;
@@ -1523,11 +1460,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompType }
      */
     public ChemCompType getChemCompCategory() {
         return chemCompCategory;
@@ -1535,11 +1470,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompType }
      */
     public void setChemCompCategory(ChemCompType value) {
         this.chemCompCategory = value;
@@ -1547,11 +1480,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompAngleCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompAngleType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompAngleType }
      */
     public ChemCompAngleType getChemCompAngleCategory() {
         return chemCompAngleCategory;
@@ -1559,11 +1490,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompAngleCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompAngleType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompAngleType }
      */
     public void setChemCompAngleCategory(ChemCompAngleType value) {
         this.chemCompAngleCategory = value;
@@ -1571,11 +1500,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompAtomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompAtomType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompAtomType }
      */
     public ChemCompAtomType getChemCompAtomCategory() {
         return chemCompAtomCategory;
@@ -1583,11 +1510,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompAtomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompAtomType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompAtomType }
      */
     public void setChemCompAtomCategory(ChemCompAtomType value) {
         this.chemCompAtomCategory = value;
@@ -1595,11 +1520,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompBondCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompBondType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompBondType }
      */
     public ChemCompBondType getChemCompBondCategory() {
         return chemCompBondCategory;
@@ -1607,11 +1530,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompBondCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompBondType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompBondType }
      */
     public void setChemCompBondCategory(ChemCompBondType value) {
         this.chemCompBondCategory = value;
@@ -1619,11 +1540,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompChirCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompChirType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompChirType }
      */
     public ChemCompChirType getChemCompChirCategory() {
         return chemCompChirCategory;
@@ -1631,11 +1550,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompChirCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompChirType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompChirType }
      */
     public void setChemCompChirCategory(ChemCompChirType value) {
         this.chemCompChirCategory = value;
@@ -1643,11 +1560,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompChirAtomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompChirAtomType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompChirAtomType }
      */
     public ChemCompChirAtomType getChemCompChirAtomCategory() {
         return chemCompChirAtomCategory;
@@ -1655,11 +1570,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompChirAtomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompChirAtomType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompChirAtomType }
      */
     public void setChemCompChirAtomCategory(ChemCompChirAtomType value) {
         this.chemCompChirAtomCategory = value;
@@ -1667,11 +1580,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompLinkCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompLinkType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompLinkType }
      */
     public ChemCompLinkType getChemCompLinkCategory() {
         return chemCompLinkCategory;
@@ -1679,11 +1590,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompLinkCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompLinkType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompLinkType }
      */
     public void setChemCompLinkCategory(ChemCompLinkType value) {
         this.chemCompLinkCategory = value;
@@ -1691,11 +1600,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompPlaneCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompPlaneType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompPlaneType }
      */
     public ChemCompPlaneType getChemCompPlaneCategory() {
         return chemCompPlaneCategory;
@@ -1703,11 +1610,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompPlaneCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompPlaneType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompPlaneType }
      */
     public void setChemCompPlaneCategory(ChemCompPlaneType value) {
         this.chemCompPlaneCategory = value;
@@ -1715,11 +1620,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompPlaneAtomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompPlaneAtomType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompPlaneAtomType }
      */
     public ChemCompPlaneAtomType getChemCompPlaneAtomCategory() {
         return chemCompPlaneAtomCategory;
@@ -1727,11 +1630,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompPlaneAtomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompPlaneAtomType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompPlaneAtomType }
      */
     public void setChemCompPlaneAtomCategory(ChemCompPlaneAtomType value) {
         this.chemCompPlaneAtomCategory = value;
@@ -1739,11 +1640,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompTorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompTorType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompTorType }
      */
     public ChemCompTorType getChemCompTorCategory() {
         return chemCompTorCategory;
@@ -1751,11 +1650,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompTorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompTorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompTorType }
      */
     public void setChemCompTorCategory(ChemCompTorType value) {
         this.chemCompTorCategory = value;
@@ -1763,11 +1660,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemCompTorValueCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemCompTorValueType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemCompTorValueType }
      */
     public ChemCompTorValueType getChemCompTorValueCategory() {
         return chemCompTorValueCategory;
@@ -1775,11 +1670,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemCompTorValueCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemCompTorValueType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemCompTorValueType }
      */
     public void setChemCompTorValueCategory(ChemCompTorValueType value) {
         this.chemCompTorValueCategory = value;
@@ -1787,11 +1680,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemLinkCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemLinkType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemLinkType }
      */
     public ChemLinkType getChemLinkCategory() {
         return chemLinkCategory;
@@ -1799,11 +1690,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemLinkCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemLinkType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemLinkType }
      */
     public void setChemLinkCategory(ChemLinkType value) {
         this.chemLinkCategory = value;
@@ -1811,11 +1700,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemLinkAngleCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemLinkAngleType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemLinkAngleType }
      */
     public ChemLinkAngleType getChemLinkAngleCategory() {
         return chemLinkAngleCategory;
@@ -1823,11 +1710,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemLinkAngleCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemLinkAngleType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemLinkAngleType }
      */
     public void setChemLinkAngleCategory(ChemLinkAngleType value) {
         this.chemLinkAngleCategory = value;
@@ -1835,11 +1720,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemLinkBondCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemLinkBondType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemLinkBondType }
      */
     public ChemLinkBondType getChemLinkBondCategory() {
         return chemLinkBondCategory;
@@ -1847,11 +1730,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemLinkBondCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemLinkBondType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemLinkBondType }
      */
     public void setChemLinkBondCategory(ChemLinkBondType value) {
         this.chemLinkBondCategory = value;
@@ -1859,11 +1740,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemLinkChirCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemLinkChirType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemLinkChirType }
      */
     public ChemLinkChirType getChemLinkChirCategory() {
         return chemLinkChirCategory;
@@ -1871,11 +1750,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemLinkChirCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemLinkChirType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemLinkChirType }
      */
     public void setChemLinkChirCategory(ChemLinkChirType value) {
         this.chemLinkChirCategory = value;
@@ -1883,11 +1760,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemLinkChirAtomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemLinkChirAtomType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemLinkChirAtomType }
      */
     public ChemLinkChirAtomType getChemLinkChirAtomCategory() {
         return chemLinkChirAtomCategory;
@@ -1895,11 +1770,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemLinkChirAtomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemLinkChirAtomType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemLinkChirAtomType }
      */
     public void setChemLinkChirAtomCategory(ChemLinkChirAtomType value) {
         this.chemLinkChirAtomCategory = value;
@@ -1907,11 +1780,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemLinkPlaneCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemLinkPlaneType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemLinkPlaneType }
      */
     public ChemLinkPlaneType getChemLinkPlaneCategory() {
         return chemLinkPlaneCategory;
@@ -1919,11 +1790,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemLinkPlaneCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemLinkPlaneType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemLinkPlaneType }
      */
     public void setChemLinkPlaneCategory(ChemLinkPlaneType value) {
         this.chemLinkPlaneCategory = value;
@@ -1931,11 +1800,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemLinkPlaneAtomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemLinkPlaneAtomType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemLinkPlaneAtomType }
      */
     public ChemLinkPlaneAtomType getChemLinkPlaneAtomCategory() {
         return chemLinkPlaneAtomCategory;
@@ -1943,11 +1810,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemLinkPlaneAtomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemLinkPlaneAtomType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemLinkPlaneAtomType }
      */
     public void setChemLinkPlaneAtomCategory(ChemLinkPlaneAtomType value) {
         this.chemLinkPlaneAtomCategory = value;
@@ -1955,11 +1820,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemLinkTorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemLinkTorType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemLinkTorType }
      */
     public ChemLinkTorType getChemLinkTorCategory() {
         return chemLinkTorCategory;
@@ -1967,11 +1830,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemLinkTorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemLinkTorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemLinkTorType }
      */
     public void setChemLinkTorCategory(ChemLinkTorType value) {
         this.chemLinkTorCategory = value;
@@ -1979,11 +1840,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemLinkTorValueCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemLinkTorValueType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemLinkTorValueType }
      */
     public ChemLinkTorValueType getChemLinkTorValueCategory() {
         return chemLinkTorValueCategory;
@@ -1991,11 +1850,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemLinkTorValueCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemLinkTorValueType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemLinkTorValueType }
      */
     public void setChemLinkTorValueCategory(ChemLinkTorValueType value) {
         this.chemLinkTorValueCategory = value;
@@ -2003,11 +1860,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemicalCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemicalType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemicalType }
      */
     public ChemicalType getChemicalCategory() {
         return chemicalCategory;
@@ -2015,11 +1870,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemicalCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemicalType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemicalType }
      */
     public void setChemicalCategory(ChemicalType value) {
         this.chemicalCategory = value;
@@ -2027,11 +1880,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemicalConnAtomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemicalConnAtomType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemicalConnAtomType }
      */
     public ChemicalConnAtomType getChemicalConnAtomCategory() {
         return chemicalConnAtomCategory;
@@ -2039,11 +1890,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemicalConnAtomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemicalConnAtomType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemicalConnAtomType }
      */
     public void setChemicalConnAtomCategory(ChemicalConnAtomType value) {
         this.chemicalConnAtomCategory = value;
@@ -2051,11 +1900,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemicalConnBondCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemicalConnBondType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemicalConnBondType }
      */
     public ChemicalConnBondType getChemicalConnBondCategory() {
         return chemicalConnBondCategory;
@@ -2063,11 +1910,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemicalConnBondCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemicalConnBondType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemicalConnBondType }
      */
     public void setChemicalConnBondCategory(ChemicalConnBondType value) {
         this.chemicalConnBondCategory = value;
@@ -2075,11 +1920,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the chemicalFormulaCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ChemicalFormulaType }
-     *     
+     *
+     * @return possible object is
+     * {@link ChemicalFormulaType }
      */
     public ChemicalFormulaType getChemicalFormulaCategory() {
         return chemicalFormulaCategory;
@@ -2087,11 +1930,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the chemicalFormulaCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ChemicalFormulaType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ChemicalFormulaType }
      */
     public void setChemicalFormulaCategory(ChemicalFormulaType value) {
         this.chemicalFormulaCategory = value;
@@ -2099,11 +1940,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the citationCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CitationType }
-     *     
+     *
+     * @return possible object is
+     * {@link CitationType }
      */
     public CitationType getCitationCategory() {
         return citationCategory;
@@ -2111,11 +1950,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the citationCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CitationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CitationType }
      */
     public void setCitationCategory(CitationType value) {
         this.citationCategory = value;
@@ -2123,11 +1960,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the citationAuthorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CitationAuthorType }
-     *     
+     *
+     * @return possible object is
+     * {@link CitationAuthorType }
      */
     public CitationAuthorType getCitationAuthorCategory() {
         return citationAuthorCategory;
@@ -2135,11 +1970,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the citationAuthorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CitationAuthorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CitationAuthorType }
      */
     public void setCitationAuthorCategory(CitationAuthorType value) {
         this.citationAuthorCategory = value;
@@ -2147,11 +1980,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the citationEditorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link CitationEditorType }
-     *     
+     *
+     * @return possible object is
+     * {@link CitationEditorType }
      */
     public CitationEditorType getCitationEditorCategory() {
         return citationEditorCategory;
@@ -2159,11 +1990,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the citationEditorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link CitationEditorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link CitationEditorType }
      */
     public void setCitationEditorCategory(CitationEditorType value) {
         this.citationEditorCategory = value;
@@ -2171,11 +2000,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the computingCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ComputingType }
-     *     
+     *
+     * @return possible object is
+     * {@link ComputingType }
      */
     public ComputingType getComputingCategory() {
         return computingCategory;
@@ -2183,11 +2010,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the computingCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ComputingType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ComputingType }
      */
     public void setComputingCategory(ComputingType value) {
         this.computingCategory = value;
@@ -2195,11 +2020,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the databaseCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DatabaseType }
-     *     
+     *
+     * @return possible object is
+     * {@link DatabaseType }
      */
     public DatabaseType getDatabaseCategory() {
         return databaseCategory;
@@ -2207,11 +2030,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the databaseCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DatabaseType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DatabaseType }
      */
     public void setDatabaseCategory(DatabaseType value) {
         this.databaseCategory = value;
@@ -2219,11 +2040,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the database2Category property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Database2Type }
-     *     
+     *
+     * @return possible object is
+     * {@link Database2Type }
      */
     public Database2Type getDatabase2Category() {
         return database2Category;
@@ -2231,11 +2050,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the database2Category property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Database2Type }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Database2Type }
      */
     public void setDatabase2Category(Database2Type value) {
         this.database2Category = value;
@@ -2243,11 +2060,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the databasePDBCaveatCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DatabasePDBCaveatType }
-     *     
+     *
+     * @return possible object is
+     * {@link DatabasePDBCaveatType }
      */
     public DatabasePDBCaveatType getDatabasePDBCaveatCategory() {
         return databasePDBCaveatCategory;
@@ -2255,11 +2070,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the databasePDBCaveatCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DatabasePDBCaveatType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DatabasePDBCaveatType }
      */
     public void setDatabasePDBCaveatCategory(DatabasePDBCaveatType value) {
         this.databasePDBCaveatCategory = value;
@@ -2267,11 +2080,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the databasePDBMatrixCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DatabasePDBMatrixType }
-     *     
+     *
+     * @return possible object is
+     * {@link DatabasePDBMatrixType }
      */
     public DatabasePDBMatrixType getDatabasePDBMatrixCategory() {
         return databasePDBMatrixCategory;
@@ -2279,11 +2090,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the databasePDBMatrixCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DatabasePDBMatrixType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DatabasePDBMatrixType }
      */
     public void setDatabasePDBMatrixCategory(DatabasePDBMatrixType value) {
         this.databasePDBMatrixCategory = value;
@@ -2291,11 +2100,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the databasePDBRemarkCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DatabasePDBRemarkType }
-     *     
+     *
+     * @return possible object is
+     * {@link DatabasePDBRemarkType }
      */
     public DatabasePDBRemarkType getDatabasePDBRemarkCategory() {
         return databasePDBRemarkCategory;
@@ -2303,11 +2110,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the databasePDBRemarkCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DatabasePDBRemarkType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DatabasePDBRemarkType }
      */
     public void setDatabasePDBRemarkCategory(DatabasePDBRemarkType value) {
         this.databasePDBRemarkCategory = value;
@@ -2315,11 +2120,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the databasePDBRevCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DatabasePDBRevType }
-     *     
+     *
+     * @return possible object is
+     * {@link DatabasePDBRevType }
      */
     public DatabasePDBRevType getDatabasePDBRevCategory() {
         return databasePDBRevCategory;
@@ -2327,11 +2130,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the databasePDBRevCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DatabasePDBRevType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DatabasePDBRevType }
      */
     public void setDatabasePDBRevCategory(DatabasePDBRevType value) {
         this.databasePDBRevCategory = value;
@@ -2339,11 +2140,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the databasePDBRevRecordCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DatabasePDBRevRecordType }
-     *     
+     *
+     * @return possible object is
+     * {@link DatabasePDBRevRecordType }
      */
     public DatabasePDBRevRecordType getDatabasePDBRevRecordCategory() {
         return databasePDBRevRecordCategory;
@@ -2351,11 +2150,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the databasePDBRevRecordCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DatabasePDBRevRecordType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DatabasePDBRevRecordType }
      */
     public void setDatabasePDBRevRecordCategory(DatabasePDBRevRecordType value) {
         this.databasePDBRevRecordCategory = value;
@@ -2363,11 +2160,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the databasePDBTvectCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DatabasePDBTvectType }
-     *     
+     *
+     * @return possible object is
+     * {@link DatabasePDBTvectType }
      */
     public DatabasePDBTvectType getDatabasePDBTvectCategory() {
         return databasePDBTvectCategory;
@@ -2375,11 +2170,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the databasePDBTvectCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DatabasePDBTvectType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DatabasePDBTvectType }
      */
     public void setDatabasePDBTvectCategory(DatabasePDBTvectType value) {
         this.databasePDBTvectCategory = value;
@@ -2387,11 +2180,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnType }
      */
     public DiffrnType getDiffrnCategory() {
         return diffrnCategory;
@@ -2399,11 +2190,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnType }
      */
     public void setDiffrnCategory(DiffrnType value) {
         this.diffrnCategory = value;
@@ -2411,11 +2200,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnAttenuatorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnAttenuatorType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnAttenuatorType }
      */
     public DiffrnAttenuatorType getDiffrnAttenuatorCategory() {
         return diffrnAttenuatorCategory;
@@ -2423,11 +2210,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnAttenuatorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnAttenuatorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnAttenuatorType }
      */
     public void setDiffrnAttenuatorCategory(DiffrnAttenuatorType value) {
         this.diffrnAttenuatorCategory = value;
@@ -2435,11 +2220,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnDetectorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnDetectorType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnDetectorType }
      */
     public DiffrnDetectorType getDiffrnDetectorCategory() {
         return diffrnDetectorCategory;
@@ -2447,11 +2230,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnDetectorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnDetectorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnDetectorType }
      */
     public void setDiffrnDetectorCategory(DiffrnDetectorType value) {
         this.diffrnDetectorCategory = value;
@@ -2459,11 +2240,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnMeasurementCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnMeasurementType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnMeasurementType }
      */
     public DiffrnMeasurementType getDiffrnMeasurementCategory() {
         return diffrnMeasurementCategory;
@@ -2471,11 +2250,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnMeasurementCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnMeasurementType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnMeasurementType }
      */
     public void setDiffrnMeasurementCategory(DiffrnMeasurementType value) {
         this.diffrnMeasurementCategory = value;
@@ -2483,11 +2260,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnOrientMatrixCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnOrientMatrixType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnOrientMatrixType }
      */
     public DiffrnOrientMatrixType getDiffrnOrientMatrixCategory() {
         return diffrnOrientMatrixCategory;
@@ -2495,11 +2270,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnOrientMatrixCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnOrientMatrixType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnOrientMatrixType }
      */
     public void setDiffrnOrientMatrixCategory(DiffrnOrientMatrixType value) {
         this.diffrnOrientMatrixCategory = value;
@@ -2507,11 +2280,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnOrientReflnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnOrientReflnType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnOrientReflnType }
      */
     public DiffrnOrientReflnType getDiffrnOrientReflnCategory() {
         return diffrnOrientReflnCategory;
@@ -2519,11 +2290,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnOrientReflnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnOrientReflnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnOrientReflnType }
      */
     public void setDiffrnOrientReflnCategory(DiffrnOrientReflnType value) {
         this.diffrnOrientReflnCategory = value;
@@ -2531,11 +2300,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnRadiationCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnRadiationType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnRadiationType }
      */
     public DiffrnRadiationType getDiffrnRadiationCategory() {
         return diffrnRadiationCategory;
@@ -2543,11 +2310,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnRadiationCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnRadiationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnRadiationType }
      */
     public void setDiffrnRadiationCategory(DiffrnRadiationType value) {
         this.diffrnRadiationCategory = value;
@@ -2555,11 +2320,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnRadiationWavelengthCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnRadiationWavelengthType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnRadiationWavelengthType }
      */
     public DiffrnRadiationWavelengthType getDiffrnRadiationWavelengthCategory() {
         return diffrnRadiationWavelengthCategory;
@@ -2567,11 +2330,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnRadiationWavelengthCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnRadiationWavelengthType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnRadiationWavelengthType }
      */
     public void setDiffrnRadiationWavelengthCategory(DiffrnRadiationWavelengthType value) {
         this.diffrnRadiationWavelengthCategory = value;
@@ -2579,11 +2340,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnReflnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnReflnType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnReflnType }
      */
     public DiffrnReflnType getDiffrnReflnCategory() {
         return diffrnReflnCategory;
@@ -2591,11 +2350,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnReflnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnReflnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnReflnType }
      */
     public void setDiffrnReflnCategory(DiffrnReflnType value) {
         this.diffrnReflnCategory = value;
@@ -2603,11 +2360,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnReflnsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnReflnsType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnReflnsType }
      */
     public DiffrnReflnsType getDiffrnReflnsCategory() {
         return diffrnReflnsCategory;
@@ -2615,11 +2370,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnReflnsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnReflnsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnReflnsType }
      */
     public void setDiffrnReflnsCategory(DiffrnReflnsType value) {
         this.diffrnReflnsCategory = value;
@@ -2627,11 +2380,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnReflnsClassCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnReflnsClassType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnReflnsClassType }
      */
     public DiffrnReflnsClassType getDiffrnReflnsClassCategory() {
         return diffrnReflnsClassCategory;
@@ -2639,11 +2390,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnReflnsClassCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnReflnsClassType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnReflnsClassType }
      */
     public void setDiffrnReflnsClassCategory(DiffrnReflnsClassType value) {
         this.diffrnReflnsClassCategory = value;
@@ -2651,11 +2400,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnScaleGroupCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnScaleGroupType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnScaleGroupType }
      */
     public DiffrnScaleGroupType getDiffrnScaleGroupCategory() {
         return diffrnScaleGroupCategory;
@@ -2663,11 +2410,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnScaleGroupCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnScaleGroupType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnScaleGroupType }
      */
     public void setDiffrnScaleGroupCategory(DiffrnScaleGroupType value) {
         this.diffrnScaleGroupCategory = value;
@@ -2675,11 +2420,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnSourceCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnSourceType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnSourceType }
      */
     public DiffrnSourceType getDiffrnSourceCategory() {
         return diffrnSourceCategory;
@@ -2687,11 +2430,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnSourceCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnSourceType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnSourceType }
      */
     public void setDiffrnSourceCategory(DiffrnSourceType value) {
         this.diffrnSourceCategory = value;
@@ -2699,11 +2440,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnStandardReflnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnStandardReflnType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnStandardReflnType }
      */
     public DiffrnStandardReflnType getDiffrnStandardReflnCategory() {
         return diffrnStandardReflnCategory;
@@ -2711,11 +2450,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnStandardReflnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnStandardReflnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnStandardReflnType }
      */
     public void setDiffrnStandardReflnCategory(DiffrnStandardReflnType value) {
         this.diffrnStandardReflnCategory = value;
@@ -2723,11 +2460,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the diffrnStandardsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link DiffrnStandardsType }
-     *     
+     *
+     * @return possible object is
+     * {@link DiffrnStandardsType }
      */
     public DiffrnStandardsType getDiffrnStandardsCategory() {
         return diffrnStandardsCategory;
@@ -2735,11 +2470,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the diffrnStandardsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link DiffrnStandardsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link DiffrnStandardsType }
      */
     public void setDiffrnStandardsCategory(DiffrnStandardsType value) {
         this.diffrnStandardsCategory = value;
@@ -2747,11 +2480,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the em2DCrystalEntityCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Em2DCrystalEntityType }
-     *     
+     *
+     * @return possible object is
+     * {@link Em2DCrystalEntityType }
      */
     public Em2DCrystalEntityType getEm2DCrystalEntityCategory() {
         return em2DCrystalEntityCategory;
@@ -2759,11 +2490,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the em2DCrystalEntityCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Em2DCrystalEntityType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Em2DCrystalEntityType }
      */
     public void setEm2DCrystalEntityCategory(Em2DCrystalEntityType value) {
         this.em2DCrystalEntityCategory = value;
@@ -2771,11 +2500,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the em2DCrystalGrowCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Em2DCrystalGrowType }
-     *     
+     *
+     * @return possible object is
+     * {@link Em2DCrystalGrowType }
      */
     public Em2DCrystalGrowType getEm2DCrystalGrowCategory() {
         return em2DCrystalGrowCategory;
@@ -2783,11 +2510,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the em2DCrystalGrowCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Em2DCrystalGrowType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Em2DCrystalGrowType }
      */
     public void setEm2DCrystalGrowCategory(Em2DCrystalGrowType value) {
         this.em2DCrystalGrowCategory = value;
@@ -2795,11 +2520,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the em2DProjectionSelectionCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Em2DProjectionSelectionType }
-     *     
+     *
+     * @return possible object is
+     * {@link Em2DProjectionSelectionType }
      */
     public Em2DProjectionSelectionType getEm2DProjectionSelectionCategory() {
         return em2DProjectionSelectionCategory;
@@ -2807,11 +2530,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the em2DProjectionSelectionCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Em2DProjectionSelectionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Em2DProjectionSelectionType }
      */
     public void setEm2DProjectionSelectionCategory(Em2DProjectionSelectionType value) {
         this.em2DProjectionSelectionCategory = value;
@@ -2819,11 +2540,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the em3DFittingCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Em3DFittingType }
-     *     
+     *
+     * @return possible object is
+     * {@link Em3DFittingType }
      */
     public Em3DFittingType getEm3DFittingCategory() {
         return em3DFittingCategory;
@@ -2831,11 +2550,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the em3DFittingCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Em3DFittingType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Em3DFittingType }
      */
     public void setEm3DFittingCategory(Em3DFittingType value) {
         this.em3DFittingCategory = value;
@@ -2843,11 +2560,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the em3DFittingListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Em3DFittingListType }
-     *     
+     *
+     * @return possible object is
+     * {@link Em3DFittingListType }
      */
     public Em3DFittingListType getEm3DFittingListCategory() {
         return em3DFittingListCategory;
@@ -2855,11 +2570,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the em3DFittingListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Em3DFittingListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Em3DFittingListType }
      */
     public void setEm3DFittingListCategory(Em3DFittingListType value) {
         this.em3DFittingListCategory = value;
@@ -2867,11 +2580,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the em3DReconstructionCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Em3DReconstructionType }
-     *     
+     *
+     * @return possible object is
+     * {@link Em3DReconstructionType }
      */
     public Em3DReconstructionType getEm3DReconstructionCategory() {
         return em3DReconstructionCategory;
@@ -2879,11 +2590,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the em3DReconstructionCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Em3DReconstructionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link Em3DReconstructionType }
      */
     public void setEm3DReconstructionCategory(Em3DReconstructionType value) {
         this.em3DReconstructionCategory = value;
@@ -2891,11 +2600,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emAssemblyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmAssemblyType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmAssemblyType }
      */
     public EmAssemblyType getEmAssemblyCategory() {
         return emAssemblyCategory;
@@ -2903,11 +2610,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emAssemblyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmAssemblyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmAssemblyType }
      */
     public void setEmAssemblyCategory(EmAssemblyType value) {
         this.emAssemblyCategory = value;
@@ -2915,11 +2620,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emBufferCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmBufferType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmBufferType }
      */
     public EmBufferType getEmBufferCategory() {
         return emBufferCategory;
@@ -2927,11 +2630,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emBufferCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmBufferType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmBufferType }
      */
     public void setEmBufferCategory(EmBufferType value) {
         this.emBufferCategory = value;
@@ -2939,11 +2640,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emBufferComponentsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmBufferComponentsType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmBufferComponentsType }
      */
     public EmBufferComponentsType getEmBufferComponentsCategory() {
         return emBufferComponentsCategory;
@@ -2951,11 +2650,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emBufferComponentsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmBufferComponentsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmBufferComponentsType }
      */
     public void setEmBufferComponentsCategory(EmBufferComponentsType value) {
         this.emBufferComponentsCategory = value;
@@ -2963,11 +2660,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emDetectorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmDetectorType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmDetectorType }
      */
     public EmDetectorType getEmDetectorCategory() {
         return emDetectorCategory;
@@ -2975,11 +2670,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emDetectorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmDetectorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmDetectorType }
      */
     public void setEmDetectorCategory(EmDetectorType value) {
         this.emDetectorCategory = value;
@@ -2987,11 +2680,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emElectronDiffractionCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmElectronDiffractionType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmElectronDiffractionType }
      */
     public EmElectronDiffractionType getEmElectronDiffractionCategory() {
         return emElectronDiffractionCategory;
@@ -2999,11 +2690,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emElectronDiffractionCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmElectronDiffractionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmElectronDiffractionType }
      */
     public void setEmElectronDiffractionCategory(EmElectronDiffractionType value) {
         this.emElectronDiffractionCategory = value;
@@ -3011,11 +2700,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emElectronDiffractionPatternCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmElectronDiffractionPatternType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmElectronDiffractionPatternType }
      */
     public EmElectronDiffractionPatternType getEmElectronDiffractionPatternCategory() {
         return emElectronDiffractionPatternCategory;
@@ -3023,11 +2710,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emElectronDiffractionPatternCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmElectronDiffractionPatternType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmElectronDiffractionPatternType }
      */
     public void setEmElectronDiffractionPatternCategory(EmElectronDiffractionPatternType value) {
         this.emElectronDiffractionPatternCategory = value;
@@ -3035,11 +2720,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emElectronDiffractionPhaseCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmElectronDiffractionPhaseType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmElectronDiffractionPhaseType }
      */
     public EmElectronDiffractionPhaseType getEmElectronDiffractionPhaseCategory() {
         return emElectronDiffractionPhaseCategory;
@@ -3047,11 +2730,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emElectronDiffractionPhaseCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmElectronDiffractionPhaseType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmElectronDiffractionPhaseType }
      */
     public void setEmElectronDiffractionPhaseCategory(EmElectronDiffractionPhaseType value) {
         this.emElectronDiffractionPhaseCategory = value;
@@ -3059,11 +2740,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emEntityAssemblyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmEntityAssemblyType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmEntityAssemblyType }
      */
     public EmEntityAssemblyType getEmEntityAssemblyCategory() {
         return emEntityAssemblyCategory;
@@ -3071,11 +2750,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emEntityAssemblyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmEntityAssemblyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmEntityAssemblyType }
      */
     public void setEmEntityAssemblyCategory(EmEntityAssemblyType value) {
         this.emEntityAssemblyCategory = value;
@@ -3083,11 +2760,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emEntityAssemblyListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmEntityAssemblyListType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmEntityAssemblyListType }
      */
     public EmEntityAssemblyListType getEmEntityAssemblyListCategory() {
         return emEntityAssemblyListCategory;
@@ -3095,11 +2770,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emEntityAssemblyListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmEntityAssemblyListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmEntityAssemblyListType }
      */
     public void setEmEntityAssemblyListCategory(EmEntityAssemblyListType value) {
         this.emEntityAssemblyListCategory = value;
@@ -3107,11 +2780,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emEulerAngleDistributionCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmEulerAngleDistributionType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmEulerAngleDistributionType }
      */
     public EmEulerAngleDistributionType getEmEulerAngleDistributionCategory() {
         return emEulerAngleDistributionCategory;
@@ -3119,11 +2790,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emEulerAngleDistributionCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmEulerAngleDistributionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmEulerAngleDistributionType }
      */
     public void setEmEulerAngleDistributionCategory(EmEulerAngleDistributionType value) {
         this.emEulerAngleDistributionCategory = value;
@@ -3131,11 +2800,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emExperimentCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmExperimentType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmExperimentType }
      */
     public EmExperimentType getEmExperimentCategory() {
         return emExperimentCategory;
@@ -3143,11 +2810,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emExperimentCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmExperimentType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmExperimentType }
      */
     public void setEmExperimentCategory(EmExperimentType value) {
         this.emExperimentCategory = value;
@@ -3155,11 +2820,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emHelicalEntityCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmHelicalEntityType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmHelicalEntityType }
      */
     public EmHelicalEntityType getEmHelicalEntityCategory() {
         return emHelicalEntityCategory;
@@ -3167,11 +2830,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emHelicalEntityCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmHelicalEntityType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmHelicalEntityType }
      */
     public void setEmHelicalEntityCategory(EmHelicalEntityType value) {
         this.emHelicalEntityCategory = value;
@@ -3179,11 +2840,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emIcosVirusShellsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmIcosVirusShellsType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmIcosVirusShellsType }
      */
     public EmIcosVirusShellsType getEmIcosVirusShellsCategory() {
         return emIcosVirusShellsCategory;
@@ -3191,11 +2850,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emIcosVirusShellsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmIcosVirusShellsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmIcosVirusShellsType }
      */
     public void setEmIcosVirusShellsCategory(EmIcosVirusShellsType value) {
         this.emIcosVirusShellsCategory = value;
@@ -3203,11 +2860,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emImageScansCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmImageScansType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmImageScansType }
      */
     public EmImageScansType getEmImageScansCategory() {
         return emImageScansCategory;
@@ -3215,11 +2870,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emImageScansCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmImageScansType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmImageScansType }
      */
     public void setEmImageScansCategory(EmImageScansType value) {
         this.emImageScansCategory = value;
@@ -3227,11 +2880,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emImagingCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmImagingType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmImagingType }
      */
     public EmImagingType getEmImagingCategory() {
         return emImagingCategory;
@@ -3239,11 +2890,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emImagingCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmImagingType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmImagingType }
      */
     public void setEmImagingCategory(EmImagingType value) {
         this.emImagingCategory = value;
@@ -3251,11 +2900,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emSamplePreparationCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmSamplePreparationType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmSamplePreparationType }
      */
     public EmSamplePreparationType getEmSamplePreparationCategory() {
         return emSamplePreparationCategory;
@@ -3263,11 +2910,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emSamplePreparationCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmSamplePreparationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmSamplePreparationType }
      */
     public void setEmSamplePreparationCategory(EmSamplePreparationType value) {
         this.emSamplePreparationCategory = value;
@@ -3275,11 +2920,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emSampleSupportCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmSampleSupportType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmSampleSupportType }
      */
     public EmSampleSupportType getEmSampleSupportCategory() {
         return emSampleSupportCategory;
@@ -3287,11 +2930,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emSampleSupportCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmSampleSupportType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmSampleSupportType }
      */
     public void setEmSampleSupportCategory(EmSampleSupportType value) {
         this.emSampleSupportCategory = value;
@@ -3299,11 +2940,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emSingleParticleEntityCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmSingleParticleEntityType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmSingleParticleEntityType }
      */
     public EmSingleParticleEntityType getEmSingleParticleEntityCategory() {
         return emSingleParticleEntityCategory;
@@ -3311,11 +2950,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emSingleParticleEntityCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmSingleParticleEntityType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmSingleParticleEntityType }
      */
     public void setEmSingleParticleEntityCategory(EmSingleParticleEntityType value) {
         this.emSingleParticleEntityCategory = value;
@@ -3323,11 +2960,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emVirusEntityCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmVirusEntityType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmVirusEntityType }
      */
     public EmVirusEntityType getEmVirusEntityCategory() {
         return emVirusEntityCategory;
@@ -3335,11 +2970,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emVirusEntityCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmVirusEntityType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmVirusEntityType }
      */
     public void setEmVirusEntityCategory(EmVirusEntityType value) {
         this.emVirusEntityCategory = value;
@@ -3347,11 +2980,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the emVitrificationCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EmVitrificationType }
-     *     
+     *
+     * @return possible object is
+     * {@link EmVitrificationType }
      */
     public EmVitrificationType getEmVitrificationCategory() {
         return emVitrificationCategory;
@@ -3359,11 +2990,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the emVitrificationCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EmVitrificationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EmVitrificationType }
      */
     public void setEmVitrificationCategory(EmVitrificationType value) {
         this.emVitrificationCategory = value;
@@ -3371,11 +3000,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entityCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntityType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntityType }
      */
     public EntityType getEntityCategory() {
         return entityCategory;
@@ -3383,11 +3010,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entityCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntityType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntityType }
      */
     public void setEntityCategory(EntityType value) {
         this.entityCategory = value;
@@ -3395,11 +3020,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entityKeywordsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntityKeywordsType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntityKeywordsType }
      */
     public EntityKeywordsType getEntityKeywordsCategory() {
         return entityKeywordsCategory;
@@ -3407,11 +3030,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entityKeywordsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntityKeywordsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntityKeywordsType }
      */
     public void setEntityKeywordsCategory(EntityKeywordsType value) {
         this.entityKeywordsCategory = value;
@@ -3419,11 +3040,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entityLinkCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntityLinkType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntityLinkType }
      */
     public EntityLinkType getEntityLinkCategory() {
         return entityLinkCategory;
@@ -3431,11 +3050,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entityLinkCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntityLinkType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntityLinkType }
      */
     public void setEntityLinkCategory(EntityLinkType value) {
         this.entityLinkCategory = value;
@@ -3443,11 +3060,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entityNameComCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntityNameComType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntityNameComType }
      */
     public EntityNameComType getEntityNameComCategory() {
         return entityNameComCategory;
@@ -3455,11 +3070,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entityNameComCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntityNameComType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntityNameComType }
      */
     public void setEntityNameComCategory(EntityNameComType value) {
         this.entityNameComCategory = value;
@@ -3467,11 +3080,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entityNameSysCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntityNameSysType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntityNameSysType }
      */
     public EntityNameSysType getEntityNameSysCategory() {
         return entityNameSysCategory;
@@ -3479,11 +3090,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entityNameSysCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntityNameSysType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntityNameSysType }
      */
     public void setEntityNameSysCategory(EntityNameSysType value) {
         this.entityNameSysCategory = value;
@@ -3491,11 +3100,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entityPolyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntityPolyType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntityPolyType }
      */
     public EntityPolyType getEntityPolyCategory() {
         return entityPolyCategory;
@@ -3503,11 +3110,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entityPolyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntityPolyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntityPolyType }
      */
     public void setEntityPolyCategory(EntityPolyType value) {
         this.entityPolyCategory = value;
@@ -3515,11 +3120,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entityPolySeqCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntityPolySeqType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntityPolySeqType }
      */
     public EntityPolySeqType getEntityPolySeqCategory() {
         return entityPolySeqCategory;
@@ -3527,11 +3130,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entityPolySeqCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntityPolySeqType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntityPolySeqType }
      */
     public void setEntityPolySeqCategory(EntityPolySeqType value) {
         this.entityPolySeqCategory = value;
@@ -3539,11 +3140,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entitySrcGenCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntitySrcGenType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntitySrcGenType }
      */
     public EntitySrcGenType getEntitySrcGenCategory() {
         return entitySrcGenCategory;
@@ -3551,11 +3150,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entitySrcGenCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntitySrcGenType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntitySrcGenType }
      */
     public void setEntitySrcGenCategory(EntitySrcGenType value) {
         this.entitySrcGenCategory = value;
@@ -3563,11 +3160,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entitySrcNatCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntitySrcNatType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntitySrcNatType }
      */
     public EntitySrcNatType getEntitySrcNatCategory() {
         return entitySrcNatCategory;
@@ -3575,11 +3170,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entitySrcNatCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntitySrcNatType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntitySrcNatType }
      */
     public void setEntitySrcNatCategory(EntitySrcNatType value) {
         this.entitySrcNatCategory = value;
@@ -3587,11 +3180,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entryCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntryType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntryType }
      */
     public EntryType getEntryCategory() {
         return entryCategory;
@@ -3599,11 +3190,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entryCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntryType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntryType }
      */
     public void setEntryCategory(EntryType value) {
         this.entryCategory = value;
@@ -3611,11 +3200,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the entryLinkCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link EntryLinkType }
-     *     
+     *
+     * @return possible object is
+     * {@link EntryLinkType }
      */
     public EntryLinkType getEntryLinkCategory() {
         return entryLinkCategory;
@@ -3623,11 +3210,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the entryLinkCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link EntryLinkType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link EntryLinkType }
      */
     public void setEntryLinkCategory(EntryLinkType value) {
         this.entryLinkCategory = value;
@@ -3635,11 +3220,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the exptlCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExptlType }
-     *     
+     *
+     * @return possible object is
+     * {@link ExptlType }
      */
     public ExptlType getExptlCategory() {
         return exptlCategory;
@@ -3647,11 +3230,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the exptlCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExptlType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ExptlType }
      */
     public void setExptlCategory(ExptlType value) {
         this.exptlCategory = value;
@@ -3659,11 +3240,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the exptlCrystalCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExptlCrystalType }
-     *     
+     *
+     * @return possible object is
+     * {@link ExptlCrystalType }
      */
     public ExptlCrystalType getExptlCrystalCategory() {
         return exptlCrystalCategory;
@@ -3671,11 +3250,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the exptlCrystalCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExptlCrystalType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ExptlCrystalType }
      */
     public void setExptlCrystalCategory(ExptlCrystalType value) {
         this.exptlCrystalCategory = value;
@@ -3683,11 +3260,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the exptlCrystalFaceCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExptlCrystalFaceType }
-     *     
+     *
+     * @return possible object is
+     * {@link ExptlCrystalFaceType }
      */
     public ExptlCrystalFaceType getExptlCrystalFaceCategory() {
         return exptlCrystalFaceCategory;
@@ -3695,11 +3270,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the exptlCrystalFaceCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExptlCrystalFaceType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ExptlCrystalFaceType }
      */
     public void setExptlCrystalFaceCategory(ExptlCrystalFaceType value) {
         this.exptlCrystalFaceCategory = value;
@@ -3707,11 +3280,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the exptlCrystalGrowCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExptlCrystalGrowType }
-     *     
+     *
+     * @return possible object is
+     * {@link ExptlCrystalGrowType }
      */
     public ExptlCrystalGrowType getExptlCrystalGrowCategory() {
         return exptlCrystalGrowCategory;
@@ -3719,11 +3290,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the exptlCrystalGrowCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExptlCrystalGrowType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ExptlCrystalGrowType }
      */
     public void setExptlCrystalGrowCategory(ExptlCrystalGrowType value) {
         this.exptlCrystalGrowCategory = value;
@@ -3731,11 +3300,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the exptlCrystalGrowCompCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ExptlCrystalGrowCompType }
-     *     
+     *
+     * @return possible object is
+     * {@link ExptlCrystalGrowCompType }
      */
     public ExptlCrystalGrowCompType getExptlCrystalGrowCompCategory() {
         return exptlCrystalGrowCompCategory;
@@ -3743,11 +3310,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the exptlCrystalGrowCompCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ExptlCrystalGrowCompType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ExptlCrystalGrowCompType }
      */
     public void setExptlCrystalGrowCompCategory(ExptlCrystalGrowCompType value) {
         this.exptlCrystalGrowCompCategory = value;
@@ -3755,11 +3320,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the geomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeomType }
-     *     
+     *
+     * @return possible object is
+     * {@link GeomType }
      */
     public GeomType getGeomCategory() {
         return geomCategory;
@@ -3767,11 +3330,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the geomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeomType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeomType }
      */
     public void setGeomCategory(GeomType value) {
         this.geomCategory = value;
@@ -3779,11 +3340,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the geomAngleCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeomAngleType }
-     *     
+     *
+     * @return possible object is
+     * {@link GeomAngleType }
      */
     public GeomAngleType getGeomAngleCategory() {
         return geomAngleCategory;
@@ -3791,11 +3350,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the geomAngleCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeomAngleType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeomAngleType }
      */
     public void setGeomAngleCategory(GeomAngleType value) {
         this.geomAngleCategory = value;
@@ -3803,11 +3360,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the geomBondCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeomBondType }
-     *     
+     *
+     * @return possible object is
+     * {@link GeomBondType }
      */
     public GeomBondType getGeomBondCategory() {
         return geomBondCategory;
@@ -3815,11 +3370,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the geomBondCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeomBondType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeomBondType }
      */
     public void setGeomBondCategory(GeomBondType value) {
         this.geomBondCategory = value;
@@ -3827,11 +3380,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the geomContactCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeomContactType }
-     *     
+     *
+     * @return possible object is
+     * {@link GeomContactType }
      */
     public GeomContactType getGeomContactCategory() {
         return geomContactCategory;
@@ -3839,11 +3390,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the geomContactCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeomContactType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeomContactType }
      */
     public void setGeomContactCategory(GeomContactType value) {
         this.geomContactCategory = value;
@@ -3851,11 +3400,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the geomHbondCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeomHbondType }
-     *     
+     *
+     * @return possible object is
+     * {@link GeomHbondType }
      */
     public GeomHbondType getGeomHbondCategory() {
         return geomHbondCategory;
@@ -3863,11 +3410,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the geomHbondCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeomHbondType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeomHbondType }
      */
     public void setGeomHbondCategory(GeomHbondType value) {
         this.geomHbondCategory = value;
@@ -3875,11 +3420,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the geomTorsionCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link GeomTorsionType }
-     *     
+     *
+     * @return possible object is
+     * {@link GeomTorsionType }
      */
     public GeomTorsionType getGeomTorsionCategory() {
         return geomTorsionCategory;
@@ -3887,11 +3430,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the geomTorsionCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link GeomTorsionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link GeomTorsionType }
      */
     public void setGeomTorsionCategory(GeomTorsionType value) {
         this.geomTorsionCategory = value;
@@ -3899,11 +3440,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the journalCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JournalType }
-     *     
+     *
+     * @return possible object is
+     * {@link JournalType }
      */
     public JournalType getJournalCategory() {
         return journalCategory;
@@ -3911,11 +3450,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the journalCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JournalType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link JournalType }
      */
     public void setJournalCategory(JournalType value) {
         this.journalCategory = value;
@@ -3923,11 +3460,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the journalIndexCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link JournalIndexType }
-     *     
+     *
+     * @return possible object is
+     * {@link JournalIndexType }
      */
     public JournalIndexType getJournalIndexCategory() {
         return journalIndexCategory;
@@ -3935,11 +3470,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the journalIndexCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link JournalIndexType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link JournalIndexType }
      */
     public void setJournalIndexCategory(JournalIndexType value) {
         this.journalIndexCategory = value;
@@ -3947,11 +3480,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the ndbOriginalNdbCoordinatesCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NdbOriginalNdbCoordinatesType }
-     *     
+     *
+     * @return possible object is
+     * {@link NdbOriginalNdbCoordinatesType }
      */
     public NdbOriginalNdbCoordinatesType getNdbOriginalNdbCoordinatesCategory() {
         return ndbOriginalNdbCoordinatesCategory;
@@ -3959,11 +3490,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the ndbOriginalNdbCoordinatesCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NdbOriginalNdbCoordinatesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link NdbOriginalNdbCoordinatesType }
      */
     public void setNdbOriginalNdbCoordinatesCategory(NdbOriginalNdbCoordinatesType value) {
         this.ndbOriginalNdbCoordinatesCategory = value;
@@ -3971,11 +3500,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the ndbStructConfNaCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NdbStructConfNaType }
-     *     
+     *
+     * @return possible object is
+     * {@link NdbStructConfNaType }
      */
     public NdbStructConfNaType getNdbStructConfNaCategory() {
         return ndbStructConfNaCategory;
@@ -3983,11 +3510,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the ndbStructConfNaCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NdbStructConfNaType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link NdbStructConfNaType }
      */
     public void setNdbStructConfNaCategory(NdbStructConfNaType value) {
         this.ndbStructConfNaCategory = value;
@@ -3995,11 +3520,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the ndbStructFeatureNaCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NdbStructFeatureNaType }
-     *     
+     *
+     * @return possible object is
+     * {@link NdbStructFeatureNaType }
      */
     public NdbStructFeatureNaType getNdbStructFeatureNaCategory() {
         return ndbStructFeatureNaCategory;
@@ -4007,11 +3530,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the ndbStructFeatureNaCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NdbStructFeatureNaType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link NdbStructFeatureNaType }
      */
     public void setNdbStructFeatureNaCategory(NdbStructFeatureNaType value) {
         this.ndbStructFeatureNaCategory = value;
@@ -4019,11 +3540,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the ndbStructNaBasePairCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NdbStructNaBasePairType }
-     *     
+     *
+     * @return possible object is
+     * {@link NdbStructNaBasePairType }
      */
     public NdbStructNaBasePairType getNdbStructNaBasePairCategory() {
         return ndbStructNaBasePairCategory;
@@ -4031,11 +3550,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the ndbStructNaBasePairCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NdbStructNaBasePairType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link NdbStructNaBasePairType }
      */
     public void setNdbStructNaBasePairCategory(NdbStructNaBasePairType value) {
         this.ndbStructNaBasePairCategory = value;
@@ -4043,11 +3560,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the ndbStructNaBasePairStepCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link NdbStructNaBasePairStepType }
-     *     
+     *
+     * @return possible object is
+     * {@link NdbStructNaBasePairStepType }
      */
     public NdbStructNaBasePairStepType getNdbStructNaBasePairStepCategory() {
         return ndbStructNaBasePairStepCategory;
@@ -4055,11 +3570,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the ndbStructNaBasePairStepCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link NdbStructNaBasePairStepType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link NdbStructNaBasePairStepType }
      */
     public void setNdbStructNaBasePairStepCategory(NdbStructNaBasePairStepType value) {
         this.ndbStructNaBasePairStepCategory = value;
@@ -4067,11 +3580,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxSGProjectCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxSGProjectType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxSGProjectType }
      */
     public PdbxSGProjectType getPdbxSGProjectCategory() {
         return pdbxSGProjectCategory;
@@ -4079,11 +3590,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxSGProjectCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxSGProjectType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxSGProjectType }
      */
     public void setPdbxSGProjectCategory(PdbxSGProjectType value) {
         this.pdbxSGProjectCategory = value;
@@ -4091,11 +3600,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxAtomSiteAnisoTlsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxAtomSiteAnisoTlsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxAtomSiteAnisoTlsType }
      */
     public PdbxAtomSiteAnisoTlsType getPdbxAtomSiteAnisoTlsCategory() {
         return pdbxAtomSiteAnisoTlsCategory;
@@ -4103,11 +3610,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxAtomSiteAnisoTlsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxAtomSiteAnisoTlsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxAtomSiteAnisoTlsType }
      */
     public void setPdbxAtomSiteAnisoTlsCategory(PdbxAtomSiteAnisoTlsType value) {
         this.pdbxAtomSiteAnisoTlsCategory = value;
@@ -4115,11 +3620,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxAuditCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxAuditType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxAuditType }
      */
     public PdbxAuditType getPdbxAuditCategory() {
         return pdbxAuditCategory;
@@ -4127,11 +3630,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxAuditCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxAuditType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxAuditType }
      */
     public void setPdbxAuditCategory(PdbxAuditType value) {
         this.pdbxAuditCategory = value;
@@ -4139,11 +3640,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxAuditAuthorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxAuditAuthorType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxAuditAuthorType }
      */
     public PdbxAuditAuthorType getPdbxAuditAuthorCategory() {
         return pdbxAuditAuthorCategory;
@@ -4151,11 +3650,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxAuditAuthorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxAuditAuthorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxAuditAuthorType }
      */
     public void setPdbxAuditAuthorCategory(PdbxAuditAuthorType value) {
         this.pdbxAuditAuthorCategory = value;
@@ -4163,11 +3660,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxAuditSupportCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxAuditSupportType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxAuditSupportType }
      */
     public PdbxAuditSupportType getPdbxAuditSupportCategory() {
         return pdbxAuditSupportCategory;
@@ -4175,11 +3670,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxAuditSupportCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxAuditSupportType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxAuditSupportType }
      */
     public void setPdbxAuditSupportCategory(PdbxAuditSupportType value) {
         this.pdbxAuditSupportCategory = value;
@@ -4187,11 +3680,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxBondDistanceLimitsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxBondDistanceLimitsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxBondDistanceLimitsType }
      */
     public PdbxBondDistanceLimitsType getPdbxBondDistanceLimitsCategory() {
         return pdbxBondDistanceLimitsCategory;
@@ -4199,11 +3690,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxBondDistanceLimitsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxBondDistanceLimitsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxBondDistanceLimitsType }
      */
     public void setPdbxBondDistanceLimitsCategory(PdbxBondDistanceLimitsType value) {
         this.pdbxBondDistanceLimitsCategory = value;
@@ -4211,11 +3700,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxBufferCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxBufferType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxBufferType }
      */
     public PdbxBufferType getPdbxBufferCategory() {
         return pdbxBufferCategory;
@@ -4223,11 +3710,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxBufferCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxBufferType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxBufferType }
      */
     public void setPdbxBufferCategory(PdbxBufferType value) {
         this.pdbxBufferCategory = value;
@@ -4235,11 +3720,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxBufferComponentsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxBufferComponentsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxBufferComponentsType }
      */
     public PdbxBufferComponentsType getPdbxBufferComponentsCategory() {
         return pdbxBufferComponentsCategory;
@@ -4247,11 +3730,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxBufferComponentsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxBufferComponentsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxBufferComponentsType }
      */
     public void setPdbxBufferComponentsCategory(PdbxBufferComponentsType value) {
         this.pdbxBufferComponentsCategory = value;
@@ -4259,11 +3740,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompAtomEditCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompAtomEditType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompAtomEditType }
      */
     public PdbxChemCompAtomEditType getPdbxChemCompAtomEditCategory() {
         return pdbxChemCompAtomEditCategory;
@@ -4271,11 +3750,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompAtomEditCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompAtomEditType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompAtomEditType }
      */
     public void setPdbxChemCompAtomEditCategory(PdbxChemCompAtomEditType value) {
         this.pdbxChemCompAtomEditCategory = value;
@@ -4283,11 +3760,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompAtomFeatureCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompAtomFeatureType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompAtomFeatureType }
      */
     public PdbxChemCompAtomFeatureType getPdbxChemCompAtomFeatureCategory() {
         return pdbxChemCompAtomFeatureCategory;
@@ -4295,11 +3770,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompAtomFeatureCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompAtomFeatureType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompAtomFeatureType }
      */
     public void setPdbxChemCompAtomFeatureCategory(PdbxChemCompAtomFeatureType value) {
         this.pdbxChemCompAtomFeatureCategory = value;
@@ -4307,11 +3780,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompAuditCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompAuditType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompAuditType }
      */
     public PdbxChemCompAuditType getPdbxChemCompAuditCategory() {
         return pdbxChemCompAuditCategory;
@@ -4319,11 +3790,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompAuditCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompAuditType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompAuditType }
      */
     public void setPdbxChemCompAuditCategory(PdbxChemCompAuditType value) {
         this.pdbxChemCompAuditCategory = value;
@@ -4331,11 +3800,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompBondEditCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompBondEditType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompBondEditType }
      */
     public PdbxChemCompBondEditType getPdbxChemCompBondEditCategory() {
         return pdbxChemCompBondEditCategory;
@@ -4343,11 +3810,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompBondEditCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompBondEditType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompBondEditType }
      */
     public void setPdbxChemCompBondEditCategory(PdbxChemCompBondEditType value) {
         this.pdbxChemCompBondEditCategory = value;
@@ -4355,11 +3820,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompDescriptorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompDescriptorType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompDescriptorType }
      */
     public PdbxChemCompDescriptorType getPdbxChemCompDescriptorCategory() {
         return pdbxChemCompDescriptorCategory;
@@ -4367,11 +3830,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompDescriptorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompDescriptorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompDescriptorType }
      */
     public void setPdbxChemCompDescriptorCategory(PdbxChemCompDescriptorType value) {
         this.pdbxChemCompDescriptorCategory = value;
@@ -4379,11 +3840,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompFeatureCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompFeatureType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompFeatureType }
      */
     public PdbxChemCompFeatureType getPdbxChemCompFeatureCategory() {
         return pdbxChemCompFeatureCategory;
@@ -4391,11 +3850,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompFeatureCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompFeatureType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompFeatureType }
      */
     public void setPdbxChemCompFeatureCategory(PdbxChemCompFeatureType value) {
         this.pdbxChemCompFeatureCategory = value;
@@ -4403,11 +3860,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompIdentifierCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompIdentifierType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompIdentifierType }
      */
     public PdbxChemCompIdentifierType getPdbxChemCompIdentifierCategory() {
         return pdbxChemCompIdentifierCategory;
@@ -4415,11 +3870,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompIdentifierCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompIdentifierType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompIdentifierType }
      */
     public void setPdbxChemCompIdentifierCategory(PdbxChemCompIdentifierType value) {
         this.pdbxChemCompIdentifierCategory = value;
@@ -4427,11 +3880,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompImportCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompImportType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompImportType }
      */
     public PdbxChemCompImportType getPdbxChemCompImportCategory() {
         return pdbxChemCompImportCategory;
@@ -4439,11 +3890,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompImportCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompImportType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompImportType }
      */
     public void setPdbxChemCompImportCategory(PdbxChemCompImportType value) {
         this.pdbxChemCompImportCategory = value;
@@ -4451,11 +3900,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompSubcomponentEntityListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompSubcomponentEntityListType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompSubcomponentEntityListType }
      */
     public PdbxChemCompSubcomponentEntityListType getPdbxChemCompSubcomponentEntityListCategory() {
         return pdbxChemCompSubcomponentEntityListCategory;
@@ -4463,11 +3910,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompSubcomponentEntityListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompSubcomponentEntityListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompSubcomponentEntityListType }
      */
     public void setPdbxChemCompSubcomponentEntityListCategory(PdbxChemCompSubcomponentEntityListType value) {
         this.pdbxChemCompSubcomponentEntityListCategory = value;
@@ -4475,11 +3920,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxChemCompSubcomponentStructConnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxChemCompSubcomponentStructConnType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxChemCompSubcomponentStructConnType }
      */
     public PdbxChemCompSubcomponentStructConnType getPdbxChemCompSubcomponentStructConnCategory() {
         return pdbxChemCompSubcomponentStructConnCategory;
@@ -4487,11 +3930,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxChemCompSubcomponentStructConnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxChemCompSubcomponentStructConnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxChemCompSubcomponentStructConnType }
      */
     public void setPdbxChemCompSubcomponentStructConnCategory(PdbxChemCompSubcomponentStructConnType value) {
         this.pdbxChemCompSubcomponentStructConnCategory = value;
@@ -4499,11 +3940,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxConstructCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxConstructType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxConstructType }
      */
     public PdbxConstructType getPdbxConstructCategory() {
         return pdbxConstructCategory;
@@ -4511,11 +3950,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxConstructCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxConstructType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxConstructType }
      */
     public void setPdbxConstructCategory(PdbxConstructType value) {
         this.pdbxConstructCategory = value;
@@ -4523,11 +3960,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxConstructFeatureCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxConstructFeatureType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxConstructFeatureType }
      */
     public PdbxConstructFeatureType getPdbxConstructFeatureCategory() {
         return pdbxConstructFeatureCategory;
@@ -4535,11 +3970,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxConstructFeatureCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxConstructFeatureType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxConstructFeatureType }
      */
     public void setPdbxConstructFeatureCategory(PdbxConstructFeatureType value) {
         this.pdbxConstructFeatureCategory = value;
@@ -4547,11 +3980,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxContactAuthorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxContactAuthorType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxContactAuthorType }
      */
     public PdbxContactAuthorType getPdbxContactAuthorCategory() {
         return pdbxContactAuthorCategory;
@@ -4559,11 +3990,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxContactAuthorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxContactAuthorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxContactAuthorType }
      */
     public void setPdbxContactAuthorCategory(PdbxContactAuthorType value) {
         this.pdbxContactAuthorCategory = value;
@@ -4571,11 +4000,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxCoordinateModelCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxCoordinateModelType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxCoordinateModelType }
      */
     public PdbxCoordinateModelType getPdbxCoordinateModelCategory() {
         return pdbxCoordinateModelCategory;
@@ -4583,11 +4010,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxCoordinateModelCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxCoordinateModelType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxCoordinateModelType }
      */
     public void setPdbxCoordinateModelCategory(PdbxCoordinateModelType value) {
         this.pdbxCoordinateModelCategory = value;
@@ -4595,11 +4020,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDatabasePDBObsSprCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDatabasePDBObsSprType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDatabasePDBObsSprType }
      */
     public PdbxDatabasePDBObsSprType getPdbxDatabasePDBObsSprCategory() {
         return pdbxDatabasePDBObsSprCategory;
@@ -4607,11 +4030,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDatabasePDBObsSprCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDatabasePDBObsSprType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDatabasePDBObsSprType }
      */
     public void setPdbxDatabasePDBObsSprCategory(PdbxDatabasePDBObsSprType value) {
         this.pdbxDatabasePDBObsSprCategory = value;
@@ -4619,11 +4040,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDatabaseMessageCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDatabaseMessageType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDatabaseMessageType }
      */
     public PdbxDatabaseMessageType getPdbxDatabaseMessageCategory() {
         return pdbxDatabaseMessageCategory;
@@ -4631,11 +4050,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDatabaseMessageCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDatabaseMessageType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDatabaseMessageType }
      */
     public void setPdbxDatabaseMessageCategory(PdbxDatabaseMessageType value) {
         this.pdbxDatabaseMessageCategory = value;
@@ -4643,11 +4060,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDatabaseProcCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDatabaseProcType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDatabaseProcType }
      */
     public PdbxDatabaseProcType getPdbxDatabaseProcCategory() {
         return pdbxDatabaseProcCategory;
@@ -4655,11 +4070,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDatabaseProcCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDatabaseProcType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDatabaseProcType }
      */
     public void setPdbxDatabaseProcCategory(PdbxDatabaseProcType value) {
         this.pdbxDatabaseProcCategory = value;
@@ -4667,11 +4080,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDatabaseRelatedCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDatabaseRelatedType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDatabaseRelatedType }
      */
     public PdbxDatabaseRelatedType getPdbxDatabaseRelatedCategory() {
         return pdbxDatabaseRelatedCategory;
@@ -4679,11 +4090,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDatabaseRelatedCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDatabaseRelatedType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDatabaseRelatedType }
      */
     public void setPdbxDatabaseRelatedCategory(PdbxDatabaseRelatedType value) {
         this.pdbxDatabaseRelatedCategory = value;
@@ -4691,11 +4100,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDatabaseRemarkCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDatabaseRemarkType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDatabaseRemarkType }
      */
     public PdbxDatabaseRemarkType getPdbxDatabaseRemarkCategory() {
         return pdbxDatabaseRemarkCategory;
@@ -4703,11 +4110,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDatabaseRemarkCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDatabaseRemarkType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDatabaseRemarkType }
      */
     public void setPdbxDatabaseRemarkCategory(PdbxDatabaseRemarkType value) {
         this.pdbxDatabaseRemarkCategory = value;
@@ -4715,11 +4120,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDatabaseStatusCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDatabaseStatusType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDatabaseStatusType }
      */
     public PdbxDatabaseStatusType getPdbxDatabaseStatusCategory() {
         return pdbxDatabaseStatusCategory;
@@ -4727,11 +4130,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDatabaseStatusCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDatabaseStatusType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDatabaseStatusType }
      */
     public void setPdbxDatabaseStatusCategory(PdbxDatabaseStatusType value) {
         this.pdbxDatabaseStatusCategory = value;
@@ -4739,11 +4140,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDiffrnReflnsShellCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDiffrnReflnsShellType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDiffrnReflnsShellType }
      */
     public PdbxDiffrnReflnsShellType getPdbxDiffrnReflnsShellCategory() {
         return pdbxDiffrnReflnsShellCategory;
@@ -4751,11 +4150,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDiffrnReflnsShellCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDiffrnReflnsShellType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDiffrnReflnsShellType }
      */
     public void setPdbxDiffrnReflnsShellCategory(PdbxDiffrnReflnsShellType value) {
         this.pdbxDiffrnReflnsShellCategory = value;
@@ -4763,11 +4160,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDistantSolventAtomsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDistantSolventAtomsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDistantSolventAtomsType }
      */
     public PdbxDistantSolventAtomsType getPdbxDistantSolventAtomsCategory() {
         return pdbxDistantSolventAtomsCategory;
@@ -4775,11 +4170,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDistantSolventAtomsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDistantSolventAtomsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDistantSolventAtomsType }
      */
     public void setPdbxDistantSolventAtomsCategory(PdbxDistantSolventAtomsType value) {
         this.pdbxDistantSolventAtomsCategory = value;
@@ -4787,11 +4180,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDomainCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDomainType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDomainType }
      */
     public PdbxDomainType getPdbxDomainCategory() {
         return pdbxDomainCategory;
@@ -4799,11 +4190,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDomainCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDomainType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDomainType }
      */
     public void setPdbxDomainCategory(PdbxDomainType value) {
         this.pdbxDomainCategory = value;
@@ -4811,11 +4200,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxDomainRangeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxDomainRangeType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxDomainRangeType }
      */
     public PdbxDomainRangeType getPdbxDomainRangeCategory() {
         return pdbxDomainRangeCategory;
@@ -4823,11 +4210,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxDomainRangeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxDomainRangeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxDomainRangeType }
      */
     public void setPdbxDomainRangeCategory(PdbxDomainRangeType value) {
         this.pdbxDomainRangeCategory = value;
@@ -4835,11 +4220,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntityAssemblyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntityAssemblyType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntityAssemblyType }
      */
     public PdbxEntityAssemblyType getPdbxEntityAssemblyCategory() {
         return pdbxEntityAssemblyCategory;
@@ -4847,11 +4230,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntityAssemblyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntityAssemblyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntityAssemblyType }
      */
     public void setPdbxEntityAssemblyCategory(PdbxEntityAssemblyType value) {
         this.pdbxEntityAssemblyCategory = value;
@@ -4859,11 +4240,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntityNameCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntityNameType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntityNameType }
      */
     public PdbxEntityNameType getPdbxEntityNameCategory() {
         return pdbxEntityNameCategory;
@@ -4871,11 +4250,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntityNameCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntityNameType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntityNameType }
      */
     public void setPdbxEntityNameCategory(PdbxEntityNameType value) {
         this.pdbxEntityNameCategory = value;
@@ -4883,11 +4260,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntityNonpolyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntityNonpolyType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntityNonpolyType }
      */
     public PdbxEntityNonpolyType getPdbxEntityNonpolyCategory() {
         return pdbxEntityNonpolyCategory;
@@ -4895,11 +4270,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntityNonpolyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntityNonpolyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntityNonpolyType }
      */
     public void setPdbxEntityNonpolyCategory(PdbxEntityNonpolyType value) {
         this.pdbxEntityNonpolyCategory = value;
@@ -4907,11 +4280,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntityProdProtocolCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntityProdProtocolType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntityProdProtocolType }
      */
     public PdbxEntityProdProtocolType getPdbxEntityProdProtocolCategory() {
         return pdbxEntityProdProtocolCategory;
@@ -4919,11 +4290,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntityProdProtocolCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntityProdProtocolType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntityProdProtocolType }
      */
     public void setPdbxEntityProdProtocolCategory(PdbxEntityProdProtocolType value) {
         this.pdbxEntityProdProtocolCategory = value;
@@ -4931,11 +4300,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenCharacterCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenCharacterType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenCharacterType }
      */
     public PdbxEntitySrcGenCharacterType getPdbxEntitySrcGenCharacterCategory() {
         return pdbxEntitySrcGenCharacterCategory;
@@ -4943,11 +4310,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenCharacterCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenCharacterType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenCharacterType }
      */
     public void setPdbxEntitySrcGenCharacterCategory(PdbxEntitySrcGenCharacterType value) {
         this.pdbxEntitySrcGenCharacterCategory = value;
@@ -4955,11 +4320,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenChromCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenChromType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenChromType }
      */
     public PdbxEntitySrcGenChromType getPdbxEntitySrcGenChromCategory() {
         return pdbxEntitySrcGenChromCategory;
@@ -4967,11 +4330,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenChromCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenChromType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenChromType }
      */
     public void setPdbxEntitySrcGenChromCategory(PdbxEntitySrcGenChromType value) {
         this.pdbxEntitySrcGenChromCategory = value;
@@ -4979,11 +4340,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenCloneCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenCloneType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenCloneType }
      */
     public PdbxEntitySrcGenCloneType getPdbxEntitySrcGenCloneCategory() {
         return pdbxEntitySrcGenCloneCategory;
@@ -4991,11 +4350,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenCloneCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenCloneType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenCloneType }
      */
     public void setPdbxEntitySrcGenCloneCategory(PdbxEntitySrcGenCloneType value) {
         this.pdbxEntitySrcGenCloneCategory = value;
@@ -5003,11 +4360,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenCloneLigationCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenCloneLigationType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenCloneLigationType }
      */
     public PdbxEntitySrcGenCloneLigationType getPdbxEntitySrcGenCloneLigationCategory() {
         return pdbxEntitySrcGenCloneLigationCategory;
@@ -5015,11 +4370,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenCloneLigationCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenCloneLigationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenCloneLigationType }
      */
     public void setPdbxEntitySrcGenCloneLigationCategory(PdbxEntitySrcGenCloneLigationType value) {
         this.pdbxEntitySrcGenCloneLigationCategory = value;
@@ -5027,11 +4380,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenCloneRecombinationCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenCloneRecombinationType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenCloneRecombinationType }
      */
     public PdbxEntitySrcGenCloneRecombinationType getPdbxEntitySrcGenCloneRecombinationCategory() {
         return pdbxEntitySrcGenCloneRecombinationCategory;
@@ -5039,11 +4390,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenCloneRecombinationCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenCloneRecombinationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenCloneRecombinationType }
      */
     public void setPdbxEntitySrcGenCloneRecombinationCategory(PdbxEntitySrcGenCloneRecombinationType value) {
         this.pdbxEntitySrcGenCloneRecombinationCategory = value;
@@ -5051,11 +4400,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenExpressCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenExpressType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenExpressType }
      */
     public PdbxEntitySrcGenExpressType getPdbxEntitySrcGenExpressCategory() {
         return pdbxEntitySrcGenExpressCategory;
@@ -5063,11 +4410,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenExpressCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenExpressType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenExpressType }
      */
     public void setPdbxEntitySrcGenExpressCategory(PdbxEntitySrcGenExpressType value) {
         this.pdbxEntitySrcGenExpressCategory = value;
@@ -5075,11 +4420,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenExpressTimepointCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenExpressTimepointType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenExpressTimepointType }
      */
     public PdbxEntitySrcGenExpressTimepointType getPdbxEntitySrcGenExpressTimepointCategory() {
         return pdbxEntitySrcGenExpressTimepointCategory;
@@ -5087,11 +4430,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenExpressTimepointCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenExpressTimepointType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenExpressTimepointType }
      */
     public void setPdbxEntitySrcGenExpressTimepointCategory(PdbxEntitySrcGenExpressTimepointType value) {
         this.pdbxEntitySrcGenExpressTimepointCategory = value;
@@ -5099,11 +4440,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenFractCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenFractType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenFractType }
      */
     public PdbxEntitySrcGenFractType getPdbxEntitySrcGenFractCategory() {
         return pdbxEntitySrcGenFractCategory;
@@ -5111,11 +4450,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenFractCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenFractType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenFractType }
      */
     public void setPdbxEntitySrcGenFractCategory(PdbxEntitySrcGenFractType value) {
         this.pdbxEntitySrcGenFractCategory = value;
@@ -5123,11 +4460,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenLysisCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenLysisType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenLysisType }
      */
     public PdbxEntitySrcGenLysisType getPdbxEntitySrcGenLysisCategory() {
         return pdbxEntitySrcGenLysisCategory;
@@ -5135,11 +4470,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenLysisCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenLysisType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenLysisType }
      */
     public void setPdbxEntitySrcGenLysisCategory(PdbxEntitySrcGenLysisType value) {
         this.pdbxEntitySrcGenLysisCategory = value;
@@ -5147,11 +4480,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenProdDigestCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenProdDigestType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenProdDigestType }
      */
     public PdbxEntitySrcGenProdDigestType getPdbxEntitySrcGenProdDigestCategory() {
         return pdbxEntitySrcGenProdDigestCategory;
@@ -5159,11 +4490,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenProdDigestCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenProdDigestType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenProdDigestType }
      */
     public void setPdbxEntitySrcGenProdDigestCategory(PdbxEntitySrcGenProdDigestType value) {
         this.pdbxEntitySrcGenProdDigestCategory = value;
@@ -5171,11 +4500,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenProdOtherCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenProdOtherType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenProdOtherType }
      */
     public PdbxEntitySrcGenProdOtherType getPdbxEntitySrcGenProdOtherCategory() {
         return pdbxEntitySrcGenProdOtherCategory;
@@ -5183,11 +4510,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenProdOtherCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenProdOtherType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenProdOtherType }
      */
     public void setPdbxEntitySrcGenProdOtherCategory(PdbxEntitySrcGenProdOtherType value) {
         this.pdbxEntitySrcGenProdOtherCategory = value;
@@ -5195,11 +4520,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenProdOtherParameterCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenProdOtherParameterType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenProdOtherParameterType }
      */
     public PdbxEntitySrcGenProdOtherParameterType getPdbxEntitySrcGenProdOtherParameterCategory() {
         return pdbxEntitySrcGenProdOtherParameterCategory;
@@ -5207,11 +4530,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenProdOtherParameterCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenProdOtherParameterType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenProdOtherParameterType }
      */
     public void setPdbxEntitySrcGenProdOtherParameterCategory(PdbxEntitySrcGenProdOtherParameterType value) {
         this.pdbxEntitySrcGenProdOtherParameterCategory = value;
@@ -5219,11 +4540,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenProdPcrCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenProdPcrType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenProdPcrType }
      */
     public PdbxEntitySrcGenProdPcrType getPdbxEntitySrcGenProdPcrCategory() {
         return pdbxEntitySrcGenProdPcrCategory;
@@ -5231,11 +4550,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenProdPcrCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenProdPcrType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenProdPcrType }
      */
     public void setPdbxEntitySrcGenProdPcrCategory(PdbxEntitySrcGenProdPcrType value) {
         this.pdbxEntitySrcGenProdPcrCategory = value;
@@ -5243,11 +4560,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenProteolysisCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenProteolysisType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenProteolysisType }
      */
     public PdbxEntitySrcGenProteolysisType getPdbxEntitySrcGenProteolysisCategory() {
         return pdbxEntitySrcGenProteolysisCategory;
@@ -5255,11 +4570,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenProteolysisCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenProteolysisType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenProteolysisType }
      */
     public void setPdbxEntitySrcGenProteolysisCategory(PdbxEntitySrcGenProteolysisType value) {
         this.pdbxEntitySrcGenProteolysisCategory = value;
@@ -5267,11 +4580,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenPureCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenPureType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenPureType }
      */
     public PdbxEntitySrcGenPureType getPdbxEntitySrcGenPureCategory() {
         return pdbxEntitySrcGenPureCategory;
@@ -5279,11 +4590,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenPureCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenPureType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenPureType }
      */
     public void setPdbxEntitySrcGenPureCategory(PdbxEntitySrcGenPureType value) {
         this.pdbxEntitySrcGenPureCategory = value;
@@ -5291,11 +4600,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcGenRefoldCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcGenRefoldType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcGenRefoldType }
      */
     public PdbxEntitySrcGenRefoldType getPdbxEntitySrcGenRefoldCategory() {
         return pdbxEntitySrcGenRefoldCategory;
@@ -5303,11 +4610,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcGenRefoldCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcGenRefoldType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcGenRefoldType }
      */
     public void setPdbxEntitySrcGenRefoldCategory(PdbxEntitySrcGenRefoldType value) {
         this.pdbxEntitySrcGenRefoldCategory = value;
@@ -5315,11 +4620,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntitySrcSynCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntitySrcSynType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntitySrcSynType }
      */
     public PdbxEntitySrcSynType getPdbxEntitySrcSynCategory() {
         return pdbxEntitySrcSynCategory;
@@ -5327,11 +4630,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntitySrcSynCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntitySrcSynType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntitySrcSynType }
      */
     public void setPdbxEntitySrcSynCategory(PdbxEntitySrcSynType value) {
         this.pdbxEntitySrcSynCategory = value;
@@ -5339,11 +4640,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxEntryDetailsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxEntryDetailsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxEntryDetailsType }
      */
     public PdbxEntryDetailsType getPdbxEntryDetailsCategory() {
         return pdbxEntryDetailsCategory;
@@ -5351,11 +4650,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxEntryDetailsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxEntryDetailsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxEntryDetailsType }
      */
     public void setPdbxEntryDetailsCategory(PdbxEntryDetailsType value) {
         this.pdbxEntryDetailsCategory = value;
@@ -5363,11 +4660,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxExptlCrystalCryoTreatmentCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxExptlCrystalCryoTreatmentType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxExptlCrystalCryoTreatmentType }
      */
     public PdbxExptlCrystalCryoTreatmentType getPdbxExptlCrystalCryoTreatmentCategory() {
         return pdbxExptlCrystalCryoTreatmentCategory;
@@ -5375,11 +4670,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxExptlCrystalCryoTreatmentCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxExptlCrystalCryoTreatmentType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxExptlCrystalCryoTreatmentType }
      */
     public void setPdbxExptlCrystalCryoTreatmentCategory(PdbxExptlCrystalCryoTreatmentType value) {
         this.pdbxExptlCrystalCryoTreatmentCategory = value;
@@ -5387,11 +4680,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxExptlCrystalGrowCompCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxExptlCrystalGrowCompType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxExptlCrystalGrowCompType }
      */
     public PdbxExptlCrystalGrowCompType getPdbxExptlCrystalGrowCompCategory() {
         return pdbxExptlCrystalGrowCompCategory;
@@ -5399,11 +4690,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxExptlCrystalGrowCompCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxExptlCrystalGrowCompType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxExptlCrystalGrowCompType }
      */
     public void setPdbxExptlCrystalGrowCompCategory(PdbxExptlCrystalGrowCompType value) {
         this.pdbxExptlCrystalGrowCompCategory = value;
@@ -5411,11 +4700,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxExptlCrystalGrowSolCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxExptlCrystalGrowSolType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxExptlCrystalGrowSolType }
      */
     public PdbxExptlCrystalGrowSolType getPdbxExptlCrystalGrowSolCategory() {
         return pdbxExptlCrystalGrowSolCategory;
@@ -5423,11 +4710,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxExptlCrystalGrowSolCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxExptlCrystalGrowSolType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxExptlCrystalGrowSolType }
      */
     public void setPdbxExptlCrystalGrowSolCategory(PdbxExptlCrystalGrowSolType value) {
         this.pdbxExptlCrystalGrowSolCategory = value;
@@ -5435,11 +4720,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxExptlPdCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxExptlPdType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxExptlPdType }
      */
     public PdbxExptlPdType getPdbxExptlPdCategory() {
         return pdbxExptlPdCategory;
@@ -5447,11 +4730,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxExptlPdCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxExptlPdType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxExptlPdType }
      */
     public void setPdbxExptlPdCategory(PdbxExptlPdType value) {
         this.pdbxExptlPdCategory = value;
@@ -5459,11 +4740,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxFamilyGroupIndexCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxFamilyGroupIndexType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxFamilyGroupIndexType }
      */
     public PdbxFamilyGroupIndexType getPdbxFamilyGroupIndexCategory() {
         return pdbxFamilyGroupIndexCategory;
@@ -5471,11 +4750,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxFamilyGroupIndexCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxFamilyGroupIndexType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxFamilyGroupIndexType }
      */
     public void setPdbxFamilyGroupIndexCategory(PdbxFamilyGroupIndexType value) {
         this.pdbxFamilyGroupIndexCategory = value;
@@ -5483,11 +4760,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxFamilyPrdAuditCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxFamilyPrdAuditType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxFamilyPrdAuditType }
      */
     public PdbxFamilyPrdAuditType getPdbxFamilyPrdAuditCategory() {
         return pdbxFamilyPrdAuditCategory;
@@ -5495,11 +4770,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxFamilyPrdAuditCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxFamilyPrdAuditType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxFamilyPrdAuditType }
      */
     public void setPdbxFamilyPrdAuditCategory(PdbxFamilyPrdAuditType value) {
         this.pdbxFamilyPrdAuditCategory = value;
@@ -5507,11 +4780,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxFeatureAssemblyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxFeatureAssemblyType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxFeatureAssemblyType }
      */
     public PdbxFeatureAssemblyType getPdbxFeatureAssemblyCategory() {
         return pdbxFeatureAssemblyCategory;
@@ -5519,11 +4790,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxFeatureAssemblyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxFeatureAssemblyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxFeatureAssemblyType }
      */
     public void setPdbxFeatureAssemblyCategory(PdbxFeatureAssemblyType value) {
         this.pdbxFeatureAssemblyCategory = value;
@@ -5531,11 +4800,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxFeatureDomainCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxFeatureDomainType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxFeatureDomainType }
      */
     public PdbxFeatureDomainType getPdbxFeatureDomainCategory() {
         return pdbxFeatureDomainCategory;
@@ -5543,11 +4810,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxFeatureDomainCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxFeatureDomainType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxFeatureDomainType }
      */
     public void setPdbxFeatureDomainCategory(PdbxFeatureDomainType value) {
         this.pdbxFeatureDomainCategory = value;
@@ -5555,11 +4820,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxFeatureEntryCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxFeatureEntryType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxFeatureEntryType }
      */
     public PdbxFeatureEntryType getPdbxFeatureEntryCategory() {
         return pdbxFeatureEntryCategory;
@@ -5567,11 +4830,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxFeatureEntryCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxFeatureEntryType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxFeatureEntryType }
      */
     public void setPdbxFeatureEntryCategory(PdbxFeatureEntryType value) {
         this.pdbxFeatureEntryCategory = value;
@@ -5579,11 +4840,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxFeatureMonomerCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxFeatureMonomerType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxFeatureMonomerType }
      */
     public PdbxFeatureMonomerType getPdbxFeatureMonomerCategory() {
         return pdbxFeatureMonomerCategory;
@@ -5591,11 +4850,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxFeatureMonomerCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxFeatureMonomerType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxFeatureMonomerType }
      */
     public void setPdbxFeatureMonomerCategory(PdbxFeatureMonomerType value) {
         this.pdbxFeatureMonomerCategory = value;
@@ -5603,11 +4860,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxFeatureSequenceRangeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxFeatureSequenceRangeType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxFeatureSequenceRangeType }
      */
     public PdbxFeatureSequenceRangeType getPdbxFeatureSequenceRangeCategory() {
         return pdbxFeatureSequenceRangeCategory;
@@ -5615,11 +4870,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxFeatureSequenceRangeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxFeatureSequenceRangeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxFeatureSequenceRangeType }
      */
     public void setPdbxFeatureSequenceRangeCategory(PdbxFeatureSequenceRangeType value) {
         this.pdbxFeatureSequenceRangeCategory = value;
@@ -5627,11 +4880,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxHelicalSymmetryCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxHelicalSymmetryType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxHelicalSymmetryType }
      */
     public PdbxHelicalSymmetryType getPdbxHelicalSymmetryCategory() {
         return pdbxHelicalSymmetryCategory;
@@ -5639,11 +4890,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxHelicalSymmetryCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxHelicalSymmetryType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxHelicalSymmetryType }
      */
     public void setPdbxHelicalSymmetryCategory(PdbxHelicalSymmetryType value) {
         this.pdbxHelicalSymmetryCategory = value;
@@ -5651,11 +4900,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxMoleculeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxMoleculeType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxMoleculeType }
      */
     public PdbxMoleculeType getPdbxMoleculeCategory() {
         return pdbxMoleculeCategory;
@@ -5663,11 +4910,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxMoleculeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxMoleculeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxMoleculeType }
      */
     public void setPdbxMoleculeCategory(PdbxMoleculeType value) {
         this.pdbxMoleculeCategory = value;
@@ -5675,11 +4920,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxMoleculeFeaturesCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxMoleculeFeaturesType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxMoleculeFeaturesType }
      */
     public PdbxMoleculeFeaturesType getPdbxMoleculeFeaturesCategory() {
         return pdbxMoleculeFeaturesCategory;
@@ -5687,11 +4930,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxMoleculeFeaturesCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxMoleculeFeaturesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxMoleculeFeaturesType }
      */
     public void setPdbxMoleculeFeaturesCategory(PdbxMoleculeFeaturesType value) {
         this.pdbxMoleculeFeaturesCategory = value;
@@ -5699,11 +4940,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrAssignedChemShiftListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrAssignedChemShiftListType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrAssignedChemShiftListType }
      */
     public PdbxNmrAssignedChemShiftListType getPdbxNmrAssignedChemShiftListCategory() {
         return pdbxNmrAssignedChemShiftListCategory;
@@ -5711,11 +4950,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrAssignedChemShiftListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrAssignedChemShiftListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrAssignedChemShiftListType }
      */
     public void setPdbxNmrAssignedChemShiftListCategory(PdbxNmrAssignedChemShiftListType value) {
         this.pdbxNmrAssignedChemShiftListCategory = value;
@@ -5723,11 +4960,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrChemShiftExperimentCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrChemShiftExperimentType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrChemShiftExperimentType }
      */
     public PdbxNmrChemShiftExperimentType getPdbxNmrChemShiftExperimentCategory() {
         return pdbxNmrChemShiftExperimentCategory;
@@ -5735,11 +4970,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrChemShiftExperimentCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrChemShiftExperimentType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrChemShiftExperimentType }
      */
     public void setPdbxNmrChemShiftExperimentCategory(PdbxNmrChemShiftExperimentType value) {
         this.pdbxNmrChemShiftExperimentCategory = value;
@@ -5747,11 +4980,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrChemShiftRefCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrChemShiftRefType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrChemShiftRefType }
      */
     public PdbxNmrChemShiftRefType getPdbxNmrChemShiftRefCategory() {
         return pdbxNmrChemShiftRefCategory;
@@ -5759,11 +4990,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrChemShiftRefCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrChemShiftRefType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrChemShiftRefType }
      */
     public void setPdbxNmrChemShiftRefCategory(PdbxNmrChemShiftRefType value) {
         this.pdbxNmrChemShiftRefCategory = value;
@@ -5771,11 +5000,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrChemShiftReferenceCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrChemShiftReferenceType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrChemShiftReferenceType }
      */
     public PdbxNmrChemShiftReferenceType getPdbxNmrChemShiftReferenceCategory() {
         return pdbxNmrChemShiftReferenceCategory;
@@ -5783,11 +5010,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrChemShiftReferenceCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrChemShiftReferenceType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrChemShiftReferenceType }
      */
     public void setPdbxNmrChemShiftReferenceCategory(PdbxNmrChemShiftReferenceType value) {
         this.pdbxNmrChemShiftReferenceCategory = value;
@@ -5795,11 +5020,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrChemShiftSoftwareCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrChemShiftSoftwareType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrChemShiftSoftwareType }
      */
     public PdbxNmrChemShiftSoftwareType getPdbxNmrChemShiftSoftwareCategory() {
         return pdbxNmrChemShiftSoftwareCategory;
@@ -5807,11 +5030,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrChemShiftSoftwareCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrChemShiftSoftwareType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrChemShiftSoftwareType }
      */
     public void setPdbxNmrChemShiftSoftwareCategory(PdbxNmrChemShiftSoftwareType value) {
         this.pdbxNmrChemShiftSoftwareCategory = value;
@@ -5819,11 +5040,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrConstraintFileCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrConstraintFileType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrConstraintFileType }
      */
     public PdbxNmrConstraintFileType getPdbxNmrConstraintFileCategory() {
         return pdbxNmrConstraintFileCategory;
@@ -5831,11 +5050,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrConstraintFileCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrConstraintFileType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrConstraintFileType }
      */
     public void setPdbxNmrConstraintFileCategory(PdbxNmrConstraintFileType value) {
         this.pdbxNmrConstraintFileCategory = value;
@@ -5843,11 +5060,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrConstraintsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrConstraintsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrConstraintsType }
      */
     public PdbxNmrConstraintsType getPdbxNmrConstraintsCategory() {
         return pdbxNmrConstraintsCategory;
@@ -5855,11 +5070,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrConstraintsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrConstraintsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrConstraintsType }
      */
     public void setPdbxNmrConstraintsCategory(PdbxNmrConstraintsType value) {
         this.pdbxNmrConstraintsCategory = value;
@@ -5867,11 +5080,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrDetailsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrDetailsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrDetailsType }
      */
     public PdbxNmrDetailsType getPdbxNmrDetailsCategory() {
         return pdbxNmrDetailsCategory;
@@ -5879,11 +5090,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrDetailsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrDetailsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrDetailsType }
      */
     public void setPdbxNmrDetailsCategory(PdbxNmrDetailsType value) {
         this.pdbxNmrDetailsCategory = value;
@@ -5891,11 +5100,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrEnsembleCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrEnsembleType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrEnsembleType }
      */
     public PdbxNmrEnsembleType getPdbxNmrEnsembleCategory() {
         return pdbxNmrEnsembleCategory;
@@ -5903,11 +5110,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrEnsembleCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrEnsembleType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrEnsembleType }
      */
     public void setPdbxNmrEnsembleCategory(PdbxNmrEnsembleType value) {
         this.pdbxNmrEnsembleCategory = value;
@@ -5915,11 +5120,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrEnsembleRmsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrEnsembleRmsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrEnsembleRmsType }
      */
     public PdbxNmrEnsembleRmsType getPdbxNmrEnsembleRmsCategory() {
         return pdbxNmrEnsembleRmsCategory;
@@ -5927,11 +5130,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrEnsembleRmsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrEnsembleRmsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrEnsembleRmsType }
      */
     public void setPdbxNmrEnsembleRmsCategory(PdbxNmrEnsembleRmsType value) {
         this.pdbxNmrEnsembleRmsCategory = value;
@@ -5939,11 +5140,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrExptlCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrExptlType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrExptlType }
      */
     public PdbxNmrExptlType getPdbxNmrExptlCategory() {
         return pdbxNmrExptlCategory;
@@ -5951,11 +5150,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrExptlCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrExptlType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrExptlType }
      */
     public void setPdbxNmrExptlCategory(PdbxNmrExptlType value) {
         this.pdbxNmrExptlCategory = value;
@@ -5963,11 +5160,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrExptlSampleCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrExptlSampleType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrExptlSampleType }
      */
     public PdbxNmrExptlSampleType getPdbxNmrExptlSampleCategory() {
         return pdbxNmrExptlSampleCategory;
@@ -5975,11 +5170,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrExptlSampleCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrExptlSampleType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrExptlSampleType }
      */
     public void setPdbxNmrExptlSampleCategory(PdbxNmrExptlSampleType value) {
         this.pdbxNmrExptlSampleCategory = value;
@@ -5987,11 +5180,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrExptlSampleConditionsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrExptlSampleConditionsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrExptlSampleConditionsType }
      */
     public PdbxNmrExptlSampleConditionsType getPdbxNmrExptlSampleConditionsCategory() {
         return pdbxNmrExptlSampleConditionsCategory;
@@ -5999,11 +5190,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrExptlSampleConditionsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrExptlSampleConditionsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrExptlSampleConditionsType }
      */
     public void setPdbxNmrExptlSampleConditionsCategory(PdbxNmrExptlSampleConditionsType value) {
         this.pdbxNmrExptlSampleConditionsCategory = value;
@@ -6011,11 +5200,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrForceConstantsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrForceConstantsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrForceConstantsType }
      */
     public PdbxNmrForceConstantsType getPdbxNmrForceConstantsCategory() {
         return pdbxNmrForceConstantsCategory;
@@ -6023,11 +5210,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrForceConstantsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrForceConstantsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrForceConstantsType }
      */
     public void setPdbxNmrForceConstantsCategory(PdbxNmrForceConstantsType value) {
         this.pdbxNmrForceConstantsCategory = value;
@@ -6035,11 +5220,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrRefineCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrRefineType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrRefineType }
      */
     public PdbxNmrRefineType getPdbxNmrRefineCategory() {
         return pdbxNmrRefineCategory;
@@ -6047,11 +5230,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrRefineCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrRefineType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrRefineType }
      */
     public void setPdbxNmrRefineCategory(PdbxNmrRefineType value) {
         this.pdbxNmrRefineCategory = value;
@@ -6059,11 +5240,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrRepresentativeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrRepresentativeType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrRepresentativeType }
      */
     public PdbxNmrRepresentativeType getPdbxNmrRepresentativeCategory() {
         return pdbxNmrRepresentativeCategory;
@@ -6071,11 +5250,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrRepresentativeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrRepresentativeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrRepresentativeType }
      */
     public void setPdbxNmrRepresentativeCategory(PdbxNmrRepresentativeType value) {
         this.pdbxNmrRepresentativeCategory = value;
@@ -6083,11 +5260,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrSampleDetailsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrSampleDetailsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrSampleDetailsType }
      */
     public PdbxNmrSampleDetailsType getPdbxNmrSampleDetailsCategory() {
         return pdbxNmrSampleDetailsCategory;
@@ -6095,11 +5270,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrSampleDetailsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrSampleDetailsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrSampleDetailsType }
      */
     public void setPdbxNmrSampleDetailsCategory(PdbxNmrSampleDetailsType value) {
         this.pdbxNmrSampleDetailsCategory = value;
@@ -6107,11 +5280,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrSoftwareCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrSoftwareType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrSoftwareType }
      */
     public PdbxNmrSoftwareType getPdbxNmrSoftwareCategory() {
         return pdbxNmrSoftwareCategory;
@@ -6119,11 +5290,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrSoftwareCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrSoftwareType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrSoftwareType }
      */
     public void setPdbxNmrSoftwareCategory(PdbxNmrSoftwareType value) {
         this.pdbxNmrSoftwareCategory = value;
@@ -6131,11 +5300,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrSoftwareTaskCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrSoftwareTaskType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrSoftwareTaskType }
      */
     public PdbxNmrSoftwareTaskType getPdbxNmrSoftwareTaskCategory() {
         return pdbxNmrSoftwareTaskCategory;
@@ -6143,11 +5310,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrSoftwareTaskCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrSoftwareTaskType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrSoftwareTaskType }
      */
     public void setPdbxNmrSoftwareTaskCategory(PdbxNmrSoftwareTaskType value) {
         this.pdbxNmrSoftwareTaskCategory = value;
@@ -6155,11 +5320,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrSpectralDimCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrSpectralDimType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrSpectralDimType }
      */
     public PdbxNmrSpectralDimType getPdbxNmrSpectralDimCategory() {
         return pdbxNmrSpectralDimCategory;
@@ -6167,11 +5330,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrSpectralDimCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrSpectralDimType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrSpectralDimType }
      */
     public void setPdbxNmrSpectralDimCategory(PdbxNmrSpectralDimType value) {
         this.pdbxNmrSpectralDimCategory = value;
@@ -6179,11 +5340,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrSpectralPeakListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrSpectralPeakListType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrSpectralPeakListType }
      */
     public PdbxNmrSpectralPeakListType getPdbxNmrSpectralPeakListCategory() {
         return pdbxNmrSpectralPeakListCategory;
@@ -6191,11 +5350,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrSpectralPeakListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrSpectralPeakListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrSpectralPeakListType }
      */
     public void setPdbxNmrSpectralPeakListCategory(PdbxNmrSpectralPeakListType value) {
         this.pdbxNmrSpectralPeakListCategory = value;
@@ -6203,11 +5360,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrSpectralPeakSoftwareCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrSpectralPeakSoftwareType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrSpectralPeakSoftwareType }
      */
     public PdbxNmrSpectralPeakSoftwareType getPdbxNmrSpectralPeakSoftwareCategory() {
         return pdbxNmrSpectralPeakSoftwareCategory;
@@ -6215,11 +5370,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrSpectralPeakSoftwareCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrSpectralPeakSoftwareType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrSpectralPeakSoftwareType }
      */
     public void setPdbxNmrSpectralPeakSoftwareCategory(PdbxNmrSpectralPeakSoftwareType value) {
         this.pdbxNmrSpectralPeakSoftwareCategory = value;
@@ -6227,11 +5380,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrSpectrometerCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrSpectrometerType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrSpectrometerType }
      */
     public PdbxNmrSpectrometerType getPdbxNmrSpectrometerCategory() {
         return pdbxNmrSpectrometerCategory;
@@ -6239,11 +5390,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrSpectrometerCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrSpectrometerType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrSpectrometerType }
      */
     public void setPdbxNmrSpectrometerCategory(PdbxNmrSpectrometerType value) {
         this.pdbxNmrSpectrometerCategory = value;
@@ -6251,11 +5400,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrSystematicChemShiftOffsetCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrSystematicChemShiftOffsetType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrSystematicChemShiftOffsetType }
      */
     public PdbxNmrSystematicChemShiftOffsetType getPdbxNmrSystematicChemShiftOffsetCategory() {
         return pdbxNmrSystematicChemShiftOffsetCategory;
@@ -6263,11 +5410,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrSystematicChemShiftOffsetCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrSystematicChemShiftOffsetType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrSystematicChemShiftOffsetType }
      */
     public void setPdbxNmrSystematicChemShiftOffsetCategory(PdbxNmrSystematicChemShiftOffsetType value) {
         this.pdbxNmrSystematicChemShiftOffsetCategory = value;
@@ -6275,11 +5420,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNmrUploadCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNmrUploadType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNmrUploadType }
      */
     public PdbxNmrUploadType getPdbxNmrUploadCategory() {
         return pdbxNmrUploadCategory;
@@ -6287,11 +5430,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNmrUploadCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNmrUploadType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNmrUploadType }
      */
     public void setPdbxNmrUploadCategory(PdbxNmrUploadType value) {
         this.pdbxNmrUploadCategory = value;
@@ -6299,11 +5440,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxNonpolySchemeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxNonpolySchemeType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxNonpolySchemeType }
      */
     public PdbxNonpolySchemeType getPdbxNonpolySchemeCategory() {
         return pdbxNonpolySchemeCategory;
@@ -6311,11 +5450,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxNonpolySchemeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxNonpolySchemeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxNonpolySchemeType }
      */
     public void setPdbxNonpolySchemeCategory(PdbxNonpolySchemeType value) {
         this.pdbxNonpolySchemeCategory = value;
@@ -6323,11 +5460,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPhasingMADSetCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPhasingMADSetType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPhasingMADSetType }
      */
     public PdbxPhasingMADSetType getPdbxPhasingMADSetCategory() {
         return pdbxPhasingMADSetCategory;
@@ -6335,11 +5470,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPhasingMADSetCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPhasingMADSetType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPhasingMADSetType }
      */
     public void setPdbxPhasingMADSetCategory(PdbxPhasingMADSetType value) {
         this.pdbxPhasingMADSetCategory = value;
@@ -6347,11 +5480,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPhasingMADSetShellCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPhasingMADSetShellType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPhasingMADSetShellType }
      */
     public PdbxPhasingMADSetShellType getPdbxPhasingMADSetShellCategory() {
         return pdbxPhasingMADSetShellCategory;
@@ -6359,11 +5490,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPhasingMADSetShellCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPhasingMADSetShellType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPhasingMADSetShellType }
      */
     public void setPdbxPhasingMADSetShellCategory(PdbxPhasingMADSetShellType value) {
         this.pdbxPhasingMADSetShellCategory = value;
@@ -6371,11 +5500,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPhasingMADSetSiteCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPhasingMADSetSiteType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPhasingMADSetSiteType }
      */
     public PdbxPhasingMADSetSiteType getPdbxPhasingMADSetSiteCategory() {
         return pdbxPhasingMADSetSiteCategory;
@@ -6383,11 +5510,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPhasingMADSetSiteCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPhasingMADSetSiteType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPhasingMADSetSiteType }
      */
     public void setPdbxPhasingMADSetSiteCategory(PdbxPhasingMADSetSiteType value) {
         this.pdbxPhasingMADSetSiteCategory = value;
@@ -6395,11 +5520,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPhasingMADShellCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPhasingMADShellType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPhasingMADShellType }
      */
     public PdbxPhasingMADShellType getPdbxPhasingMADShellCategory() {
         return pdbxPhasingMADShellCategory;
@@ -6407,11 +5530,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPhasingMADShellCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPhasingMADShellType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPhasingMADShellType }
      */
     public void setPdbxPhasingMADShellCategory(PdbxPhasingMADShellType value) {
         this.pdbxPhasingMADShellCategory = value;
@@ -6419,11 +5540,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPhasingMRCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPhasingMRType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPhasingMRType }
      */
     public PdbxPhasingMRType getPdbxPhasingMRCategory() {
         return pdbxPhasingMRCategory;
@@ -6431,11 +5550,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPhasingMRCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPhasingMRType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPhasingMRType }
      */
     public void setPdbxPhasingMRCategory(PdbxPhasingMRType value) {
         this.pdbxPhasingMRCategory = value;
@@ -6443,11 +5560,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPhasingDmCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPhasingDmType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPhasingDmType }
      */
     public PdbxPhasingDmType getPdbxPhasingDmCategory() {
         return pdbxPhasingDmCategory;
@@ -6455,11 +5570,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPhasingDmCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPhasingDmType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPhasingDmType }
      */
     public void setPdbxPhasingDmCategory(PdbxPhasingDmType value) {
         this.pdbxPhasingDmCategory = value;
@@ -6467,11 +5580,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPhasingDmShellCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPhasingDmShellType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPhasingDmShellType }
      */
     public PdbxPhasingDmShellType getPdbxPhasingDmShellCategory() {
         return pdbxPhasingDmShellCategory;
@@ -6479,11 +5590,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPhasingDmShellCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPhasingDmShellType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPhasingDmShellType }
      */
     public void setPdbxPhasingDmShellCategory(PdbxPhasingDmShellType value) {
         this.pdbxPhasingDmShellCategory = value;
@@ -6491,11 +5600,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPointSymmetryCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPointSymmetryType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPointSymmetryType }
      */
     public PdbxPointSymmetryType getPdbxPointSymmetryCategory() {
         return pdbxPointSymmetryCategory;
@@ -6503,11 +5610,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPointSymmetryCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPointSymmetryType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPointSymmetryType }
      */
     public void setPdbxPointSymmetryCategory(PdbxPointSymmetryType value) {
         this.pdbxPointSymmetryCategory = value;
@@ -6515,11 +5620,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPolySeqSchemeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPolySeqSchemeType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPolySeqSchemeType }
      */
     public PdbxPolySeqSchemeType getPdbxPolySeqSchemeCategory() {
         return pdbxPolySeqSchemeCategory;
@@ -6527,11 +5630,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPolySeqSchemeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPolySeqSchemeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPolySeqSchemeType }
      */
     public void setPdbxPolySeqSchemeCategory(PdbxPolySeqSchemeType value) {
         this.pdbxPolySeqSchemeCategory = value;
@@ -6539,11 +5640,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPrdAuditCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPrdAuditType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPrdAuditType }
      */
     public PdbxPrdAuditType getPdbxPrdAuditCategory() {
         return pdbxPrdAuditCategory;
@@ -6551,11 +5650,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPrdAuditCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPrdAuditType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPrdAuditType }
      */
     public void setPdbxPrdAuditCategory(PdbxPrdAuditType value) {
         this.pdbxPrdAuditCategory = value;
@@ -6563,11 +5660,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxPrereleaseSeqCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxPrereleaseSeqType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxPrereleaseSeqType }
      */
     public PdbxPrereleaseSeqType getPdbxPrereleaseSeqCategory() {
         return pdbxPrereleaseSeqCategory;
@@ -6575,11 +5670,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxPrereleaseSeqCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxPrereleaseSeqType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxPrereleaseSeqType }
      */
     public void setPdbxPrereleaseSeqCategory(PdbxPrereleaseSeqType value) {
         this.pdbxPrereleaseSeqCategory = value;
@@ -6587,11 +5680,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReRefinementCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReRefinementType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReRefinementType }
      */
     public PdbxReRefinementType getPdbxReRefinementCategory() {
         return pdbxReRefinementCategory;
@@ -6599,11 +5690,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReRefinementCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReRefinementType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReRefinementType }
      */
     public void setPdbxReRefinementCategory(PdbxReRefinementType value) {
         this.pdbxReRefinementCategory = value;
@@ -6611,11 +5700,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceEntityLinkCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceEntityLinkType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceEntityLinkType }
      */
     public PdbxReferenceEntityLinkType getPdbxReferenceEntityLinkCategory() {
         return pdbxReferenceEntityLinkCategory;
@@ -6623,11 +5710,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceEntityLinkCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceEntityLinkType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceEntityLinkType }
      */
     public void setPdbxReferenceEntityLinkCategory(PdbxReferenceEntityLinkType value) {
         this.pdbxReferenceEntityLinkCategory = value;
@@ -6635,11 +5720,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceEntityListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceEntityListType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceEntityListType }
      */
     public PdbxReferenceEntityListType getPdbxReferenceEntityListCategory() {
         return pdbxReferenceEntityListCategory;
@@ -6647,11 +5730,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceEntityListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceEntityListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceEntityListType }
      */
     public void setPdbxReferenceEntityListCategory(PdbxReferenceEntityListType value) {
         this.pdbxReferenceEntityListCategory = value;
@@ -6659,11 +5740,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceEntityNonpolyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceEntityNonpolyType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceEntityNonpolyType }
      */
     public PdbxReferenceEntityNonpolyType getPdbxReferenceEntityNonpolyCategory() {
         return pdbxReferenceEntityNonpolyCategory;
@@ -6671,11 +5750,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceEntityNonpolyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceEntityNonpolyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceEntityNonpolyType }
      */
     public void setPdbxReferenceEntityNonpolyCategory(PdbxReferenceEntityNonpolyType value) {
         this.pdbxReferenceEntityNonpolyCategory = value;
@@ -6683,11 +5760,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceEntityPolyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceEntityPolyType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceEntityPolyType }
      */
     public PdbxReferenceEntityPolyType getPdbxReferenceEntityPolyCategory() {
         return pdbxReferenceEntityPolyCategory;
@@ -6695,11 +5770,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceEntityPolyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceEntityPolyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceEntityPolyType }
      */
     public void setPdbxReferenceEntityPolyCategory(PdbxReferenceEntityPolyType value) {
         this.pdbxReferenceEntityPolyCategory = value;
@@ -6707,11 +5780,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceEntityPolyLinkCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceEntityPolyLinkType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceEntityPolyLinkType }
      */
     public PdbxReferenceEntityPolyLinkType getPdbxReferenceEntityPolyLinkCategory() {
         return pdbxReferenceEntityPolyLinkCategory;
@@ -6719,11 +5790,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceEntityPolyLinkCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceEntityPolyLinkType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceEntityPolyLinkType }
      */
     public void setPdbxReferenceEntityPolyLinkCategory(PdbxReferenceEntityPolyLinkType value) {
         this.pdbxReferenceEntityPolyLinkCategory = value;
@@ -6731,11 +5800,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceEntityPolySeqCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceEntityPolySeqType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceEntityPolySeqType }
      */
     public PdbxReferenceEntityPolySeqType getPdbxReferenceEntityPolySeqCategory() {
         return pdbxReferenceEntityPolySeqCategory;
@@ -6743,11 +5810,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceEntityPolySeqCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceEntityPolySeqType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceEntityPolySeqType }
      */
     public void setPdbxReferenceEntityPolySeqCategory(PdbxReferenceEntityPolySeqType value) {
         this.pdbxReferenceEntityPolySeqCategory = value;
@@ -6755,11 +5820,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceEntitySequenceCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceEntitySequenceType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceEntitySequenceType }
      */
     public PdbxReferenceEntitySequenceType getPdbxReferenceEntitySequenceCategory() {
         return pdbxReferenceEntitySequenceCategory;
@@ -6767,11 +5830,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceEntitySequenceCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceEntitySequenceType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceEntitySequenceType }
      */
     public void setPdbxReferenceEntitySequenceCategory(PdbxReferenceEntitySequenceType value) {
         this.pdbxReferenceEntitySequenceCategory = value;
@@ -6779,11 +5840,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceEntitySrcNatCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceEntitySrcNatType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceEntitySrcNatType }
      */
     public PdbxReferenceEntitySrcNatType getPdbxReferenceEntitySrcNatCategory() {
         return pdbxReferenceEntitySrcNatCategory;
@@ -6791,11 +5850,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceEntitySrcNatCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceEntitySrcNatType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceEntitySrcNatType }
      */
     public void setPdbxReferenceEntitySrcNatCategory(PdbxReferenceEntitySrcNatType value) {
         this.pdbxReferenceEntitySrcNatCategory = value;
@@ -6803,11 +5860,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceEntitySubcomponentsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceEntitySubcomponentsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceEntitySubcomponentsType }
      */
     public PdbxReferenceEntitySubcomponentsType getPdbxReferenceEntitySubcomponentsCategory() {
         return pdbxReferenceEntitySubcomponentsCategory;
@@ -6815,11 +5870,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceEntitySubcomponentsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceEntitySubcomponentsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceEntitySubcomponentsType }
      */
     public void setPdbxReferenceEntitySubcomponentsCategory(PdbxReferenceEntitySubcomponentsType value) {
         this.pdbxReferenceEntitySubcomponentsCategory = value;
@@ -6827,11 +5880,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceMoleculeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceMoleculeType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceMoleculeType }
      */
     public PdbxReferenceMoleculeType getPdbxReferenceMoleculeCategory() {
         return pdbxReferenceMoleculeCategory;
@@ -6839,11 +5890,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceMoleculeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceMoleculeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceMoleculeType }
      */
     public void setPdbxReferenceMoleculeCategory(PdbxReferenceMoleculeType value) {
         this.pdbxReferenceMoleculeCategory = value;
@@ -6851,11 +5900,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceMoleculeAnnotationCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceMoleculeAnnotationType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceMoleculeAnnotationType }
      */
     public PdbxReferenceMoleculeAnnotationType getPdbxReferenceMoleculeAnnotationCategory() {
         return pdbxReferenceMoleculeAnnotationCategory;
@@ -6863,11 +5910,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceMoleculeAnnotationCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceMoleculeAnnotationType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceMoleculeAnnotationType }
      */
     public void setPdbxReferenceMoleculeAnnotationCategory(PdbxReferenceMoleculeAnnotationType value) {
         this.pdbxReferenceMoleculeAnnotationCategory = value;
@@ -6875,11 +5920,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceMoleculeDetailsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceMoleculeDetailsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceMoleculeDetailsType }
      */
     public PdbxReferenceMoleculeDetailsType getPdbxReferenceMoleculeDetailsCategory() {
         return pdbxReferenceMoleculeDetailsCategory;
@@ -6887,11 +5930,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceMoleculeDetailsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceMoleculeDetailsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceMoleculeDetailsType }
      */
     public void setPdbxReferenceMoleculeDetailsCategory(PdbxReferenceMoleculeDetailsType value) {
         this.pdbxReferenceMoleculeDetailsCategory = value;
@@ -6899,11 +5940,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceMoleculeFamilyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceMoleculeFamilyType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceMoleculeFamilyType }
      */
     public PdbxReferenceMoleculeFamilyType getPdbxReferenceMoleculeFamilyCategory() {
         return pdbxReferenceMoleculeFamilyCategory;
@@ -6911,11 +5950,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceMoleculeFamilyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceMoleculeFamilyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceMoleculeFamilyType }
      */
     public void setPdbxReferenceMoleculeFamilyCategory(PdbxReferenceMoleculeFamilyType value) {
         this.pdbxReferenceMoleculeFamilyCategory = value;
@@ -6923,11 +5960,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceMoleculeFeaturesCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceMoleculeFeaturesType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceMoleculeFeaturesType }
      */
     public PdbxReferenceMoleculeFeaturesType getPdbxReferenceMoleculeFeaturesCategory() {
         return pdbxReferenceMoleculeFeaturesCategory;
@@ -6935,11 +5970,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceMoleculeFeaturesCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceMoleculeFeaturesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceMoleculeFeaturesType }
      */
     public void setPdbxReferenceMoleculeFeaturesCategory(PdbxReferenceMoleculeFeaturesType value) {
         this.pdbxReferenceMoleculeFeaturesCategory = value;
@@ -6947,11 +5980,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceMoleculeListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceMoleculeListType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceMoleculeListType }
      */
     public PdbxReferenceMoleculeListType getPdbxReferenceMoleculeListCategory() {
         return pdbxReferenceMoleculeListCategory;
@@ -6959,11 +5990,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceMoleculeListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceMoleculeListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceMoleculeListType }
      */
     public void setPdbxReferenceMoleculeListCategory(PdbxReferenceMoleculeListType value) {
         this.pdbxReferenceMoleculeListCategory = value;
@@ -6971,11 +6000,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceMoleculeRelatedStructuresCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceMoleculeRelatedStructuresType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceMoleculeRelatedStructuresType }
      */
     public PdbxReferenceMoleculeRelatedStructuresType getPdbxReferenceMoleculeRelatedStructuresCategory() {
         return pdbxReferenceMoleculeRelatedStructuresCategory;
@@ -6983,11 +6010,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceMoleculeRelatedStructuresCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceMoleculeRelatedStructuresType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceMoleculeRelatedStructuresType }
      */
     public void setPdbxReferenceMoleculeRelatedStructuresCategory(PdbxReferenceMoleculeRelatedStructuresType value) {
         this.pdbxReferenceMoleculeRelatedStructuresCategory = value;
@@ -6995,11 +6020,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferenceMoleculeSynonymsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferenceMoleculeSynonymsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferenceMoleculeSynonymsType }
      */
     public PdbxReferenceMoleculeSynonymsType getPdbxReferenceMoleculeSynonymsCategory() {
         return pdbxReferenceMoleculeSynonymsCategory;
@@ -7007,11 +6030,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferenceMoleculeSynonymsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferenceMoleculeSynonymsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferenceMoleculeSynonymsType }
      */
     public void setPdbxReferenceMoleculeSynonymsCategory(PdbxReferenceMoleculeSynonymsType value) {
         this.pdbxReferenceMoleculeSynonymsCategory = value;
@@ -7019,11 +6040,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReferencePublicationListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReferencePublicationListType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReferencePublicationListType }
      */
     public PdbxReferencePublicationListType getPdbxReferencePublicationListCategory() {
         return pdbxReferencePublicationListCategory;
@@ -7031,11 +6050,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReferencePublicationListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReferencePublicationListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReferencePublicationListType }
      */
     public void setPdbxReferencePublicationListCategory(PdbxReferencePublicationListType value) {
         this.pdbxReferencePublicationListCategory = value;
@@ -7043,11 +6060,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxRefineCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxRefineType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxRefineType }
      */
     public PdbxRefineType getPdbxRefineCategory() {
         return pdbxRefineCategory;
@@ -7055,11 +6070,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxRefineCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxRefineType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxRefineType }
      */
     public void setPdbxRefineCategory(PdbxRefineType value) {
         this.pdbxRefineCategory = value;
@@ -7067,11 +6080,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxRefineAuxFileCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxRefineAuxFileType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxRefineAuxFileType }
      */
     public PdbxRefineAuxFileType getPdbxRefineAuxFileCategory() {
         return pdbxRefineAuxFileCategory;
@@ -7079,11 +6090,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxRefineAuxFileCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxRefineAuxFileType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxRefineAuxFileType }
      */
     public void setPdbxRefineAuxFileCategory(PdbxRefineAuxFileType value) {
         this.pdbxRefineAuxFileCategory = value;
@@ -7091,11 +6100,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxRefineComponentCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxRefineComponentType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxRefineComponentType }
      */
     public PdbxRefineComponentType getPdbxRefineComponentCategory() {
         return pdbxRefineComponentCategory;
@@ -7103,11 +6110,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxRefineComponentCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxRefineComponentType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxRefineComponentType }
      */
     public void setPdbxRefineComponentCategory(PdbxRefineComponentType value) {
         this.pdbxRefineComponentCategory = value;
@@ -7115,11 +6120,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxRefineTlsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxRefineTlsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxRefineTlsType }
      */
     public PdbxRefineTlsType getPdbxRefineTlsCategory() {
         return pdbxRefineTlsCategory;
@@ -7127,11 +6130,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxRefineTlsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxRefineTlsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxRefineTlsType }
      */
     public void setPdbxRefineTlsCategory(PdbxRefineTlsType value) {
         this.pdbxRefineTlsCategory = value;
@@ -7139,11 +6140,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxRefineTlsGroupCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxRefineTlsGroupType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxRefineTlsGroupType }
      */
     public PdbxRefineTlsGroupType getPdbxRefineTlsGroupCategory() {
         return pdbxRefineTlsGroupCategory;
@@ -7151,11 +6150,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxRefineTlsGroupCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxRefineTlsGroupType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxRefineTlsGroupType }
      */
     public void setPdbxRefineTlsGroupCategory(PdbxRefineTlsGroupType value) {
         this.pdbxRefineTlsGroupCategory = value;
@@ -7163,11 +6160,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxReflnsTwinCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxReflnsTwinType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxReflnsTwinType }
      */
     public PdbxReflnsTwinType getPdbxReflnsTwinCategory() {
         return pdbxReflnsTwinCategory;
@@ -7175,11 +6170,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxReflnsTwinCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxReflnsTwinType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxReflnsTwinType }
      */
     public void setPdbxReflnsTwinCategory(PdbxReflnsTwinType value) {
         this.pdbxReflnsTwinCategory = value;
@@ -7187,11 +6180,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxRelatedExpDataSetCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxRelatedExpDataSetType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxRelatedExpDataSetType }
      */
     public PdbxRelatedExpDataSetType getPdbxRelatedExpDataSetCategory() {
         return pdbxRelatedExpDataSetCategory;
@@ -7199,11 +6190,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxRelatedExpDataSetCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxRelatedExpDataSetType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxRelatedExpDataSetType }
      */
     public void setPdbxRelatedExpDataSetCategory(PdbxRelatedExpDataSetType value) {
         this.pdbxRelatedExpDataSetCategory = value;
@@ -7211,11 +6200,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxRemediationAtomSiteMappingCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxRemediationAtomSiteMappingType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxRemediationAtomSiteMappingType }
      */
     public PdbxRemediationAtomSiteMappingType getPdbxRemediationAtomSiteMappingCategory() {
         return pdbxRemediationAtomSiteMappingCategory;
@@ -7223,11 +6210,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxRemediationAtomSiteMappingCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxRemediationAtomSiteMappingType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxRemediationAtomSiteMappingType }
      */
     public void setPdbxRemediationAtomSiteMappingCategory(PdbxRemediationAtomSiteMappingType value) {
         this.pdbxRemediationAtomSiteMappingCategory = value;
@@ -7235,11 +6220,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxRobotSystemCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxRobotSystemType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxRobotSystemType }
      */
     public PdbxRobotSystemType getPdbxRobotSystemCategory() {
         return pdbxRobotSystemCategory;
@@ -7247,11 +6230,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxRobotSystemCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxRobotSystemType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxRobotSystemType }
      */
     public void setPdbxRobotSystemCategory(PdbxRobotSystemType value) {
         this.pdbxRobotSystemCategory = value;
@@ -7259,11 +6240,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxSequenceRangeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxSequenceRangeType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxSequenceRangeType }
      */
     public PdbxSequenceRangeType getPdbxSequenceRangeCategory() {
         return pdbxSequenceRangeCategory;
@@ -7271,11 +6250,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxSequenceRangeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxSequenceRangeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxSequenceRangeType }
      */
     public void setPdbxSequenceRangeCategory(PdbxSequenceRangeType value) {
         this.pdbxSequenceRangeCategory = value;
@@ -7283,11 +6260,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxSolnScatterCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxSolnScatterType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxSolnScatterType }
      */
     public PdbxSolnScatterType getPdbxSolnScatterCategory() {
         return pdbxSolnScatterCategory;
@@ -7295,11 +6270,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxSolnScatterCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxSolnScatterType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxSolnScatterType }
      */
     public void setPdbxSolnScatterCategory(PdbxSolnScatterType value) {
         this.pdbxSolnScatterCategory = value;
@@ -7307,11 +6280,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxSolnScatterModelCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxSolnScatterModelType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxSolnScatterModelType }
      */
     public PdbxSolnScatterModelType getPdbxSolnScatterModelCategory() {
         return pdbxSolnScatterModelCategory;
@@ -7319,11 +6290,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxSolnScatterModelCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxSolnScatterModelType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxSolnScatterModelType }
      */
     public void setPdbxSolnScatterModelCategory(PdbxSolnScatterModelType value) {
         this.pdbxSolnScatterModelCategory = value;
@@ -7331,11 +6300,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructAssemblyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructAssemblyType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructAssemblyType }
      */
     public PdbxStructAssemblyType getPdbxStructAssemblyCategory() {
         return pdbxStructAssemblyCategory;
@@ -7343,11 +6310,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructAssemblyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructAssemblyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructAssemblyType }
      */
     public void setPdbxStructAssemblyCategory(PdbxStructAssemblyType value) {
         this.pdbxStructAssemblyCategory = value;
@@ -7355,11 +6320,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructAssemblyGenCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructAssemblyGenType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructAssemblyGenType }
      */
     public PdbxStructAssemblyGenType getPdbxStructAssemblyGenCategory() {
         return pdbxStructAssemblyGenCategory;
@@ -7367,11 +6330,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructAssemblyGenCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructAssemblyGenType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructAssemblyGenType }
      */
     public void setPdbxStructAssemblyGenCategory(PdbxStructAssemblyGenType value) {
         this.pdbxStructAssemblyGenCategory = value;
@@ -7379,11 +6340,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructAssemblyPropCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructAssemblyPropType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructAssemblyPropType }
      */
     public PdbxStructAssemblyPropType getPdbxStructAssemblyPropCategory() {
         return pdbxStructAssemblyPropCategory;
@@ -7391,11 +6350,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructAssemblyPropCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructAssemblyPropType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructAssemblyPropType }
      */
     public void setPdbxStructAssemblyPropCategory(PdbxStructAssemblyPropType value) {
         this.pdbxStructAssemblyPropCategory = value;
@@ -7403,11 +6360,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructAsymGenCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructAsymGenType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructAsymGenType }
      */
     public PdbxStructAsymGenType getPdbxStructAsymGenCategory() {
         return pdbxStructAsymGenCategory;
@@ -7415,11 +6370,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructAsymGenCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructAsymGenType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructAsymGenType }
      */
     public void setPdbxStructAsymGenCategory(PdbxStructAsymGenType value) {
         this.pdbxStructAsymGenCategory = value;
@@ -7427,11 +6380,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructChemCompDiagnosticsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructChemCompDiagnosticsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructChemCompDiagnosticsType }
      */
     public PdbxStructChemCompDiagnosticsType getPdbxStructChemCompDiagnosticsCategory() {
         return pdbxStructChemCompDiagnosticsCategory;
@@ -7439,11 +6390,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructChemCompDiagnosticsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructChemCompDiagnosticsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructChemCompDiagnosticsType }
      */
     public void setPdbxStructChemCompDiagnosticsCategory(PdbxStructChemCompDiagnosticsType value) {
         this.pdbxStructChemCompDiagnosticsCategory = value;
@@ -7451,11 +6400,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructChemCompFeatureCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructChemCompFeatureType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructChemCompFeatureType }
      */
     public PdbxStructChemCompFeatureType getPdbxStructChemCompFeatureCategory() {
         return pdbxStructChemCompFeatureCategory;
@@ -7463,11 +6410,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructChemCompFeatureCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructChemCompFeatureType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructChemCompFeatureType }
      */
     public void setPdbxStructChemCompFeatureCategory(PdbxStructChemCompFeatureType value) {
         this.pdbxStructChemCompFeatureCategory = value;
@@ -7475,11 +6420,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructConnAngleCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructConnAngleType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructConnAngleType }
      */
     public PdbxStructConnAngleType getPdbxStructConnAngleCategory() {
         return pdbxStructConnAngleCategory;
@@ -7487,11 +6430,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructConnAngleCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructConnAngleType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructConnAngleType }
      */
     public void setPdbxStructConnAngleCategory(PdbxStructConnAngleType value) {
         this.pdbxStructConnAngleCategory = value;
@@ -7499,11 +6440,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructEntityInstCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructEntityInstType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructEntityInstType }
      */
     public PdbxStructEntityInstType getPdbxStructEntityInstCategory() {
         return pdbxStructEntityInstCategory;
@@ -7511,11 +6450,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructEntityInstCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructEntityInstType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructEntityInstType }
      */
     public void setPdbxStructEntityInstCategory(PdbxStructEntityInstType value) {
         this.pdbxStructEntityInstCategory = value;
@@ -7523,11 +6460,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructGroupComponentRangeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructGroupComponentRangeType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructGroupComponentRangeType }
      */
     public PdbxStructGroupComponentRangeType getPdbxStructGroupComponentRangeCategory() {
         return pdbxStructGroupComponentRangeCategory;
@@ -7535,11 +6470,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructGroupComponentRangeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructGroupComponentRangeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructGroupComponentRangeType }
      */
     public void setPdbxStructGroupComponentRangeCategory(PdbxStructGroupComponentRangeType value) {
         this.pdbxStructGroupComponentRangeCategory = value;
@@ -7547,11 +6480,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructGroupComponentsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructGroupComponentsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructGroupComponentsType }
      */
     public PdbxStructGroupComponentsType getPdbxStructGroupComponentsCategory() {
         return pdbxStructGroupComponentsCategory;
@@ -7559,11 +6490,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructGroupComponentsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructGroupComponentsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructGroupComponentsType }
      */
     public void setPdbxStructGroupComponentsCategory(PdbxStructGroupComponentsType value) {
         this.pdbxStructGroupComponentsCategory = value;
@@ -7571,11 +6500,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructGroupListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructGroupListType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructGroupListType }
      */
     public PdbxStructGroupListType getPdbxStructGroupListCategory() {
         return pdbxStructGroupListCategory;
@@ -7583,11 +6510,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructGroupListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructGroupListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructGroupListType }
      */
     public void setPdbxStructGroupListCategory(PdbxStructGroupListType value) {
         this.pdbxStructGroupListCategory = value;
@@ -7595,11 +6520,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructInfoCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructInfoType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructInfoType }
      */
     public PdbxStructInfoType getPdbxStructInfoCategory() {
         return pdbxStructInfoCategory;
@@ -7607,11 +6530,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructInfoCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructInfoType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructInfoType }
      */
     public void setPdbxStructInfoCategory(PdbxStructInfoType value) {
         this.pdbxStructInfoCategory = value;
@@ -7619,11 +6540,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructLegacyOperListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructLegacyOperListType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructLegacyOperListType }
      */
     public PdbxStructLegacyOperListType getPdbxStructLegacyOperListCategory() {
         return pdbxStructLegacyOperListCategory;
@@ -7631,11 +6550,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructLegacyOperListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructLegacyOperListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructLegacyOperListType }
      */
     public void setPdbxStructLegacyOperListCategory(PdbxStructLegacyOperListType value) {
         this.pdbxStructLegacyOperListCategory = value;
@@ -7643,11 +6560,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructModResidueCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructModResidueType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructModResidueType }
      */
     public PdbxStructModResidueType getPdbxStructModResidueCategory() {
         return pdbxStructModResidueCategory;
@@ -7655,11 +6570,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructModResidueCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructModResidueType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructModResidueType }
      */
     public void setPdbxStructModResidueCategory(PdbxStructModResidueType value) {
         this.pdbxStructModResidueCategory = value;
@@ -7667,11 +6580,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructMsymGenCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructMsymGenType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructMsymGenType }
      */
     public PdbxStructMsymGenType getPdbxStructMsymGenCategory() {
         return pdbxStructMsymGenCategory;
@@ -7679,11 +6590,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructMsymGenCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructMsymGenType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructMsymGenType }
      */
     public void setPdbxStructMsymGenCategory(PdbxStructMsymGenType value) {
         this.pdbxStructMsymGenCategory = value;
@@ -7691,11 +6600,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructOperListCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructOperListType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructOperListType }
      */
     public PdbxStructOperListType getPdbxStructOperListCategory() {
         return pdbxStructOperListCategory;
@@ -7703,11 +6610,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructOperListCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructOperListType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructOperListType }
      */
     public void setPdbxStructOperListCategory(PdbxStructOperListType value) {
         this.pdbxStructOperListCategory = value;
@@ -7715,11 +6620,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructRefSeqDeletionCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructRefSeqDeletionType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructRefSeqDeletionType }
      */
     public PdbxStructRefSeqDeletionType getPdbxStructRefSeqDeletionCategory() {
         return pdbxStructRefSeqDeletionCategory;
@@ -7727,11 +6630,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructRefSeqDeletionCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructRefSeqDeletionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructRefSeqDeletionType }
      */
     public void setPdbxStructRefSeqDeletionCategory(PdbxStructRefSeqDeletionType value) {
         this.pdbxStructRefSeqDeletionCategory = value;
@@ -7739,11 +6640,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructRefSeqFeatureCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructRefSeqFeatureType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructRefSeqFeatureType }
      */
     public PdbxStructRefSeqFeatureType getPdbxStructRefSeqFeatureCategory() {
         return pdbxStructRefSeqFeatureCategory;
@@ -7751,11 +6650,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructRefSeqFeatureCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructRefSeqFeatureType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructRefSeqFeatureType }
      */
     public void setPdbxStructRefSeqFeatureCategory(PdbxStructRefSeqFeatureType value) {
         this.pdbxStructRefSeqFeatureCategory = value;
@@ -7763,11 +6660,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructRefSeqFeaturePropCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructRefSeqFeaturePropType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructRefSeqFeaturePropType }
      */
     public PdbxStructRefSeqFeaturePropType getPdbxStructRefSeqFeaturePropCategory() {
         return pdbxStructRefSeqFeaturePropCategory;
@@ -7775,11 +6670,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructRefSeqFeaturePropCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructRefSeqFeaturePropType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructRefSeqFeaturePropType }
      */
     public void setPdbxStructRefSeqFeaturePropCategory(PdbxStructRefSeqFeaturePropType value) {
         this.pdbxStructRefSeqFeaturePropCategory = value;
@@ -7787,11 +6680,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructRefSeqInsertionCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructRefSeqInsertionType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructRefSeqInsertionType }
      */
     public PdbxStructRefSeqInsertionType getPdbxStructRefSeqInsertionCategory() {
         return pdbxStructRefSeqInsertionCategory;
@@ -7799,11 +6690,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructRefSeqInsertionCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructRefSeqInsertionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructRefSeqInsertionType }
      */
     public void setPdbxStructRefSeqInsertionCategory(PdbxStructRefSeqInsertionType value) {
         this.pdbxStructRefSeqInsertionCategory = value;
@@ -7811,11 +6700,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructSheetHbondCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructSheetHbondType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructSheetHbondType }
      */
     public PdbxStructSheetHbondType getPdbxStructSheetHbondCategory() {
         return pdbxStructSheetHbondCategory;
@@ -7823,11 +6710,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructSheetHbondCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructSheetHbondType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructSheetHbondType }
      */
     public void setPdbxStructSheetHbondCategory(PdbxStructSheetHbondType value) {
         this.pdbxStructSheetHbondCategory = value;
@@ -7835,11 +6720,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxStructSpecialSymmetryCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxStructSpecialSymmetryType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxStructSpecialSymmetryType }
      */
     public PdbxStructSpecialSymmetryType getPdbxStructSpecialSymmetryCategory() {
         return pdbxStructSpecialSymmetryCategory;
@@ -7847,11 +6730,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxStructSpecialSymmetryCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxStructSpecialSymmetryType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxStructSpecialSymmetryType }
      */
     public void setPdbxStructSpecialSymmetryCategory(PdbxStructSpecialSymmetryType value) {
         this.pdbxStructSpecialSymmetryCategory = value;
@@ -7859,11 +6740,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxUnobsOrZeroOccAtomsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxUnobsOrZeroOccAtomsType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxUnobsOrZeroOccAtomsType }
      */
     public PdbxUnobsOrZeroOccAtomsType getPdbxUnobsOrZeroOccAtomsCategory() {
         return pdbxUnobsOrZeroOccAtomsCategory;
@@ -7871,11 +6750,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxUnobsOrZeroOccAtomsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxUnobsOrZeroOccAtomsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxUnobsOrZeroOccAtomsType }
      */
     public void setPdbxUnobsOrZeroOccAtomsCategory(PdbxUnobsOrZeroOccAtomsType value) {
         this.pdbxUnobsOrZeroOccAtomsCategory = value;
@@ -7883,11 +6760,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxUnobsOrZeroOccResiduesCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxUnobsOrZeroOccResiduesType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxUnobsOrZeroOccResiduesType }
      */
     public PdbxUnobsOrZeroOccResiduesType getPdbxUnobsOrZeroOccResiduesCategory() {
         return pdbxUnobsOrZeroOccResiduesCategory;
@@ -7895,11 +6770,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxUnobsOrZeroOccResiduesCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxUnobsOrZeroOccResiduesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxUnobsOrZeroOccResiduesType }
      */
     public void setPdbxUnobsOrZeroOccResiduesCategory(PdbxUnobsOrZeroOccResiduesType value) {
         this.pdbxUnobsOrZeroOccResiduesCategory = value;
@@ -7907,11 +6780,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidateChiralCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidateChiralType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidateChiralType }
      */
     public PdbxValidateChiralType getPdbxValidateChiralCategory() {
         return pdbxValidateChiralCategory;
@@ -7919,11 +6790,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidateChiralCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidateChiralType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidateChiralType }
      */
     public void setPdbxValidateChiralCategory(PdbxValidateChiralType value) {
         this.pdbxValidateChiralCategory = value;
@@ -7931,11 +6800,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidateCloseContactCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidateCloseContactType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidateCloseContactType }
      */
     public PdbxValidateCloseContactType getPdbxValidateCloseContactCategory() {
         return pdbxValidateCloseContactCategory;
@@ -7943,11 +6810,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidateCloseContactCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidateCloseContactType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidateCloseContactType }
      */
     public void setPdbxValidateCloseContactCategory(PdbxValidateCloseContactType value) {
         this.pdbxValidateCloseContactCategory = value;
@@ -7955,11 +6820,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidateMainChainPlaneCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidateMainChainPlaneType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidateMainChainPlaneType }
      */
     public PdbxValidateMainChainPlaneType getPdbxValidateMainChainPlaneCategory() {
         return pdbxValidateMainChainPlaneCategory;
@@ -7967,11 +6830,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidateMainChainPlaneCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidateMainChainPlaneType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidateMainChainPlaneType }
      */
     public void setPdbxValidateMainChainPlaneCategory(PdbxValidateMainChainPlaneType value) {
         this.pdbxValidateMainChainPlaneCategory = value;
@@ -7979,11 +6840,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidatePeptideOmegaCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidatePeptideOmegaType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidatePeptideOmegaType }
      */
     public PdbxValidatePeptideOmegaType getPdbxValidatePeptideOmegaCategory() {
         return pdbxValidatePeptideOmegaCategory;
@@ -7991,11 +6850,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidatePeptideOmegaCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidatePeptideOmegaType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidatePeptideOmegaType }
      */
     public void setPdbxValidatePeptideOmegaCategory(PdbxValidatePeptideOmegaType value) {
         this.pdbxValidatePeptideOmegaCategory = value;
@@ -8003,11 +6860,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidatePlanesCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidatePlanesType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidatePlanesType }
      */
     public PdbxValidatePlanesType getPdbxValidatePlanesCategory() {
         return pdbxValidatePlanesCategory;
@@ -8015,11 +6870,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidatePlanesCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidatePlanesType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidatePlanesType }
      */
     public void setPdbxValidatePlanesCategory(PdbxValidatePlanesType value) {
         this.pdbxValidatePlanesCategory = value;
@@ -8027,11 +6880,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidatePlanesAtomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidatePlanesAtomType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidatePlanesAtomType }
      */
     public PdbxValidatePlanesAtomType getPdbxValidatePlanesAtomCategory() {
         return pdbxValidatePlanesAtomCategory;
@@ -8039,11 +6890,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidatePlanesAtomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidatePlanesAtomType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidatePlanesAtomType }
      */
     public void setPdbxValidatePlanesAtomCategory(PdbxValidatePlanesAtomType value) {
         this.pdbxValidatePlanesAtomCategory = value;
@@ -8051,11 +6900,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidatePolymerLinkageCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidatePolymerLinkageType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidatePolymerLinkageType }
      */
     public PdbxValidatePolymerLinkageType getPdbxValidatePolymerLinkageCategory() {
         return pdbxValidatePolymerLinkageCategory;
@@ -8063,11 +6910,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidatePolymerLinkageCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidatePolymerLinkageType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidatePolymerLinkageType }
      */
     public void setPdbxValidatePolymerLinkageCategory(PdbxValidatePolymerLinkageType value) {
         this.pdbxValidatePolymerLinkageCategory = value;
@@ -8075,11 +6920,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidateRmsdAngleCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidateRmsdAngleType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidateRmsdAngleType }
      */
     public PdbxValidateRmsdAngleType getPdbxValidateRmsdAngleCategory() {
         return pdbxValidateRmsdAngleCategory;
@@ -8087,11 +6930,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidateRmsdAngleCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidateRmsdAngleType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidateRmsdAngleType }
      */
     public void setPdbxValidateRmsdAngleCategory(PdbxValidateRmsdAngleType value) {
         this.pdbxValidateRmsdAngleCategory = value;
@@ -8099,11 +6940,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidateRmsdBondCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidateRmsdBondType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidateRmsdBondType }
      */
     public PdbxValidateRmsdBondType getPdbxValidateRmsdBondCategory() {
         return pdbxValidateRmsdBondCategory;
@@ -8111,11 +6950,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidateRmsdBondCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidateRmsdBondType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidateRmsdBondType }
      */
     public void setPdbxValidateRmsdBondCategory(PdbxValidateRmsdBondType value) {
         this.pdbxValidateRmsdBondCategory = value;
@@ -8123,11 +6960,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidateSymmContactCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidateSymmContactType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidateSymmContactType }
      */
     public PdbxValidateSymmContactType getPdbxValidateSymmContactCategory() {
         return pdbxValidateSymmContactCategory;
@@ -8135,11 +6970,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidateSymmContactCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidateSymmContactType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidateSymmContactType }
      */
     public void setPdbxValidateSymmContactCategory(PdbxValidateSymmContactType value) {
         this.pdbxValidateSymmContactCategory = value;
@@ -8147,11 +6980,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxValidateTorsionCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxValidateTorsionType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxValidateTorsionType }
      */
     public PdbxValidateTorsionType getPdbxValidateTorsionCategory() {
         return pdbxValidateTorsionCategory;
@@ -8159,11 +6990,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxValidateTorsionCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxValidateTorsionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxValidateTorsionType }
      */
     public void setPdbxValidateTorsionCategory(PdbxValidateTorsionType value) {
         this.pdbxValidateTorsionCategory = value;
@@ -8171,11 +7000,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxVersionCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxVersionType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxVersionType }
      */
     public PdbxVersionType getPdbxVersionCategory() {
         return pdbxVersionCategory;
@@ -8183,11 +7010,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxVersionCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxVersionType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxVersionType }
      */
     public void setPdbxVersionCategory(PdbxVersionType value) {
         this.pdbxVersionCategory = value;
@@ -8195,11 +7020,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the pdbxXplorFileCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PdbxXplorFileType }
-     *     
+     *
+     * @return possible object is
+     * {@link PdbxXplorFileType }
      */
     public PdbxXplorFileType getPdbxXplorFileCategory() {
         return pdbxXplorFileCategory;
@@ -8207,11 +7030,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the pdbxXplorFileCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PdbxXplorFileType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PdbxXplorFileType }
      */
     public void setPdbxXplorFileCategory(PdbxXplorFileType value) {
         this.pdbxXplorFileCategory = value;
@@ -8219,11 +7040,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingType }
      */
     public PhasingType getPhasingCategory() {
         return phasingCategory;
@@ -8231,11 +7050,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingType }
      */
     public void setPhasingCategory(PhasingType value) {
         this.phasingCategory = value;
@@ -8243,11 +7060,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMADCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMADType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMADType }
      */
     public PhasingMADType getPhasingMADCategory() {
         return phasingMADCategory;
@@ -8255,11 +7070,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMADCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMADType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMADType }
      */
     public void setPhasingMADCategory(PhasingMADType value) {
         this.phasingMADCategory = value;
@@ -8267,11 +7080,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMADClustCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMADClustType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMADClustType }
      */
     public PhasingMADClustType getPhasingMADClustCategory() {
         return phasingMADClustCategory;
@@ -8279,11 +7090,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMADClustCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMADClustType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMADClustType }
      */
     public void setPhasingMADClustCategory(PhasingMADClustType value) {
         this.phasingMADClustCategory = value;
@@ -8291,11 +7100,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMADExptCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMADExptType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMADExptType }
      */
     public PhasingMADExptType getPhasingMADExptCategory() {
         return phasingMADExptCategory;
@@ -8303,11 +7110,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMADExptCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMADExptType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMADExptType }
      */
     public void setPhasingMADExptCategory(PhasingMADExptType value) {
         this.phasingMADExptCategory = value;
@@ -8315,11 +7120,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMADRatioCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMADRatioType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMADRatioType }
      */
     public PhasingMADRatioType getPhasingMADRatioCategory() {
         return phasingMADRatioCategory;
@@ -8327,11 +7130,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMADRatioCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMADRatioType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMADRatioType }
      */
     public void setPhasingMADRatioCategory(PhasingMADRatioType value) {
         this.phasingMADRatioCategory = value;
@@ -8339,11 +7140,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMADSetCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMADSetType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMADSetType }
      */
     public PhasingMADSetType getPhasingMADSetCategory() {
         return phasingMADSetCategory;
@@ -8351,11 +7150,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMADSetCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMADSetType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMADSetType }
      */
     public void setPhasingMADSetCategory(PhasingMADSetType value) {
         this.phasingMADSetCategory = value;
@@ -8363,11 +7160,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMIRCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMIRType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMIRType }
      */
     public PhasingMIRType getPhasingMIRCategory() {
         return phasingMIRCategory;
@@ -8375,11 +7170,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMIRCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMIRType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMIRType }
      */
     public void setPhasingMIRCategory(PhasingMIRType value) {
         this.phasingMIRCategory = value;
@@ -8387,11 +7180,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMIRDerCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMIRDerType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMIRDerType }
      */
     public PhasingMIRDerType getPhasingMIRDerCategory() {
         return phasingMIRDerCategory;
@@ -8399,11 +7190,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMIRDerCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMIRDerType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMIRDerType }
      */
     public void setPhasingMIRDerCategory(PhasingMIRDerType value) {
         this.phasingMIRDerCategory = value;
@@ -8411,11 +7200,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMIRDerReflnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMIRDerReflnType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMIRDerReflnType }
      */
     public PhasingMIRDerReflnType getPhasingMIRDerReflnCategory() {
         return phasingMIRDerReflnCategory;
@@ -8423,11 +7210,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMIRDerReflnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMIRDerReflnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMIRDerReflnType }
      */
     public void setPhasingMIRDerReflnCategory(PhasingMIRDerReflnType value) {
         this.phasingMIRDerReflnCategory = value;
@@ -8435,11 +7220,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMIRDerShellCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMIRDerShellType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMIRDerShellType }
      */
     public PhasingMIRDerShellType getPhasingMIRDerShellCategory() {
         return phasingMIRDerShellCategory;
@@ -8447,11 +7230,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMIRDerShellCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMIRDerShellType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMIRDerShellType }
      */
     public void setPhasingMIRDerShellCategory(PhasingMIRDerShellType value) {
         this.phasingMIRDerShellCategory = value;
@@ -8459,11 +7240,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMIRDerSiteCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMIRDerSiteType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMIRDerSiteType }
      */
     public PhasingMIRDerSiteType getPhasingMIRDerSiteCategory() {
         return phasingMIRDerSiteCategory;
@@ -8471,11 +7250,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMIRDerSiteCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMIRDerSiteType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMIRDerSiteType }
      */
     public void setPhasingMIRDerSiteCategory(PhasingMIRDerSiteType value) {
         this.phasingMIRDerSiteCategory = value;
@@ -8483,11 +7260,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingMIRShellCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingMIRShellType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingMIRShellType }
      */
     public PhasingMIRShellType getPhasingMIRShellCategory() {
         return phasingMIRShellCategory;
@@ -8495,11 +7270,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingMIRShellCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingMIRShellType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingMIRShellType }
      */
     public void setPhasingMIRShellCategory(PhasingMIRShellType value) {
         this.phasingMIRShellCategory = value;
@@ -8507,11 +7280,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingAveragingCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingAveragingType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingAveragingType }
      */
     public PhasingAveragingType getPhasingAveragingCategory() {
         return phasingAveragingCategory;
@@ -8519,11 +7290,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingAveragingCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingAveragingType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingAveragingType }
      */
     public void setPhasingAveragingCategory(PhasingAveragingType value) {
         this.phasingAveragingCategory = value;
@@ -8531,11 +7300,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingIsomorphousCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingIsomorphousType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingIsomorphousType }
      */
     public PhasingIsomorphousType getPhasingIsomorphousCategory() {
         return phasingIsomorphousCategory;
@@ -8543,11 +7310,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingIsomorphousCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingIsomorphousType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingIsomorphousType }
      */
     public void setPhasingIsomorphousCategory(PhasingIsomorphousType value) {
         this.phasingIsomorphousCategory = value;
@@ -8555,11 +7320,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingSetCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingSetType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingSetType }
      */
     public PhasingSetType getPhasingSetCategory() {
         return phasingSetCategory;
@@ -8567,11 +7330,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingSetCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingSetType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingSetType }
      */
     public void setPhasingSetCategory(PhasingSetType value) {
         this.phasingSetCategory = value;
@@ -8579,11 +7340,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the phasingSetReflnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PhasingSetReflnType }
-     *     
+     *
+     * @return possible object is
+     * {@link PhasingSetReflnType }
      */
     public PhasingSetReflnType getPhasingSetReflnCategory() {
         return phasingSetReflnCategory;
@@ -8591,11 +7350,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the phasingSetReflnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PhasingSetReflnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PhasingSetReflnType }
      */
     public void setPhasingSetReflnCategory(PhasingSetReflnType value) {
         this.phasingSetReflnCategory = value;
@@ -8603,11 +7360,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the publCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PublType }
-     *     
+     *
+     * @return possible object is
+     * {@link PublType }
      */
     public PublType getPublCategory() {
         return publCategory;
@@ -8615,11 +7370,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the publCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PublType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PublType }
      */
     public void setPublCategory(PublType value) {
         this.publCategory = value;
@@ -8627,11 +7380,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the publAuthorCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PublAuthorType }
-     *     
+     *
+     * @return possible object is
+     * {@link PublAuthorType }
      */
     public PublAuthorType getPublAuthorCategory() {
         return publAuthorCategory;
@@ -8639,11 +7390,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the publAuthorCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PublAuthorType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PublAuthorType }
      */
     public void setPublAuthorCategory(PublAuthorType value) {
         this.publAuthorCategory = value;
@@ -8651,11 +7400,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the publBodyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PublBodyType }
-     *     
+     *
+     * @return possible object is
+     * {@link PublBodyType }
      */
     public PublBodyType getPublBodyCategory() {
         return publBodyCategory;
@@ -8663,11 +7410,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the publBodyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PublBodyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PublBodyType }
      */
     public void setPublBodyCategory(PublBodyType value) {
         this.publBodyCategory = value;
@@ -8675,11 +7420,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the publManuscriptInclCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PublManuscriptInclType }
-     *     
+     *
+     * @return possible object is
+     * {@link PublManuscriptInclType }
      */
     public PublManuscriptInclType getPublManuscriptInclCategory() {
         return publManuscriptInclCategory;
@@ -8687,11 +7430,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the publManuscriptInclCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PublManuscriptInclType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link PublManuscriptInclType }
      */
     public void setPublManuscriptInclCategory(PublManuscriptInclType value) {
         this.publManuscriptInclCategory = value;
@@ -8699,11 +7440,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineType }
      */
     public RefineType getRefineCategory() {
         return refineCategory;
@@ -8711,11 +7450,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineType }
      */
     public void setRefineCategory(RefineType value) {
         this.refineCategory = value;
@@ -8723,11 +7460,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineBIsoCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineBIsoType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineBIsoType }
      */
     public RefineBIsoType getRefineBIsoCategory() {
         return refineBIsoCategory;
@@ -8735,11 +7470,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineBIsoCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineBIsoType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineBIsoType }
      */
     public void setRefineBIsoCategory(RefineBIsoType value) {
         this.refineBIsoCategory = value;
@@ -8747,11 +7480,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineAnalyzeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineAnalyzeType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineAnalyzeType }
      */
     public RefineAnalyzeType getRefineAnalyzeCategory() {
         return refineAnalyzeCategory;
@@ -8759,11 +7490,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineAnalyzeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineAnalyzeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineAnalyzeType }
      */
     public void setRefineAnalyzeCategory(RefineAnalyzeType value) {
         this.refineAnalyzeCategory = value;
@@ -8771,11 +7500,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineFunctMinimizedCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineFunctMinimizedType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineFunctMinimizedType }
      */
     public RefineFunctMinimizedType getRefineFunctMinimizedCategory() {
         return refineFunctMinimizedCategory;
@@ -8783,11 +7510,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineFunctMinimizedCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineFunctMinimizedType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineFunctMinimizedType }
      */
     public void setRefineFunctMinimizedCategory(RefineFunctMinimizedType value) {
         this.refineFunctMinimizedCategory = value;
@@ -8795,11 +7520,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineHistCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineHistType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineHistType }
      */
     public RefineHistType getRefineHistCategory() {
         return refineHistCategory;
@@ -8807,11 +7530,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineHistCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineHistType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineHistType }
      */
     public void setRefineHistCategory(RefineHistType value) {
         this.refineHistCategory = value;
@@ -8819,11 +7540,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineLsClassCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineLsClassType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineLsClassType }
      */
     public RefineLsClassType getRefineLsClassCategory() {
         return refineLsClassCategory;
@@ -8831,11 +7550,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineLsClassCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineLsClassType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineLsClassType }
      */
     public void setRefineLsClassCategory(RefineLsClassType value) {
         this.refineLsClassCategory = value;
@@ -8843,11 +7560,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineLsRestrCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineLsRestrType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineLsRestrType }
      */
     public RefineLsRestrType getRefineLsRestrCategory() {
         return refineLsRestrCategory;
@@ -8855,11 +7570,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineLsRestrCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineLsRestrType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineLsRestrType }
      */
     public void setRefineLsRestrCategory(RefineLsRestrType value) {
         this.refineLsRestrCategory = value;
@@ -8867,11 +7580,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineLsRestrNcsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineLsRestrNcsType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineLsRestrNcsType }
      */
     public RefineLsRestrNcsType getRefineLsRestrNcsCategory() {
         return refineLsRestrNcsCategory;
@@ -8879,11 +7590,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineLsRestrNcsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineLsRestrNcsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineLsRestrNcsType }
      */
     public void setRefineLsRestrNcsCategory(RefineLsRestrNcsType value) {
         this.refineLsRestrNcsCategory = value;
@@ -8891,11 +7600,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineLsRestrTypeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineLsRestrTypeType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineLsRestrTypeType }
      */
     public RefineLsRestrTypeType getRefineLsRestrTypeCategory() {
         return refineLsRestrTypeCategory;
@@ -8903,11 +7610,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineLsRestrTypeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineLsRestrTypeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineLsRestrTypeType }
      */
     public void setRefineLsRestrTypeCategory(RefineLsRestrTypeType value) {
         this.refineLsRestrTypeCategory = value;
@@ -8915,11 +7620,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineLsShellCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineLsShellType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineLsShellType }
      */
     public RefineLsShellType getRefineLsShellCategory() {
         return refineLsShellCategory;
@@ -8927,11 +7630,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineLsShellCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineLsShellType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineLsShellType }
      */
     public void setRefineLsShellCategory(RefineLsShellType value) {
         this.refineLsShellCategory = value;
@@ -8939,11 +7640,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the refineOccupancyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link RefineOccupancyType }
-     *     
+     *
+     * @return possible object is
+     * {@link RefineOccupancyType }
      */
     public RefineOccupancyType getRefineOccupancyCategory() {
         return refineOccupancyCategory;
@@ -8951,11 +7650,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the refineOccupancyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link RefineOccupancyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link RefineOccupancyType }
      */
     public void setRefineOccupancyCategory(RefineOccupancyType value) {
         this.refineOccupancyCategory = value;
@@ -8963,11 +7660,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the reflnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReflnType }
-     *     
+     *
+     * @return possible object is
+     * {@link ReflnType }
      */
     public ReflnType getReflnCategory() {
         return reflnCategory;
@@ -8975,11 +7670,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the reflnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReflnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReflnType }
      */
     public void setReflnCategory(ReflnType value) {
         this.reflnCategory = value;
@@ -8987,11 +7680,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the reflnSysAbsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReflnSysAbsType }
-     *     
+     *
+     * @return possible object is
+     * {@link ReflnSysAbsType }
      */
     public ReflnSysAbsType getReflnSysAbsCategory() {
         return reflnSysAbsCategory;
@@ -8999,11 +7690,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the reflnSysAbsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReflnSysAbsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReflnSysAbsType }
      */
     public void setReflnSysAbsCategory(ReflnSysAbsType value) {
         this.reflnSysAbsCategory = value;
@@ -9011,11 +7700,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the reflnsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReflnsType }
-     *     
+     *
+     * @return possible object is
+     * {@link ReflnsType }
      */
     public ReflnsType getReflnsCategory() {
         return reflnsCategory;
@@ -9023,11 +7710,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the reflnsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReflnsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReflnsType }
      */
     public void setReflnsCategory(ReflnsType value) {
         this.reflnsCategory = value;
@@ -9035,11 +7720,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the reflnsClassCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReflnsClassType }
-     *     
+     *
+     * @return possible object is
+     * {@link ReflnsClassType }
      */
     public ReflnsClassType getReflnsClassCategory() {
         return reflnsClassCategory;
@@ -9047,11 +7730,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the reflnsClassCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReflnsClassType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReflnsClassType }
      */
     public void setReflnsClassCategory(ReflnsClassType value) {
         this.reflnsClassCategory = value;
@@ -9059,11 +7740,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the reflnsScaleCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReflnsScaleType }
-     *     
+     *
+     * @return possible object is
+     * {@link ReflnsScaleType }
      */
     public ReflnsScaleType getReflnsScaleCategory() {
         return reflnsScaleCategory;
@@ -9071,11 +7750,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the reflnsScaleCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReflnsScaleType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReflnsScaleType }
      */
     public void setReflnsScaleCategory(ReflnsScaleType value) {
         this.reflnsScaleCategory = value;
@@ -9083,11 +7760,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the reflnsShellCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ReflnsShellType }
-     *     
+     *
+     * @return possible object is
+     * {@link ReflnsShellType }
      */
     public ReflnsShellType getReflnsShellCategory() {
         return reflnsShellCategory;
@@ -9095,11 +7770,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the reflnsShellCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ReflnsShellType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ReflnsShellType }
      */
     public void setReflnsShellCategory(ReflnsShellType value) {
         this.reflnsShellCategory = value;
@@ -9107,11 +7780,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the softwareCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SoftwareType }
-     *     
+     *
+     * @return possible object is
+     * {@link SoftwareType }
      */
     public SoftwareType getSoftwareCategory() {
         return softwareCategory;
@@ -9119,11 +7790,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the softwareCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SoftwareType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SoftwareType }
      */
     public void setSoftwareCategory(SoftwareType value) {
         this.softwareCategory = value;
@@ -9131,11 +7800,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the spaceGroupCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SpaceGroupType }
-     *     
+     *
+     * @return possible object is
+     * {@link SpaceGroupType }
      */
     public SpaceGroupType getSpaceGroupCategory() {
         return spaceGroupCategory;
@@ -9143,11 +7810,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the spaceGroupCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SpaceGroupType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SpaceGroupType }
      */
     public void setSpaceGroupCategory(SpaceGroupType value) {
         this.spaceGroupCategory = value;
@@ -9155,11 +7820,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the spaceGroupSymopCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SpaceGroupSymopType }
-     *     
+     *
+     * @return possible object is
+     * {@link SpaceGroupSymopType }
      */
     public SpaceGroupSymopType getSpaceGroupSymopCategory() {
         return spaceGroupSymopCategory;
@@ -9167,11 +7830,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the spaceGroupSymopCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SpaceGroupSymopType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SpaceGroupSymopType }
      */
     public void setSpaceGroupSymopCategory(SpaceGroupSymopType value) {
         this.spaceGroupSymopCategory = value;
@@ -9179,11 +7840,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructType }
      */
     public StructType getStructCategory() {
         return structCategory;
@@ -9191,11 +7850,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructType }
      */
     public void setStructCategory(StructType value) {
         this.structCategory = value;
@@ -9203,11 +7860,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structAsymCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructAsymType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructAsymType }
      */
     public StructAsymType getStructAsymCategory() {
         return structAsymCategory;
@@ -9215,11 +7870,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structAsymCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructAsymType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructAsymType }
      */
     public void setStructAsymCategory(StructAsymType value) {
         this.structAsymCategory = value;
@@ -9227,11 +7880,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structBiolCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructBiolType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructBiolType }
      */
     public StructBiolType getStructBiolCategory() {
         return structBiolCategory;
@@ -9239,11 +7890,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structBiolCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructBiolType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructBiolType }
      */
     public void setStructBiolCategory(StructBiolType value) {
         this.structBiolCategory = value;
@@ -9251,11 +7900,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structBiolGenCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructBiolGenType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructBiolGenType }
      */
     public StructBiolGenType getStructBiolGenCategory() {
         return structBiolGenCategory;
@@ -9263,11 +7910,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structBiolGenCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructBiolGenType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructBiolGenType }
      */
     public void setStructBiolGenCategory(StructBiolGenType value) {
         this.structBiolGenCategory = value;
@@ -9275,11 +7920,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structBiolKeywordsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructBiolKeywordsType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructBiolKeywordsType }
      */
     public StructBiolKeywordsType getStructBiolKeywordsCategory() {
         return structBiolKeywordsCategory;
@@ -9287,11 +7930,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structBiolKeywordsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructBiolKeywordsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructBiolKeywordsType }
      */
     public void setStructBiolKeywordsCategory(StructBiolKeywordsType value) {
         this.structBiolKeywordsCategory = value;
@@ -9299,11 +7940,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structBiolViewCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructBiolViewType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructBiolViewType }
      */
     public StructBiolViewType getStructBiolViewCategory() {
         return structBiolViewCategory;
@@ -9311,11 +7950,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structBiolViewCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructBiolViewType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructBiolViewType }
      */
     public void setStructBiolViewCategory(StructBiolViewType value) {
         this.structBiolViewCategory = value;
@@ -9323,11 +7960,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structConfCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructConfType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructConfType }
      */
     public StructConfType getStructConfCategory() {
         return structConfCategory;
@@ -9335,11 +7970,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structConfCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructConfType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructConfType }
      */
     public void setStructConfCategory(StructConfType value) {
         this.structConfCategory = value;
@@ -9347,11 +7980,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structConfTypeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructConfTypeType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructConfTypeType }
      */
     public StructConfTypeType getStructConfTypeCategory() {
         return structConfTypeCategory;
@@ -9359,11 +7990,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structConfTypeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructConfTypeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructConfTypeType }
      */
     public void setStructConfTypeCategory(StructConfTypeType value) {
         this.structConfTypeCategory = value;
@@ -9371,11 +8000,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structConnCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructConnType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructConnType }
      */
     public StructConnType getStructConnCategory() {
         return structConnCategory;
@@ -9383,11 +8010,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structConnCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructConnType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructConnType }
      */
     public void setStructConnCategory(StructConnType value) {
         this.structConnCategory = value;
@@ -9395,11 +8020,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structConnTypeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructConnTypeType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructConnTypeType }
      */
     public StructConnTypeType getStructConnTypeCategory() {
         return structConnTypeCategory;
@@ -9407,11 +8030,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structConnTypeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructConnTypeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructConnTypeType }
      */
     public void setStructConnTypeCategory(StructConnTypeType value) {
         this.structConnTypeCategory = value;
@@ -9419,11 +8040,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structKeywordsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructKeywordsType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructKeywordsType }
      */
     public StructKeywordsType getStructKeywordsCategory() {
         return structKeywordsCategory;
@@ -9431,11 +8050,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structKeywordsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructKeywordsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructKeywordsType }
      */
     public void setStructKeywordsCategory(StructKeywordsType value) {
         this.structKeywordsCategory = value;
@@ -9443,11 +8060,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structMonDetailsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructMonDetailsType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructMonDetailsType }
      */
     public StructMonDetailsType getStructMonDetailsCategory() {
         return structMonDetailsCategory;
@@ -9455,11 +8070,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structMonDetailsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructMonDetailsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructMonDetailsType }
      */
     public void setStructMonDetailsCategory(StructMonDetailsType value) {
         this.structMonDetailsCategory = value;
@@ -9467,11 +8080,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structMonNuclCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructMonNuclType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructMonNuclType }
      */
     public StructMonNuclType getStructMonNuclCategory() {
         return structMonNuclCategory;
@@ -9479,11 +8090,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structMonNuclCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructMonNuclType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructMonNuclType }
      */
     public void setStructMonNuclCategory(StructMonNuclType value) {
         this.structMonNuclCategory = value;
@@ -9491,11 +8100,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structMonProtCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructMonProtType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructMonProtType }
      */
     public StructMonProtType getStructMonProtCategory() {
         return structMonProtCategory;
@@ -9503,11 +8110,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structMonProtCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructMonProtType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructMonProtType }
      */
     public void setStructMonProtCategory(StructMonProtType value) {
         this.structMonProtCategory = value;
@@ -9515,11 +8120,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structMonProtCisCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructMonProtCisType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructMonProtCisType }
      */
     public StructMonProtCisType getStructMonProtCisCategory() {
         return structMonProtCisCategory;
@@ -9527,11 +8130,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structMonProtCisCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructMonProtCisType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructMonProtCisType }
      */
     public void setStructMonProtCisCategory(StructMonProtCisType value) {
         this.structMonProtCisCategory = value;
@@ -9539,11 +8140,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structNcsDomCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructNcsDomType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructNcsDomType }
      */
     public StructNcsDomType getStructNcsDomCategory() {
         return structNcsDomCategory;
@@ -9551,11 +8150,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structNcsDomCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructNcsDomType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructNcsDomType }
      */
     public void setStructNcsDomCategory(StructNcsDomType value) {
         this.structNcsDomCategory = value;
@@ -9563,11 +8160,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structNcsDomLimCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructNcsDomLimType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructNcsDomLimType }
      */
     public StructNcsDomLimType getStructNcsDomLimCategory() {
         return structNcsDomLimCategory;
@@ -9575,11 +8170,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structNcsDomLimCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructNcsDomLimType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructNcsDomLimType }
      */
     public void setStructNcsDomLimCategory(StructNcsDomLimType value) {
         this.structNcsDomLimCategory = value;
@@ -9587,11 +8180,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structNcsEnsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructNcsEnsType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructNcsEnsType }
      */
     public StructNcsEnsType getStructNcsEnsCategory() {
         return structNcsEnsCategory;
@@ -9599,11 +8190,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structNcsEnsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructNcsEnsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructNcsEnsType }
      */
     public void setStructNcsEnsCategory(StructNcsEnsType value) {
         this.structNcsEnsCategory = value;
@@ -9611,11 +8200,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structNcsEnsGenCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructNcsEnsGenType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructNcsEnsGenType }
      */
     public StructNcsEnsGenType getStructNcsEnsGenCategory() {
         return structNcsEnsGenCategory;
@@ -9623,11 +8210,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structNcsEnsGenCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructNcsEnsGenType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructNcsEnsGenType }
      */
     public void setStructNcsEnsGenCategory(StructNcsEnsGenType value) {
         this.structNcsEnsGenCategory = value;
@@ -9635,11 +8220,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structNcsOperCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructNcsOperType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructNcsOperType }
      */
     public StructNcsOperType getStructNcsOperCategory() {
         return structNcsOperCategory;
@@ -9647,11 +8230,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structNcsOperCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructNcsOperType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructNcsOperType }
      */
     public void setStructNcsOperCategory(StructNcsOperType value) {
         this.structNcsOperCategory = value;
@@ -9659,11 +8240,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structRefCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructRefType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructRefType }
      */
     public StructRefType getStructRefCategory() {
         return structRefCategory;
@@ -9671,11 +8250,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structRefCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructRefType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructRefType }
      */
     public void setStructRefCategory(StructRefType value) {
         this.structRefCategory = value;
@@ -9683,11 +8260,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structRefSeqCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructRefSeqType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructRefSeqType }
      */
     public StructRefSeqType getStructRefSeqCategory() {
         return structRefSeqCategory;
@@ -9695,11 +8270,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structRefSeqCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructRefSeqType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructRefSeqType }
      */
     public void setStructRefSeqCategory(StructRefSeqType value) {
         this.structRefSeqCategory = value;
@@ -9707,11 +8280,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structRefSeqDifCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructRefSeqDifType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructRefSeqDifType }
      */
     public StructRefSeqDifType getStructRefSeqDifCategory() {
         return structRefSeqDifCategory;
@@ -9719,11 +8290,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structRefSeqDifCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructRefSeqDifType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructRefSeqDifType }
      */
     public void setStructRefSeqDifCategory(StructRefSeqDifType value) {
         this.structRefSeqDifCategory = value;
@@ -9731,11 +8300,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structSheetCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructSheetType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructSheetType }
      */
     public StructSheetType getStructSheetCategory() {
         return structSheetCategory;
@@ -9743,11 +8310,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structSheetCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructSheetType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructSheetType }
      */
     public void setStructSheetCategory(StructSheetType value) {
         this.structSheetCategory = value;
@@ -9755,11 +8320,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structSheetHbondCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructSheetHbondType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructSheetHbondType }
      */
     public StructSheetHbondType getStructSheetHbondCategory() {
         return structSheetHbondCategory;
@@ -9767,11 +8330,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structSheetHbondCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructSheetHbondType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructSheetHbondType }
      */
     public void setStructSheetHbondCategory(StructSheetHbondType value) {
         this.structSheetHbondCategory = value;
@@ -9779,11 +8340,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structSheetOrderCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructSheetOrderType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructSheetOrderType }
      */
     public StructSheetOrderType getStructSheetOrderCategory() {
         return structSheetOrderCategory;
@@ -9791,11 +8350,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structSheetOrderCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructSheetOrderType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructSheetOrderType }
      */
     public void setStructSheetOrderCategory(StructSheetOrderType value) {
         this.structSheetOrderCategory = value;
@@ -9803,11 +8360,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structSheetRangeCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructSheetRangeType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructSheetRangeType }
      */
     public StructSheetRangeType getStructSheetRangeCategory() {
         return structSheetRangeCategory;
@@ -9815,11 +8370,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structSheetRangeCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructSheetRangeType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructSheetRangeType }
      */
     public void setStructSheetRangeCategory(StructSheetRangeType value) {
         this.structSheetRangeCategory = value;
@@ -9827,11 +8380,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structSheetTopologyCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructSheetTopologyType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructSheetTopologyType }
      */
     public StructSheetTopologyType getStructSheetTopologyCategory() {
         return structSheetTopologyCategory;
@@ -9839,11 +8390,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structSheetTopologyCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructSheetTopologyType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructSheetTopologyType }
      */
     public void setStructSheetTopologyCategory(StructSheetTopologyType value) {
         this.structSheetTopologyCategory = value;
@@ -9851,11 +8400,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structSiteCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructSiteType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructSiteType }
      */
     public StructSiteType getStructSiteCategory() {
         return structSiteCategory;
@@ -9863,11 +8410,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structSiteCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructSiteType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructSiteType }
      */
     public void setStructSiteCategory(StructSiteType value) {
         this.structSiteCategory = value;
@@ -9875,11 +8420,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structSiteGenCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructSiteGenType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructSiteGenType }
      */
     public StructSiteGenType getStructSiteGenCategory() {
         return structSiteGenCategory;
@@ -9887,11 +8430,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structSiteGenCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructSiteGenType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructSiteGenType }
      */
     public void setStructSiteGenCategory(StructSiteGenType value) {
         this.structSiteGenCategory = value;
@@ -9899,11 +8440,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structSiteKeywordsCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructSiteKeywordsType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructSiteKeywordsType }
      */
     public StructSiteKeywordsType getStructSiteKeywordsCategory() {
         return structSiteKeywordsCategory;
@@ -9911,11 +8450,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structSiteKeywordsCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructSiteKeywordsType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructSiteKeywordsType }
      */
     public void setStructSiteKeywordsCategory(StructSiteKeywordsType value) {
         this.structSiteKeywordsCategory = value;
@@ -9923,11 +8460,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the structSiteViewCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link StructSiteViewType }
-     *     
+     *
+     * @return possible object is
+     * {@link StructSiteViewType }
      */
     public StructSiteViewType getStructSiteViewCategory() {
         return structSiteViewCategory;
@@ -9935,11 +8470,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the structSiteViewCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link StructSiteViewType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link StructSiteViewType }
      */
     public void setStructSiteViewCategory(StructSiteViewType value) {
         this.structSiteViewCategory = value;
@@ -9947,11 +8480,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the symmetryCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SymmetryType }
-     *     
+     *
+     * @return possible object is
+     * {@link SymmetryType }
      */
     public SymmetryType getSymmetryCategory() {
         return symmetryCategory;
@@ -9959,11 +8490,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the symmetryCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SymmetryType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SymmetryType }
      */
     public void setSymmetryCategory(SymmetryType value) {
         this.symmetryCategory = value;
@@ -9971,11 +8500,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the symmetryEquivCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link SymmetryEquivType }
-     *     
+     *
+     * @return possible object is
+     * {@link SymmetryEquivType }
      */
     public SymmetryEquivType getSymmetryEquivCategory() {
         return symmetryEquivCategory;
@@ -9983,11 +8510,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the symmetryEquivCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link SymmetryEquivType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link SymmetryEquivType }
      */
     public void setSymmetryEquivCategory(SymmetryEquivType value) {
         this.symmetryEquivCategory = value;
@@ -9995,11 +8520,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the valenceParamCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ValenceParamType }
-     *     
+     *
+     * @return possible object is
+     * {@link ValenceParamType }
      */
     public ValenceParamType getValenceParamCategory() {
         return valenceParamCategory;
@@ -10007,11 +8530,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the valenceParamCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ValenceParamType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ValenceParamType }
      */
     public void setValenceParamCategory(ValenceParamType value) {
         this.valenceParamCategory = value;
@@ -10019,11 +8540,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the valenceRefCategory property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ValenceRefType }
-     *     
+     *
+     * @return possible object is
+     * {@link ValenceRefType }
      */
     public ValenceRefType getValenceRefCategory() {
         return valenceRefCategory;
@@ -10031,11 +8550,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the valenceRefCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ValenceRefType }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link ValenceRefType }
      */
     public void setValenceRefCategory(ValenceRefType value) {
         this.valenceRefCategory = value;
@@ -10043,11 +8560,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Gets the value of the datablockName property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
+     *
+     * @return possible object is
+     * {@link String }
      */
     public String getDatablockName() {
         return datablockName;
@@ -10055,11 +8570,9 @@ public class DatablockType implements IDatablockType {
 
     /**
      * Sets the value of the datablockName property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
+     *
+     * @param value allowed object is
+     *              {@link String }
      */
     public void setDatablockName(String value) {
         this.datablockName = value;

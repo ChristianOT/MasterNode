@@ -17,6 +17,8 @@ import javax.xml.bind.annotation.XmlType;
 import org.gradle.pdbml.IAtomSiteType;
 import org.gradle.pdbml.IDatablockType;
 
+import java.util.List;
+
 
 /**
  * <p>Java class for datablockType complex type.
@@ -422,7 +424,7 @@ import org.gradle.pdbml.IDatablockType;
 public class DatablockType implements IDatablockType {
 
     @XmlElement(name = "atom_siteCategory")
-    protected IAtomSiteType atomSiteCategory;
+    protected AtomSiteType atomSiteCategory;
     @XmlElement(name = "atom_site_anisotropCategory")
     protected AtomSiteAnisotropType atomSiteAnisotropCategory;
     @XmlElement(name = "atom_sitesCategory")
@@ -1168,19 +1170,16 @@ public class DatablockType implements IDatablockType {
      *     {@link AtomSiteType }
      *     
      */
-    public IAtomSiteType getAtomSiteCategory() {
+    public AtomSiteType getAtomSiteCategory() {
         return atomSiteCategory;
     }
 
     /**
      * Sets the value of the atomSiteCategory property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link AtomSiteType }
+     *
      *     
      */
-    public void setAtomSiteCategory(IAtomSiteType value) {
+    public void setAtomSiteCategory(AtomSiteType value) {
         this.atomSiteCategory = value;
     }
 

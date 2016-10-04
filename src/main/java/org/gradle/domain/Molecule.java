@@ -1,6 +1,7 @@
 package org.gradle.domain;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
@@ -20,12 +21,21 @@ public class Molecule {
 	private Long id;
 	private String fileName;
 	public Integer atomCount = 0;
-	
+
+
+	public Molecule() {
+	}
+
+	public Molecule(String fileName, Set<Atom> atoms) {
+		this.fileName = fileName;
+		this.atoms = atoms;
+	}
+
 	/*
-	 * Set of atoms. @Relationship enables the relation between two domain models.
-	 */
+         * Set of atoms. @Relationship enables the relation between two domain models.
+         */
 	@Relationship(type="ATOM",direction=Relationship.UNDIRECTED)
-	public HashSet<Atom> atoms = new HashSet<Atom>();
+	public Set<Atom> atoms = new HashSet<Atom>();
 
 	public Integer getAtomCount() {
 		return atomCount;
@@ -43,7 +53,7 @@ public class Molecule {
 		this.fileName = fileName;
 	}
 
-	public HashSet<Atom> getAtoms() {
+	public Set<Atom> getAtoms() {
 		return atoms;
 	}
 

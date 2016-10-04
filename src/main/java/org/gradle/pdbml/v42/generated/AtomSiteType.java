@@ -8,6 +8,8 @@
 
 package org.gradle.pdbml.v42.generated;
 
+import org.gradle.pdbml.IAtomSiteType;
+
 import java.math.BigDecimal;
 import java.math.BigInteger;
 import java.util.ArrayList;
@@ -1010,7 +1012,7 @@ import javax.xml.bind.annotation.XmlValue;
 @XmlType(name = "atom_siteType", propOrder = {
     "atomSite"
 })
-public class AtomSiteType {
+public class AtomSiteType implements org.gradle.pdbml.IAtomSiteType {
 
     @XmlElement(name = "atom_site")
     protected List<AtomSiteType.AtomSite> atomSite;
@@ -1037,6 +1039,7 @@ public class AtomSiteType {
      * 
      * 
      */
+    @Override
     public List<AtomSiteType.AtomSite> getAtomSite() {
         if (atomSite == null) {
             atomSite = new ArrayList<AtomSiteType.AtomSite>();
@@ -1044,535 +1047,6 @@ public class AtomSiteType {
         return this.atomSite;
     }
 
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;all>
-     *         &lt;element name="B_equiv_geom_mean" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
-     *               &lt;minInclusive value="0.0"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="B_equiv_geom_mean_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="B_iso_or_equiv" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="B_iso_or_equiv_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Cartn_x" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Cartn_x_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Cartn_y" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Cartn_y_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Cartn_z" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Cartn_z_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="U_equiv_geom_mean" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
-     *               &lt;minInclusive value="0.0"/>
-     *               &lt;maxInclusive value="10.0"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="U_equiv_geom_mean_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="U_iso_or_equiv" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
-     *               &lt;minInclusive value="0.0"/>
-     *               &lt;maxInclusive value="10.0"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="U_iso_or_equiv_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Wyckoff_symbol" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="adp_type" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="Uani"/>
-     *               &lt;enumeration value="Uiso"/>
-     *               &lt;enumeration value="Uovl"/>
-     *               &lt;enumeration value="Umpe"/>
-     *               &lt;enumeration value="Bani"/>
-     *               &lt;enumeration value="Biso"/>
-     *               &lt;enumeration value="Bovl"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B11" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B11_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B12" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B12_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B13" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B13_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B22" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B22_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B23" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B23_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B33" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_B33_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="8pi2_angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U11" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U11_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U12" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U12_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U13" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U13_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U22" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U22_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U23" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U23_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U33" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_U33_esd" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>decimal">
-     *                 &lt;attribute name="units" type="{http://www.w3.org/2001/XMLSchema}string" fixed="angstroms_squared" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="aniso_ratio" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}decimal">
-     *               &lt;minInclusive value="1.0"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="attached_hydrogens" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer">
-     *               &lt;minInclusive value="0"/>
-     *               &lt;maxInclusive value="8"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="auth_asym_id" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="auth_atom_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="auth_comp_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="auth_seq_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="calc_attached_atom" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="calc_flag" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="d"/>
-     *               &lt;enumeration value="calc"/>
-     *               &lt;enumeration value="c"/>
-     *               &lt;enumeration value="dum"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="chemical_conn_number" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
-     *         &lt;element name="constraints" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="details" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="disorder_assembly" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="disorder_group" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="footnote_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="fract_x" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
-     *         &lt;element name="fract_x_esd" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
-     *         &lt;element name="fract_y" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
-     *         &lt;element name="fract_y_esd" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
-     *         &lt;element name="fract_z" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
-     *         &lt;element name="fract_z_esd" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
-     *         &lt;element name="group_PDB" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="ATOM"/>
-     *               &lt;enumeration value="HETATM"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="label_alt_id" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="label_asym_id" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="label_atom_id" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="label_comp_id" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="label_entity_id" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *         &lt;element name="label_seq_id" type="{http://www.w3.org/2001/XMLSchema}integer"/>
-     *         &lt;element name="occupancy" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
-     *         &lt;element name="occupancy_esd" type="{http://www.w3.org/2001/XMLSchema}decimal" minOccurs="0"/>
-     *         &lt;element name="pdbx_PDB_atom_name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_PDB_ins_code" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_PDB_model_num" type="{http://www.w3.org/2001/XMLSchema}integer" minOccurs="0"/>
-     *         &lt;element name="pdbx_PDB_residue_name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_PDB_residue_no" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_PDB_strand_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_auth_alt_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_auth_asym_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_auth_atom_name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_auth_comp_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_auth_seq_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_formal_charge" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer">
-     *               &lt;minInclusive value="-8"/>
-     *               &lt;maxInclusive value="8"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="pdbx_ncs_dom_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_struct_group_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="pdbx_tls_group_id" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="refinement_flags" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="S"/>
-     *               &lt;enumeration value="G"/>
-     *               &lt;enumeration value="R"/>
-     *               &lt;enumeration value="D"/>
-     *               &lt;enumeration value="T"/>
-     *               &lt;enumeration value="U"/>
-     *               &lt;enumeration value="P"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="refinement_flags_adp" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="T"/>
-     *               &lt;enumeration value="U"/>
-     *               &lt;enumeration value="TU"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="refinement_flags_occupancy" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="P"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="refinement_flags_posn" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="D"/>
-     *               &lt;enumeration value="G"/>
-     *               &lt;enumeration value="R"/>
-     *               &lt;enumeration value="S"/>
-     *               &lt;enumeration value="DG"/>
-     *               &lt;enumeration value="DR"/>
-     *               &lt;enumeration value="DS"/>
-     *               &lt;enumeration value="GR"/>
-     *               &lt;enumeration value="GS"/>
-     *               &lt;enumeration value="RS"/>
-     *               &lt;enumeration value="DGR"/>
-     *               &lt;enumeration value="DGS"/>
-     *               &lt;enumeration value="DRS"/>
-     *               &lt;enumeration value="GRS"/>
-     *               &lt;enumeration value="DGRS"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="restraints" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
-     *         &lt;element name="symmetry_multiplicity" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer">
-     *               &lt;minInclusive value="1"/>
-     *               &lt;maxInclusive value="192"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="thermal_displace_type" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;enumeration value="Uani"/>
-     *               &lt;enumeration value="Uiso"/>
-     *               &lt;enumeration value="Uovl"/>
-     *               &lt;enumeration value="Umpe"/>
-     *               &lt;enumeration value="Bani"/>
-     *               &lt;enumeration value="Biso"/>
-     *               &lt;enumeration value="Bovl"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *         &lt;element name="type_symbol" type="{http://www.w3.org/2001/XMLSchema}string"/>
-     *       &lt;/all>
-     *       &lt;attribute name="id" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "", propOrder = {
-
-    })
     public static class AtomSite {
 
         @XmlElementRef(name = "B_equiv_geom_mean", namespace = "http://pdbml.pdb.org/schema/pdbx-v42.xsd", type = JAXBElement.class, required = false)
@@ -1764,11 +1238,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the bEquivGeomMean property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getBEquivGeomMean() {
             return bEquivGeomMean;
@@ -1776,11 +1250,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the bEquivGeomMean property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setBEquivGeomMean(JAXBElement<BigDecimal> value) {
             this.bEquivGeomMean = value;
@@ -1788,11 +1262,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the bEquivGeomMeanEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BEquivGeomMeanEsd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.BEquivGeomMeanEsd> getBEquivGeomMeanEsd() {
             return bEquivGeomMeanEsd;
@@ -1800,11 +1274,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the bEquivGeomMeanEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BEquivGeomMeanEsd }{@code >}
-         *     
+         *
          */
         public void setBEquivGeomMeanEsd(JAXBElement<AtomSiteType.AtomSite.BEquivGeomMeanEsd> value) {
             this.bEquivGeomMeanEsd = value;
@@ -1812,11 +1286,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the bIsoOrEquiv property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquiv }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.BIsoOrEquiv> getBIsoOrEquiv() {
             return bIsoOrEquiv;
@@ -1824,11 +1298,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the bIsoOrEquiv property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquiv }{@code >}
-         *     
+         *
          */
         public void setBIsoOrEquiv(JAXBElement<AtomSiteType.AtomSite.BIsoOrEquiv> value) {
             this.bIsoOrEquiv = value;
@@ -1836,11 +1310,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the bIsoOrEquivEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquivEsd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.BIsoOrEquivEsd> getBIsoOrEquivEsd() {
             return bIsoOrEquivEsd;
@@ -1848,11 +1322,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the bIsoOrEquivEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquivEsd }{@code >}
-         *     
+         *
          */
         public void setBIsoOrEquivEsd(JAXBElement<AtomSiteType.AtomSite.BIsoOrEquivEsd> value) {
             this.bIsoOrEquivEsd = value;
@@ -1860,11 +1334,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the cartnX property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnX }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnX> getCartnX() {
             return cartnX;
@@ -1872,11 +1346,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the cartnX property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnX }{@code >}
-         *     
+         *
          */
         public void setCartnX(JAXBElement<AtomSiteType.AtomSite.CartnX> value) {
             this.cartnX = value;
@@ -1884,11 +1358,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the cartnXEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnXEsd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnXEsd> getCartnXEsd() {
             return cartnXEsd;
@@ -1896,11 +1370,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the cartnXEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnXEsd }{@code >}
-         *     
+         *
          */
         public void setCartnXEsd(JAXBElement<AtomSiteType.AtomSite.CartnXEsd> value) {
             this.cartnXEsd = value;
@@ -1908,11 +1382,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the cartnY property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnY }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnY> getCartnY() {
             return cartnY;
@@ -1920,11 +1394,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the cartnY property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnY }{@code >}
-         *     
+         *
          */
         public void setCartnY(JAXBElement<AtomSiteType.AtomSite.CartnY> value) {
             this.cartnY = value;
@@ -1932,11 +1406,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the cartnYEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnYEsd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnYEsd> getCartnYEsd() {
             return cartnYEsd;
@@ -1944,11 +1418,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the cartnYEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnYEsd }{@code >}
-         *     
+         *
          */
         public void setCartnYEsd(JAXBElement<AtomSiteType.AtomSite.CartnYEsd> value) {
             this.cartnYEsd = value;
@@ -1956,11 +1430,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the cartnZ property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZ }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnZ> getCartnZ() {
             return cartnZ;
@@ -1968,11 +1442,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the cartnZ property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZ }{@code >}
-         *     
+         *
          */
         public void setCartnZ(JAXBElement<AtomSiteType.AtomSite.CartnZ> value) {
             this.cartnZ = value;
@@ -1980,11 +1454,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the cartnZEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZEsd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnZEsd> getCartnZEsd() {
             return cartnZEsd;
@@ -1992,11 +1466,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the cartnZEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZEsd }{@code >}
-         *     
+         *
          */
         public void setCartnZEsd(JAXBElement<AtomSiteType.AtomSite.CartnZEsd> value) {
             this.cartnZEsd = value;
@@ -2004,11 +1478,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the uEquivGeomMean property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getUEquivGeomMean() {
             return uEquivGeomMean;
@@ -2016,11 +1490,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the uEquivGeomMean property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setUEquivGeomMean(JAXBElement<BigDecimal> value) {
             this.uEquivGeomMean = value;
@@ -2028,11 +1502,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the uEquivGeomMeanEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UEquivGeomMeanEsd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.UEquivGeomMeanEsd> getUEquivGeomMeanEsd() {
             return uEquivGeomMeanEsd;
@@ -2040,11 +1514,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the uEquivGeomMeanEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UEquivGeomMeanEsd }{@code >}
-         *     
+         *
          */
         public void setUEquivGeomMeanEsd(JAXBElement<AtomSiteType.AtomSite.UEquivGeomMeanEsd> value) {
             this.uEquivGeomMeanEsd = value;
@@ -2052,11 +1526,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the uIsoOrEquiv property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getUIsoOrEquiv() {
             return uIsoOrEquiv;
@@ -2064,11 +1538,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the uIsoOrEquiv property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setUIsoOrEquiv(JAXBElement<BigDecimal> value) {
             this.uIsoOrEquiv = value;
@@ -2076,11 +1550,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the uIsoOrEquivEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UIsoOrEquivEsd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.UIsoOrEquivEsd> getUIsoOrEquivEsd() {
             return uIsoOrEquivEsd;
@@ -2088,11 +1562,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the uIsoOrEquivEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UIsoOrEquivEsd }{@code >}
-         *     
+         *
          */
         public void setUIsoOrEquivEsd(JAXBElement<AtomSiteType.AtomSite.UIsoOrEquivEsd> value) {
             this.uIsoOrEquivEsd = value;
@@ -2100,11 +1574,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the wyckoffSymbol property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getWyckoffSymbol() {
             return wyckoffSymbol;
@@ -2112,11 +1586,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the wyckoffSymbol property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setWyckoffSymbol(JAXBElement<String> value) {
             this.wyckoffSymbol = value;
@@ -2124,11 +1598,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the adpType property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getAdpType() {
             return adpType;
@@ -2136,11 +1610,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the adpType property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setAdpType(JAXBElement<String> value) {
             this.adpType = value;
@@ -2148,11 +1622,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB11 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB11> getAnisoB11() {
             return anisoB11;
@@ -2160,11 +1634,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB11 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11 }{@code >}
-         *     
+         *
          */
         public void setAnisoB11(JAXBElement<AtomSiteType.AtomSite.AnisoB11> value) {
             this.anisoB11 = value;
@@ -2172,11 +1646,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB11Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB11Esd> getAnisoB11Esd() {
             return anisoB11Esd;
@@ -2184,11 +1658,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB11Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoB11Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB11Esd> value) {
             this.anisoB11Esd = value;
@@ -2196,11 +1670,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB12 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB12> getAnisoB12() {
             return anisoB12;
@@ -2208,11 +1682,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB12 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12 }{@code >}
-         *     
+         *
          */
         public void setAnisoB12(JAXBElement<AtomSiteType.AtomSite.AnisoB12> value) {
             this.anisoB12 = value;
@@ -2220,11 +1694,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB12Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB12Esd> getAnisoB12Esd() {
             return anisoB12Esd;
@@ -2232,11 +1706,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB12Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoB12Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB12Esd> value) {
             this.anisoB12Esd = value;
@@ -2244,11 +1718,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB13 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB13> getAnisoB13() {
             return anisoB13;
@@ -2256,11 +1730,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB13 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13 }{@code >}
-         *     
+         *
          */
         public void setAnisoB13(JAXBElement<AtomSiteType.AtomSite.AnisoB13> value) {
             this.anisoB13 = value;
@@ -2268,11 +1742,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB13Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB13Esd> getAnisoB13Esd() {
             return anisoB13Esd;
@@ -2280,11 +1754,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB13Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoB13Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB13Esd> value) {
             this.anisoB13Esd = value;
@@ -2292,11 +1766,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB22 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB22> getAnisoB22() {
             return anisoB22;
@@ -2304,11 +1778,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB22 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22 }{@code >}
-         *     
+         *
          */
         public void setAnisoB22(JAXBElement<AtomSiteType.AtomSite.AnisoB22> value) {
             this.anisoB22 = value;
@@ -2316,11 +1790,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB22Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB22Esd> getAnisoB22Esd() {
             return anisoB22Esd;
@@ -2328,11 +1802,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB22Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoB22Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB22Esd> value) {
             this.anisoB22Esd = value;
@@ -2340,11 +1814,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB23 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB23> getAnisoB23() {
             return anisoB23;
@@ -2352,11 +1826,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB23 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23 }{@code >}
-         *     
+         *
          */
         public void setAnisoB23(JAXBElement<AtomSiteType.AtomSite.AnisoB23> value) {
             this.anisoB23 = value;
@@ -2364,11 +1838,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB23Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB23Esd> getAnisoB23Esd() {
             return anisoB23Esd;
@@ -2376,11 +1850,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB23Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoB23Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB23Esd> value) {
             this.anisoB23Esd = value;
@@ -2388,11 +1862,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB33 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB33> getAnisoB33() {
             return anisoB33;
@@ -2400,11 +1874,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB33 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33 }{@code >}
-         *     
+         *
          */
         public void setAnisoB33(JAXBElement<AtomSiteType.AtomSite.AnisoB33> value) {
             this.anisoB33 = value;
@@ -2412,11 +1886,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoB33Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB33Esd> getAnisoB33Esd() {
             return anisoB33Esd;
@@ -2424,11 +1898,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoB33Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoB33Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB33Esd> value) {
             this.anisoB33Esd = value;
@@ -2436,11 +1910,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU11 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU11> getAnisoU11() {
             return anisoU11;
@@ -2448,11 +1922,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU11 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11 }{@code >}
-         *     
+         *
          */
         public void setAnisoU11(JAXBElement<AtomSiteType.AtomSite.AnisoU11> value) {
             this.anisoU11 = value;
@@ -2460,11 +1934,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU11Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU11Esd> getAnisoU11Esd() {
             return anisoU11Esd;
@@ -2472,11 +1946,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU11Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoU11Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU11Esd> value) {
             this.anisoU11Esd = value;
@@ -2484,11 +1958,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU12 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU12> getAnisoU12() {
             return anisoU12;
@@ -2496,11 +1970,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU12 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12 }{@code >}
-         *     
+         *
          */
         public void setAnisoU12(JAXBElement<AtomSiteType.AtomSite.AnisoU12> value) {
             this.anisoU12 = value;
@@ -2508,11 +1982,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU12Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU12Esd> getAnisoU12Esd() {
             return anisoU12Esd;
@@ -2520,11 +1994,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU12Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoU12Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU12Esd> value) {
             this.anisoU12Esd = value;
@@ -2532,11 +2006,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU13 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU13> getAnisoU13() {
             return anisoU13;
@@ -2544,11 +2018,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU13 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13 }{@code >}
-         *     
+         *
          */
         public void setAnisoU13(JAXBElement<AtomSiteType.AtomSite.AnisoU13> value) {
             this.anisoU13 = value;
@@ -2556,11 +2030,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU13Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU13Esd> getAnisoU13Esd() {
             return anisoU13Esd;
@@ -2568,11 +2042,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU13Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoU13Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU13Esd> value) {
             this.anisoU13Esd = value;
@@ -2580,11 +2054,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU22 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU22> getAnisoU22() {
             return anisoU22;
@@ -2592,11 +2066,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU22 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22 }{@code >}
-         *     
+         *
          */
         public void setAnisoU22(JAXBElement<AtomSiteType.AtomSite.AnisoU22> value) {
             this.anisoU22 = value;
@@ -2604,11 +2078,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU22Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU22Esd> getAnisoU22Esd() {
             return anisoU22Esd;
@@ -2616,11 +2090,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU22Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoU22Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU22Esd> value) {
             this.anisoU22Esd = value;
@@ -2628,11 +2102,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU23 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU23> getAnisoU23() {
             return anisoU23;
@@ -2640,11 +2114,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU23 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23 }{@code >}
-         *     
+         *
          */
         public void setAnisoU23(JAXBElement<AtomSiteType.AtomSite.AnisoU23> value) {
             this.anisoU23 = value;
@@ -2652,11 +2126,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU23Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU23Esd> getAnisoU23Esd() {
             return anisoU23Esd;
@@ -2664,11 +2138,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU23Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoU23Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU23Esd> value) {
             this.anisoU23Esd = value;
@@ -2676,11 +2150,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU33 property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33 }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU33> getAnisoU33() {
             return anisoU33;
@@ -2688,11 +2162,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU33 property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33 }{@code >}
-         *     
+         *
          */
         public void setAnisoU33(JAXBElement<AtomSiteType.AtomSite.AnisoU33> value) {
             this.anisoU33 = value;
@@ -2700,11 +2174,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoU33Esd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33Esd }{@code >}
-         *     
+         *
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU33Esd> getAnisoU33Esd() {
             return anisoU33Esd;
@@ -2712,11 +2186,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoU33Esd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33Esd }{@code >}
-         *     
+         *
          */
         public void setAnisoU33Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU33Esd> value) {
             this.anisoU33Esd = value;
@@ -2724,11 +2198,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the anisoRatio property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getAnisoRatio() {
             return anisoRatio;
@@ -2736,11 +2210,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the anisoRatio property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setAnisoRatio(JAXBElement<BigDecimal> value) {
             this.anisoRatio = value;
@@ -2748,11 +2222,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the attachedHydrogens property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link Integer }{@code >}
-         *     
+         *
          */
         public JAXBElement<Integer> getAttachedHydrogens() {
             return attachedHydrogens;
@@ -2760,11 +2234,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the attachedHydrogens property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link Integer }{@code >}
-         *     
+         *
          */
         public void setAttachedHydrogens(JAXBElement<Integer> value) {
             this.attachedHydrogens = value;
@@ -2772,11 +2246,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the authAsymId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getAuthAsymId() {
             return authAsymId;
@@ -2784,11 +2258,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the authAsymId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setAuthAsymId(String value) {
             this.authAsymId = value;
@@ -2796,11 +2270,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the authAtomId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getAuthAtomId() {
             return authAtomId;
@@ -2808,11 +2282,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the authAtomId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setAuthAtomId(JAXBElement<String> value) {
             this.authAtomId = value;
@@ -2820,11 +2294,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the authCompId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getAuthCompId() {
             return authCompId;
@@ -2832,11 +2306,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the authCompId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setAuthCompId(JAXBElement<String> value) {
             this.authCompId = value;
@@ -2844,11 +2318,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the authSeqId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getAuthSeqId() {
             return authSeqId;
@@ -2856,11 +2330,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the authSeqId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setAuthSeqId(JAXBElement<String> value) {
             this.authSeqId = value;
@@ -2868,11 +2342,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the calcAttachedAtom property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getCalcAttachedAtom() {
             return calcAttachedAtom;
@@ -2880,11 +2354,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the calcAttachedAtom property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setCalcAttachedAtom(JAXBElement<String> value) {
             this.calcAttachedAtom = value;
@@ -2892,11 +2366,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the calcFlag property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getCalcFlag() {
             return calcFlag;
@@ -2904,11 +2378,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the calcFlag property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setCalcFlag(JAXBElement<String> value) {
             this.calcFlag = value;
@@ -2916,11 +2390,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the chemicalConnNumber property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigInteger> getChemicalConnNumber() {
             return chemicalConnNumber;
@@ -2928,11 +2402,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the chemicalConnNumber property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
-         *     
+         *
          */
         public void setChemicalConnNumber(JAXBElement<BigInteger> value) {
             this.chemicalConnNumber = value;
@@ -2940,11 +2414,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the constraints property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getConstraints() {
             return constraints;
@@ -2952,11 +2426,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the constraints property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setConstraints(JAXBElement<String> value) {
             this.constraints = value;
@@ -2964,11 +2438,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the details property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getDetails() {
             return details;
@@ -2976,11 +2450,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the details property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setDetails(JAXBElement<String> value) {
             this.details = value;
@@ -2988,11 +2462,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the disorderAssembly property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getDisorderAssembly() {
             return disorderAssembly;
@@ -3000,11 +2474,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the disorderAssembly property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setDisorderAssembly(JAXBElement<String> value) {
             this.disorderAssembly = value;
@@ -3012,11 +2486,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the disorderGroup property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getDisorderGroup() {
             return disorderGroup;
@@ -3024,11 +2498,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the disorderGroup property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setDisorderGroup(JAXBElement<String> value) {
             this.disorderGroup = value;
@@ -3036,11 +2510,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the footnoteId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getFootnoteId() {
             return footnoteId;
@@ -3048,11 +2522,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the footnoteId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setFootnoteId(JAXBElement<String> value) {
             this.footnoteId = value;
@@ -3060,11 +2534,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the fractX property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getFractX() {
             return fractX;
@@ -3072,11 +2546,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the fractX property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setFractX(JAXBElement<BigDecimal> value) {
             this.fractX = value;
@@ -3084,11 +2558,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the fractXEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getFractXEsd() {
             return fractXEsd;
@@ -3096,11 +2570,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the fractXEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setFractXEsd(JAXBElement<BigDecimal> value) {
             this.fractXEsd = value;
@@ -3108,11 +2582,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the fractY property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getFractY() {
             return fractY;
@@ -3120,11 +2594,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the fractY property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setFractY(JAXBElement<BigDecimal> value) {
             this.fractY = value;
@@ -3132,11 +2606,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the fractYEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getFractYEsd() {
             return fractYEsd;
@@ -3144,11 +2618,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the fractYEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setFractYEsd(JAXBElement<BigDecimal> value) {
             this.fractYEsd = value;
@@ -3156,11 +2630,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the fractZ property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getFractZ() {
             return fractZ;
@@ -3168,11 +2642,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the fractZ property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setFractZ(JAXBElement<BigDecimal> value) {
             this.fractZ = value;
@@ -3180,11 +2654,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the fractZEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getFractZEsd() {
             return fractZEsd;
@@ -3192,11 +2666,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the fractZEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setFractZEsd(JAXBElement<BigDecimal> value) {
             this.fractZEsd = value;
@@ -3204,11 +2678,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the groupPDB property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getGroupPDB() {
             return groupPDB;
@@ -3216,11 +2690,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the groupPDB property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setGroupPDB(JAXBElement<String> value) {
             this.groupPDB = value;
@@ -3228,11 +2702,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the labelAltId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getLabelAltId() {
             return labelAltId;
@@ -3240,11 +2714,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the labelAltId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setLabelAltId(String value) {
             this.labelAltId = value;
@@ -3252,11 +2726,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the labelAsymId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getLabelAsymId() {
             return labelAsymId;
@@ -3264,11 +2738,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the labelAsymId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setLabelAsymId(String value) {
             this.labelAsymId = value;
@@ -3276,11 +2750,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the labelAtomId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getLabelAtomId() {
             return labelAtomId;
@@ -3288,11 +2762,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the labelAtomId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setLabelAtomId(String value) {
             this.labelAtomId = value;
@@ -3300,11 +2774,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the labelCompId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getLabelCompId() {
             return labelCompId;
@@ -3312,11 +2786,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the labelCompId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setLabelCompId(String value) {
             this.labelCompId = value;
@@ -3324,11 +2798,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the labelEntityId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getLabelEntityId() {
             return labelEntityId;
@@ -3336,11 +2810,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the labelEntityId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setLabelEntityId(String value) {
             this.labelEntityId = value;
@@ -3348,11 +2822,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the labelSeqId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link BigInteger }
-         *     
+         *
          */
         public BigInteger getLabelSeqId() {
             return labelSeqId;
@@ -3360,11 +2834,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the labelSeqId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link BigInteger }
-         *     
+         *
          */
         public void setLabelSeqId(BigInteger value) {
             this.labelSeqId = value;
@@ -3372,11 +2846,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the occupancy property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getOccupancy() {
             return occupancy;
@@ -3384,11 +2858,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the occupancy property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setOccupancy(JAXBElement<BigDecimal> value) {
             this.occupancy = value;
@@ -3396,11 +2870,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the occupancyEsd property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigDecimal> getOccupancyEsd() {
             return occupancyEsd;
@@ -3408,11 +2882,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the occupancyEsd property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
-         *     
+         *
          */
         public void setOccupancyEsd(JAXBElement<BigDecimal> value) {
             this.occupancyEsd = value;
@@ -3420,11 +2894,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxPDBAtomName property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxPDBAtomName() {
             return pdbxPDBAtomName;
@@ -3432,11 +2906,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxPDBAtomName property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxPDBAtomName(JAXBElement<String> value) {
             this.pdbxPDBAtomName = value;
@@ -3444,11 +2918,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxPDBInsCode property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxPDBInsCode() {
             return pdbxPDBInsCode;
@@ -3456,11 +2930,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxPDBInsCode property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxPDBInsCode(JAXBElement<String> value) {
             this.pdbxPDBInsCode = value;
@@ -3468,11 +2942,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxPDBModelNum property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
-         *     
+         *
          */
         public JAXBElement<BigInteger> getPdbxPDBModelNum() {
             return pdbxPDBModelNum;
@@ -3480,11 +2954,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxPDBModelNum property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
-         *     
+         *
          */
         public void setPdbxPDBModelNum(JAXBElement<BigInteger> value) {
             this.pdbxPDBModelNum = value;
@@ -3492,11 +2966,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxPDBResidueName property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxPDBResidueName() {
             return pdbxPDBResidueName;
@@ -3504,11 +2978,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxPDBResidueName property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxPDBResidueName(JAXBElement<String> value) {
             this.pdbxPDBResidueName = value;
@@ -3516,11 +2990,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxPDBResidueNo property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxPDBResidueNo() {
             return pdbxPDBResidueNo;
@@ -3528,11 +3002,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxPDBResidueNo property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxPDBResidueNo(JAXBElement<String> value) {
             this.pdbxPDBResidueNo = value;
@@ -3540,11 +3014,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxPDBStrandId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxPDBStrandId() {
             return pdbxPDBStrandId;
@@ -3552,11 +3026,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxPDBStrandId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxPDBStrandId(JAXBElement<String> value) {
             this.pdbxPDBStrandId = value;
@@ -3564,11 +3038,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxAuthAltId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxAuthAltId() {
             return pdbxAuthAltId;
@@ -3576,11 +3050,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxAuthAltId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxAuthAltId(JAXBElement<String> value) {
             this.pdbxAuthAltId = value;
@@ -3588,11 +3062,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxAuthAsymId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxAuthAsymId() {
             return pdbxAuthAsymId;
@@ -3600,11 +3074,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxAuthAsymId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxAuthAsymId(JAXBElement<String> value) {
             this.pdbxAuthAsymId = value;
@@ -3612,11 +3086,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxAuthAtomName property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxAuthAtomName() {
             return pdbxAuthAtomName;
@@ -3624,11 +3098,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxAuthAtomName property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxAuthAtomName(JAXBElement<String> value) {
             this.pdbxAuthAtomName = value;
@@ -3636,11 +3110,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxAuthCompId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxAuthCompId() {
             return pdbxAuthCompId;
@@ -3648,11 +3122,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxAuthCompId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxAuthCompId(JAXBElement<String> value) {
             this.pdbxAuthCompId = value;
@@ -3660,11 +3134,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxAuthSeqId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxAuthSeqId() {
             return pdbxAuthSeqId;
@@ -3672,11 +3146,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxAuthSeqId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxAuthSeqId(JAXBElement<String> value) {
             this.pdbxAuthSeqId = value;
@@ -3684,11 +3158,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxFormalCharge property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link Integer }{@code >}
-         *     
+         *
          */
         public JAXBElement<Integer> getPdbxFormalCharge() {
             return pdbxFormalCharge;
@@ -3696,11 +3170,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxFormalCharge property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link Integer }{@code >}
-         *     
+         *
          */
         public void setPdbxFormalCharge(JAXBElement<Integer> value) {
             this.pdbxFormalCharge = value;
@@ -3708,11 +3182,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxNcsDomId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxNcsDomId() {
             return pdbxNcsDomId;
@@ -3720,11 +3194,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxNcsDomId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxNcsDomId(JAXBElement<String> value) {
             this.pdbxNcsDomId = value;
@@ -3732,11 +3206,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxStructGroupId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxStructGroupId() {
             return pdbxStructGroupId;
@@ -3744,11 +3218,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxStructGroupId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxStructGroupId(JAXBElement<String> value) {
             this.pdbxStructGroupId = value;
@@ -3756,11 +3230,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the pdbxTlsGroupId property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getPdbxTlsGroupId() {
             return pdbxTlsGroupId;
@@ -3768,11 +3242,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the pdbxTlsGroupId property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setPdbxTlsGroupId(JAXBElement<String> value) {
             this.pdbxTlsGroupId = value;
@@ -3780,11 +3254,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the refinementFlags property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getRefinementFlags() {
             return refinementFlags;
@@ -3792,11 +3266,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the refinementFlags property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setRefinementFlags(JAXBElement<String> value) {
             this.refinementFlags = value;
@@ -3804,11 +3278,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the refinementFlagsAdp property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getRefinementFlagsAdp() {
             return refinementFlagsAdp;
@@ -3816,11 +3290,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the refinementFlagsAdp property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setRefinementFlagsAdp(JAXBElement<String> value) {
             this.refinementFlagsAdp = value;
@@ -3828,11 +3302,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the refinementFlagsOccupancy property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getRefinementFlagsOccupancy() {
             return refinementFlagsOccupancy;
@@ -3840,11 +3314,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the refinementFlagsOccupancy property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setRefinementFlagsOccupancy(JAXBElement<String> value) {
             this.refinementFlagsOccupancy = value;
@@ -3852,11 +3326,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the refinementFlagsPosn property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getRefinementFlagsPosn() {
             return refinementFlagsPosn;
@@ -3864,11 +3338,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the refinementFlagsPosn property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setRefinementFlagsPosn(JAXBElement<String> value) {
             this.refinementFlagsPosn = value;
@@ -3876,11 +3350,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the restraints property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getRestraints() {
             return restraints;
@@ -3888,11 +3362,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the restraints property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setRestraints(JAXBElement<String> value) {
             this.restraints = value;
@@ -3900,11 +3374,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the symmetryMultiplicity property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link Integer }{@code >}
-         *     
+         *
          */
         public JAXBElement<Integer> getSymmetryMultiplicity() {
             return symmetryMultiplicity;
@@ -3912,11 +3386,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the symmetryMultiplicity property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link Integer }{@code >}
-         *     
+         *
          */
         public void setSymmetryMultiplicity(JAXBElement<Integer> value) {
             this.symmetryMultiplicity = value;
@@ -3924,11 +3398,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the thermalDisplaceType property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public JAXBElement<String> getThermalDisplaceType() {
             return thermalDisplaceType;
@@ -3936,11 +3410,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the thermalDisplaceType property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link JAXBElement }{@code <}{@link String }{@code >}
-         *     
+         *
          */
         public void setThermalDisplaceType(JAXBElement<String> value) {
             this.thermalDisplaceType = value;
@@ -3948,11 +3422,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the typeSymbol property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getTypeSymbol() {
             return typeSymbol;
@@ -3960,11 +3434,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the typeSymbol property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setTypeSymbol(String value) {
             this.typeSymbol = value;
@@ -3972,11 +3446,11 @@ public class AtomSiteType {
 
         /**
          * Gets the value of the id property.
-         * 
+         *
          * @return
          *     possible object is
          *     {@link String }
-         *     
+         *
          */
         public String getId() {
             return id;
@@ -3984,11 +3458,11 @@ public class AtomSiteType {
 
         /**
          * Sets the value of the id property.
-         * 
+         *
          * @param value
          *     allowed object is
          *     {@link String }
-         *     
+         *
          */
         public void setId(String value) {
             this.id = value;
@@ -3997,9 +3471,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4009,12 +3483,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB11 {
 
@@ -4025,11 +3499,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4037,11 +3511,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4049,11 +3523,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4065,11 +3539,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4080,9 +3554,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4092,12 +3566,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB11Esd {
 
@@ -4108,11 +3582,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4120,11 +3594,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4132,11 +3606,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4148,11 +3622,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4163,9 +3637,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4175,12 +3649,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB12 {
 
@@ -4191,11 +3665,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4203,11 +3677,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4215,11 +3689,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4231,11 +3705,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4246,9 +3720,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4258,12 +3732,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB12Esd {
 
@@ -4274,11 +3748,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4286,11 +3760,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4298,11 +3772,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4314,11 +3788,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4329,9 +3803,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4341,12 +3815,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB13 {
 
@@ -4357,11 +3831,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4369,11 +3843,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4381,11 +3855,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4397,11 +3871,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4412,9 +3886,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4424,12 +3898,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB13Esd {
 
@@ -4440,11 +3914,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4452,11 +3926,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4464,11 +3938,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4480,11 +3954,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4495,9 +3969,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4507,12 +3981,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB22 {
 
@@ -4523,11 +3997,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4535,11 +4009,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4547,11 +4021,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4563,11 +4037,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4578,9 +4052,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4590,12 +4064,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB22Esd {
 
@@ -4606,11 +4080,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4618,11 +4092,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4630,11 +4104,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4646,11 +4120,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4661,9 +4135,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4673,12 +4147,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB23 {
 
@@ -4689,11 +4163,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4701,11 +4175,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4713,11 +4187,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4729,11 +4203,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4744,9 +4218,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4756,12 +4230,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB23Esd {
 
@@ -4772,11 +4246,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4784,11 +4258,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4796,11 +4270,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4812,11 +4286,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4827,9 +4301,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4839,12 +4313,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB33 {
 
@@ -4855,11 +4329,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4867,11 +4341,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4879,11 +4353,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4895,11 +4369,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4910,9 +4384,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4922,12 +4396,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoB33Esd {
 
@@ -4938,11 +4412,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -4950,11 +4424,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4962,11 +4436,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -4978,11 +4452,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4993,9 +4467,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5005,12 +4479,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU11 {
 
@@ -5021,11 +4495,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5033,11 +4507,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5045,11 +4519,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5061,11 +4535,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5076,9 +4550,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5088,12 +4562,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU11Esd {
 
@@ -5104,11 +4578,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5116,11 +4590,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5128,11 +4602,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5144,11 +4618,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5159,9 +4633,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5171,12 +4645,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU12 {
 
@@ -5187,11 +4661,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5199,11 +4673,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5211,11 +4685,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5227,11 +4701,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5242,9 +4716,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5254,12 +4728,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU12Esd {
 
@@ -5270,11 +4744,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5282,11 +4756,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5294,11 +4768,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5310,11 +4784,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5325,9 +4799,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5337,12 +4811,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU13 {
 
@@ -5353,11 +4827,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5365,11 +4839,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5377,11 +4851,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5393,11 +4867,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5408,9 +4882,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5420,12 +4894,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU13Esd {
 
@@ -5436,11 +4910,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5448,11 +4922,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5460,11 +4934,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5476,11 +4950,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5491,9 +4965,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5503,12 +4977,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU22 {
 
@@ -5519,11 +4993,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5531,11 +5005,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5543,11 +5017,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5559,11 +5033,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5574,9 +5048,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5586,12 +5060,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU22Esd {
 
@@ -5602,11 +5076,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5614,11 +5088,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5626,11 +5100,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5642,11 +5116,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5657,9 +5131,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5669,12 +5143,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU23 {
 
@@ -5685,11 +5159,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5697,11 +5171,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5709,11 +5183,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5725,11 +5199,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5740,9 +5214,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5752,12 +5226,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU23Esd {
 
@@ -5768,11 +5242,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5780,11 +5254,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5792,11 +5266,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5808,11 +5282,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5823,9 +5297,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5835,12 +5309,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU33 {
 
@@ -5851,11 +5325,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5863,11 +5337,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5875,11 +5349,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5891,11 +5365,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5906,9 +5380,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5918,12 +5392,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class AnisoU33Esd {
 
@@ -5934,11 +5408,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -5946,11 +5420,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5958,11 +5432,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -5974,11 +5448,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5989,9 +5463,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6001,12 +5475,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class BEquivGeomMeanEsd {
 
@@ -6017,11 +5491,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6029,11 +5503,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6041,11 +5515,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6057,11 +5531,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6072,9 +5546,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6084,12 +5558,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class BIsoOrEquiv {
 
@@ -6100,11 +5574,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6112,11 +5586,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6124,11 +5598,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6140,11 +5614,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6155,9 +5629,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6167,12 +5641,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class BIsoOrEquivEsd {
 
@@ -6183,11 +5657,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6195,11 +5669,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6207,11 +5681,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6223,11 +5697,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6238,9 +5712,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6250,12 +5724,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class CartnX {
 
@@ -6266,11 +5740,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6278,11 +5752,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6290,11 +5764,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6306,11 +5780,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6321,9 +5795,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6333,12 +5807,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class CartnXEsd {
 
@@ -6349,11 +5823,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6361,11 +5835,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6373,11 +5847,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6389,11 +5863,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6404,9 +5878,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6416,12 +5890,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class CartnY {
 
@@ -6432,11 +5906,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6444,11 +5918,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6456,11 +5930,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6472,11 +5946,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6487,9 +5961,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6499,12 +5973,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class CartnYEsd {
 
@@ -6515,11 +5989,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6527,11 +6001,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6539,11 +6013,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6555,11 +6029,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6570,9 +6044,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6582,12 +6056,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class CartnZ {
 
@@ -6598,11 +6072,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6610,11 +6084,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6622,11 +6096,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6638,11 +6112,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6653,9 +6127,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6665,12 +6139,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class CartnZEsd {
 
@@ -6681,11 +6155,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6693,11 +6167,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6705,11 +6179,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6721,11 +6195,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6736,9 +6210,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6748,12 +6222,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class UEquivGeomMeanEsd {
 
@@ -6764,11 +6238,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6776,11 +6250,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6788,11 +6262,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6804,11 +6278,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6819,9 +6293,9 @@ public class AtomSiteType {
 
         /**
          * <p>Java class for anonymous complex type.
-         * 
+         *
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * 
+         *
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6831,12 +6305,12 @@ public class AtomSiteType {
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
-         * 
-         * 
+         *
+         *
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-            "value"
+                "value"
         })
         public static class UIsoOrEquivEsd {
 
@@ -6847,11 +6321,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the value property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public BigDecimal getValue() {
                 return value;
@@ -6859,11 +6333,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the value property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link BigDecimal }
-             *     
+             *
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6871,11 +6345,11 @@ public class AtomSiteType {
 
             /**
              * Gets the value of the units property.
-             * 
+             *
              * @return
              *     possible object is
              *     {@link String }
-             *     
+             *
              */
             public String getUnits() {
                 if (units == null) {
@@ -6887,11 +6361,11 @@ public class AtomSiteType {
 
             /**
              * Sets the value of the units property.
-             * 
+             *
              * @param value
              *     allowed object is
              *     {@link String }
-             *     
+             *
              */
             public void setUnits(String value) {
                 this.units = value;

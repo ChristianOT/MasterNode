@@ -1,14 +1,7 @@
 package org.gradle.config;
 
-import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
-import javax.jms.ConnectionFactory;
-import javax.jms.JMSException;
-
-import org.apache.activemq.ActiveMQConnectionFactory;
-import org.gradle.writer.JmsMessageWriter;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -28,13 +21,8 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-import org.springframework.jms.annotation.EnableJms;
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.jms.config.JmsListenerContainerFactory;
-import org.springframework.jms.config.SimpleJmsListenerContainerFactory;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.util.FileSystemUtils;
+
 /**
  * In this class all the batch jobs and steps are configured.
  *  - bootstrap job: adding, updating data from local files to neo4j database
@@ -125,7 +113,7 @@ public class BatchConfig{
 	public ItemReader multiReader() throws IOException {
 		MultiResourceItemReader reader = new MultiResourceItemReader();
 		PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-		Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/gradle/*.xml");
+		Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/*.xml");
 		if(resources != null){
 			System.out.println(resources.length);
 			reader.setResources(resources);
@@ -161,7 +149,7 @@ public class BatchConfig{
 //	}
 //
 //	/**
-//	 * Setting the ItemWriter for masterStep as a {@link org.gradle.writer.JmsMessageWriter}.
+//	 * Setting the ItemWriter for masterStep as a {@link org.gradle.service.writer.JmsMessageWriter}.
 //	 * Needs JmsTemplate to interact with jms queues.
 //	 * 
 //	 * @return itemWriter

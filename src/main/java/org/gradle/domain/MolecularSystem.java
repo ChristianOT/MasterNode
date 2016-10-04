@@ -1,6 +1,7 @@
 package org.gradle.domain;
 
 import java.util.HashSet;
+import java.util.Set;
 
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
@@ -19,15 +20,24 @@ public class MolecularSystem {
 	@GraphId
 	private Long id;
 
+	public MolecularSystem() {
+	}
+
+	public MolecularSystem(String nameOfSystem, Set<Molecule> molecules) {
+		this.nameOfSystem = nameOfSystem;
+		this.molecules = molecules;
+	}
+
 	private String nameOfSystem;
 	public Integer numberOfMolecules;
 	public Integer numberOfAtoms;
+
 
 	/*
 	 * Set of molecules. @Relationship enables the relation between two domain models.
 	 */
 	@Relationship(type = "MOLECULE", direction = Relationship.UNDIRECTED)
-	public HashSet<Molecule> molecules = new HashSet<Molecule>();
+	public Set<Molecule> molecules = new HashSet<Molecule>();
 
 	public String getNameOfSystem() {
 		return nameOfSystem;
@@ -53,7 +63,7 @@ public class MolecularSystem {
 		this.numberOfAtoms = numberOfAtoms;
 	}
 
-	public HashSet<Molecule> getMolecules() {
+	public Set<Molecule> getMolecules() {
 		return molecules;
 	}
 
