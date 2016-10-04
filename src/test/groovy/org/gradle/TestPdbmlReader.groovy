@@ -1,5 +1,6 @@
-package org.gradle.reader
+package org.gradle
 
+import org.gradle.reader.PdbmlFileReader
 import org.springframework.core.io.Resource
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
@@ -11,7 +12,7 @@ class TestPdbmlReader extends Specification{
 		
 		
 		PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-		Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/recover/1IDQ.xml");
+		Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/1IDQ.xml");
 	
 		when:
 		def reader = new PdbmlFileReader(resources[0])

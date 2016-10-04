@@ -7,7 +7,6 @@ import spock.lang.Specification
  */
 class TestGroovyScripting extends Specification {
 
-
     def "test file listing"() {
         expect:
         new File('./src/main/resources/org/').eachFile { file ->
@@ -17,8 +16,7 @@ class TestGroovyScripting extends Specification {
         }
     }
 
-
- /*   def "test file reading"() {
+    def "test file reading"() {
         expect:
         new File('./src/main/resources/org/1IDQ.xml').eachLine { line ->
             println line
@@ -55,5 +53,27 @@ class TestGroovyScripting extends Specification {
                 println('Unknown version: '+lines.get(3))
             }
         }
-    }*/
+    }
+
+    def "test reading and moving multiple files"(){
+        expect:
+        new File('./src/main/resources/org/').eachFile { file ->
+            if (file.name.endsWith(".xml")){
+                List lines = file.readLines()
+                if(lines.get(3) =='   xmlns:PDBx="http://pdbml.pdb.org/schema/pdbx-v40.xsd"') {
+                    println('File '+file.getName() + ': version 40')
+                    boolean fileMoved = file.renameTo(new File(new File('./src/main/resources/org/version_40'), file.getName()))
+                    println('File '+file.getName() + ' moved: '+fileMoved)
+                }else {
+                    if (lines.get(3) == '   xmlns:PDBx="http://pdbml.pdb.org/schema/pdbx-v42.xsd"') {
+                        println('File '+file.getName() + ': version 42')
+                        boolean fileMoved = file.renameTo(new File(new File('./src/main/resources/org/version_42'), file.getName()))
+                        println('File ' + file.getName() + ' moved: ' + fileMoved)
+                    }else{
+                        println('Unknown version: '+lines.get(3))
+                    }
+                }
+            }
+        }
+    }
 }
