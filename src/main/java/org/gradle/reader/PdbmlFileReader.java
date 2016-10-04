@@ -24,92 +24,52 @@ import javax.xml.bind.Unmarshaller;
  * @author Christian Ouali Turki
  */
 @Service
-public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<IDatablockType>{
+public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBElement>{
 	
 	public PdbmlFileReader() {
 	}
 
-	public PdbmlFileReader(Resource resource) {
+	public PdbmlFileReader(Resource resource, IDatablockType idt) {
 		this.resource = resource;
+		this.iDatablockType=idt;
 	}
 
 	private Resource resource;
-	
-	/*
-	 * Method for reading pdbml file format v40.
-	 * Deletes the file after done with the unmarshalling.
-	 */
-	public IDatablockType readv40(Resource resource) throws IOException, JAXBException{
-		if(resource != null){
-			System.out.println("File V40: " + resource.getFile());
-			JAXBContext jaxbContext = JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class);
-			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-			JAXBElement<org.gradle.pdbml.v40.generated.DatablockType> pdb = (JAXBElement<org.gradle.pdbml.v40.generated.DatablockType>) jaxbUnmarshaller.unmarshal(resource.getInputStream());
-			System.out.println("done reading : " + pdb.getValue().getDatablockName());
-//			resource.getFile().delete();
-			resource = null;
-			return (IDatablockType) pdb.getValue();
-		}else{
-			return null;
-		}
-	}
-	
-	/*
-	 * Method for reading pdbml file format v42.
-	 * Deletes the file after done with the unmarshalling.
-	 */
-	public IDatablockType readv42(Resource resource) throws IOException, JAXBException{
-		if(resource != null){
-			System.out.println("File V42: " + resource.getFile());
-			JAXBContext jaxbContext = JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class);
-			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
-			JAXBElement<org.gradle.pdbml.v42.generated.DatablockType> pdb = (JAXBElement<org.gradle.pdbml.v42.generated.DatablockType>) jaxbUnmarshaller.unmarshal(resource.getInputStream());
-			System.out.println("done reading : " + pdb.getValue().getDatablockName());
-			resource.getFile().delete();
-			resource = null;
-			return (IDatablockType) pdb.getValue();
-		}else{
-			return null;
-		}
-	}
+	private IDatablockType iDatablockType;
 
 	/*
 	 * Implemented read method. Dynamically reads pdbml files of both formats. 
 	 */
 	@Override
-	public IDatablockType read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
-
-        IDatablockType dti;
-		try{
-			dti = readv40(resource);
-		}catch(UnmarshalException e){
-			dti = readv42(resource);
+	public JAXBElement read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
+		JAXBElement pdb = null;
+		if(resource != null) {
+			System.out.println("Reading " + resource.getFile());
+			JAXBContext jaxbContext = JAXBContext.newInstance(iDatablockType.getClass());
+			Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
+			pdb = (JAXBElement) jaxbUnmarshaller.unmarshal(resource.getInputStream());
 		}
-		return dti;
+			return pdb;
+	}
+
+
+	@Override
+	public void setResource(Resource resource) {
+
 	}
 
 	@Override
 	public void open(ExecutionContext executionContext) throws ItemStreamException {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void update(ExecutionContext executionContext) throws ItemStreamException {
-		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void close() throws ItemStreamException {
-		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
-	public void setResource(Resource resource) {
-		this.resource=resource;
-		
 	}
-	
 }
