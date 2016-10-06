@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.gradle.domain.Atom;
 import org.gradle.pdbml.IAtomSite;
+import org.gradle.pdbml.IAtomSiteType;
 import org.gradle.pdbml.IDatablockType;
 import org.gradle.pdbml.v42.generated.AtomSiteType;
 import org.springframework.stereotype.Service;

@@ -15,7 +15,6 @@ import org.springframework.context.annotation.Import;
  * @author Christian Ouali Turki
  */
 @SpringBootApplication
-@Import(BatchConfig.class)
 public class MasterNode {
 
 	public static void main(String[] args) throws IOException {

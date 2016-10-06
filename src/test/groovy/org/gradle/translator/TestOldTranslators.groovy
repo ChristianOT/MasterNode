@@ -16,46 +16,33 @@ import javax.xml.bind.JAXBContext
 /**
  * Created by christian on 05/10/2016.
  */
-class TestOldTranslators extends Specification{
+class TestOldTranslators extends Specification {
+
+    PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
+    Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
+    def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
+    def atomTranslator = new AtomTranslator()
+    def moleTranslator = new MoleculeTranslator()
+    def msTranslator = new MolecularSystemTranslator()
+
 
     def "test translate to atom"() {
-
-        PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
-        def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
-
-        when:
-        def translator = new AtomTranslator()
-
-        then:
-        assert translator.translateToAtom(reader.read()) instanceof List<Atom>
+        expect:
+        assert atomTranslator.translateToAtom(reader.read()) instanceof List<Atom>
     }
 
     def "test translate to molecule"() {
-
-        PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
-        def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
-
         when:
-        def translator = new MoleculeTranslator()
-
+        moleTranslator.at=atomTranslator
         then:
-        assert translator.translateToMolecule(reader.read()) instanceof List<Molecule>
+        assert moleTranslator.translateToMolecule(reader.read()) instanceof List<Molecule>
     }
 
     def "test translate to molecularSystem"() {
-
-        PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
-        def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
-
         when:
-        def translator = new MolecularSystemTranslator()
-
-
+        moleTranslator.at=atomTranslator
+        msTranslator.mt=moleTranslator
         then:
-        assert translator.translateToMolecularSystem(reader.read()) instanceof MolecularSystem
-
+        assert msTranslator.translateToMolecularSystem(reader.read()) instanceof MolecularSystem
     }
 }

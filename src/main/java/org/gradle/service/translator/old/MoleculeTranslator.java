@@ -9,16 +9,19 @@ import org.gradle.pdbml.IDatablockType;
 import org.gradle.service.translator.old.AtomTranslator;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.xml.bind.JAXBElement;
 
 @Service
 public class MoleculeTranslator {
 
+    @Resource
+    public AtomTranslator at;
+
     Integer solventCounter = 0;
     Integer singleAtomCounter = 0;
 
     public List<Molecule> translateToMolecule(JAXBElement<IDatablockType> item) {
-        AtomTranslator at = new AtomTranslator();
         List<Atom> atoms = at.translateToAtom(item);
         List<Molecule> molecules = new ArrayList<Molecule>();
         //start for-loop

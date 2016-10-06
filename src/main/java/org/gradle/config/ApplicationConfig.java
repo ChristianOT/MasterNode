@@ -30,17 +30,10 @@ public class ApplicationConfig extends Neo4jConfiguration {
 	public org.neo4j.ogm.config.Configuration getConfiguration() {
 		org.neo4j.ogm.config.Configuration config = new org.neo4j.ogm.config.Configuration();
 		config.driverConfiguration().setDriverClassName("org.neo4j.ogm.drivers.http.driver.HttpDriver")
-				.setURI("http://neo4j:password@localhost:7474");
+				.setURI("http://neo4j:wallerlab@localhost:7474");
 		return config;
 	}
 
-	/**
-	 * setting arguments for the SessionFactory
-	 * 
-	 * @param Configuration
-	 * @param String, location of domain models
-	 * @return SessionFectory
-	 */
 	@Bean
 	public SessionFactory getSessionFactory() {
 		return new SessionFactory(getConfiguration(), "org.gradle.domain");

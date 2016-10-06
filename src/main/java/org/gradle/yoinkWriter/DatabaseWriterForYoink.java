@@ -1,7 +1,7 @@
 package org.gradle.yoinkWriter;
 
 import org.gradle.yoinkClasses.SimpleMolecularSystem;
-import org.gradle.yoinkWriter.dataBaseRepositories.MolecularSystemRepositoryForYoink;
+import org.gradle.dataBaseRepositories.MolecularSystemRepositoryForYoink;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

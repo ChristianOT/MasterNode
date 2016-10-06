@@ -1,6 +1,5 @@
 package org.gradle.pdbml;
 
-
 import java.util.List;
 
 /**

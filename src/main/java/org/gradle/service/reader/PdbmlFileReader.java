@@ -22,55 +22,59 @@ import javax.xml.bind.Unmarshaller;
  * @author Christian Ouali Turki
  */
 //@Service
-public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBElement>{
+public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBElement> {
 
-	private Resource resource;
-	private JAXBContext jaxbContext;
+    private Resource resource;
 
-	public PdbmlFileReader() {}
+    private JAXBContext jaxbContext;
 
-	public PdbmlFileReader(JAXBContext jaxbContext) {
-		this.jaxbContext=jaxbContext;
-	}
+    public PdbmlFileReader() {
+    }
 
-	public PdbmlFileReader(Resource resource, JAXBContext jaxbContext) {
-		this.resource=resource;
-		this.jaxbContext=jaxbContext;
-	}
-	/*
-	 * Implemented read method. Dynamically reads pdbml files of both formats. 
-	 */
-	@Override
-	public JAXBElement read() throws Exception {
-		if(resource != null) {
-			System.out.println("Reading " + resource.getFile());
-			Unmarshaller jaxbUnmarshaller = this.jaxbContext.createUnmarshaller();
-			JAXBElement pdb = (JAXBElement) jaxbUnmarshaller.unmarshal(resource.getInputStream());
-			return pdb;
-		} else{
-			System.out.println("No resources to read");
-			return null;}
-	}
+    public PdbmlFileReader(JAXBContext jaxbContext) {
+        this.jaxbContext = jaxbContext;
+    }
+
+    public PdbmlFileReader(Resource resource, JAXBContext jaxbContext) {
+        this.resource = resource;
+        this.jaxbContext = jaxbContext;
+    }
+
+    /*
+     * Implemented read method. Dynamically reads pdbml files of both formats.
+     */
+    @Override
+    public JAXBElement read() throws Exception {
+        if (resource != null) {
+            System.out.println("Reading " + resource.getFile());
+            Unmarshaller jaxbUnmarshaller = this.jaxbContext.createUnmarshaller();
+            JAXBElement pdb = (JAXBElement) jaxbUnmarshaller.unmarshal(resource.getInputStream());
+            return pdb;
+        } else {
+            System.out.println("No resources to read");
+            return null;
+        }
+    }
 
 
-	@Override
-	public void setResource(Resource resource) {
-		this.resource = resource;
+    @Override
+    public void setResource(Resource resource) {
+        this.resource = resource;
 
-	}
+    }
 
-	@Override
-	public void open(ExecutionContext executionContext) throws ItemStreamException {
+    @Override
+    public void open(ExecutionContext executionContext) throws ItemStreamException {
 
-	}
+    }
 
-	@Override
-	public void update(ExecutionContext executionContext) throws ItemStreamException {
+    @Override
+    public void update(ExecutionContext executionContext) throws ItemStreamException {
 
-	}
+    }
 
-	@Override
-	public void close() throws ItemStreamException {
+    @Override
+    public void close() throws ItemStreamException {
 
-	}
+    }
 }

@@ -48,4 +48,15 @@ public class SimpleAtom implements Atom {
     public void setRadialGrid(RadialGrid radial_grid) {
         this.radial_grid = radial_grid;
     }
+
+    @Override
+    public String toString() {
+        return "SimpleAtom{" +
+                "index=" + index +
+                ", elementType=" + elementType +
+                ", coordinate=" + coordinate.getCoords().getX()
+                          + " " + coordinate.getCoords().getY()
+                          + " " + coordinate.getCoords().getZ()
+                + '}';
+    }
 }

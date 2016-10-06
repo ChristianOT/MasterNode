@@ -6,7 +6,7 @@ import org.gradle.yoinkTranslator.AtomTranslatorForYoink
 import org.gradle.yoinkTranslator.MolecularSystemTranslatorForYoink
 import org.gradle.yoinkTranslator.MoleculeTranslatorForYoink
 import org.gradle.yoinkWriter.DatabaseWriterForYoink
-import org.gradle.yoinkWriter.dataBaseRepositories.MolecularSystemRepositoryForYoink
+import org.gradle.dataBaseRepositories.MolecularSystemRepositoryForYoink
 import org.springframework.core.io.Resource
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver
 import org.wallerlab.yoink.api.service.math.Vector

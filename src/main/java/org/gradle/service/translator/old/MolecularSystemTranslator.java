@@ -7,13 +7,16 @@ import org.gradle.domain.Molecule;
 import org.gradle.pdbml.IDatablockType;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import javax.xml.bind.JAXBElement;
 
 @Service
 public class MolecularSystemTranslator {
 
+    @Resource
+    public MoleculeTranslator mt;
+
     public MolecularSystem translateToMolecularSystem(JAXBElement<IDatablockType> item) {
-        MoleculeTranslator mt = new MoleculeTranslator();
         List<Molecule> molecules = mt.translateToMolecule(item);
         int numOfAtoms = 0;
         MolecularSystem molecularSystem = new MolecularSystem();
