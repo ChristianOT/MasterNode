@@ -1,0 +1,51 @@
+package org.gradle.yoinkClasses;
+
+import org.gradle.interfaces.Atom;
+import org.wallerlab.yoink.api.model.molecular.Coord;
+import org.wallerlab.yoink.api.model.molecular.Element;
+import org.wallerlab.yoink.api.model.molecular.RadialGrid;
+
+public class SimpleAtom implements Atom {
+    protected final int index;
+    protected final Element elementType;
+    private final Coord coordinate;
+    private RadialGrid radial_grid;
+
+    public SimpleAtom(int index, Element elementType, Coord coordinate) {
+        this.index = index;
+        this.elementType = elementType;
+        this.coordinate = coordinate;
+    }
+
+    public Element getElementType() {
+        return this.elementType;
+    }
+
+    public int getIndex() {
+        return this.index;
+    }
+
+    public Coord getCoordinate() {
+        return this.coordinate;
+    }
+
+    public double getX3() {
+        return this.coordinate.getCoords().getX();
+    }
+
+    public double getY3() {
+        return this.coordinate.getCoords().getY();
+    }
+
+    public double getZ3() {
+        return this.coordinate.getCoords().getZ();
+    }
+
+    public RadialGrid getRadialGrid() {
+        return this.radial_grid;
+    }
+
+    public void setRadialGrid(RadialGrid radial_grid) {
+        this.radial_grid = radial_grid;
+    }
+}

@@ -8,6 +8,7 @@
 
 package org.gradle.pdbml.v40.generated;
 
+import org.gradle.pdbml.IAtomSite;
 import org.gradle.pdbml.IAtomSiteType;
 
 import java.math.BigDecimal;
@@ -25,459 +26,460 @@ import javax.xml.bind.annotation.XmlValue;
 
 
 /**
+ * 
  * Data items in the ATOM_SITE category record details about
  * the atom sites in a macromolecular crystal structure, such as
  * the positional coordinates, atomic displacement parameters,
  * magnetic moments and directions.
- * <p>
+ * 
  * The data items for describing anisotropic atomic
  * displacement factors are only used if the corresponding items
  * are not given in the ATOM_SITE_ANISOTROP category.
- * <p>
- * Example 1 - based on PDB entry 5HVP and laboratory records for the
- * structure corresponding to PDB entry 5HVP.
+ * 
+ *     Example 1 - based on PDB entry 5HVP and laboratory records for the
+ *                 structure corresponding to PDB entry 5HVP.
  * <PDBx:atom_siteCategory>
- * <PDBx:atom_site id="1">
- * <PDBx:B_iso_or_equiv>17.93</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>25.369</PDBx:Cartn_x>
- * <PDBx:Cartn_y>30.691</PDBx:Cartn_y>
- * <PDBx:Cartn_z>11.795</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>N</PDBx:label_atom_id>
- * <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
- * <PDBx:label_seq_id>11</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>N</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="2">
- * <PDBx:B_iso_or_equiv>17.75</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>25.970</PDBx:Cartn_x>
- * <PDBx:Cartn_y>31.965</PDBx:Cartn_y>
- * <PDBx:Cartn_z>12.332</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CA</PDBx:label_atom_id>
- * <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
- * <PDBx:label_seq_id>11</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="3">
- * <PDBx:B_iso_or_equiv>17.83</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>25.569</PDBx:Cartn_x>
- * <PDBx:Cartn_y>32.010</PDBx:Cartn_y>
- * <PDBx:Cartn_z>13.808</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>C</PDBx:label_atom_id>
- * <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
- * <PDBx:label_seq_id>11</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="4">
- * <PDBx:B_iso_or_equiv>17.53</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>24.735</PDBx:Cartn_x>
- * <PDBx:Cartn_y>31.190</PDBx:Cartn_y>
- * <PDBx:Cartn_z>14.167</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>O</PDBx:label_atom_id>
- * <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
- * <PDBx:label_seq_id>11</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>O</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="5">
- * <PDBx:B_iso_or_equiv>17.66</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>25.379</PDBx:Cartn_x>
- * <PDBx:Cartn_y>33.146</PDBx:Cartn_y>
- * <PDBx:Cartn_z>11.540</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CB</PDBx:label_atom_id>
- * <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
- * <PDBx:label_seq_id>11</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="6">
- * <PDBx:B_iso_or_equiv>18.86</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>25.584</PDBx:Cartn_x>
- * <PDBx:Cartn_y>33.034</PDBx:Cartn_y>
- * <PDBx:Cartn_z>10.030</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CG1</PDBx:label_atom_id>
- * <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
- * <PDBx:label_seq_id>11</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="7">
- * <PDBx:B_iso_or_equiv>17.12</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>23.933</PDBx:Cartn_x>
- * <PDBx:Cartn_y>33.309</PDBx:Cartn_y>
- * <PDBx:Cartn_z>11.872</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CG2</PDBx:label_atom_id>
- * <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
- * <PDBx:label_seq_id>11</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="8">
- * <PDBx:B_iso_or_equiv>18.97</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>26.095</PDBx:Cartn_x>
- * <PDBx:Cartn_y>32.930</PDBx:Cartn_y>
- * <PDBx:Cartn_z>14.590</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
- * <PDBx:footnote_id>4</PDBx:footnote_id>
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>N</PDBx:label_atom_id>
- * <PDBx:label_comp_id>THR</PDBx:label_comp_id>
- * <PDBx:label_seq_id>12</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>N</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="9">
- * <PDBx:B_iso_or_equiv>19.80</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>25.734</PDBx:Cartn_x>
- * <PDBx:Cartn_y>32.995</PDBx:Cartn_y>
- * <PDBx:Cartn_z>16.032</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
- * <PDBx:footnote_id>4</PDBx:footnote_id>
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CA</PDBx:label_atom_id>
- * <PDBx:label_comp_id>THR</PDBx:label_comp_id>
- * <PDBx:label_seq_id>12</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="10">
- * <PDBx:B_iso_or_equiv>20.92</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>24.695</PDBx:Cartn_x>
- * <PDBx:Cartn_y>34.106</PDBx:Cartn_y>
- * <PDBx:Cartn_z>16.113</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
- * <PDBx:footnote_id>4</PDBx:footnote_id>
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>C</PDBx:label_atom_id>
- * <PDBx:label_comp_id>THR</PDBx:label_comp_id>
- * <PDBx:label_seq_id>12</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="11">
- * <PDBx:B_iso_or_equiv>21.84</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>24.869</PDBx:Cartn_x>
- * <PDBx:Cartn_y>35.118</PDBx:Cartn_y>
- * <PDBx:Cartn_z>15.421</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
- * <PDBx:footnote_id>4</PDBx:footnote_id>
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>O</PDBx:label_atom_id>
- * <PDBx:label_comp_id>THR</PDBx:label_comp_id>
- * <PDBx:label_seq_id>12</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>O</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="12">
- * <PDBx:B_iso_or_equiv>20.51</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>26.911</PDBx:Cartn_x>
- * <PDBx:Cartn_y>33.346</PDBx:Cartn_y>
- * <PDBx:Cartn_z>17.018</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
- * <PDBx:footnote_id>4</PDBx:footnote_id>
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CB</PDBx:label_atom_id>
- * <PDBx:label_comp_id>THR</PDBx:label_comp_id>
- * <PDBx:label_seq_id>12</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="13">
- * <PDBx:B_iso_or_equiv>20.29</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>27.946</PDBx:Cartn_x>
- * <PDBx:Cartn_y>33.921</PDBx:Cartn_y>
- * <PDBx:Cartn_z>16.183</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
- * <PDBx:footnote_id>4</PDBx:footnote_id>
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id>3</PDBx:label_alt_id>
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>OG1</PDBx:label_atom_id>
- * <PDBx:label_comp_id>THR</PDBx:label_comp_id>
- * <PDBx:label_seq_id>12</PDBx:label_seq_id>
- * <PDBx:occupancy>0.50</PDBx:occupancy>
- * <PDBx:type_symbol>O</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="14">
- * <PDBx:B_iso_or_equiv>20.59</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>27.769</PDBx:Cartn_x>
- * <PDBx:Cartn_y>32.142</PDBx:Cartn_y>
- * <PDBx:Cartn_z>17.103</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
- * <PDBx:footnote_id>4</PDBx:footnote_id>
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id>4</PDBx:label_alt_id>
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>OG1</PDBx:label_atom_id>
- * <PDBx:label_comp_id>THR</PDBx:label_comp_id>
- * <PDBx:label_seq_id>12</PDBx:label_seq_id>
- * <PDBx:occupancy>0.50</PDBx:occupancy>
- * <PDBx:type_symbol>O</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="15">
- * <PDBx:B_iso_or_equiv>20.47</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>27.418</PDBx:Cartn_x>
- * <PDBx:Cartn_y>32.181</PDBx:Cartn_y>
- * <PDBx:Cartn_z>17.878</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
- * <PDBx:footnote_id>4</PDBx:footnote_id>
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id>3</PDBx:label_alt_id>
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CG2</PDBx:label_atom_id>
- * <PDBx:label_comp_id>THR</PDBx:label_comp_id>
- * <PDBx:label_seq_id>12</PDBx:label_seq_id>
- * <PDBx:occupancy>0.50</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="16">
- * <PDBx:B_iso_or_equiv>20.00</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>26.489</PDBx:Cartn_x>
- * <PDBx:Cartn_y>33.778</PDBx:Cartn_y>
- * <PDBx:Cartn_z>18.426</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
- * <PDBx:footnote_id>4</PDBx:footnote_id>
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id>4</PDBx:label_alt_id>
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CG2</PDBx:label_atom_id>
- * <PDBx:label_comp_id>THR</PDBx:label_comp_id>
- * <PDBx:label_seq_id>12</PDBx:label_seq_id>
- * <PDBx:occupancy>0.50</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="17">
- * <PDBx:B_iso_or_equiv>22.08</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>23.664</PDBx:Cartn_x>
- * <PDBx:Cartn_y>33.855</PDBx:Cartn_y>
- * <PDBx:Cartn_z>16.884</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>N</PDBx:label_atom_id>
- * <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
- * <PDBx:label_seq_id>13</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>N</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="18">
- * <PDBx:B_iso_or_equiv>23.44</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>22.623</PDBx:Cartn_x>
- * <PDBx:Cartn_y>34.850</PDBx:Cartn_y>
- * <PDBx:Cartn_z>17.093</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CA</PDBx:label_atom_id>
- * <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
- * <PDBx:label_seq_id>13</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="19">
- * <PDBx:B_iso_or_equiv>25.77</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>22.657</PDBx:Cartn_x>
- * <PDBx:Cartn_y>35.113</PDBx:Cartn_y>
- * <PDBx:Cartn_z>18.610</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>C</PDBx:label_atom_id>
- * <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
- * <PDBx:label_seq_id>13</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="20">
- * <PDBx:B_iso_or_equiv>26.28</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>23.123</PDBx:Cartn_x>
- * <PDBx:Cartn_y>34.250</PDBx:Cartn_y>
- * <PDBx:Cartn_z>19.406</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>O</PDBx:label_atom_id>
- * <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
- * <PDBx:label_seq_id>13</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>O</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="21">
- * <PDBx:B_iso_or_equiv>22.67</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>21.236</PDBx:Cartn_x>
- * <PDBx:Cartn_y>34.463</PDBx:Cartn_y>
- * <PDBx:Cartn_z>16.492</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CB</PDBx:label_atom_id>
- * <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
- * <PDBx:label_seq_id>13</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="22">
- * <PDBx:B_iso_or_equiv>22.14</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>20.478</PDBx:Cartn_x>
- * <PDBx:Cartn_y>33.469</PDBx:Cartn_y>
- * <PDBx:Cartn_z>17.371</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CG1</PDBx:label_atom_id>
- * <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
- * <PDBx:label_seq_id>13</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="23">
- * <PDBx:B_iso_or_equiv>21.75</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>21.357</PDBx:Cartn_x>
- * <PDBx:Cartn_y>33.986</PDBx:Cartn_y>
- * <PDBx:Cartn_z>15.016</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
- * <PDBx:footnote_id xsi:nil="true" />
- * <PDBx:group_PDB>ATOM</PDBx:group_PDB>
- * <PDBx:label_alt_id xsi:nil="true" />
- * <PDBx:label_asym_id>A</PDBx:label_asym_id>
- * <PDBx:label_atom_id>CG2</PDBx:label_atom_id>
- * <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
- * <PDBx:label_seq_id>13</PDBx:label_seq_id>
- * <PDBx:occupancy>1.00</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="101">
- * <PDBx:B_iso_or_equiv>17.27</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>4.171</PDBx:Cartn_x>
- * <PDBx:Cartn_y>29.012</PDBx:Cartn_y>
- * <PDBx:Cartn_z>7.116</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>300</PDBx:auth_seq_id>
- * <PDBx:footnote_id>1</PDBx:footnote_id>
- * <PDBx:group_PDB>HETATM</PDBx:group_PDB>
- * <PDBx:label_alt_id>1</PDBx:label_alt_id>
- * <PDBx:label_asym_id>C</PDBx:label_asym_id>
- * <PDBx:label_atom_id>C1</PDBx:label_atom_id>
- * <PDBx:label_comp_id>APS</PDBx:label_comp_id>
- * <PDBx:label_seq_id xsi:nil="true" />
- * <PDBx:occupancy>0.58</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="102">
- * <PDBx:B_iso_or_equiv>16.95</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>4.949</PDBx:Cartn_x>
- * <PDBx:Cartn_y>27.758</PDBx:Cartn_y>
- * <PDBx:Cartn_z>6.793</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>300</PDBx:auth_seq_id>
- * <PDBx:footnote_id>1</PDBx:footnote_id>
- * <PDBx:group_PDB>HETATM</PDBx:group_PDB>
- * <PDBx:label_alt_id>1</PDBx:label_alt_id>
- * <PDBx:label_asym_id>C</PDBx:label_asym_id>
- * <PDBx:label_atom_id>C2</PDBx:label_atom_id>
- * <PDBx:label_comp_id>APS</PDBx:label_comp_id>
- * <PDBx:label_seq_id xsi:nil="true" />
- * <PDBx:occupancy>0.58</PDBx:occupancy>
- * <PDBx:type_symbol>C</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="103">
- * <PDBx:B_iso_or_equiv>16.85</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>4.800</PDBx:Cartn_x>
- * <PDBx:Cartn_y>26.678</PDBx:Cartn_y>
- * <PDBx:Cartn_z>7.393</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>300</PDBx:auth_seq_id>
- * <PDBx:footnote_id>1</PDBx:footnote_id>
- * <PDBx:group_PDB>HETATM</PDBx:group_PDB>
- * <PDBx:label_alt_id>1</PDBx:label_alt_id>
- * <PDBx:label_asym_id>C</PDBx:label_asym_id>
- * <PDBx:label_atom_id>O3</PDBx:label_atom_id>
- * <PDBx:label_comp_id>APS</PDBx:label_comp_id>
- * <PDBx:label_seq_id xsi:nil="true" />
- * <PDBx:occupancy>0.58</PDBx:occupancy>
- * <PDBx:type_symbol>O</PDBx:type_symbol>
- * </PDBx:atom_site>
- * <PDBx:atom_site id="104">
- * <PDBx:B_iso_or_equiv>16.43</PDBx:B_iso_or_equiv>
- * <PDBx:Cartn_x>5.930</PDBx:Cartn_x>
- * <PDBx:Cartn_y>27.841</PDBx:Cartn_y>
- * <PDBx:Cartn_z>5.869</PDBx:Cartn_z>
- * <PDBx:auth_seq_id>300</PDBx:auth_seq_id>
- * <PDBx:footnote_id>1</PDBx:footnote_id>
- * <PDBx:group_PDB>HETATM</PDBx:group_PDB>
- * <PDBx:label_alt_id>1</PDBx:label_alt_id>
- * <PDBx:label_asym_id>C</PDBx:label_asym_id>
- * <PDBx:label_atom_id>N4</PDBx:label_atom_id>
- * <PDBx:label_comp_id>APS</PDBx:label_comp_id>
- * <PDBx:label_seq_id xsi:nil="true" />
- * <PDBx:occupancy>0.58</PDBx:occupancy>
- * <PDBx:type_symbol>N</PDBx:type_symbol>
- * </PDBx:atom_site>
+ *    <PDBx:atom_site id="1">
+ *       <PDBx:B_iso_or_equiv>17.93</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>25.369</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>30.691</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>11.795</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>N</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>11</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>N</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="2">
+ *       <PDBx:B_iso_or_equiv>17.75</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>25.970</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>31.965</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>12.332</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CA</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>11</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="3">
+ *       <PDBx:B_iso_or_equiv>17.83</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>25.569</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>32.010</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>13.808</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>C</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>11</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="4">
+ *       <PDBx:B_iso_or_equiv>17.53</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>24.735</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>31.190</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>14.167</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>O</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>11</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>O</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="5">
+ *       <PDBx:B_iso_or_equiv>17.66</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>25.379</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>33.146</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>11.540</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CB</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>11</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="6">
+ *       <PDBx:B_iso_or_equiv>18.86</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>25.584</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>33.034</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>10.030</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CG1</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>11</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="7">
+ *       <PDBx:B_iso_or_equiv>17.12</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>23.933</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>33.309</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>11.872</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>11</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CG2</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>VAL</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>11</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="8">
+ *       <PDBx:B_iso_or_equiv>18.97</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>26.095</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>32.930</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>14.590</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>4</PDBx:footnote_id>
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>N</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>THR</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>12</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>N</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="9">
+ *       <PDBx:B_iso_or_equiv>19.80</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>25.734</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>32.995</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>16.032</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>4</PDBx:footnote_id>
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CA</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>THR</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>12</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="10">
+ *       <PDBx:B_iso_or_equiv>20.92</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>24.695</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>34.106</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>16.113</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>4</PDBx:footnote_id>
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>C</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>THR</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>12</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="11">
+ *       <PDBx:B_iso_or_equiv>21.84</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>24.869</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>35.118</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>15.421</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>4</PDBx:footnote_id>
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>O</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>THR</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>12</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>O</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="12">
+ *       <PDBx:B_iso_or_equiv>20.51</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>26.911</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>33.346</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>17.018</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>4</PDBx:footnote_id>
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CB</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>THR</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>12</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="13">
+ *       <PDBx:B_iso_or_equiv>20.29</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>27.946</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>33.921</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>16.183</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>4</PDBx:footnote_id>
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id>3</PDBx:label_alt_id>
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>OG1</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>THR</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>12</PDBx:label_seq_id>
+ *       <PDBx:occupancy>0.50</PDBx:occupancy>
+ *       <PDBx:type_symbol>O</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="14">
+ *       <PDBx:B_iso_or_equiv>20.59</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>27.769</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>32.142</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>17.103</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>4</PDBx:footnote_id>
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id>4</PDBx:label_alt_id>
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>OG1</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>THR</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>12</PDBx:label_seq_id>
+ *       <PDBx:occupancy>0.50</PDBx:occupancy>
+ *       <PDBx:type_symbol>O</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="15">
+ *       <PDBx:B_iso_or_equiv>20.47</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>27.418</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>32.181</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>17.878</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>4</PDBx:footnote_id>
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id>3</PDBx:label_alt_id>
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CG2</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>THR</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>12</PDBx:label_seq_id>
+ *       <PDBx:occupancy>0.50</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="16">
+ *       <PDBx:B_iso_or_equiv>20.00</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>26.489</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>33.778</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>18.426</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>12</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>4</PDBx:footnote_id>
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id>4</PDBx:label_alt_id>
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CG2</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>THR</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>12</PDBx:label_seq_id>
+ *       <PDBx:occupancy>0.50</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="17">
+ *       <PDBx:B_iso_or_equiv>22.08</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>23.664</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>33.855</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>16.884</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>N</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>13</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>N</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="18">
+ *       <PDBx:B_iso_or_equiv>23.44</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>22.623</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>34.850</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>17.093</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CA</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>13</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="19">
+ *       <PDBx:B_iso_or_equiv>25.77</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>22.657</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>35.113</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>18.610</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>C</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>13</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="20">
+ *       <PDBx:B_iso_or_equiv>26.28</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>23.123</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>34.250</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>19.406</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>O</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>13</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>O</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="21">
+ *       <PDBx:B_iso_or_equiv>22.67</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>21.236</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>34.463</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>16.492</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CB</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>13</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="22">
+ *       <PDBx:B_iso_or_equiv>22.14</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>20.478</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>33.469</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>17.371</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CG1</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>13</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="23">
+ *       <PDBx:B_iso_or_equiv>21.75</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>21.357</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>33.986</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>15.016</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>13</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id xsi:nil="true" />
+ *       <PDBx:group_PDB>ATOM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id xsi:nil="true" />
+ *       <PDBx:label_asym_id>A</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>CG2</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>ILE</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id>13</PDBx:label_seq_id>
+ *       <PDBx:occupancy>1.00</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="101">
+ *       <PDBx:B_iso_or_equiv>17.27</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>4.171</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>29.012</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>7.116</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>300</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>1</PDBx:footnote_id>
+ *       <PDBx:group_PDB>HETATM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id>1</PDBx:label_alt_id>
+ *       <PDBx:label_asym_id>C</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>C1</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>APS</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id xsi:nil="true" />
+ *       <PDBx:occupancy>0.58</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="102">
+ *       <PDBx:B_iso_or_equiv>16.95</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>4.949</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>27.758</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>6.793</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>300</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>1</PDBx:footnote_id>
+ *       <PDBx:group_PDB>HETATM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id>1</PDBx:label_alt_id>
+ *       <PDBx:label_asym_id>C</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>C2</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>APS</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id xsi:nil="true" />
+ *       <PDBx:occupancy>0.58</PDBx:occupancy>
+ *       <PDBx:type_symbol>C</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="103">
+ *       <PDBx:B_iso_or_equiv>16.85</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>4.800</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>26.678</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>7.393</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>300</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>1</PDBx:footnote_id>
+ *       <PDBx:group_PDB>HETATM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id>1</PDBx:label_alt_id>
+ *       <PDBx:label_asym_id>C</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>O3</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>APS</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id xsi:nil="true" />
+ *       <PDBx:occupancy>0.58</PDBx:occupancy>
+ *       <PDBx:type_symbol>O</PDBx:type_symbol>
+ *    </PDBx:atom_site>
+ *    <PDBx:atom_site id="104">
+ *       <PDBx:B_iso_or_equiv>16.43</PDBx:B_iso_or_equiv>
+ *       <PDBx:Cartn_x>5.930</PDBx:Cartn_x>
+ *       <PDBx:Cartn_y>27.841</PDBx:Cartn_y>
+ *       <PDBx:Cartn_z>5.869</PDBx:Cartn_z>
+ *       <PDBx:auth_seq_id>300</PDBx:auth_seq_id>
+ *       <PDBx:footnote_id>1</PDBx:footnote_id>
+ *       <PDBx:group_PDB>HETATM</PDBx:group_PDB>
+ *       <PDBx:label_alt_id>1</PDBx:label_alt_id>
+ *       <PDBx:label_asym_id>C</PDBx:label_asym_id>
+ *       <PDBx:label_atom_id>N4</PDBx:label_atom_id>
+ *       <PDBx:label_comp_id>APS</PDBx:label_comp_id>
+ *       <PDBx:label_seq_id xsi:nil="true" />
+ *       <PDBx:occupancy>0.58</PDBx:occupancy>
+ *       <PDBx:type_symbol>N</PDBx:type_symbol>
+ *    </PDBx:atom_site>
  * </PDBx:atom_siteCategory>
- * <p>
- * <p>
- * <p>
- * <p>
+ * 
+ * 
+ *          
+ * 
  * <p>Java class for atom_siteType complex type.
- * <p>
+ * 
  * <p>The following schema fragment specifies the expected content contained within this class.
- * <p>
+ * 
  * <pre>
  * &lt;complexType name="atom_siteType">
  *   &lt;complexContent>
@@ -1104,35 +1106,39 @@ import javax.xml.bind.annotation.XmlValue;
  *   &lt;/complexContent>
  * &lt;/complexType>
  * </pre>
+ * 
+ * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "atom_siteType", propOrder = {
-        "atomSite"
+    "atomSite"
 })
-public class AtomSiteType implements IAtomSiteType{
+public class AtomSiteType implements IAtomSiteType<AtomSiteType.AtomSite>{
 
     @XmlElement(name = "atom_site")
     protected List<AtomSiteType.AtomSite> atomSite;
 
     /**
      * Gets the value of the atomSite property.
-     * <p>
+     * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
      * This is why there is not a <CODE>set</CODE> method for the atomSite property.
-     * <p>
+     * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
      *    getAtomSite().add(newItem);
      * </pre>
-     * <p>
-     * <p>
+     * 
+     * 
      * <p>
      * Objects of the following type(s) are allowed in the list
      * {@link AtomSiteType.AtomSite }
+     * 
+     * 
      */
     public List<AtomSiteType.AtomSite> getAtomSite() {
         if (atomSite == null) {
@@ -1144,9 +1150,9 @@ public class AtomSiteType implements IAtomSiteType{
 
     /**
      * <p>Java class for anonymous complex type.
-     * <p>
+     * 
      * <p>The following schema fragment specifies the expected content contained within this class.
-     * <p>
+     * 
      * <pre>
      * &lt;complexType>
      *   &lt;complexContent>
@@ -1763,6 +1769,8 @@ public class AtomSiteType implements IAtomSiteType{
      *   &lt;/complexContent>
      * &lt;/complexType>
      * </pre>
+     * 
+     * 
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "", propOrder = {
@@ -1959,9 +1967,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the bEquivGeomMean property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getBEquivGeomMean() {
             return bEquivGeomMean;
@@ -1969,9 +1979,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the bEquivGeomMean property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setBEquivGeomMean(JAXBElement<String> value) {
             this.bEquivGeomMean = value;
@@ -1979,9 +1991,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the bEquivGeomMeanEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BEquivGeomMeanEsd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BEquivGeomMeanEsd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.BEquivGeomMeanEsd> getBEquivGeomMeanEsd() {
             return bEquivGeomMeanEsd;
@@ -1989,9 +2003,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the bEquivGeomMeanEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BEquivGeomMeanEsd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BEquivGeomMeanEsd }{@code >}
+         *     
          */
         public void setBEquivGeomMeanEsd(JAXBElement<AtomSiteType.AtomSite.BEquivGeomMeanEsd> value) {
             this.bEquivGeomMeanEsd = value;
@@ -1999,9 +2015,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the bIsoOrEquiv property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquiv }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquiv }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.BIsoOrEquiv> getBIsoOrEquiv() {
             return bIsoOrEquiv;
@@ -2009,9 +2027,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the bIsoOrEquiv property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquiv }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquiv }{@code >}
+         *     
          */
         public void setBIsoOrEquiv(JAXBElement<AtomSiteType.AtomSite.BIsoOrEquiv> value) {
             this.bIsoOrEquiv = value;
@@ -2019,9 +2039,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the bIsoOrEquivEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquivEsd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquivEsd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.BIsoOrEquivEsd> getBIsoOrEquivEsd() {
             return bIsoOrEquivEsd;
@@ -2029,9 +2051,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the bIsoOrEquivEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquivEsd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.BIsoOrEquivEsd }{@code >}
+         *     
          */
         public void setBIsoOrEquivEsd(JAXBElement<AtomSiteType.AtomSite.BIsoOrEquivEsd> value) {
             this.bIsoOrEquivEsd = value;
@@ -2039,9 +2063,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the cartnX property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnX }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnX }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnX> getCartnX() {
             return cartnX;
@@ -2049,9 +2075,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the cartnX property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnX }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnX }{@code >}
+         *     
          */
         public void setCartnX(JAXBElement<AtomSiteType.AtomSite.CartnX> value) {
             this.cartnX = value;
@@ -2059,9 +2087,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the cartnXEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnXEsd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnXEsd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnXEsd> getCartnXEsd() {
             return cartnXEsd;
@@ -2069,9 +2099,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the cartnXEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnXEsd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnXEsd }{@code >}
+         *     
          */
         public void setCartnXEsd(JAXBElement<AtomSiteType.AtomSite.CartnXEsd> value) {
             this.cartnXEsd = value;
@@ -2079,9 +2111,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the cartnY property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnY }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnY }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnY> getCartnY() {
             return cartnY;
@@ -2089,9 +2123,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the cartnY property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnY }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnY }{@code >}
+         *     
          */
         public void setCartnY(JAXBElement<AtomSiteType.AtomSite.CartnY> value) {
             this.cartnY = value;
@@ -2099,9 +2135,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the cartnYEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnYEsd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnYEsd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnYEsd> getCartnYEsd() {
             return cartnYEsd;
@@ -2109,9 +2147,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the cartnYEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnYEsd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnYEsd }{@code >}
+         *     
          */
         public void setCartnYEsd(JAXBElement<AtomSiteType.AtomSite.CartnYEsd> value) {
             this.cartnYEsd = value;
@@ -2119,9 +2159,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the cartnZ property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZ }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZ }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnZ> getCartnZ() {
             return cartnZ;
@@ -2129,9 +2171,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the cartnZ property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZ }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZ }{@code >}
+         *     
          */
         public void setCartnZ(JAXBElement<AtomSiteType.AtomSite.CartnZ> value) {
             this.cartnZ = value;
@@ -2139,9 +2183,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the cartnZEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZEsd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZEsd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.CartnZEsd> getCartnZEsd() {
             return cartnZEsd;
@@ -2149,9 +2195,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the cartnZEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZEsd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.CartnZEsd }{@code >}
+         *     
          */
         public void setCartnZEsd(JAXBElement<AtomSiteType.AtomSite.CartnZEsd> value) {
             this.cartnZEsd = value;
@@ -2159,9 +2207,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the uEquivGeomMean property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getUEquivGeomMean() {
             return uEquivGeomMean;
@@ -2169,9 +2219,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the uEquivGeomMean property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setUEquivGeomMean(JAXBElement<String> value) {
             this.uEquivGeomMean = value;
@@ -2179,9 +2231,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the uEquivGeomMeanEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UEquivGeomMeanEsd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UEquivGeomMeanEsd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.UEquivGeomMeanEsd> getUEquivGeomMeanEsd() {
             return uEquivGeomMeanEsd;
@@ -2189,9 +2243,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the uEquivGeomMeanEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UEquivGeomMeanEsd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UEquivGeomMeanEsd }{@code >}
+         *     
          */
         public void setUEquivGeomMeanEsd(JAXBElement<AtomSiteType.AtomSite.UEquivGeomMeanEsd> value) {
             this.uEquivGeomMeanEsd = value;
@@ -2199,9 +2255,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the uIsoOrEquiv property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getUIsoOrEquiv() {
             return uIsoOrEquiv;
@@ -2209,9 +2267,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the uIsoOrEquiv property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setUIsoOrEquiv(JAXBElement<String> value) {
             this.uIsoOrEquiv = value;
@@ -2219,9 +2279,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the uIsoOrEquivEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UIsoOrEquivEsd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UIsoOrEquivEsd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.UIsoOrEquivEsd> getUIsoOrEquivEsd() {
             return uIsoOrEquivEsd;
@@ -2229,9 +2291,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the uIsoOrEquivEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UIsoOrEquivEsd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.UIsoOrEquivEsd }{@code >}
+         *     
          */
         public void setUIsoOrEquivEsd(JAXBElement<AtomSiteType.AtomSite.UIsoOrEquivEsd> value) {
             this.uIsoOrEquivEsd = value;
@@ -2239,9 +2303,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the wyckoffSymbol property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getWyckoffSymbol() {
             return wyckoffSymbol;
@@ -2249,9 +2315,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the wyckoffSymbol property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setWyckoffSymbol(JAXBElement<String> value) {
             this.wyckoffSymbol = value;
@@ -2259,9 +2327,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the adpType property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getAdpType() {
             return adpType;
@@ -2269,9 +2339,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the adpType property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setAdpType(JAXBElement<String> value) {
             this.adpType = value;
@@ -2279,9 +2351,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB11 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB11> getAnisoB11() {
             return anisoB11;
@@ -2289,9 +2363,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB11 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11 }{@code >}
+         *     
          */
         public void setAnisoB11(JAXBElement<AtomSiteType.AtomSite.AnisoB11> value) {
             this.anisoB11 = value;
@@ -2299,9 +2375,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB11Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB11Esd> getAnisoB11Esd() {
             return anisoB11Esd;
@@ -2309,9 +2387,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB11Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB11Esd }{@code >}
+         *     
          */
         public void setAnisoB11Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB11Esd> value) {
             this.anisoB11Esd = value;
@@ -2319,9 +2399,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB12 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB12> getAnisoB12() {
             return anisoB12;
@@ -2329,9 +2411,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB12 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12 }{@code >}
+         *     
          */
         public void setAnisoB12(JAXBElement<AtomSiteType.AtomSite.AnisoB12> value) {
             this.anisoB12 = value;
@@ -2339,9 +2423,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB12Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB12Esd> getAnisoB12Esd() {
             return anisoB12Esd;
@@ -2349,9 +2435,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB12Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB12Esd }{@code >}
+         *     
          */
         public void setAnisoB12Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB12Esd> value) {
             this.anisoB12Esd = value;
@@ -2359,9 +2447,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB13 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB13> getAnisoB13() {
             return anisoB13;
@@ -2369,9 +2459,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB13 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13 }{@code >}
+         *     
          */
         public void setAnisoB13(JAXBElement<AtomSiteType.AtomSite.AnisoB13> value) {
             this.anisoB13 = value;
@@ -2379,9 +2471,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB13Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB13Esd> getAnisoB13Esd() {
             return anisoB13Esd;
@@ -2389,9 +2483,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB13Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB13Esd }{@code >}
+         *     
          */
         public void setAnisoB13Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB13Esd> value) {
             this.anisoB13Esd = value;
@@ -2399,9 +2495,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB22 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB22> getAnisoB22() {
             return anisoB22;
@@ -2409,9 +2507,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB22 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22 }{@code >}
+         *     
          */
         public void setAnisoB22(JAXBElement<AtomSiteType.AtomSite.AnisoB22> value) {
             this.anisoB22 = value;
@@ -2419,9 +2519,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB22Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB22Esd> getAnisoB22Esd() {
             return anisoB22Esd;
@@ -2429,9 +2531,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB22Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB22Esd }{@code >}
+         *     
          */
         public void setAnisoB22Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB22Esd> value) {
             this.anisoB22Esd = value;
@@ -2439,9 +2543,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB23 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB23> getAnisoB23() {
             return anisoB23;
@@ -2449,9 +2555,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB23 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23 }{@code >}
+         *     
          */
         public void setAnisoB23(JAXBElement<AtomSiteType.AtomSite.AnisoB23> value) {
             this.anisoB23 = value;
@@ -2459,9 +2567,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB23Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB23Esd> getAnisoB23Esd() {
             return anisoB23Esd;
@@ -2469,9 +2579,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB23Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB23Esd }{@code >}
+         *     
          */
         public void setAnisoB23Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB23Esd> value) {
             this.anisoB23Esd = value;
@@ -2479,9 +2591,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB33 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB33> getAnisoB33() {
             return anisoB33;
@@ -2489,9 +2603,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB33 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33 }{@code >}
+         *     
          */
         public void setAnisoB33(JAXBElement<AtomSiteType.AtomSite.AnisoB33> value) {
             this.anisoB33 = value;
@@ -2499,9 +2615,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoB33Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoB33Esd> getAnisoB33Esd() {
             return anisoB33Esd;
@@ -2509,9 +2627,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoB33Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoB33Esd }{@code >}
+         *     
          */
         public void setAnisoB33Esd(JAXBElement<AtomSiteType.AtomSite.AnisoB33Esd> value) {
             this.anisoB33Esd = value;
@@ -2519,9 +2639,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU11 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU11> getAnisoU11() {
             return anisoU11;
@@ -2529,9 +2651,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU11 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11 }{@code >}
+         *     
          */
         public void setAnisoU11(JAXBElement<AtomSiteType.AtomSite.AnisoU11> value) {
             this.anisoU11 = value;
@@ -2539,9 +2663,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU11Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU11Esd> getAnisoU11Esd() {
             return anisoU11Esd;
@@ -2549,9 +2675,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU11Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU11Esd }{@code >}
+         *     
          */
         public void setAnisoU11Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU11Esd> value) {
             this.anisoU11Esd = value;
@@ -2559,9 +2687,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU12 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU12> getAnisoU12() {
             return anisoU12;
@@ -2569,9 +2699,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU12 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12 }{@code >}
+         *     
          */
         public void setAnisoU12(JAXBElement<AtomSiteType.AtomSite.AnisoU12> value) {
             this.anisoU12 = value;
@@ -2579,9 +2711,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU12Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU12Esd> getAnisoU12Esd() {
             return anisoU12Esd;
@@ -2589,9 +2723,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU12Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU12Esd }{@code >}
+         *     
          */
         public void setAnisoU12Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU12Esd> value) {
             this.anisoU12Esd = value;
@@ -2599,9 +2735,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU13 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU13> getAnisoU13() {
             return anisoU13;
@@ -2609,9 +2747,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU13 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13 }{@code >}
+         *     
          */
         public void setAnisoU13(JAXBElement<AtomSiteType.AtomSite.AnisoU13> value) {
             this.anisoU13 = value;
@@ -2619,9 +2759,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU13Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU13Esd> getAnisoU13Esd() {
             return anisoU13Esd;
@@ -2629,9 +2771,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU13Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU13Esd }{@code >}
+         *     
          */
         public void setAnisoU13Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU13Esd> value) {
             this.anisoU13Esd = value;
@@ -2639,9 +2783,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU22 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU22> getAnisoU22() {
             return anisoU22;
@@ -2649,9 +2795,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU22 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22 }{@code >}
+         *     
          */
         public void setAnisoU22(JAXBElement<AtomSiteType.AtomSite.AnisoU22> value) {
             this.anisoU22 = value;
@@ -2659,9 +2807,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU22Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU22Esd> getAnisoU22Esd() {
             return anisoU22Esd;
@@ -2669,9 +2819,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU22Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU22Esd }{@code >}
+         *     
          */
         public void setAnisoU22Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU22Esd> value) {
             this.anisoU22Esd = value;
@@ -2679,9 +2831,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU23 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU23> getAnisoU23() {
             return anisoU23;
@@ -2689,9 +2843,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU23 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23 }{@code >}
+         *     
          */
         public void setAnisoU23(JAXBElement<AtomSiteType.AtomSite.AnisoU23> value) {
             this.anisoU23 = value;
@@ -2699,9 +2855,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU23Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU23Esd> getAnisoU23Esd() {
             return anisoU23Esd;
@@ -2709,9 +2867,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU23Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU23Esd }{@code >}
+         *     
          */
         public void setAnisoU23Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU23Esd> value) {
             this.anisoU23Esd = value;
@@ -2719,9 +2879,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU33 property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33 }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33 }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU33> getAnisoU33() {
             return anisoU33;
@@ -2729,9 +2891,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU33 property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33 }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33 }{@code >}
+         *     
          */
         public void setAnisoU33(JAXBElement<AtomSiteType.AtomSite.AnisoU33> value) {
             this.anisoU33 = value;
@@ -2739,9 +2903,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoU33Esd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33Esd }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33Esd }{@code >}
+         *     
          */
         public JAXBElement<AtomSiteType.AtomSite.AnisoU33Esd> getAnisoU33Esd() {
             return anisoU33Esd;
@@ -2749,9 +2915,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoU33Esd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33Esd }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link AtomSiteType.AtomSite.AnisoU33Esd }{@code >}
+         *     
          */
         public void setAnisoU33Esd(JAXBElement<AtomSiteType.AtomSite.AnisoU33Esd> value) {
             this.anisoU33Esd = value;
@@ -2759,9 +2927,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the anisoRatio property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getAnisoRatio() {
             return anisoRatio;
@@ -2769,9 +2939,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the anisoRatio property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setAnisoRatio(JAXBElement<String> value) {
             this.anisoRatio = value;
@@ -2779,9 +2951,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the attachedHydrogens property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getAttachedHydrogens() {
             return attachedHydrogens;
@@ -2789,9 +2963,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the attachedHydrogens property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setAttachedHydrogens(JAXBElement<String> value) {
             this.attachedHydrogens = value;
@@ -2799,9 +2975,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the authAsymId property.
-         *
-         * @return possible object is
-         * {@link String }
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getAuthAsymId() {
             return authAsymId;
@@ -2809,9 +2987,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the authAsymId property.
-         *
-         * @param value allowed object is
-         *              {@link String }
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setAuthAsymId(String value) {
             this.authAsymId = value;
@@ -2819,9 +2999,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the authAtomId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getAuthAtomId() {
             return authAtomId;
@@ -2829,9 +3011,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the authAtomId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setAuthAtomId(JAXBElement<String> value) {
             this.authAtomId = value;
@@ -2839,9 +3023,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the authCompId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getAuthCompId() {
             return authCompId;
@@ -2849,9 +3035,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the authCompId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setAuthCompId(JAXBElement<String> value) {
             this.authCompId = value;
@@ -2859,9 +3047,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the authSeqId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getAuthSeqId() {
             return authSeqId;
@@ -2869,9 +3059,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the authSeqId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setAuthSeqId(JAXBElement<String> value) {
             this.authSeqId = value;
@@ -2879,9 +3071,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the calcAttachedAtom property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getCalcAttachedAtom() {
             return calcAttachedAtom;
@@ -2889,9 +3083,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the calcAttachedAtom property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setCalcAttachedAtom(JAXBElement<String> value) {
             this.calcAttachedAtom = value;
@@ -2899,9 +3095,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the calcFlag property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getCalcFlag() {
             return calcFlag;
@@ -2909,9 +3107,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the calcFlag property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setCalcFlag(JAXBElement<String> value) {
             this.calcFlag = value;
@@ -2919,9 +3119,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the chemicalConnNumber property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
+         *     
          */
         public JAXBElement<BigInteger> getChemicalConnNumber() {
             return chemicalConnNumber;
@@ -2929,9 +3131,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the chemicalConnNumber property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
+         *     
          */
         public void setChemicalConnNumber(JAXBElement<BigInteger> value) {
             this.chemicalConnNumber = value;
@@ -2939,9 +3143,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the constraints property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getConstraints() {
             return constraints;
@@ -2949,9 +3155,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the constraints property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setConstraints(JAXBElement<String> value) {
             this.constraints = value;
@@ -2959,9 +3167,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the details property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getDetails() {
             return details;
@@ -2969,9 +3179,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the details property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setDetails(JAXBElement<String> value) {
             this.details = value;
@@ -2979,9 +3191,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the disorderAssembly property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getDisorderAssembly() {
             return disorderAssembly;
@@ -2989,9 +3203,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the disorderAssembly property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setDisorderAssembly(JAXBElement<String> value) {
             this.disorderAssembly = value;
@@ -2999,9 +3215,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the disorderGroup property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getDisorderGroup() {
             return disorderGroup;
@@ -3009,9 +3227,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the disorderGroup property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setDisorderGroup(JAXBElement<String> value) {
             this.disorderGroup = value;
@@ -3019,9 +3239,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the footnoteId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getFootnoteId() {
             return footnoteId;
@@ -3029,9 +3251,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the footnoteId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setFootnoteId(JAXBElement<String> value) {
             this.footnoteId = value;
@@ -3039,9 +3263,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the fractX property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public JAXBElement<BigDecimal> getFractX() {
             return fractX;
@@ -3049,9 +3275,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the fractX property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public void setFractX(JAXBElement<BigDecimal> value) {
             this.fractX = value;
@@ -3059,9 +3287,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the fractXEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public JAXBElement<BigDecimal> getFractXEsd() {
             return fractXEsd;
@@ -3069,9 +3299,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the fractXEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public void setFractXEsd(JAXBElement<BigDecimal> value) {
             this.fractXEsd = value;
@@ -3079,9 +3311,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the fractY property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public JAXBElement<BigDecimal> getFractY() {
             return fractY;
@@ -3089,9 +3323,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the fractY property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public void setFractY(JAXBElement<BigDecimal> value) {
             this.fractY = value;
@@ -3099,9 +3335,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the fractYEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public JAXBElement<BigDecimal> getFractYEsd() {
             return fractYEsd;
@@ -3109,9 +3347,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the fractYEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public void setFractYEsd(JAXBElement<BigDecimal> value) {
             this.fractYEsd = value;
@@ -3119,9 +3359,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the fractZ property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public JAXBElement<BigDecimal> getFractZ() {
             return fractZ;
@@ -3129,9 +3371,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the fractZ property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public void setFractZ(JAXBElement<BigDecimal> value) {
             this.fractZ = value;
@@ -3139,9 +3383,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the fractZEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public JAXBElement<BigDecimal> getFractZEsd() {
             return fractZEsd;
@@ -3149,9 +3395,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the fractZEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public void setFractZEsd(JAXBElement<BigDecimal> value) {
             this.fractZEsd = value;
@@ -3159,9 +3407,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the groupPDB property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getGroupPDB() {
             return groupPDB;
@@ -3169,9 +3419,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the groupPDB property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setGroupPDB(JAXBElement<String> value) {
             this.groupPDB = value;
@@ -3179,9 +3431,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the labelAltId property.
-         *
-         * @return possible object is
-         * {@link String }
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getLabelAltId() {
             return labelAltId;
@@ -3189,9 +3443,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the labelAltId property.
-         *
-         * @param value allowed object is
-         *              {@link String }
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setLabelAltId(String value) {
             this.labelAltId = value;
@@ -3199,9 +3455,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the labelAsymId property.
-         *
-         * @return possible object is
-         * {@link String }
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getLabelAsymId() {
             return labelAsymId;
@@ -3209,9 +3467,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the labelAsymId property.
-         *
-         * @param value allowed object is
-         *              {@link String }
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setLabelAsymId(String value) {
             this.labelAsymId = value;
@@ -3219,9 +3479,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the labelAtomId property.
-         *
-         * @return possible object is
-         * {@link String }
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getLabelAtomId() {
             return labelAtomId;
@@ -3229,9 +3491,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the labelAtomId property.
-         *
-         * @param value allowed object is
-         *              {@link String }
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setLabelAtomId(String value) {
             this.labelAtomId = value;
@@ -3239,9 +3503,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the labelCompId property.
-         *
-         * @return possible object is
-         * {@link String }
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getLabelCompId() {
             return labelCompId;
@@ -3249,9 +3515,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the labelCompId property.
-         *
-         * @param value allowed object is
-         *              {@link String }
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setLabelCompId(String value) {
             this.labelCompId = value;
@@ -3259,9 +3527,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the labelEntityId property.
-         *
-         * @return possible object is
-         * {@link String }
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getLabelEntityId() {
             return labelEntityId;
@@ -3269,9 +3539,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the labelEntityId property.
-         *
-         * @param value allowed object is
-         *              {@link String }
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setLabelEntityId(String value) {
             this.labelEntityId = value;
@@ -3279,9 +3551,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the labelSeqId property.
-         *
-         * @return possible object is
-         * {@link BigInteger }
+         * 
+         * @return
+         *     possible object is
+         *     {@link BigInteger }
+         *     
          */
         public BigInteger getLabelSeqId() {
             return labelSeqId;
@@ -3289,9 +3563,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the labelSeqId property.
-         *
-         * @param value allowed object is
-         *              {@link BigInteger }
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link BigInteger }
+         *     
          */
         public void setLabelSeqId(BigInteger value) {
             this.labelSeqId = value;
@@ -3299,9 +3575,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the occupancy property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public JAXBElement<BigDecimal> getOccupancy() {
             return occupancy;
@@ -3309,9 +3587,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the occupancy property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public void setOccupancy(JAXBElement<BigDecimal> value) {
             this.occupancy = value;
@@ -3319,9 +3599,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the occupancyEsd property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public JAXBElement<BigDecimal> getOccupancyEsd() {
             return occupancyEsd;
@@ -3329,9 +3611,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the occupancyEsd property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigDecimal }{@code >}
+         *     
          */
         public void setOccupancyEsd(JAXBElement<BigDecimal> value) {
             this.occupancyEsd = value;
@@ -3339,9 +3623,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxPDBAtomName property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxPDBAtomName() {
             return pdbxPDBAtomName;
@@ -3349,9 +3635,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxPDBAtomName property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxPDBAtomName(JAXBElement<String> value) {
             this.pdbxPDBAtomName = value;
@@ -3359,9 +3647,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxPDBInsCode property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxPDBInsCode() {
             return pdbxPDBInsCode;
@@ -3369,9 +3659,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxPDBInsCode property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxPDBInsCode(JAXBElement<String> value) {
             this.pdbxPDBInsCode = value;
@@ -3379,9 +3671,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxPDBModelNum property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
+         *     
          */
         public JAXBElement<BigInteger> getPdbxPDBModelNum() {
             return pdbxPDBModelNum;
@@ -3389,9 +3683,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxPDBModelNum property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link BigInteger }{@code >}
+         *     
          */
         public void setPdbxPDBModelNum(JAXBElement<BigInteger> value) {
             this.pdbxPDBModelNum = value;
@@ -3399,9 +3695,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxPDBResidueName property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxPDBResidueName() {
             return pdbxPDBResidueName;
@@ -3409,9 +3707,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxPDBResidueName property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxPDBResidueName(JAXBElement<String> value) {
             this.pdbxPDBResidueName = value;
@@ -3419,9 +3719,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxPDBResidueNo property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxPDBResidueNo() {
             return pdbxPDBResidueNo;
@@ -3429,9 +3731,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxPDBResidueNo property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxPDBResidueNo(JAXBElement<String> value) {
             this.pdbxPDBResidueNo = value;
@@ -3439,9 +3743,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxPDBStrandId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxPDBStrandId() {
             return pdbxPDBStrandId;
@@ -3449,9 +3755,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxPDBStrandId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxPDBStrandId(JAXBElement<String> value) {
             this.pdbxPDBStrandId = value;
@@ -3459,9 +3767,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxAuthAltId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxAuthAltId() {
             return pdbxAuthAltId;
@@ -3469,9 +3779,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxAuthAltId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxAuthAltId(JAXBElement<String> value) {
             this.pdbxAuthAltId = value;
@@ -3479,9 +3791,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxAuthAsymId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxAuthAsymId() {
             return pdbxAuthAsymId;
@@ -3489,9 +3803,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxAuthAsymId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxAuthAsymId(JAXBElement<String> value) {
             this.pdbxAuthAsymId = value;
@@ -3499,9 +3815,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxAuthAtomName property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxAuthAtomName() {
             return pdbxAuthAtomName;
@@ -3509,9 +3827,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxAuthAtomName property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxAuthAtomName(JAXBElement<String> value) {
             this.pdbxAuthAtomName = value;
@@ -3519,9 +3839,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxAuthCompId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxAuthCompId() {
             return pdbxAuthCompId;
@@ -3529,9 +3851,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxAuthCompId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxAuthCompId(JAXBElement<String> value) {
             this.pdbxAuthCompId = value;
@@ -3539,9 +3863,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxAuthSeqId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxAuthSeqId() {
             return pdbxAuthSeqId;
@@ -3549,9 +3875,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxAuthSeqId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxAuthSeqId(JAXBElement<String> value) {
             this.pdbxAuthSeqId = value;
@@ -3559,9 +3887,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxFormalCharge property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxFormalCharge() {
             return pdbxFormalCharge;
@@ -3569,9 +3899,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxFormalCharge property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxFormalCharge(JAXBElement<String> value) {
             this.pdbxFormalCharge = value;
@@ -3579,9 +3911,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxNcsDomId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxNcsDomId() {
             return pdbxNcsDomId;
@@ -3589,9 +3923,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxNcsDomId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxNcsDomId(JAXBElement<String> value) {
             this.pdbxNcsDomId = value;
@@ -3599,9 +3935,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxStructGroupId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxStructGroupId() {
             return pdbxStructGroupId;
@@ -3609,9 +3947,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxStructGroupId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxStructGroupId(JAXBElement<String> value) {
             this.pdbxStructGroupId = value;
@@ -3619,9 +3959,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the pdbxTlsGroupId property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getPdbxTlsGroupId() {
             return pdbxTlsGroupId;
@@ -3629,9 +3971,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the pdbxTlsGroupId property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setPdbxTlsGroupId(JAXBElement<String> value) {
             this.pdbxTlsGroupId = value;
@@ -3639,9 +3983,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the refinementFlags property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getRefinementFlags() {
             return refinementFlags;
@@ -3649,9 +3995,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the refinementFlags property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setRefinementFlags(JAXBElement<String> value) {
             this.refinementFlags = value;
@@ -3659,9 +4007,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the refinementFlagsAdp property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getRefinementFlagsAdp() {
             return refinementFlagsAdp;
@@ -3669,9 +4019,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the refinementFlagsAdp property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setRefinementFlagsAdp(JAXBElement<String> value) {
             this.refinementFlagsAdp = value;
@@ -3679,9 +4031,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the refinementFlagsOccupancy property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getRefinementFlagsOccupancy() {
             return refinementFlagsOccupancy;
@@ -3689,9 +4043,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the refinementFlagsOccupancy property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setRefinementFlagsOccupancy(JAXBElement<String> value) {
             this.refinementFlagsOccupancy = value;
@@ -3699,9 +4055,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the refinementFlagsPosn property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getRefinementFlagsPosn() {
             return refinementFlagsPosn;
@@ -3709,9 +4067,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the refinementFlagsPosn property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setRefinementFlagsPosn(JAXBElement<String> value) {
             this.refinementFlagsPosn = value;
@@ -3719,9 +4079,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the restraints property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getRestraints() {
             return restraints;
@@ -3729,9 +4091,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the restraints property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setRestraints(JAXBElement<String> value) {
             this.restraints = value;
@@ -3739,9 +4103,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the symmetryMultiplicity property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getSymmetryMultiplicity() {
             return symmetryMultiplicity;
@@ -3749,9 +4115,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the symmetryMultiplicity property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setSymmetryMultiplicity(JAXBElement<String> value) {
             this.symmetryMultiplicity = value;
@@ -3759,9 +4127,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the thermalDisplaceType property.
-         *
-         * @return possible object is
-         * {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @return
+         *     possible object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public JAXBElement<String> getThermalDisplaceType() {
             return thermalDisplaceType;
@@ -3769,9 +4139,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the thermalDisplaceType property.
-         *
-         * @param value allowed object is
-         *              {@link JAXBElement }{@code <}{@link String }{@code >}
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link JAXBElement }{@code <}{@link String }{@code >}
+         *     
          */
         public void setThermalDisplaceType(JAXBElement<String> value) {
             this.thermalDisplaceType = value;
@@ -3779,9 +4151,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the typeSymbol property.
-         *
-         * @return possible object is
-         * {@link String }
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getTypeSymbol() {
             return typeSymbol;
@@ -3789,9 +4163,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the typeSymbol property.
-         *
-         * @param value allowed object is
-         *              {@link String }
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setTypeSymbol(String value) {
             this.typeSymbol = value;
@@ -3799,9 +4175,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Gets the value of the id property.
-         *
-         * @return possible object is
-         * {@link String }
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
          */
         public String getId() {
             return id;
@@ -3809,9 +4187,11 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * Sets the value of the id property.
-         *
-         * @param value allowed object is
-         *              {@link String }
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
          */
         public void setId(String value) {
             this.id = value;
@@ -3820,9 +4200,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -3832,10 +4212,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB11 {
 
@@ -3846,9 +4228,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -3856,9 +4240,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -3866,9 +4252,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -3880,9 +4268,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -3893,9 +4283,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -3905,10 +4295,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB11Esd {
 
@@ -3919,9 +4311,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -3929,9 +4323,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -3939,9 +4335,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -3953,9 +4351,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -3966,9 +4366,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -3978,10 +4378,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB12 {
 
@@ -3992,9 +4394,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4002,9 +4406,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4012,9 +4418,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4026,9 +4434,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4039,9 +4449,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4051,10 +4461,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB12Esd {
 
@@ -4065,9 +4477,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4075,9 +4489,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4085,9 +4501,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4099,9 +4517,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4112,9 +4532,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4124,10 +4544,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB13 {
 
@@ -4138,9 +4560,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4148,9 +4572,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4158,9 +4584,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4172,9 +4600,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4185,9 +4615,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4197,10 +4627,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB13Esd {
 
@@ -4211,9 +4643,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4221,9 +4655,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4231,9 +4667,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4245,9 +4683,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4258,9 +4698,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4270,10 +4710,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB22 {
 
@@ -4284,9 +4726,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4294,9 +4738,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4304,9 +4750,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4318,9 +4766,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4331,9 +4781,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4343,10 +4793,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB22Esd {
 
@@ -4357,9 +4809,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4367,9 +4821,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4377,9 +4833,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4391,9 +4849,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4404,9 +4864,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4416,10 +4876,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB23 {
 
@@ -4430,9 +4892,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4440,9 +4904,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4450,9 +4916,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4464,9 +4932,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4477,9 +4947,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4489,10 +4959,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB23Esd {
 
@@ -4503,9 +4975,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4513,9 +4987,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4523,9 +4999,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4537,9 +5015,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4550,9 +5030,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4562,10 +5042,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB33 {
 
@@ -4576,9 +5058,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4586,9 +5070,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4596,9 +5082,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4610,9 +5098,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4623,9 +5113,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4635,10 +5125,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoB33Esd {
 
@@ -4649,9 +5141,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4659,9 +5153,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4669,9 +5165,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4683,9 +5181,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4696,9 +5196,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4708,10 +5208,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU11 {
 
@@ -4722,9 +5224,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4732,9 +5236,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4742,9 +5248,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4756,9 +5264,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4769,9 +5279,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4781,10 +5291,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU11Esd {
 
@@ -4795,9 +5307,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4805,9 +5319,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4815,9 +5331,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4829,9 +5347,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4842,9 +5362,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4854,10 +5374,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU12 {
 
@@ -4868,9 +5390,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4878,9 +5402,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4888,9 +5414,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4902,9 +5430,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4915,9 +5445,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -4927,10 +5457,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU12Esd {
 
@@ -4941,9 +5473,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -4951,9 +5485,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -4961,9 +5497,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -4975,9 +5513,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -4988,9 +5528,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5000,10 +5540,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU13 {
 
@@ -5014,9 +5556,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5024,9 +5568,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5034,9 +5580,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5048,9 +5596,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5061,9 +5611,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5073,10 +5623,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU13Esd {
 
@@ -5087,9 +5639,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5097,9 +5651,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5107,9 +5663,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5121,9 +5679,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5134,9 +5694,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5146,10 +5706,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU22 {
 
@@ -5160,9 +5722,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5170,9 +5734,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5180,9 +5746,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5194,9 +5762,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5207,9 +5777,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5219,10 +5789,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU22Esd {
 
@@ -5233,9 +5805,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5243,9 +5817,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5253,9 +5829,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5267,9 +5845,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5280,9 +5860,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5292,10 +5872,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU23 {
 
@@ -5306,9 +5888,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5316,9 +5900,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5326,9 +5912,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5340,9 +5928,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5353,9 +5943,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5365,10 +5955,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU23Esd {
 
@@ -5379,9 +5971,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5389,9 +5983,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5399,9 +5995,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5413,9 +6011,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5426,9 +6026,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5438,10 +6038,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU33 {
 
@@ -5452,9 +6054,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5462,9 +6066,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5472,9 +6078,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5486,9 +6094,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5499,9 +6109,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5511,10 +6121,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class AnisoU33Esd {
 
@@ -5525,9 +6137,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5535,9 +6149,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5545,9 +6161,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5559,9 +6177,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5572,9 +6192,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5584,10 +6204,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class BEquivGeomMeanEsd {
 
@@ -5598,9 +6220,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5608,9 +6232,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5618,9 +6244,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5632,9 +6260,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5645,9 +6275,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5657,10 +6287,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class BIsoOrEquiv {
 
@@ -5671,9 +6303,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5681,9 +6315,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5691,9 +6327,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5705,9 +6343,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5718,9 +6358,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5730,10 +6370,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class BIsoOrEquivEsd {
 
@@ -5744,9 +6386,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5754,9 +6398,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5764,9 +6410,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5778,9 +6426,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5791,9 +6441,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5803,10 +6453,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class CartnX {
 
@@ -5817,9 +6469,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5827,9 +6481,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5837,9 +6493,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5851,9 +6509,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5864,9 +6524,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5876,10 +6536,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class CartnXEsd {
 
@@ -5890,9 +6552,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5900,9 +6564,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5910,9 +6576,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5924,9 +6592,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -5937,9 +6607,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -5949,10 +6619,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class CartnY {
 
@@ -5963,9 +6635,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -5973,9 +6647,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -5983,9 +6659,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -5997,9 +6675,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6010,9 +6690,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6022,10 +6702,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class CartnYEsd {
 
@@ -6036,9 +6718,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -6046,9 +6730,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6056,9 +6742,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -6070,9 +6758,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6083,9 +6773,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6095,10 +6785,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class CartnZ {
 
@@ -6109,9 +6801,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -6119,9 +6813,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6129,9 +6825,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -6143,9 +6841,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6156,9 +6856,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6168,10 +6868,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class CartnZEsd {
 
@@ -6182,9 +6884,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -6192,9 +6896,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6202,9 +6908,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -6216,9 +6924,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6229,9 +6939,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6241,10 +6951,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class UEquivGeomMeanEsd {
 
@@ -6255,9 +6967,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -6265,9 +6979,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6275,9 +6991,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -6289,9 +7007,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;
@@ -6302,9 +7022,9 @@ public class AtomSiteType implements IAtomSiteType{
 
         /**
          * <p>Java class for anonymous complex type.
-         * <p>
+         * 
          * <p>The following schema fragment specifies the expected content contained within this class.
-         * <p>
+         * 
          * <pre>
          * &lt;complexType>
          *   &lt;simpleContent>
@@ -6314,10 +7034,12 @@ public class AtomSiteType implements IAtomSiteType{
          *   &lt;/simpleContent>
          * &lt;/complexType>
          * </pre>
+         * 
+         * 
          */
         @XmlAccessorType(XmlAccessType.FIELD)
         @XmlType(name = "", propOrder = {
-                "value"
+            "value"
         })
         public static class UIsoOrEquivEsd {
 
@@ -6328,9 +7050,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the value property.
-             *
-             * @return possible object is
-             * {@link BigDecimal }
+             * 
+             * @return
+             *     possible object is
+             *     {@link BigDecimal }
+             *     
              */
             public BigDecimal getValue() {
                 return value;
@@ -6338,9 +7062,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the value property.
-             *
-             * @param value allowed object is
-             *              {@link BigDecimal }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link BigDecimal }
+             *     
              */
             public void setValue(BigDecimal value) {
                 this.value = value;
@@ -6348,9 +7074,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Gets the value of the units property.
-             *
-             * @return possible object is
-             * {@link String }
+             * 
+             * @return
+             *     possible object is
+             *     {@link String }
+             *     
              */
             public String getUnits() {
                 if (units == null) {
@@ -6362,9 +7090,11 @@ public class AtomSiteType implements IAtomSiteType{
 
             /**
              * Sets the value of the units property.
-             *
-             * @param value allowed object is
-             *              {@link String }
+             * 
+             * @param value
+             *     allowed object is
+             *     {@link String }
+             *     
              */
             public void setUnits(String value) {
                 this.units = value;

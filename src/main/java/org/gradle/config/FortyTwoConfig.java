@@ -18,8 +18,7 @@ public class FortyTwoConfig {
 
     @Bean
     public PdbmlFileReader pdbmlFileReader() throws JAXBException {
-        return new PdbmlFileReader(JAXBContext.newInstance("org.gradle.pdbml.v42.generated",
-                org.gradle.pdbml.v42.generated.ObjectFactory.class.getClassLoader()));
+        return new PdbmlFileReader(JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class));
     }
 
 }

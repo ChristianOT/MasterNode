@@ -1,30 +1,39 @@
 package org.gradle.reader
 
-import org.gradle.pdbml.IDatablockType
-import org.gradle.pdbml.v42.generated.DatablockType
 import org.gradle.service.reader.PdbmlFileReader
 import org.springframework.core.io.Resource
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 
 import spock.lang.Specification
 
-class TestPdbmlReader extends Specification{
-	
-	def "testing read()"(){
-		
-		PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-		Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/5a0c.xml");
+import javax.xml.bind.JAXBContext
 
-		def versionType = Mock(IDatablockType)
+class TestPdbmlReader extends Specification {
 
-		versionType.getClass() >> DatablockType
+    def "testing read v40 PdbmlFiles"() {
 
-		when:
-		def reader = new PdbmlFileReader(resources[0])
+        PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
+        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/5a0c.xml");
 
-		then:
-		'4Y1G' == reader.read().getDatablockName()
+        when:
+        def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class))
 
-	}
+        then:
+        assert reader.read().getValue() instanceof org.gradle.pdbml.v40.generated.DatablockType
+
+    }
+
+    def "testing read v42 PdbmlFiles"() {
+
+        PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
+        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
+
+        when:
+        def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
+
+        then:
+        assert reader.read().getValue() instanceof org.gradle.pdbml.v42.generated.DatablockType
+
+    }
 
 }
