@@ -1,6 +1,6 @@
 package org.gradle.dataBaseRepositories;
 
-import org.gradle.yoinkClasses.SimpleAtom;
+import org.gradle.domain.SimpleAtom;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 

@@ -26,12 +26,11 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * In this class all the batch jobs and steps are configured.
- *  - bootstrap job: adding, updating data from local files to neo4j database
- *  - master job: sending messages containing the id of one or all database entries to a
- *   jms queue (request)
- * 
- * @author Christian Ouali Turki
+ * - bootstrap job: adding, updating data from local files to neo4j database
+ * - master job: sending messages containing the id of one or all database entries to a
+ * jms queue (request)
  *
+ * @author Christian Ouali Turki
  */
 @Profile("standard")
 @Configuration
@@ -39,14 +38,21 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 //@EnableJms
 @ComponentScan("org.gradle")
-public class BatchConfig{
+public class BatchConfig {
 
-	/**
-	 * getting copy of application context
-	 */
-	 @Autowired
-	 ConfigurableApplicationContext context;
-	 
+    /**
+     * getting copy of application context
+     */
+    @Autowired
+    ConfigurableApplicationContext context;
+
+    @Autowired
+    JobBuilderFactory jbf;
+
+    @Autowired
+    StepBuilderFactory sbf;
+
+
 //	 /**
 //	  * setting the ConnectionFactory for jms communication
 //	  * 
@@ -64,68 +70,71 @@ public class BatchConfig{
 //		factory.setConnectionFactory(connectionFactory);
 //		return factory;
 //	}
-	
+
 	/*
-	 * bootstrapJob
+     * bootstrapJob
 	 */
 
-	@Autowired
-	@Qualifier("bootstrapStep")
-	private Step bootstrapStep;
+    @Autowired
+    @Qualifier("bootstrapStep")
+    private Step bootstrapStep;
 
-	/**
-	 * Bean for building the bootstrap job executing bootstrapStep.
-	 *  
-	 * @param jbf, JobBuilderFactory
-	 * @return bootstrap
-	 * @throws IOException
-	 */
-	@Bean
-	public Job bootstrapJob(JobBuilderFactory jbf) throws IOException {
-		return jbf.get("bootstrap").incrementer(new RunIdIncrementer()).flow(bootstrapStep).end().build();
-	}
+    /**
+     * Bean for building the bootstrap job executing bootstrapStep.
+     *
+     * @param jbf, JobBuilderFactory
+     * @return bootstrap
+     * @throws IOException
+     */
+    @Bean
+    public Job bootstrapJob() throws IOException {
+        return jbf.get("bootstrap")
+                .incrementer(new RunIdIncrementer())
+                .flow(bootstrapStep)
+                .end()
+                .build();
+    }
 
-	/**
-	 * Bean for building the bootstrap step.
-	 * 
-	 * @param sbf, StepBuilderFactory
-	 * @return bootstrapStep
-	 * @throws IOException
-	 */
-	@Bean
-	public Step bootstrapStep(StepBuilderFactory sbf) throws IOException {
-		return sbf.get("bootstrapStep").chunk(1)
-				.reader(multiReader())
-				.processor((ItemProcessor) context.getBean("pdbmlProcessor"))
-				.writer((ItemWriter) context.getBean("databaseWriter"))
-				.build();
-	}
+    /**
+     * Bean for building the bootstrap step.
+     *
+     * @param sbf, StepBuilderFactory
+     * @return bootstrapStep
+     * @throws IOException
+     */
+    @Bean
+    public Step bootstrapStep() throws IOException {
+        return sbf.get("bootstrapStep").chunk(1)
+                .reader(multiReader())
+                .processor((ItemProcessor) context.getBean("pdbmlProcessor"))
+                .writer((ItemWriter) context.getBean("databaseWriter"))
+                .build();
+    }
 
-	/**
-	 * Setting ItemReader for bootstrapStep as a MultiResourceItemReader. Use
-	 * PathMatchingResourcePatternResolver for setting the file path. Delegates
-	 * to the PdbmlFileReader to handle the pdbml files.
-	 * 
-	 * ISSUE: trying to read same file multiple times!!!
-	 * 
-	 * @return reader
-	 * @throws IOException
-	 */
-	@Bean
-	public ItemReader multiReader() throws IOException {
-		MultiResourceItemReader reader = new MultiResourceItemReader();
-		PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-		Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/*.xml");
-		if(resources != null){
-			System.out.println(resources.length);
-			reader.setResources(resources);
-			reader.setDelegate((ResourceAwareItemReaderItemStream) context.getBean("pdbmlFileReader"));
-		}else{
-			System.out.println("No file to read!");
-			//context.close();
-		}
-		return reader;
-	}
+    /**
+     * Setting ItemReader for bootstrapStep as a MultiResourceItemReader. Delegates
+     * to the PdbmlFileReader to handle the pdbml files.
+     * <p>
+     * ISSUE: trying to read same file multiple times!!!
+     *
+     * @return reader
+     * @throws IOException
+     */
+    @Bean
+    public ItemReader multiReader() {
+        MultiResourceItemReader reader = new MultiResourceItemReader();
+        Resource[] resources;
+        try {
+            resources = context.getResources("file:./src/main/resources/org/*.xml");
+            System.out.println(resources.length);
+            reader.setResources(resources);
+            reader.setDelegate((ResourceAwareItemReaderItemStream) context.getBean("pdbmlFileReader"));
+        } catch (IOException e) {
+            System.out.println(e);
+        }
+        //context.close();
+        return reader;
+    }
 
 //	/*
 //	 * masterJob

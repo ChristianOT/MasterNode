@@ -9,7 +9,7 @@ import org.gradle.interfaces.MolecularSystem;
 import org.gradle.interfaces.Molecule;
 import org.gradle.interfaces.Translator;
 import org.gradle.pdbml.IDatablockType;
-import org.gradle.yoinkClasses.SimpleMolecularSystem;
+import org.gradle.domain.SimpleMolecularSystem;
 import org.springframework.stereotype.Service;
 
 @Service

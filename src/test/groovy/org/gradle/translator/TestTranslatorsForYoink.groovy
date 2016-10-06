@@ -24,26 +24,17 @@ class TestTranslatorsForYoink extends Specification {
     PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
     Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
     def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
-    def myVector3D = new SimpleVector3DFactory()
-    def simpleCoordFactory = new SimpleCoordFactory()
     def atomTranslator = new AtomTranslatorForYoink()
     def moleculeTranslator = new MoleculeTranslatorForYoink()
     def msTranslator = new MolecularSystemTranslatorForYoink()
 
     def "test translate to atom"() {
-        when:
-        myVector3D.myVectorType = Vector.Vector3DType.COMMONS
-        simpleCoordFactory.myVector3D = myVector3D
-        then:
-        def translator = new AtomTranslatorForYoink(simpleCoordFactory);
-        assert translator.translate((reader.read().getValue())) instanceof Set<Atom>
+        expect:
+        assert atomTranslator.translate((reader.read().getValue())) instanceof Set<Atom>
     }
 
     def "test translate to molecule"() {
         when:
-        myVector3D.myVectorType = Vector.Vector3DType.COMMONS
-        simpleCoordFactory.myVector3D = myVector3D
-        atomTranslator.coordFactory = simpleCoordFactory
         moleculeTranslator.atomTranslatorForYoink = atomTranslator
         then:
         assert moleculeTranslator.translate(reader.read().getValue()) instanceof Set<Molecule>
@@ -51,9 +42,6 @@ class TestTranslatorsForYoink extends Specification {
 
     def "test translate to molecularsystem"() {
         when:
-        myVector3D.myVectorType = Vector.Vector3DType.COMMONS
-        simpleCoordFactory.myVector3D = myVector3D
-        atomTranslator.coordFactory = simpleCoordFactory
         moleculeTranslator.atomTranslatorForYoink = atomTranslator
         msTranslator.moleculeTranslatorForYoink = moleculeTranslator
         then:

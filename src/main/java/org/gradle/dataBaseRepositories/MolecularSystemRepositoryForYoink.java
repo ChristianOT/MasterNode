@@ -1,6 +1,6 @@
 package org.gradle.dataBaseRepositories;
 
-import org.gradle.yoinkClasses.SimpleMolecularSystem;
+import org.gradle.domain.SimpleMolecularSystem;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;
 

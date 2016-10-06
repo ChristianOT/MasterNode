@@ -14,6 +14,7 @@ import org.springframework.stereotype.Service;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBElement;
+import javax.xml.bind.UnmarshalException;
 import javax.xml.bind.Unmarshaller;
 
 /**
@@ -47,8 +48,15 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBEl
     public JAXBElement read() throws Exception {
         if (resource != null) {
             System.out.println("Reading " + resource.getFile());
-            Unmarshaller jaxbUnmarshaller = this.jaxbContext.createUnmarshaller();
-            JAXBElement pdb = (JAXBElement) jaxbUnmarshaller.unmarshal(resource.getInputStream());
+            JAXBElement pdb =null;
+            try {
+                Unmarshaller jaxbUnmarshaller = this.jaxbContext.createUnmarshaller();
+                pdb = (JAXBElement) jaxbUnmarshaller.unmarshal(resource.getInputStream());
+                //resource.getFile().delete();
+                resource = null;
+            }catch(UnmarshalException e){
+                System.out.println("Incompatible pdbml version. Wrong profile selected.");
+            }
             return pdb;
         } else {
             System.out.println("No resources to read");

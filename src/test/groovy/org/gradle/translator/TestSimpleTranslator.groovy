@@ -22,34 +22,20 @@ class TestSimpleTranslator extends Specification {
     PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
     Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
     def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
-    def myVector3D = new SimpleVector3DFactory()
-    def simpleCoordFactory = new SimpleCoordFactory()
     def translator = new SimpleTranslator()
 
     def "test translate to atom"() {
-        when:
-        myVector3D.myVectorType = Vector.Vector3DType.COMMONS
-        simpleCoordFactory.myVector3D = myVector3D
-        translator.coordFactory = simpleCoordFactory
-        then:
+        expect:
         assert translator.translateToAtom(reader.read()) instanceof Set<Atom>
     }
 
     def "test translate to molecule"() {
-        when:
-        myVector3D.myVectorType = Vector.Vector3DType.COMMONS
-        simpleCoordFactory.myVector3D = myVector3D
-        translator.coordFactory = simpleCoordFactory
-        then:
+        expect:
         assert translator.translateToMolecule(reader.read()) instanceof Set<Molecule>
     }
 
     def "test translate to molecularSystem"() {
-        when:
-        myVector3D.myVectorType = Vector.Vector3DType.COMMONS
-        simpleCoordFactory.myVector3D = myVector3D
-        translator.coordFactory = simpleCoordFactory
-        then:
+        expect:
         assert translator.translate(reader.read()) instanceof MolecularSystem
     }
 }

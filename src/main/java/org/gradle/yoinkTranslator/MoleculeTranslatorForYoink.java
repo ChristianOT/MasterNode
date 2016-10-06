@@ -8,7 +8,7 @@ import javax.annotation.Resource;
 import org.gradle.interfaces.Molecule;
 import org.gradle.interfaces.Translator;
 import org.gradle.pdbml.IDatablockType;
-import org.gradle.yoinkClasses.SimpleMolecule;
+import org.gradle.domain.SimpleMolecule;
 import org.springframework.stereotype.Service;
 
 @Service

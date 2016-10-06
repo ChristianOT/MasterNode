@@ -1,6 +1,5 @@
 package org.gradle.yoinkTranslator;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -8,26 +7,23 @@ import java.util.Set;
 
 import org.gradle.interfaces.Atom;
 import org.gradle.pdbml.IDatablockType;
-import org.gradle.pdbml.v42.generated.AtomSiteType;
 import org.gradle.pdbml.v42.generated.DatablockType;
-import org.gradle.yoinkClasses.SimpleAtom;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.gradle.domain.SimpleAtom;
+import org.gradle.yoinkClasses.SimpleCoordFactory;
 import org.springframework.stereotype.Service;
-import org.wallerlab.yoink.api.model.molecular.Coord;
 import org.wallerlab.yoink.api.model.molecular.Element;
-import org.wallerlab.yoink.api.service.Factory;
-import org.wallerlab.yoink.molecular.domain.SimpleCoordFactory;
 import org.gradle.interfaces.Translator;
-import org.wallerlab.yoink.molecular.service.translator.MolecularSystemTranslator;
-
-import javax.annotation.Resource;
-import javax.xml.bind.JAXBElement;
+import org.wallerlab.yoink.api.service.math.Vector;
+import org.wallerlab.yoink.math.linear.SimpleVector3DFactory;
 
 @Service
 public class AtomTranslatorForYoink implements Translator<Atom, IDatablockType> {
 
+    public Vector.Vector3DType myVector3D = Vector.Vector3DType.COMMONS;
 
-    public Factory<Coord, double[]> coordFactory= new SimpleCoordFactory();
+    public SimpleVector3DFactory simpleVector3DFactory = new SimpleVector3DFactory(myVector3D);
+
+    public SimpleCoordFactory coordFactory = new SimpleCoordFactory(simpleVector3DFactory);
 
     public AtomTranslatorForYoink() {
     }
