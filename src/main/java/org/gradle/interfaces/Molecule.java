@@ -1,9 +1,9 @@
 package org.gradle.interfaces;
 
-import java.util.Set;
-
 import org.wallerlab.yoink.api.model.molecular.Coord;
 import org.wallerlab.yoink.api.model.regionizer.Region.Name;
+
+import java.util.Set;
 
 public interface Molecule {
     Name getName();

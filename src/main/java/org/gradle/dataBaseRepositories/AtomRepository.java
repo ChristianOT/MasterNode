@@ -1,7 +1,5 @@
 package org.gradle.dataBaseRepositories;
 
-import java.util.List;
-
 import org.gradle.domain.Atom;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Service;

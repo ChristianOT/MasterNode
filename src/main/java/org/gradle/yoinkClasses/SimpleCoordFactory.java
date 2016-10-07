@@ -1,6 +1,5 @@
 package org.gradle.yoinkClasses;
 
-import javax.annotation.Resource;
 import org.springframework.stereotype.Service;
 import org.wallerlab.yoink.api.model.molecular.Coord;
 import org.wallerlab.yoink.api.service.Factory;

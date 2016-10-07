@@ -1,7 +1,5 @@
 package org.gradle.translator
 
-import org.gradle.pdbml.IDatablockType
-import org.gradle.pdbml.v42.generated.DatablockType
 import org.gradle.service.reader.PdbmlFileReader
 import org.gradle.yoinkTranslator.YoinkTranslator
 import org.springframework.core.io.Resource

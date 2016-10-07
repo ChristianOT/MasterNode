@@ -15,7 +15,7 @@ import java.util.List;
  * Created by christian on 05/10/2016.
  */
 @Service
-public class ProcessorForYoink implements ItemProcessor<JAXBElement<IDatablockType>, List<MolecularSystem>> {
+public class ProcessorForYoink implements ItemProcessor<JAXBElement<IDatablockType>, MolecularSystem> {
 
     @Autowired
     MolecularSystemTranslatorForYoink molecularSystemTranslatorForYoink;
@@ -23,8 +23,7 @@ public class ProcessorForYoink implements ItemProcessor<JAXBElement<IDatablockTy
     private List<MolecularSystem> list = new ArrayList<MolecularSystem>();
 
     @Override
-    public List<MolecularSystem> process(JAXBElement<IDatablockType> item) throws Exception {
-        list.addAll(molecularSystemTranslatorForYoink.translate(item.getValue()));
-        return list;
+    public MolecularSystem process(JAXBElement<IDatablockType> item) throws Exception {
+        return molecularSystemTranslatorForYoink.translate(item.getValue());
     }
 }

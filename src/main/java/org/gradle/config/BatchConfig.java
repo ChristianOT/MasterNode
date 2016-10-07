@@ -1,7 +1,5 @@
 package org.gradle.config;
 
-import java.io.IOException;
-
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
@@ -21,8 +19,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import java.io.IOException;
 
 /**
  * In this class all the batch jobs and steps are configured.
@@ -82,7 +81,6 @@ public class BatchConfig {
     /**
      * Bean for building the bootstrap job executing bootstrapStep.
      *
-     * @param jbf, JobBuilderFactory
      * @return bootstrap
      * @throws IOException
      */
@@ -98,7 +96,6 @@ public class BatchConfig {
     /**
      * Bean for building the bootstrap step.
      *
-     * @param sbf, StepBuilderFactory
      * @return bootstrapStep
      * @throws IOException
      */
@@ -136,13 +133,13 @@ public class BatchConfig {
         return reader;
     }
 
-//	/*
-//	 * masterJob
-//	 */
-//
-//	@Autowired
-//	@Qualifier("masterStep")
-//	private Step masterStep;
+	/*
+	 * masterJob
+	 */
+
+	@Autowired
+	@Qualifier("masterStep")
+	private Step masterStep;
 //
 //	/**
 //	 * Configuration of the JmsTemplate allowing interaction with jms
@@ -172,33 +169,31 @@ public class BatchConfig {
 //		return itemWriter;
 //	}
 //	
-//	/**
-//	 * Bean for building the master job executing masterStep.
-//	 * 
-//	 * @param jbf, JobBuilderFactory
-//	 * @return master
-//	 * @throws IOException
-//	 */
-//	@Bean
-//	public Job masterJob(JobBuilderFactory jbf) throws IOException {
-//		return jbf.get("master").incrementer(new RunIdIncrementer()).flow(masterStep).end().build();
-//	}
-//
-//	/**
-//	 * Bean for building masterStep. No processor necessary.
-//	 * 
-//	 * @param sbf StepBuilderFactory
-//	 * @return masterStep
-//	 * @throws IOException
-//	 */
-//	@Bean
-//	public Step masterStep(StepBuilderFactory sbf) throws IOException {
-//		return sbf.get("masterStep").chunk(1)
-//				.reader((ItemReader<? extends Object>) context.getBean("dbReader"))
-//				.writer((ItemWriter<? super Object>) writer())
-//				.build();
-//	}
-//
+	/**
+	 * Bean for building the master job executing masterStep.
+	 *
+	 * @return master
+	 * @throws IOException
+	 */
+	@Bean
+	public Job masterJob() throws IOException {
+		return jbf.get("master").incrementer(new RunIdIncrementer()).flow(masterStep).end().build();
+	}
+
+	/**
+	 * Bean for building masterStep. No processor necessary.
+	 *
+	 * @return masterStep
+	 * @throws IOException
+	 */
+	@Bean
+	public Step masterStep() throws IOException {
+		return sbf.get("masterStep").chunk(1)
+				.reader((ItemReader<? extends Object>) context.getBean("dbReader"))
+				.writer((ItemWriter<? super Object>) context.getBean("consoleWriter"))
+				.build();
+	}
+
 //	/**
 //	 * Variable for counting number of receiveMessage executions. If number equals 
 //	 * the number of messages send, the applications context will be closed.

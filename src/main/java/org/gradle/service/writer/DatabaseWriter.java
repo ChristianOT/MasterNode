@@ -1,12 +1,12 @@
 package org.gradle.service.writer;
 
-import java.util.List;
-
 import org.gradle.dataBaseRepositories.MolecularSystemRepository;
 import org.gradle.domain.MolecularSystem;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 /**
  * ItemWriter for saving a MolecularSystem into the database. For bootstrapStep.

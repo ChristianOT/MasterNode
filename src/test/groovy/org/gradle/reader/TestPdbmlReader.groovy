@@ -2,8 +2,7 @@ package org.gradle.reader
 
 import org.gradle.service.reader.PdbmlFileReader
 import org.springframework.core.io.Resource
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
-
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver
 import spock.lang.Specification
 
 import javax.xml.bind.JAXBContext

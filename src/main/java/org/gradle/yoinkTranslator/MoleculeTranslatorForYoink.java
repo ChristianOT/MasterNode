@@ -1,15 +1,14 @@
 package org.gradle.yoinkTranslator;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.annotation.Resource;
-
+import org.gradle.domain.SimpleMolecule;
 import org.gradle.interfaces.Molecule;
 import org.gradle.interfaces.Translator;
 import org.gradle.pdbml.IDatablockType;
-import org.gradle.domain.SimpleMolecule;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
+import java.util.HashSet;
+import java.util.Set;
 
 @Service
 public class MoleculeTranslatorForYoink implements Translator<Molecule, IDatablockType>{

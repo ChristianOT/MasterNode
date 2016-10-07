@@ -13,9 +13,9 @@ public class SimpleAtom implements Atom {
     @GraphId
     private Long id;
 
-    protected final int index;
-    protected final Element elementType;
-    private final Coord coordinate;
+    protected int index;
+    protected Element elementType;
+    private Coord coordinate;
     private RadialGrid radial_grid;
 
     public SimpleAtom(int index, Element elementType, Coord coordinate) {

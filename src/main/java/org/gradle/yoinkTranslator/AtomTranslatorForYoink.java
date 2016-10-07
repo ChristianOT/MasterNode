@@ -1,20 +1,20 @@
 package org.gradle.yoinkTranslator;
 
+import org.gradle.domain.SimpleAtom;
+import org.gradle.interfaces.Atom;
+import org.gradle.interfaces.Translator;
+import org.gradle.pdbml.IDatablockType;
+import org.gradle.pdbml.v42.generated.DatablockType;
+import org.gradle.yoinkClasses.SimpleCoordFactory;
+import org.springframework.stereotype.Service;
+import org.wallerlab.yoink.api.model.molecular.Element;
+import org.wallerlab.yoink.api.service.math.Vector;
+import org.wallerlab.yoink.math.linear.SimpleVector3DFactory;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
-import org.gradle.interfaces.Atom;
-import org.gradle.pdbml.IDatablockType;
-import org.gradle.pdbml.v42.generated.DatablockType;
-import org.gradle.domain.SimpleAtom;
-import org.gradle.yoinkClasses.SimpleCoordFactory;
-import org.springframework.stereotype.Service;
-import org.wallerlab.yoink.api.model.molecular.Element;
-import org.gradle.interfaces.Translator;
-import org.wallerlab.yoink.api.service.math.Vector;
-import org.wallerlab.yoink.math.linear.SimpleVector3DFactory;
 
 @Service
 public class AtomTranslatorForYoink implements Translator<Atom, IDatablockType> {

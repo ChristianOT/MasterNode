@@ -15,11 +15,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.io.IOException;
@@ -101,4 +99,34 @@ public class YoinkBatchConfig {
         //context.close();
         return reader;
     }
+
+    @Autowired
+    @Qualifier("masterStep")
+    private Step masterStep;
+
+    /**
+     * Bean for building the master job executing masterStep.
+     *
+     * @return master
+     * @throws IOException
+     */
+    @Bean
+    public Job masterJob() throws IOException {
+        return jbf.get("master").incrementer(new RunIdIncrementer()).flow(masterStep).end().build();
+    }
+
+    /**
+     * Bean for building masterStep. No processor necessary.
+     *
+     * @return masterStep
+     * @throws IOException
+     */
+    @Bean
+    public Step masterStep() throws IOException {
+        return sbf.get("masterStep").chunk(1)
+                .reader((ItemReader<? extends Object>) context.getBean("dbReaderForYoink"))
+                .writer((ItemWriter<? super Object>) context.getBean("consoleWriterForYoink"))
+                .build();
+    }
+
 }

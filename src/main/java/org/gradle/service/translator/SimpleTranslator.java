@@ -1,25 +1,25 @@
 package org.gradle.service.translator;
 
-import java.util.HashSet;
-import java.util.Set;
-import java.util.stream.IntStream;
-
-import org.gradle.interfaces.Atom;
-import org.gradle.interfaces.MolecularSystem;
-import org.gradle.interfaces.Molecule;
-import org.gradle.yoinkClasses.SimpleCoordFactory;
 import org.gradle.domain.SimpleAtom;
 import org.gradle.domain.SimpleMolecularSystem;
 import org.gradle.domain.SimpleMolecule;
-
+import org.gradle.interfaces.Atom;
+import org.gradle.interfaces.MolecularSystem;
+import org.gradle.interfaces.Molecule;
 import org.gradle.pdbml.IDatablockType;
 import org.gradle.pdbml.v42.generated.AtomSiteType;
+import org.gradle.yoinkClasses.SimpleCoordFactory;
 import org.springframework.stereotype.Service;
 import org.wallerlab.yoink.api.model.molecular.Element;
 import org.wallerlab.yoink.api.service.math.Vector;
 import org.wallerlab.yoink.math.linear.SimpleVector3DFactory;
-import static java.util.stream.Collectors.toSet;
+
 import javax.xml.bind.JAXBElement;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.IntStream;
+
+import static java.util.stream.Collectors.toSet;
 
 
 @Service

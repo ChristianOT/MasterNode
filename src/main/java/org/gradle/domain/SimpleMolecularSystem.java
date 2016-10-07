@@ -7,7 +7,9 @@ import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
 
 @NodeEntity
 public class SimpleMolecularSystem implements MolecularSystem {
@@ -17,8 +19,11 @@ public class SimpleMolecularSystem implements MolecularSystem {
 
     private String nameOfSystem;
 
+    public SimpleMolecularSystem() {
+    }
+
     @Relationship(type = "MOLECULE", direction = Relationship.UNDIRECTED)
-    private final Set<Molecule> molecules;
+    public Set<Molecule> molecules;
 
     public SimpleMolecularSystem(String nameOfSystem, Set<Molecule> molecules) {
         this.nameOfSystem = nameOfSystem;
@@ -44,6 +49,14 @@ public class SimpleMolecularSystem implements MolecularSystem {
 
     public Set<Molecule> getMolecules() {
         return this.molecules;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getNameOfSystem() {
+        return nameOfSystem;
     }
 
     @Override

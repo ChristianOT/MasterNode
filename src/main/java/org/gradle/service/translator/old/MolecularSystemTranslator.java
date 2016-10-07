@@ -1,7 +1,5 @@
 package org.gradle.service.translator.old;
 
-import java.util.List;
-
 import org.gradle.domain.MolecularSystem;
 import org.gradle.domain.Molecule;
 import org.gradle.pdbml.IDatablockType;
@@ -9,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import javax.xml.bind.JAXBElement;
+import java.util.List;
 
 @Service
 public class MolecularSystemTranslator {

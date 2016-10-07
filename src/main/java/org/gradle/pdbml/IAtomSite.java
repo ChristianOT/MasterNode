@@ -1517,7 +1517,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB11 {
+    class AnisoB11 {
 
         @XmlValue
         protected BigDecimal value;
@@ -1589,7 +1589,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB11Esd {
+    class AnisoB11Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -1661,7 +1661,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB12 {
+    class AnisoB12 {
 
         @XmlValue
         protected BigDecimal value;
@@ -1733,7 +1733,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB12Esd {
+    class AnisoB12Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -1805,7 +1805,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB13 {
+    class AnisoB13 {
 
         @XmlValue
         protected BigDecimal value;
@@ -1877,7 +1877,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB13Esd {
+    class AnisoB13Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -1949,7 +1949,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB22 {
+    class AnisoB22 {
 
         @XmlValue
         protected BigDecimal value;
@@ -2021,7 +2021,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB22Esd {
+    class AnisoB22Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -2093,7 +2093,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB23 {
+    class AnisoB23 {
 
         @XmlValue
         protected BigDecimal value;
@@ -2165,7 +2165,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB23Esd {
+    class AnisoB23Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -2237,7 +2237,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB33 {
+    class AnisoB33 {
 
         @XmlValue
         protected BigDecimal value;
@@ -2309,7 +2309,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoB33Esd {
+    class AnisoB33Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -2381,7 +2381,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU11 {
+    class AnisoU11 {
 
         @XmlValue
         protected BigDecimal value;
@@ -2453,7 +2453,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU11Esd {
+    class AnisoU11Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -2525,7 +2525,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU12 {
+    class AnisoU12 {
 
         @XmlValue
         protected BigDecimal value;
@@ -2597,7 +2597,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU12Esd {
+    class AnisoU12Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -2669,7 +2669,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU13 {
+    class AnisoU13 {
 
         @XmlValue
         protected BigDecimal value;
@@ -2741,7 +2741,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU13Esd {
+    class AnisoU13Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -2813,7 +2813,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU22 {
+    class AnisoU22 {
 
         @XmlValue
         protected BigDecimal value;
@@ -2885,7 +2885,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU22Esd {
+    class AnisoU22Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -2957,7 +2957,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU23 {
+    class AnisoU23 {
 
         @XmlValue
         protected BigDecimal value;
@@ -3029,7 +3029,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU23Esd {
+    class AnisoU23Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -3101,7 +3101,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU33 {
+    class AnisoU33 {
 
         @XmlValue
         protected BigDecimal value;
@@ -3173,7 +3173,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class AnisoU33Esd {
+    class AnisoU33Esd {
 
         @XmlValue
         protected BigDecimal value;
@@ -3245,7 +3245,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class BEquivGeomMeanEsd {
+    class BEquivGeomMeanEsd {
 
         @XmlValue
         protected BigDecimal value;
@@ -3317,7 +3317,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class BIsoOrEquiv {
+    class BIsoOrEquiv {
 
         @XmlValue
         protected BigDecimal value;
@@ -3389,7 +3389,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class BIsoOrEquivEsd {
+    class BIsoOrEquivEsd {
 
         @XmlValue
         protected BigDecimal value;
@@ -3461,7 +3461,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class CartnX {
+    class CartnX {
 
         @XmlValue
         protected BigDecimal value;
@@ -3533,7 +3533,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class CartnXEsd {
+    class CartnXEsd {
 
         @XmlValue
         protected BigDecimal value;
@@ -3605,7 +3605,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class CartnY {
+    class CartnY {
 
         @XmlValue
         protected BigDecimal value;
@@ -3677,7 +3677,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class CartnYEsd {
+    class CartnYEsd {
 
         @XmlValue
         protected BigDecimal value;
@@ -3749,7 +3749,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class CartnZ {
+    class CartnZ {
 
         @XmlValue
         protected BigDecimal value;
@@ -3821,7 +3821,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class CartnZEsd {
+    class CartnZEsd {
 
         @XmlValue
         protected BigDecimal value;
@@ -3893,7 +3893,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class UEquivGeomMeanEsd {
+    class UEquivGeomMeanEsd {
 
         @XmlValue
         protected BigDecimal value;
@@ -3965,7 +3965,7 @@ public interface IAtomSite<T, K> {
     @XmlType(name = "", propOrder = {
             "value"
     })
-    public static class UIsoOrEquivEsd {
+    class UIsoOrEquivEsd {
 
         @XmlValue
         protected BigDecimal value;

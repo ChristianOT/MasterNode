@@ -7,9 +7,6 @@ import org.gradle.service.reader.PdbmlFileReader
 import org.gradle.service.translator.SimpleTranslator
 import org.springframework.core.io.Resource
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver
-import org.wallerlab.yoink.api.service.math.Vector
-import org.wallerlab.yoink.math.linear.SimpleVector3DFactory
-import org.wallerlab.yoink.molecular.domain.SimpleCoordFactory
 import spock.lang.Specification
 
 import javax.xml.bind.JAXBContext

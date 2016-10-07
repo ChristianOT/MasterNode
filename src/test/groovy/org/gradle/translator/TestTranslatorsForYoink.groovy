@@ -1,5 +1,6 @@
 package org.gradle.translator
 
+import org.gradle.domain.SimpleMolecularSystem
 import org.gradle.service.reader.PdbmlFileReader
 import org.gradle.yoinkTranslator.AtomTranslatorForYoink
 import org.gradle.yoinkTranslator.MolecularSystemTranslatorForYoink
@@ -7,11 +8,7 @@ import org.gradle.yoinkTranslator.MoleculeTranslatorForYoink
 import org.springframework.core.io.Resource
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver
 import org.wallerlab.yoink.api.model.molecular.Atom
-import org.wallerlab.yoink.api.model.molecular.MolecularSystem
 import org.wallerlab.yoink.api.model.molecular.Molecule
-import org.wallerlab.yoink.api.service.math.Vector
-import org.wallerlab.yoink.math.linear.SimpleVector3DFactory
-import org.wallerlab.yoink.molecular.domain.SimpleCoordFactory
 import spock.lang.Specification
 
 import javax.xml.bind.JAXBContext
@@ -45,6 +42,6 @@ class TestTranslatorsForYoink extends Specification {
         moleculeTranslator.atomTranslatorForYoink = atomTranslator
         msTranslator.moleculeTranslatorForYoink = moleculeTranslator
         then:
-        assert msTranslator.translate(reader.read().getValue()) instanceof Set<MolecularSystem>
+        assert msTranslator.translate(reader.read().getValue()) instanceof SimpleMolecularSystem
     }
 }

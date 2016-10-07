@@ -16,10 +16,10 @@ public class SimpleMolecule implements Molecule {
     @GraphId
     private Long id;
 
-    private final int index;
+    private int index;
 
     @Relationship(type="ATOM",direction=Relationship.UNDIRECTED)
-    private final Set<Atom> atoms;
+    public Set<Atom> atoms;
     protected Name name;
     private Coord centerOfMass;
 

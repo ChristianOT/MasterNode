@@ -1,6 +1,5 @@
 package org.gradle.interfaces;
 
-import java.util.List;
 import java.util.Set;
 
 

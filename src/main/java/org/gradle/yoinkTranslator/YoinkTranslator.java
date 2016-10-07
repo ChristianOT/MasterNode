@@ -1,14 +1,14 @@
 package org.gradle.yoinkTranslator;
 
+import org.gradle.domain.SimpleAtom;
+import org.gradle.domain.SimpleMolecularSystem;
+import org.gradle.domain.SimpleMolecule;
 import org.gradle.interfaces.Atom;
 import org.gradle.interfaces.MolecularSystem;
 import org.gradle.interfaces.Molecule;
 import org.gradle.interfaces.Translator;
 import org.gradle.pdbml.IDatablockType;
 import org.gradle.pdbml.v42.generated.DatablockType;
-import org.gradle.domain.SimpleAtom;
-import org.gradle.domain.SimpleMolecularSystem;
-import org.gradle.domain.SimpleMolecule;
 import org.wallerlab.yoink.api.model.molecular.Coord;
 import org.wallerlab.yoink.api.model.molecular.Element;
 import org.wallerlab.yoink.api.service.Factory;

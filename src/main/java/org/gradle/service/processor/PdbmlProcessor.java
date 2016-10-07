@@ -24,7 +24,6 @@ public class PdbmlProcessor implements ItemProcessor<JAXBElement<IDatablockType>
     @Override
     public MolecularSystem process(JAXBElement<IDatablockType> item) throws Exception {
         if (item.getValue().getClass() == DatablockType.class) {
-            System.out.println("inside processor");
             return mst.translateToMolecularSystem(item);
         } else {
             return null;

@@ -16,30 +16,24 @@ import javax.xml.bind.JAXBContext
 /**
  * Created by christian on 05/10/2016.
  */
-class TestDatabaseWriter extends Specification{
+class TestDatabaseWriter extends Specification {
 
     def "test writing to db"() {
-
         PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
         Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
         def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
-
         def atomTranslator = new AtomTranslator()
         def moleTranslator = new MoleculeTranslator()
         def msTranslator = new MolecularSystemTranslator()
         def writer = new DatabaseWriter()
         def list = new ArrayList<MolecularSystem>()
-
         def repo = Mock(MolecularSystemRepository)
-
         when:
-        moleTranslator.at=atomTranslator
-        msTranslator.mt=moleTranslator
+        moleTranslator.at = atomTranslator
+        msTranslator.mt = moleTranslator
         list.add(msTranslator.translateToMolecularSystem(reader.read()))
         writer.msr = repo
-
         then:
         writer.write(list)
-
     }
 }

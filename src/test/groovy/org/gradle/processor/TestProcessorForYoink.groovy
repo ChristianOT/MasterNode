@@ -1,6 +1,6 @@
 package org.gradle.processor
 
-import org.gradle.interfaces.MolecularSystem
+import org.gradle.domain.SimpleMolecularSystem
 import org.gradle.service.reader.PdbmlFileReader
 import org.gradle.yoinkProcessor.ProcessorForYoink
 import org.gradle.yoinkTranslator.AtomTranslatorForYoink
@@ -8,9 +8,6 @@ import org.gradle.yoinkTranslator.MolecularSystemTranslatorForYoink
 import org.gradle.yoinkTranslator.MoleculeTranslatorForYoink
 import org.springframework.core.io.Resource
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver
-import org.wallerlab.yoink.api.service.math.Vector
-import org.wallerlab.yoink.math.linear.SimpleVector3DFactory
-import org.wallerlab.yoink.molecular.domain.SimpleCoordFactory
 import spock.lang.Specification
 
 import javax.xml.bind.JAXBContext
@@ -36,7 +33,7 @@ class TestProcessorForYoink extends Specification {
         processor.molecularSystemTranslatorForYoink = msTranslator
 
         then:
-        assert processor.process(reader.read()) instanceof List<MolecularSystem>
+        assert processor.process(reader.read()) instanceof SimpleMolecularSystem
 
     }
 }
