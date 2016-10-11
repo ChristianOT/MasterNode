@@ -5,7 +5,9 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
+import org.springframework.batch.core.job.SimpleJob;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
+import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
@@ -21,6 +23,8 @@ import org.springframework.core.io.Resource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by christian on 05/10/2016.
@@ -50,7 +54,6 @@ public class YoinkBatchConfig {
     /**
      * Bean for building the bootstrap job executing bootstrapStep.
      *
-     * @param jbf, JobBuilderFactory
      * @return bootstrap
      * @throws IOException
      */
@@ -62,7 +65,6 @@ public class YoinkBatchConfig {
     /**
      * Bean for building the bootstrap step.
      *
-     * @param sbf, StepBuilderFactory
      * @return bootstrapStep
      * @throws IOException
      */
@@ -104,6 +106,8 @@ public class YoinkBatchConfig {
     @Qualifier("masterStep")
     private Step masterStep;
 
+    public JobRepository jobRepository;
+
     /**
      * Bean for building the master job executing masterStep.
      *
@@ -125,6 +129,7 @@ public class YoinkBatchConfig {
     public Step masterStep() throws IOException {
         return sbf.get("masterStep").chunk(1)
                 .reader((ItemReader<? extends Object>) context.getBean("dbReaderForYoink"))
+                .processor((ItemProcessor<? super Object, ?>) context.getBean("dbProcessorForYoink"))
                 .writer((ItemWriter<? super Object>) context.getBean("consoleWriterForYoink"))
                 .build();
     }

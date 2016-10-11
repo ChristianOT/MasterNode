@@ -1,6 +1,6 @@
 package org.gradle.domain;
 
-import org.gradle.interfaces.Atom;
+import org.gradle.interfaces.domain.Atom;
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.wallerlab.yoink.api.model.molecular.Coord;
@@ -17,6 +17,8 @@ public class SimpleAtom implements Atom {
     protected Element elementType;
     private Coord coordinate;
     private RadialGrid radial_grid;
+
+    public SimpleAtom() { }
 
     public SimpleAtom(int index, Element elementType, Coord coordinate) {
         this.index = index;

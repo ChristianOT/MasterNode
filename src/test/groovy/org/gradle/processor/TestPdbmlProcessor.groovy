@@ -19,8 +19,9 @@ class TestPdbmlProcessor extends Specification{
 
     def "test processor"(){
         PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
-        def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
+        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/*.xml");
+        def readerV42 = new PdbmlFileReader(resources[0]/* Version 42: 4Y1G */, JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
+        def readerV40 = new PdbmlFileReader(resources[1]/* Version 40: 5A0C */, JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class))
         def atomTranslator = new AtomTranslator()
         def moleTranslator = new MoleculeTranslator()
         def msTranslator = new MolecularSystemTranslator()
@@ -30,6 +31,8 @@ class TestPdbmlProcessor extends Specification{
         msTranslator.mt=moleTranslator
         processor.mst = msTranslator
         then:
-        assert processor.process(reader.read()) instanceof MolecularSystem
-        }
+        assert processor.process(readerV40.read()) instanceof MolecularSystem
+        assert processor.process(readerV42.read()) instanceof MolecularSystem
+
+    }
 }

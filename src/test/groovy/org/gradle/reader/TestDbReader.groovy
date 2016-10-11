@@ -5,7 +5,7 @@ import org.gradle.dataBaseRepositories.MolecularSystemRepositoryForYoink
 import org.gradle.domain.MolecularSystem
 import org.gradle.domain.SimpleMolecularSystem
 import org.gradle.service.reader.DbReader
-import org.gradle.service.reader.DbReaderForYoink
+import org.gradle.forYoink.yoinkReader.DbReaderForYoink
 import spock.lang.Specification
 
 /**

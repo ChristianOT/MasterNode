@@ -2,7 +2,8 @@ package org.gradle.service.translator.old;
 
 import org.gradle.domain.MolecularSystem;
 import org.gradle.domain.Molecule;
-import org.gradle.pdbml.IDatablockType;
+import org.gradle.interfaces.service.Translator;
+import org.gradle.interfaces.pdbml.IDatablockType;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -10,13 +11,14 @@ import javax.xml.bind.JAXBElement;
 import java.util.List;
 
 @Service
-public class MolecularSystemTranslator {
+public class MolecularSystemTranslator implements Translator<MolecularSystem,JAXBElement> {
 
     @Resource
     public MoleculeTranslator mt;
 
-    public MolecularSystem translateToMolecularSystem(JAXBElement<IDatablockType> item) {
-        List<Molecule> molecules = mt.translateToMolecule(item);
+    @Override
+    public MolecularSystem translate(JAXBElement item) {
+        List<Molecule> molecules = mt.translateToMolecule((JAXBElement<IDatablockType>) item);
         int numOfAtoms = 0;
         MolecularSystem molecularSystem = new MolecularSystem();
         for (int i = 0; i < molecules.size(); i++) {
@@ -32,4 +34,5 @@ public class MolecularSystemTranslator {
     public String getMoleculeName(Molecule molecule) {
         return molecule.getFileName().substring(0, 4);
     }
+
 }

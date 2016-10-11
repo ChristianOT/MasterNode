@@ -8,7 +8,9 @@
 
 package org.gradle.pdbml.v42.generated;
 
-import org.gradle.pdbml.IAtomSiteType;
+import org.gradle.interfaces.pdbml.IAtomSite;
+import org.gradle.interfaces.pdbml.IAtomSiteType;
+import org.gradle.interfaces.pdbml.ICartn;
 
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.*;
@@ -1569,7 +1571,7 @@ public class AtomSiteType implements IAtomSiteType<AtomSiteType.AtomSite>{
     @XmlType(name = "", propOrder = {
 
     })
-    public static class AtomSite {
+    public static class AtomSite implements IAtomSite {
 
         @XmlElementRef(name = "B_equiv_geom_mean", namespace = "http://pdbml.pdb.org/schema/pdbx-v42.xsd", type = JAXBElement.class, required = false)
         protected JAXBElement<BigDecimal> bEquivGeomMean;
@@ -6253,7 +6255,7 @@ public class AtomSiteType implements IAtomSiteType<AtomSiteType.AtomSite>{
         @XmlType(name = "", propOrder = {
             "value"
         })
-        public static class CartnX {
+        public static class CartnX implements ICartn{
 
             @XmlValue
             protected BigDecimal value;
@@ -6419,7 +6421,7 @@ public class AtomSiteType implements IAtomSiteType<AtomSiteType.AtomSite>{
         @XmlType(name = "", propOrder = {
             "value"
         })
-        public static class CartnY {
+        public static class CartnY implements ICartn{
 
             @XmlValue
             protected BigDecimal value;
@@ -6585,7 +6587,7 @@ public class AtomSiteType implements IAtomSiteType<AtomSiteType.AtomSite>{
         @XmlType(name = "", propOrder = {
             "value"
         })
-        public static class CartnZ {
+        public static class CartnZ implements ICartn{
 
             @XmlValue
             protected BigDecimal value;

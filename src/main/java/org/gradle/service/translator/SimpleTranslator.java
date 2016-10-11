@@ -3,12 +3,13 @@ package org.gradle.service.translator;
 import org.gradle.domain.SimpleAtom;
 import org.gradle.domain.SimpleMolecularSystem;
 import org.gradle.domain.SimpleMolecule;
-import org.gradle.interfaces.Atom;
-import org.gradle.interfaces.MolecularSystem;
-import org.gradle.interfaces.Molecule;
-import org.gradle.pdbml.IDatablockType;
-import org.gradle.pdbml.v42.generated.AtomSiteType;
-import org.gradle.yoinkClasses.SimpleCoordFactory;
+import org.gradle.interfaces.domain.Atom;
+import org.gradle.interfaces.domain.MolecularSystem;
+import org.gradle.interfaces.domain.Molecule;
+import org.gradle.interfaces.pdbml.IAtomSite;
+import org.gradle.interfaces.pdbml.ICartn;
+import org.gradle.interfaces.pdbml.IDatablockType;
+import org.gradle.forYoink.yoinkClasses.SimpleCoordFactory;
 import org.springframework.stereotype.Service;
 import org.wallerlab.yoink.api.model.molecular.Element;
 import org.wallerlab.yoink.api.service.math.Vector;
@@ -50,10 +51,10 @@ public class SimpleTranslator {
     public Set<Atom> translateToAtom(JAXBElement<IDatablockType> item) {
         return IntStream.range(0, item.getValue().getAtomSiteCategory().getAtomSite().size())
                 .mapToObj(i -> {
-                    AtomSiteType.AtomSite atom = (AtomSiteType.AtomSite)item.getValue().getAtomSiteCategory().getAtomSite().get(i);
-                    Double x = atom.getCartnX().getValue().getValue().doubleValue();
-                    Double y = atom.getCartnY().getValue().getValue().doubleValue();
-                    Double z = atom.getCartnZ().getValue().getValue().doubleValue();
+                    IAtomSite atom = (IAtomSite) item.getValue().getAtomSiteCategory().getAtomSite().get(i);
+                    Double x = ((ICartn) atom.getCartnX().getValue()).getValue().doubleValue();
+                    Double y = ((ICartn) atom.getCartnY().getValue()).getValue().doubleValue();
+                    Double z = ((ICartn) atom.getCartnZ().getValue()).getValue().doubleValue();
                     double[] coords = {x, y, z};
                     return new SimpleAtom(Integer.parseInt(atom.getId()), Element.valueOf(atom.getTypeSymbol())
                             , simpleCoordFactory.create(coords));

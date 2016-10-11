@@ -20,8 +20,9 @@ class TestDatabaseWriter extends Specification {
 
     def "test writing to db"() {
         PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
-        def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
+        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/*.xml");
+        def readerV42 = new PdbmlFileReader(resources[0]/* Version 42: 4Y1G */, JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
+        def readerV40 = new PdbmlFileReader(resources[1]/* Version 40: 5A0C */, JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class))
         def atomTranslator = new AtomTranslator()
         def moleTranslator = new MoleculeTranslator()
         def msTranslator = new MolecularSystemTranslator()
@@ -31,7 +32,7 @@ class TestDatabaseWriter extends Specification {
         when:
         moleTranslator.at = atomTranslator
         msTranslator.mt = moleTranslator
-        list.add(msTranslator.translateToMolecularSystem(reader.read()))
+        list.addAll(msTranslator.translate(readerV40.read()),msTranslator.translate(readerV42.read()))
         writer.msr = repo
         then:
         writer.write(list)

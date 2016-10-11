@@ -1,7 +1,7 @@
 package org.gradle.writer
 
 import org.gradle.service.writer.ConsoleWriter
-import org.gradle.yoinkWriter.ConsoleWriterForYoink
+import org.gradle.forYoink.yoinkWriter.ConsoleWriterForYoink
 import spock.lang.Specification
 
 /**

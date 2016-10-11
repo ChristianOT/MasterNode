@@ -1,7 +1,7 @@
 package org.gradle.domain;
 
-import org.gradle.interfaces.Atom;
-import org.gradle.interfaces.Molecule;
+import org.gradle.interfaces.domain.Atom;
+import org.gradle.interfaces.domain.Molecule;
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
@@ -18,10 +18,12 @@ public class SimpleMolecule implements Molecule {
 
     private int index;
 
-    @Relationship(type="ATOM",direction=Relationship.UNDIRECTED)
+    @Relationship(type="HAS",direction=Relationship.UNDIRECTED)
     public Set<Atom> atoms;
     protected Name name;
     private Coord centerOfMass;
+
+    public SimpleMolecule() { }
 
     public SimpleMolecule(int index, Set<Atom> atoms) {
         this.index = index;

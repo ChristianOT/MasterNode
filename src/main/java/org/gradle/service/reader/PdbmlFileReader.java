@@ -46,7 +46,7 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBEl
                 Unmarshaller jaxbUnmarshaller = this.jaxbContext.createUnmarshaller();
                 pdb = (JAXBElement) jaxbUnmarshaller.unmarshal(resource.getInputStream());
                 //resource.getFile().delete();
-                resource = null;
+                resource = null; //prevents multiple reading of the same file (perhaps other reader required)
             }catch(UnmarshalException e){
                 System.out.println("Incompatible pdbml version. Wrong profile selected.");
             }

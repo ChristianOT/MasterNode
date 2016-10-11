@@ -1,8 +1,8 @@
 package org.gradle.domain;
 
-import org.gradle.interfaces.Atom;
-import org.gradle.interfaces.MolecularSystem;
-import org.gradle.interfaces.Molecule;
+import org.gradle.interfaces.domain.Atom;
+import org.gradle.interfaces.domain.MolecularSystem;
+import org.gradle.interfaces.domain.Molecule;
 import org.neo4j.ogm.annotation.GraphId;
 import org.neo4j.ogm.annotation.NodeEntity;
 import org.neo4j.ogm.annotation.Relationship;
@@ -19,11 +19,10 @@ public class SimpleMolecularSystem implements MolecularSystem {
 
     private String nameOfSystem;
 
-    public SimpleMolecularSystem() {
-    }
-
-    @Relationship(type = "MOLECULE", direction = Relationship.UNDIRECTED)
+    @Relationship(type = "BELONGS_TO", direction = Relationship.UNDIRECTED)
     public Set<Molecule> molecules;
+
+    public SimpleMolecularSystem() { }
 
     public SimpleMolecularSystem(String nameOfSystem, Set<Molecule> molecules) {
         this.nameOfSystem = nameOfSystem;

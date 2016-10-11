@@ -8,7 +8,7 @@
 
 package org.gradle.pdbml.v40.generated;
 
-import org.gradle.pdbml.IDatablockType;
+import org.gradle.interfaces.pdbml.IDatablockType;
 
 import javax.xml.bind.annotation.*;
 

@@ -1,8 +1,9 @@
 package org.gradle.service.translator.old;
 
 import org.gradle.domain.Atom;
-import org.gradle.pdbml.IDatablockType;
-import org.gradle.pdbml.v42.generated.AtomSiteType;
+import org.gradle.interfaces.pdbml.IAtomSite;
+import org.gradle.interfaces.pdbml.ICartn;
+import org.gradle.interfaces.pdbml.IDatablockType;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.JAXBElement;
@@ -16,14 +17,13 @@ public class AtomTranslator {
     public List<Atom> translateToAtom(JAXBElement<IDatablockType> item) {
         List<Atom> atoms = new ArrayList<Atom>();
         System.out.println("number of Atoms: " + item.getValue().getAtomSiteCategory().getAtomSite().size());
-        List<AtomSiteType.AtomSite> dt = item.getValue().getAtomSiteCategory().getAtomSite();
+        List<IAtomSite> dt = item.getValue().getAtomSiteCategory().getAtomSite();
         int nAtoms = dt.size();
         int i = 0;
         for (i = 0; i < nAtoms; i++) {
-
-            Double cx = dt.get(i).getCartnX().getValue().getValue().doubleValue();
-            Double cy = dt.get(i).getCartnY().getValue().getValue().doubleValue();
-            Double cz = dt.get(i).getCartnZ().getValue().getValue().doubleValue();
+            Double cx = ((ICartn)dt.get(i).getCartnX().getValue()).getValue().doubleValue();
+            Double cy = ((ICartn)dt.get(i).getCartnY().getValue()).getValue().doubleValue();
+            Double cz = ((ICartn)dt.get(i).getCartnZ().getValue()).getValue().doubleValue();
             double[] coords = {cx, cy, cz};
 
             String element = dt.get(i).getTypeSymbol();

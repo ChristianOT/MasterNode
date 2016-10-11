@@ -1,11 +1,12 @@
 package org.gradle.processor
 
 import org.gradle.domain.SimpleMolecularSystem
+import org.gradle.forYoink.yoinkTranslator.TranslatorFINAL
 import org.gradle.service.reader.PdbmlFileReader
-import org.gradle.yoinkProcessor.ProcessorForYoink
-import org.gradle.yoinkTranslator.AtomTranslatorForYoink
-import org.gradle.yoinkTranslator.MolecularSystemTranslatorForYoink
-import org.gradle.yoinkTranslator.MoleculeTranslatorForYoink
+import org.gradle.forYoink.yoinkProcessor.ProcessorForYoink
+import org.gradle.forYoink.yoinkTranslator.toDelete.AtomTranslatorForYoink
+import org.gradle.forYoink.yoinkTranslator.toDelete.MolecularSystemTranslatorForYoink
+import org.gradle.forYoink.yoinkTranslator.toDelete.MoleculeTranslatorForYoink
 import org.springframework.core.io.Resource
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver
 import spock.lang.Specification
@@ -20,20 +21,19 @@ class TestProcessorForYoink extends Specification {
     def "test processing JAXB<IDatablockType> to List<MolecularSystem>"() {
 
         PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/4y1g.xml");
-        def reader = new PdbmlFileReader(resources[0], JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
+        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/*.xml");
+        def readerV42 = new PdbmlFileReader(resources[0]/* Version 42: 4Y1G */, JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
+        def readerV40 = new PdbmlFileReader(resources[1]/* Version 40: 5A0C */, JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class))
         def processor = new ProcessorForYoink()
-        def atomTranslator = new AtomTranslatorForYoink()
-        def moleculeTranslator = new MoleculeTranslatorForYoink()
-        def msTranslator = new MolecularSystemTranslatorForYoink()
+        def translator = new TranslatorFINAL()
 
         when:
-        moleculeTranslator.atomTranslatorForYoink = atomTranslator
-        msTranslator.moleculeTranslatorForYoink = moleculeTranslator
-        processor.molecularSystemTranslatorForYoink = msTranslator
+        processor.tf = translator
 
         then:
-        assert processor.process(reader.read()) instanceof SimpleMolecularSystem
+        assert processor.process(readerV40.read()) instanceof SimpleMolecularSystem
+        assert processor.process(readerV42.read()) instanceof SimpleMolecularSystem
+
 
     }
 }
