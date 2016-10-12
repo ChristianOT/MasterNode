@@ -24,20 +24,20 @@ class TestTranslatorFINAL extends Specification {
     def translator = new TranslatorFINAL()
     int i = 0
 
-//    def "test getProperties"() {
-//        when:
-//        def properties1 = translator.getProperties(readerV40.read().getValue(), i)
-//        def properties2 = translator.getProperties(readerV42.read().getValue(), i)
-//
-//        then:
-//        properties1.get(0) instanceof String
-//        properties1.get(1) instanceof String
-//        properties1.get(2) instanceof double[]
-//        properties2.get(0) instanceof String
-//        properties2.get(1) instanceof String
-//        properties2.get(2) instanceof double[]
-//
-//    }
+    def "test getProperties"() {
+        when:
+        def properties1 = translator.getProperties(readerV40.read().getValue(), i)
+        def properties2 = translator.getProperties(readerV42.read().getValue(), i)
+
+        then:
+        properties1.get(0) instanceof String
+        properties1.get(1) instanceof String
+        properties1.get(2) instanceof double[]
+        properties2.get(0) instanceof String
+        properties2.get(1) instanceof String
+        properties2.get(2) instanceof double[]
+
+    }
 
     def "test translateToAtom"() {
         expect:

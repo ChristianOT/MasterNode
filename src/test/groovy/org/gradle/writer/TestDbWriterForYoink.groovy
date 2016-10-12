@@ -4,9 +4,6 @@ import org.gradle.dataBaseRepositories.MolecularSystemRepositoryForYoink
 import org.gradle.domain.SimpleMolecularSystem
 import org.gradle.forYoink.yoinkTranslator.TranslatorFINAL
 import org.gradle.service.reader.PdbmlFileReader
-import org.gradle.forYoink.yoinkTranslator.toDelete.AtomTranslatorForYoink
-import org.gradle.forYoink.yoinkTranslator.toDelete.MolecularSystemTranslatorForYoink
-import org.gradle.forYoink.yoinkTranslator.toDelete.MoleculeTranslatorForYoink
 import org.gradle.forYoink.yoinkWriter.DatabaseWriterForYoink
 import org.gradle.service.translator.SimpleTranslator
 import org.springframework.core.io.Resource
@@ -26,25 +23,6 @@ class TestDbWriterForYoink extends Specification {
     def readerV40 = new PdbmlFileReader(resources[1]/* Version 40: 5A0C */, JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class))
     def writer = new DatabaseWriterForYoink()
     def repo = Mock(MolecularSystemRepositoryForYoink)
-
-    def "test writing molecularSystem to dataBase"() {
-
-        def atomTranslator = new AtomTranslatorForYoink()
-        def moleculeTranslator = new MoleculeTranslatorForYoink()
-        def msTranslator = new MolecularSystemTranslatorForYoink()
-        moleculeTranslator.atomTranslatorForYoink = atomTranslator
-        msTranslator.moleculeTranslatorForYoink = moleculeTranslator
-
-        when:
-        def list = new ArrayList<SimpleMolecularSystem>()
-        list.addAll(msTranslator.translate(readerV40.read().getValue()), msTranslator.translate(readerV42.read().getValue()))
-        writer.msr = repo
-
-        then:
-        writer.write(list)
-
-
-    }
 
     def "test writing molecularSystem to db with SimpleTranslator"() {
 
