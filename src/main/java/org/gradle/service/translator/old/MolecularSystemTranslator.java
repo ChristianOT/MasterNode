@@ -14,11 +14,11 @@ import java.util.List;
 public class MolecularSystemTranslator implements Translator<MolecularSystem,JAXBElement> {
 
     @Resource
-    public MoleculeTranslator mt;
+    public Translator<List<Molecule>, JAXBElement<IDatablockType>> moleculeTranslator;
 
     @Override
     public MolecularSystem translate(JAXBElement item) {
-        List<Molecule> molecules = mt.translateToMolecule((JAXBElement<IDatablockType>) item);
+        List<Molecule> molecules = moleculeTranslator.translate((JAXBElement<IDatablockType>) item);
         int numOfAtoms = 0;
         MolecularSystem molecularSystem = new MolecularSystem();
         for (int i = 0; i < molecules.size(); i++) {

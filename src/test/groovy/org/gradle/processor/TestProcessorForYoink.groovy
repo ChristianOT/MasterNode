@@ -4,9 +4,7 @@ import org.gradle.domain.SimpleMolecularSystem
 import org.gradle.forYoink.yoinkTranslator.TranslatorFINAL
 import org.gradle.service.reader.PdbmlFileReader
 import org.gradle.forYoink.yoinkProcessor.ProcessorForYoink
-import org.gradle.forYoink.yoinkTranslator.toDelete.AtomTranslatorForYoink
-import org.gradle.forYoink.yoinkTranslator.toDelete.MolecularSystemTranslatorForYoink
-import org.gradle.forYoink.yoinkTranslator.toDelete.MoleculeTranslatorForYoink
+
 import org.springframework.core.io.Resource
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver
 import spock.lang.Specification

@@ -86,7 +86,7 @@ public class BatchConfig {
      */
     @Bean
     public Job bootstrapJob() throws IOException {
-        return jbf.get("bootstrap")
+        return jbf.get("bootstrapStep")
                 .incrementer(new RunIdIncrementer())
                 .flow(bootstrapStep)
                 .end()
@@ -100,11 +100,12 @@ public class BatchConfig {
      * @throws IOException
      */
     @Bean
-    public Step bootstrapStep() throws IOException {
+    public Step bootstrapStep(StepBuilderFactory sbf, ItemReader multiReader,
+                         ItemProcessor pdbmlProcessor, ItemWriter databaseWriter) throws IOException {
         return sbf.get("bootstrapStep").chunk(1)
-                .reader(multiReader())
-                .processor((ItemProcessor) context.getBean("pdbmlProcessor"))
-                .writer((ItemWriter) context.getBean("databaseWriter"))
+                .reader(multiReader)
+                .processor(pdbmlProcessor)
+                .writer(databaseWriter)
                 .build();
     }
 

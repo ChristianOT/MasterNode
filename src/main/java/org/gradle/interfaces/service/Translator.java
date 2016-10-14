@@ -3,8 +3,8 @@ package org.gradle.interfaces.service;
 import org.springframework.stereotype.Service;
 
 @Service
-public interface Translator<O, I> {
+public interface Translator<T, K> {
 
-    O translate(I i);
+    T translate(K k);
 
 }

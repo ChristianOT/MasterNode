@@ -27,8 +27,8 @@ class TestPdbmlProcessor extends Specification{
         def msTranslator = new MolecularSystemTranslator()
         def processor = new PdbmlProcessor()
         when:
-        moleTranslator.at=atomTranslator
-        msTranslator.mt=moleTranslator
+        moleTranslator.atomTranslator=atomTranslator
+        msTranslator.moleculeTranslator=moleTranslator
         processor.mst = msTranslator
         then:
         assert processor.process(readerV40.read()) instanceof MolecularSystem

@@ -4,6 +4,7 @@ import org.gradle.domain.Atom;
 import org.gradle.interfaces.pdbml.IAtomSite;
 import org.gradle.interfaces.pdbml.ICartn;
 import org.gradle.interfaces.pdbml.IDatablockType;
+import org.gradle.interfaces.service.Translator;
 import org.springframework.stereotype.Service;
 
 import javax.xml.bind.JAXBElement;
@@ -12,9 +13,9 @@ import java.util.List;
 
 
 @Service
-public class AtomTranslator {
+public class AtomTranslator implements Translator<List<Atom>,JAXBElement<IDatablockType>>{
 
-    public List<Atom> translateToAtom(JAXBElement<IDatablockType> item) {
+    public List<Atom> translate(JAXBElement<IDatablockType> item) {
         List<Atom> atoms = new ArrayList<Atom>();
         System.out.println("number of Atoms: " + item.getValue().getAtomSiteCategory().getAtomSite().size());
         List<IAtomSite> dt = item.getValue().getAtomSiteCategory().getAtomSite();

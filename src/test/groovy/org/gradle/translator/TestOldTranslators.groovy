@@ -29,24 +29,24 @@ class TestOldTranslators extends Specification {
 
     def "test translate to atom"() {
         expect:
-        assert atomTranslator.translateToAtom(readerV40.read()) instanceof List<Atom>
-        assert atomTranslator.translateToAtom(readerV42.read()) instanceof List<Atom>
+        assert atomTranslator.translate(readerV40.read()) instanceof List<Atom>
+        assert atomTranslator.translate(readerV42.read()) instanceof List<Atom>
 
     }
 
     def "test translate to molecule"() {
         when:
-        moleTranslator.at=atomTranslator
+        moleTranslator.atomTranslator=atomTranslator
         then:
-        assert moleTranslator.translateToMolecule(readerV40.read()) instanceof List<Molecule>
-        assert moleTranslator.translateToMolecule(readerV42.read()) instanceof List<Molecule>
+        assert moleTranslator.translate(readerV40.read()) instanceof List<Molecule>
+        assert moleTranslator.translate(readerV42.read()) instanceof List<Molecule>
 
     }
 
     def "test translate to molecularSystem"() {
         when:
-        moleTranslator.at=atomTranslator
-        msTranslator.mt=moleTranslator
+        moleTranslator.atomTranslator=atomTranslator
+        msTranslator.moleculeTranslator=moleTranslator
         then:
         assert msTranslator.translate(readerV40.read()) instanceof MolecularSystem
         assert msTranslator.translate(readerV42.read()) instanceof MolecularSystem

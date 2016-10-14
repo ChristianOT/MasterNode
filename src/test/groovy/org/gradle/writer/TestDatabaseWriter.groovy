@@ -30,9 +30,9 @@ class TestDatabaseWriter extends Specification {
         def list = new ArrayList<MolecularSystem>()
         def repo = Mock(MolecularSystemRepository)
         when:
-        moleTranslator.at = atomTranslator
-        msTranslator.mt = moleTranslator
-        list.addAll(msTranslator.translate(readerV40.read()),msTranslator.translate(readerV42.read()))
+        moleTranslator.atomTranslator = atomTranslator
+        msTranslator.moleculeTranslator = moleTranslator
+        list.addAll(msTranslator.translate(readerV40.read()), msTranslator.translate(readerV42.read()))
         writer.msr = repo
         then:
         writer.write(list)

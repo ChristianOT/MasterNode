@@ -3,6 +3,7 @@ package org.gradle.service.translator.old;
 import org.gradle.domain.Atom;
 import org.gradle.domain.Molecule;
 import org.gradle.interfaces.pdbml.IDatablockType;
+import org.gradle.interfaces.service.Translator;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -11,16 +12,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class MoleculeTranslator {
+public class MoleculeTranslator implements Translator<List<Molecule>, JAXBElement<IDatablockType>>{
 
     @Resource
-    public AtomTranslator at;
+    public Translator<List<Atom>,JAXBElement<IDatablockType>> atomTranslator;
 
     Integer solventCounter = 0;
     Integer singleAtomCounter = 0;
 
-    public List<Molecule> translateToMolecule(JAXBElement<IDatablockType> item) {
-        List<Atom> atoms = at.translateToAtom(item);
+    public List<Molecule> translate(JAXBElement<IDatablockType> item) {
+        List<Atom> atoms = atomTranslator.translate(item);
         List<Molecule> molecules = new ArrayList<Molecule>();
         //start for-loop
         for (int i = 0; i < atoms.size(); i++) {
