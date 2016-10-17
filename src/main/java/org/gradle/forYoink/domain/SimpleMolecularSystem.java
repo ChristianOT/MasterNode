@@ -20,7 +20,7 @@ public class SimpleMolecularSystem implements MolecularSystem {
     private String nameOfSystem;
 
     @Relationship(type = "BELONGS_TO", direction = Relationship.UNDIRECTED)
-    public Set<Molecule> molecules;
+    private Set<Molecule> molecules;
 
     public SimpleMolecularSystem() { }
 

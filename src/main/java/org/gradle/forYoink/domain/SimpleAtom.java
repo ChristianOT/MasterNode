@@ -13,12 +13,13 @@ public class SimpleAtom implements Atom {
     @GraphId
     private Long id;
 
-    protected int index;
-    protected Element elementType;
+    private int index;
+    private Element elementType;
     private Coord coordinate;
     private RadialGrid radial_grid;
 
-    public SimpleAtom() { }
+    public SimpleAtom() {
+    }
 
     public SimpleAtom(int index, Element elementType, Coord coordinate) {
         this.index = index;

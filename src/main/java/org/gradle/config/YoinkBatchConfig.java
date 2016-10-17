@@ -5,7 +5,6 @@ import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.job.SimpleJob;
 import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.core.repository.JobRepository;
 import org.springframework.batch.item.ItemProcessor;
@@ -23,8 +22,6 @@ import org.springframework.core.io.Resource;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by christian on 05/10/2016.
@@ -39,12 +36,15 @@ public class YoinkBatchConfig {
      * getting copy of application context
      */
     @Autowired
+    private
     ConfigurableApplicationContext context;
 
     @Autowired
+    private
     JobBuilderFactory jbf;
 
     @Autowired
+    private
     StepBuilderFactory sbf;
 
     @Autowired
@@ -58,7 +58,7 @@ public class YoinkBatchConfig {
      * @throws IOException
      */
     @Bean
-    public Job bootstrapJob() throws IOException {
+    public Job bootstrapJob() {
         return jbf.get("bootstrap").incrementer(new RunIdIncrementer()).flow(bootstrapStep).end().build();
     }
 
@@ -69,7 +69,7 @@ public class YoinkBatchConfig {
      * @throws IOException
      */
     @Bean
-    public Step bootstrapStep() throws IOException {
+    public Step bootstrapStep() {
         return sbf.get("bootstrapStep").chunk(1)
                 .reader(multiReader())
                 .processor((ItemProcessor) context.getBean("processorForYoink"))
@@ -87,7 +87,7 @@ public class YoinkBatchConfig {
      * @throws IOException
      */
     @Bean
-    public ItemReader multiReader() {
+    private ItemReader multiReader() {
         MultiResourceItemReader reader = new MultiResourceItemReader();
         Resource[] resources;
         try {
@@ -115,7 +115,7 @@ public class YoinkBatchConfig {
      * @throws IOException
      */
     @Bean
-    public Job masterJob() throws IOException {
+    public Job masterJob() {
         return jbf.get("master").incrementer(new RunIdIncrementer()).flow(masterStep).end().build();
     }
 
@@ -126,7 +126,7 @@ public class YoinkBatchConfig {
      * @throws IOException
      */
     @Bean
-    public Step masterStep() throws IOException {
+    public Step masterStep() {
         return sbf.get("masterStep").chunk(1)
                 .reader((ItemReader<? extends Object>) context.getBean("dbReaderForYoink"))
                 .processor((ItemProcessor<? super Object, ?>) context.getBean("dbProcessorForYoink"))

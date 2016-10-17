@@ -17,7 +17,7 @@ import java.util.List;
 public class DatabaseWriter implements ItemWriter<MolecularSystem>{
 
 	@Autowired
-	MolecularSystemRepository msr;
+	private	MolecularSystemRepository msr;
 	
 	@Override
 	public void write(List<? extends MolecularSystem> items) throws Exception {

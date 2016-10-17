@@ -21,13 +21,11 @@ public class SimpleCoordFactory implements Factory<Coord, double[]> {
 
     public Coord create() {
         Vector coordVector = this.myVector3D.create(0.0D, 0.0D, 0.0D);
-        SimpleCoord newCooord = new SimpleCoord(coordVector);
-        return newCooord;
+        return new SimpleCoord(coordVector);
     }
 
     public Coord create(double[] d) {
         Vector coordVector = this.myVector3D.create(d);
-        SimpleCoord newCooord = new SimpleCoord(coordVector);
-        return newCooord;
+        return new SimpleCoord(coordVector);
     }
 }

@@ -2,7 +2,6 @@ package org.gradle.service.processor;
 
 import org.gradle.domain.MolecularSystem;
 import org.gradle.interfaces.pdbml.IDatablockType;
-import org.gradle.pdbml.v42.generated.DatablockType;
 import org.gradle.service.translator.old.MolecularSystemTranslator;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Service;

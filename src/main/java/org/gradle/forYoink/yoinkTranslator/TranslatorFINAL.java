@@ -28,11 +28,11 @@ import java.util.Set;
 @Service
 public class TranslatorFINAL implements Translator<MolecularSystem, JAXBElement<IDatablockType>> {
 
-    public Vector.Vector3DType myVector3D = Vector.Vector3DType.COMMONS;
+    private Vector.Vector3DType myVector3D = Vector.Vector3DType.COMMONS;
 
-    public SimpleVector3DFactory simpleVector3DFactory = new SimpleVector3DFactory(myVector3D);
+    private SimpleVector3DFactory simpleVector3DFactory = new SimpleVector3DFactory(myVector3D);
 
-    public SimpleCoordFactory coordFactory = new SimpleCoordFactory(simpleVector3DFactory);
+    private SimpleCoordFactory coordFactory = new SimpleCoordFactory(simpleVector3DFactory);
 
     private int moleculeCounter = 0;
 

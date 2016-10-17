@@ -12,13 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class MoleculeTranslator implements Translator<List<Molecule>, JAXBElement<IDatablockType>>{
+public class MoleculeTranslator implements Translator<List<Molecule>, JAXBElement<IDatablockType>> {
 
     @Resource
-    public Translator<List<Atom>,JAXBElement<IDatablockType>> atomTranslator;
+    public Translator<List<Atom>, JAXBElement<IDatablockType>> atomTranslator;
 
-    Integer solventCounter = 0;
-    Integer singleAtomCounter = 0;
+    private Integer solventCounter = 0;
+    private Integer singleAtomCounter = 0;
 
     public List<Molecule> translate(JAXBElement<IDatablockType> item) {
         List<Atom> atoms = atomTranslator.translate(item);
@@ -28,7 +28,7 @@ public class MoleculeTranslator implements Translator<List<Molecule>, JAXBElemen
             /*
              * Check GroupPDBx
 			 */
-            if (atoms.get(i).getGroupPDBx().matches("ATOM") == true) {
+            if (atoms.get(i).getGroupPDBx().matches("ATOM")) {
                 /*
                  * Check Chain
 				 */
@@ -67,7 +67,7 @@ public class MoleculeTranslator implements Translator<List<Molecule>, JAXBElemen
                  * Check LabelCompId
 				 */
 
-                if (atoms.get(i).getLabelCompId().matches("HOH") == true) {
+                if (atoms.get(i).getLabelCompId().matches("HOH")) {
                     Molecule solvent = new Molecule();
                     solvent.atoms.add(atoms.get(i));
                     solvent.setFileName(item.getValue().getDatablockName() + ": " + atoms.get(i).getLabelCompId());

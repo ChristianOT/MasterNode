@@ -21,42 +21,42 @@ import java.util.List;
 @Service
 public class JmsMessageWriter implements ItemWriter<List<String>> {
 
-	@Autowired
-	ConfigurableApplicationContext context;
+    @Autowired
+    ConfigurableApplicationContext context;
 
-	public Integer messageCounter = 0;
+    private Integer messageCounter = 0;
 
-	private JmsTemplate jmsTemplate;
+    private JmsTemplate jmsTemplate;
 
-	/*
-	 * send a message for every String in List<String>
-	 */
-	@Override
-	public void write(List<? extends List<String>> items) throws Exception {
-		System.out.println("########### Creating Message ###########");
-		for (List<String> mss : items) {
-			for (String ms : mss) {
-				messageCounter++;
-				MessageCreator messageCreator = new MessageCreator() {
-					public Message createMessage(Session session) throws JMSException {
-						return session.createTextMessage(ms);
-					}
-				};
-				System.out.println("Sending message.");
-				jmsTemplate.send("request", messageCreator);
-				System.out.println("Waiting for answer.");
-				// if (messageCounter==mss.size())
-				// receiveMessage();
-			}
-		}
-	}
+    /*
+     * send a message for every String in List<String>
+     */
+    @Override
+    public void write(List<? extends List<String>> items) throws Exception {
+        System.out.println("########### Creating Message ###########");
+        for (List<String> mss : items) {
+            for (String ms : mss) {
+                messageCounter++;
+                MessageCreator messageCreator = new MessageCreator() {
+                    public Message createMessage(Session session) throws JMSException {
+                        return session.createTextMessage(ms);
+                    }
+                };
+                System.out.println("Sending message.");
+                jmsTemplate.send("request", messageCreator);
+                System.out.println("Waiting for answer.");
+                // if (messageCounter==mss.size())
+                // receiveMessage();
+            }
+        }
+    }
 
-	public JmsTemplate getJmsTemplate() {
-		return jmsTemplate;
-	}
+    public JmsTemplate getJmsTemplate() {
+        return jmsTemplate;
+    }
 
-	public void setJmsTemplate(JmsTemplate jmsTemplate) {
-		this.jmsTemplate = jmsTemplate;
-	}
+    public void setJmsTemplate(JmsTemplate jmsTemplate) {
+        this.jmsTemplate = jmsTemplate;
+    }
 
 }

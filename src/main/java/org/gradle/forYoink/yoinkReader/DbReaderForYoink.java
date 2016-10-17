@@ -17,7 +17,7 @@ import java.util.List;
 public class DbReaderForYoink implements ItemReader<List<MolecularSystem>> {
 
     @Resource
-    MolecularSystemRepositoryForYoink molecularSystemRepositoryForYoink;
+    private MolecularSystemRepositoryForYoink molecularSystemRepositoryForYoink;
 
     @Override
     public List<MolecularSystem> read() throws Exception {

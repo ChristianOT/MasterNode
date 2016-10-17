@@ -19,8 +19,8 @@ public class SimpleMolecule implements Molecule {
     private int index;
 
     @Relationship(type="HAS",direction=Relationship.UNDIRECTED)
-    public Set<Atom> atoms;
-    protected Name name;
+    private Set<Atom> atoms;
+    private Name name;
     private Coord centerOfMass;
 
     public SimpleMolecule() { }

@@ -16,7 +16,7 @@ import javax.xml.bind.JAXBElement;
 public class ProcessorForYoink implements ItemProcessor<JAXBElement<IDatablockType>, MolecularSystem> {
 
     @Resource
-    TranslatorFINAL tf;
+    private TranslatorFINAL tf;
 
     @Override
     public MolecularSystem process(JAXBElement<IDatablockType> item) throws Exception {

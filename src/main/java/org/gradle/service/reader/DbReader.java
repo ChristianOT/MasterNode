@@ -18,7 +18,7 @@ import java.util.List;
 public class DbReader implements ItemReader<List<String>> {
 
     @Autowired
-    MolecularSystemRepository msr;
+    private MolecularSystemRepository msr;
 
     /**
      * Implemented read method from ItemReader interface.

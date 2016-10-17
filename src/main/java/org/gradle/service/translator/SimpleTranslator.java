@@ -26,11 +26,11 @@ import static java.util.stream.Collectors.toSet;
 @Service
 public class SimpleTranslator {
 
-    public Vector.Vector3DType myVector3D = Vector.Vector3DType.COMMONS;
+    private Vector.Vector3DType myVector3D = Vector.Vector3DType.COMMONS;
 
-    public SimpleVector3DFactory simpleVector3DFactory = new SimpleVector3DFactory(myVector3D);
+    private SimpleVector3DFactory simpleVector3DFactory = new SimpleVector3DFactory(myVector3D);
 
-    public SimpleCoordFactory simpleCoordFactory = new SimpleCoordFactory(simpleVector3DFactory);
+    private SimpleCoordFactory simpleCoordFactory = new SimpleCoordFactory(simpleVector3DFactory);
 
     public MolecularSystem translate(JAXBElement<IDatablockType> item) {
         System.out.println("FORTYorFORTYTwo " + item.getDeclaredType());

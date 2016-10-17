@@ -17,7 +17,7 @@ import java.util.List;
 public class DatabaseWriterForYoink implements ItemWriter<SimpleMolecularSystem> {
 
     @Autowired
-    MolecularSystemRepositoryForYoink msr;
+    private MolecularSystemRepositoryForYoink msr;
 
     @Override
     public void write(List<? extends SimpleMolecularSystem> items) throws Exception {

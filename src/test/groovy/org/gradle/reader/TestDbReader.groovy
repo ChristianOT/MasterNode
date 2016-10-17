@@ -6,6 +6,7 @@ import org.gradle.domain.MolecularSystem
 import org.gradle.domain.SimpleMolecularSystem
 import org.gradle.service.reader.DbReader
 import org.gradle.forYoink.yoinkReader.DbReaderForYoink
+import spock.lang.Ignore
 import spock.lang.Specification
 
 /**

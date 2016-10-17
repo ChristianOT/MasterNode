@@ -1,8 +1,6 @@
 package org.gradle.interfaces.pdbml;
 
 import javax.xml.bind.JAXBElement;
-import javax.xml.bind.annotation.*;
-import java.math.BigDecimal;
 import java.math.BigInteger;
 
 /**
@@ -10,282 +8,282 @@ import java.math.BigInteger;
  */
 public interface IAtomSite {
 
-    public JAXBElement getBEquivGeomMean();
+    JAXBElement getBEquivGeomMean();
 
-    public JAXBElement getBEquivGeomMeanEsd();
+    JAXBElement getBEquivGeomMeanEsd();
 
 
-    public JAXBElement getBIsoOrEquiv();
+    JAXBElement getBIsoOrEquiv();
 
 
-    public JAXBElement getBIsoOrEquivEsd();
+    JAXBElement getBIsoOrEquivEsd();
 
 
-    public JAXBElement getCartnX();
+    JAXBElement getCartnX();
 
 
-    public JAXBElement getCartnXEsd();
+    JAXBElement getCartnXEsd();
 
 
-    public JAXBElement getCartnY();
+    JAXBElement getCartnY();
 
 
-    public JAXBElement getCartnYEsd();
+    JAXBElement getCartnYEsd();
 
 
-    public JAXBElement getCartnZ();
+    JAXBElement getCartnZ();
 
 
-    public JAXBElement getCartnZEsd();
+    JAXBElement getCartnZEsd();
 
 
-    public JAXBElement getUEquivGeomMean();
+    JAXBElement getUEquivGeomMean();
 
 
-    public JAXBElement getUEquivGeomMeanEsd();
+    JAXBElement getUEquivGeomMeanEsd();
 
 
-    public JAXBElement getUIsoOrEquiv();
+    JAXBElement getUIsoOrEquiv();
 
 
-    public JAXBElement getUIsoOrEquivEsd();
+    JAXBElement getUIsoOrEquivEsd();
 
 
-    public JAXBElement getWyckoffSymbol();
+    JAXBElement getWyckoffSymbol();
 
 
-    public JAXBElement getAdpType();
+    JAXBElement getAdpType();
 
 
-    public JAXBElement getAnisoB11();
+    JAXBElement getAnisoB11();
 
 
-    public JAXBElement getAnisoB11Esd();
+    JAXBElement getAnisoB11Esd();
 
 
-    public JAXBElement getAnisoB12();
+    JAXBElement getAnisoB12();
 
 
-    public JAXBElement getAnisoB12Esd();
+    JAXBElement getAnisoB12Esd();
 
 
-    public JAXBElement getAnisoB13();
+    JAXBElement getAnisoB13();
 
 
-    public JAXBElement getAnisoB13Esd();
+    JAXBElement getAnisoB13Esd();
 
 
-    public JAXBElement getAnisoB22();
+    JAXBElement getAnisoB22();
 
 
-    public JAXBElement getAnisoB22Esd();
+    JAXBElement getAnisoB22Esd();
 
 
-    public JAXBElement getAnisoB23();
+    JAXBElement getAnisoB23();
 
 
-    public JAXBElement getAnisoB23Esd();
+    JAXBElement getAnisoB23Esd();
 
 
-    public JAXBElement getAnisoB33();
+    JAXBElement getAnisoB33();
 
 
-    public JAXBElement getAnisoB33Esd();
+    JAXBElement getAnisoB33Esd();
 
 
-    public JAXBElement getAnisoU11();
+    JAXBElement getAnisoU11();
 
 
-    public JAXBElement getAnisoU11Esd();
+    JAXBElement getAnisoU11Esd();
 
 
-    public JAXBElement getAnisoU12();
+    JAXBElement getAnisoU12();
 
 
-    public JAXBElement getAnisoU12Esd();
+    JAXBElement getAnisoU12Esd();
 
 
-    public JAXBElement getAnisoU13();
+    JAXBElement getAnisoU13();
 
 
-    public JAXBElement getAnisoU13Esd();
+    JAXBElement getAnisoU13Esd();
 
 
-    public JAXBElement getAnisoU22();
+    JAXBElement getAnisoU22();
 
 
-    public JAXBElement getAnisoU22Esd();
+    JAXBElement getAnisoU22Esd();
 
 
-    public JAXBElement getAnisoU23();
+    JAXBElement getAnisoU23();
 
 
-    public JAXBElement getAnisoU23Esd();
+    JAXBElement getAnisoU23Esd();
 
 
-    public JAXBElement getAnisoU33();
+    JAXBElement getAnisoU33();
 
 
-    public JAXBElement getAnisoU33Esd();
+    JAXBElement getAnisoU33Esd();
 
 
-    public JAXBElement getAnisoRatio();
+    JAXBElement getAnisoRatio();
 
 
-    public JAXBElement getAttachedHydrogens();
+    JAXBElement getAttachedHydrogens();
 
 
-    public String getAuthAsymId();
+    String getAuthAsymId();
 
 
-    public JAXBElement getAuthAtomId();
+    JAXBElement getAuthAtomId();
 
 
-    public JAXBElement getAuthCompId();
+    JAXBElement getAuthCompId();
 
 
-    public JAXBElement getAuthSeqId();
+    JAXBElement getAuthSeqId();
 
 
-    public JAXBElement getCalcAttachedAtom();
+    JAXBElement getCalcAttachedAtom();
 
 
-    public JAXBElement getCalcFlag();
+    JAXBElement getCalcFlag();
 
 
-    public JAXBElement getChemicalConnNumber();
+    JAXBElement getChemicalConnNumber();
 
 
-    public JAXBElement getConstraints();
+    JAXBElement getConstraints();
 
 
-    public JAXBElement getDetails();
+    JAXBElement getDetails();
 
 
-    public JAXBElement getDisorderAssembly();
+    JAXBElement getDisorderAssembly();
 
 
-    public JAXBElement getDisorderGroup();
+    JAXBElement getDisorderGroup();
 
 
-    public JAXBElement getFootnoteId();
+    JAXBElement getFootnoteId();
 
 
-    public JAXBElement getFractX();
+    JAXBElement getFractX();
 
 
-    public JAXBElement getFractXEsd();
+    JAXBElement getFractXEsd();
 
 
-    public JAXBElement getFractY();
+    JAXBElement getFractY();
 
 
-    public JAXBElement getFractYEsd();
+    JAXBElement getFractYEsd();
 
 
-    public JAXBElement getFractZ();
+    JAXBElement getFractZ();
 
 
-    public JAXBElement getFractZEsd();
+    JAXBElement getFractZEsd();
 
 
-    public JAXBElement getGroupPDB();
+    JAXBElement getGroupPDB();
 
 
-    public String getLabelAltId();
+    String getLabelAltId();
 
 
-    public String getLabelAsymId();
+    String getLabelAsymId();
 
 
-    public String getLabelAtomId();
+    String getLabelAtomId();
 
 
-    public String getLabelCompId();
+    String getLabelCompId();
 
 
-    public String getLabelEntityId();
+    String getLabelEntityId();
 
 
-    public BigInteger getLabelSeqId();
+    BigInteger getLabelSeqId();
 
 
-    public JAXBElement getOccupancy();
+    JAXBElement getOccupancy();
 
 
-    public JAXBElement getOccupancyEsd();
+    JAXBElement getOccupancyEsd();
 
 
-    public JAXBElement getPdbxPDBAtomName();
+    JAXBElement getPdbxPDBAtomName();
 
 
-    public JAXBElement getPdbxPDBInsCode();
+    JAXBElement getPdbxPDBInsCode();
 
 
-    public JAXBElement getPdbxPDBModelNum();
+    JAXBElement getPdbxPDBModelNum();
 
 
-    public JAXBElement getPdbxPDBResidueName();
+    JAXBElement getPdbxPDBResidueName();
 
 
-    public JAXBElement getPdbxPDBResidueNo();
+    JAXBElement getPdbxPDBResidueNo();
 
 
-    public JAXBElement getPdbxPDBStrandId();
+    JAXBElement getPdbxPDBStrandId();
 
 
-    public JAXBElement getPdbxAuthAltId();
+    JAXBElement getPdbxAuthAltId();
 
 
-    public JAXBElement getPdbxAuthAsymId();
+    JAXBElement getPdbxAuthAsymId();
 
 
-    public JAXBElement getPdbxAuthAtomName();
+    JAXBElement getPdbxAuthAtomName();
 
 
-    public JAXBElement getPdbxAuthCompId();
+    JAXBElement getPdbxAuthCompId();
 
 
-    public JAXBElement getPdbxAuthSeqId();
+    JAXBElement getPdbxAuthSeqId();
 
 
-    public JAXBElement getPdbxFormalCharge();
+    JAXBElement getPdbxFormalCharge();
 
 
-    public JAXBElement getPdbxNcsDomId();
+    JAXBElement getPdbxNcsDomId();
 
 
-    public JAXBElement getPdbxStructGroupId();
+    JAXBElement getPdbxStructGroupId();
 
 
-    public JAXBElement getPdbxTlsGroupId();
+    JAXBElement getPdbxTlsGroupId();
 
 
-    public JAXBElement getRefinementFlags();
+    JAXBElement getRefinementFlags();
 
 
-    public JAXBElement getRefinementFlagsAdp();
+    JAXBElement getRefinementFlagsAdp();
 
 
-    public JAXBElement getRefinementFlagsOccupancy();
+    JAXBElement getRefinementFlagsOccupancy();
 
 
-    public JAXBElement getRefinementFlagsPosn();
+    JAXBElement getRefinementFlagsPosn();
 
 
-    public JAXBElement getRestraints();
+    JAXBElement getRestraints();
 
 
-    public JAXBElement getSymmetryMultiplicity();
+    JAXBElement getSymmetryMultiplicity();
 
 
-    public JAXBElement getThermalDisplaceType();
+    JAXBElement getThermalDisplaceType();
 
 
-    public String getTypeSymbol();
+    String getTypeSymbol();
 
 
-    public String getId();
+    String getId();
 
 
 }
