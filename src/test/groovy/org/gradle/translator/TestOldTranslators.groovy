@@ -5,7 +5,7 @@ import org.gradle.domain.MolecularSystem
 import org.gradle.domain.Molecule
 import org.gradle.service.reader.PdbmlFileReader
 import org.gradle.service.translator.old.AtomTranslator
-import org.gradle.service.translator.old.MolecularSystemTranslator
+import org.gradle.service.translator.old.MolecularSystemTransformer
 import org.gradle.service.translator.old.MoleculeTranslator
 import org.springframework.core.io.Resource
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver
@@ -24,7 +24,7 @@ class TestOldTranslators extends Specification {
     def readerV40 = new PdbmlFileReader(resources[1]/* Version 40: 5A0C */, JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class))
     def atomTranslator = new AtomTranslator()
     def moleTranslator = new MoleculeTranslator()
-    def msTranslator = new MolecularSystemTranslator()
+    def msTranslator = new MolecularSystemTransformer()
 
 
     def "test translate to atom"() {

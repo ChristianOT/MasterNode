@@ -1,6 +1,5 @@
 package org.gradle.domain
 
-import org.junit.Test
 import spock.lang.Specification
 
 /**

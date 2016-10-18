@@ -1,7 +1,6 @@
 package org.gradle.writer
 
 import org.gradle.service.writer.ConsoleWriter
-import org.gradle.forYoink.yoinkWriter.ConsoleWriterForYoink
 import spock.lang.Specification
 
 /**
@@ -22,13 +21,4 @@ class TestConsoleWriter extends Specification{
         writer.write(lust)
     }
 
-    def "test consoleWriterForYoink"(){
-        def writer = new ConsoleWriterForYoink()
-        when:
-        list.add("hello")
-        list.add("world")
-        lust.add(list)
-        then:
-        writer.write(lust)
-    }
 }

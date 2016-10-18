@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="MasterNode-yoink_main" target="1.8" />
+      <module name="MasterNode-yoink_test" target="1.8" />
       <module name="MasterNode_main" target="1.8" />
       <module name="MasterNode_test" target="1.8" />
     </bytecodeTargetLevel>

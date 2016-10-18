@@ -15,10 +15,10 @@ import java.io.IOException;
 @SpringBootApplication
 public class MasterNode {
 
-	public static void main(String[] args) throws IOException {
-		@SuppressWarnings("unused")
-		ApplicationContext context = SpringApplication.run(MasterNode.class, args);
+    public static void main(String[] args) throws IOException {
+        @SuppressWarnings("unused")
+        ApplicationContext context = SpringApplication.run(MasterNode.class, args);
 
-	}
+    }
 
 }

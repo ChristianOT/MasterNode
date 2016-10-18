@@ -224,7 +224,7 @@ public class BatchConfig {
      * @throws JMSException
      * @throws InterruptedException
      */
-    @JmsListener(destination = "respond", containerFactory = "myJmsContainerFactory", concurrency = "1")
+    //@JmsListener(destination = "respond", containerFactory = "myJmsContainerFactory", concurrency = "1")
     public void receiveMessage(String message) {
         responseCounter++;
         System.out.println("#---------- Getting answer: " + message + ". ----------#");
