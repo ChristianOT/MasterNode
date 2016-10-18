@@ -2,6 +2,7 @@ package org.gradle.processor
 
 import org.gradle.domain.SimpleMolecularSystem
 import org.gradle.forYoink.yoinkTranslator.TranslatorFINAL
+import org.gradle.interfaces.service.Translator
 import org.gradle.service.reader.PdbmlFileReader
 import org.gradle.forYoink.yoinkProcessor.ProcessorForYoink
 
@@ -10,28 +11,23 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver
 import spock.lang.Specification
 
 import javax.xml.bind.JAXBContext
+import javax.xml.bind.JAXBElement
 
 /**
  * Created by christian on 05/10/2016.
  */
 class TestProcessorForYoink extends Specification {
 
-    def "test processing JAXB<IDatablockType> to List<MolecularSystem>"() {
+    def "test if process() calls tf.translate() once "() {
 
-        PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/*.xml");
-        def readerV42 = new PdbmlFileReader(resources[0]/* Version 42: 4Y1G */, JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
-        def readerV40 = new PdbmlFileReader(resources[1]/* Version 40: 5A0C */, JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class))
         def processor = new ProcessorForYoink()
-        def translator = new TranslatorFINAL()
-
+        def tf = Mock(TranslatorFINAL)
+        def jaxb = Mock(JAXBElement)
         when:
-        processor.tf = translator
-
+        processor.tf = tf
+        processor.process(jaxb)
         then:
-        assert processor.process(readerV40.read()) instanceof SimpleMolecularSystem
-        assert processor.process(readerV42.read()) instanceof SimpleMolecularSystem
-
+        1 * tf.translate(_)
 
     }
 }

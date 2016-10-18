@@ -11,28 +11,25 @@ import org.springframework.core.io.support.PathMatchingResourcePatternResolver
 import spock.lang.Specification
 
 import javax.xml.bind.JAXBContext
+import javax.xml.bind.JAXBElement
 
 /**
  * Created by christian on 04/10/2016.
  */
-class TestPdbmlProcessor extends Specification{
+class TestPdbmlProcessor extends Specification {
 
-    def "test processor"(){
-        PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-        Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/reader/resources/*.xml");
-        def readerV42 = new PdbmlFileReader(resources[0]/* Version 42: 4Y1G */, JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
-        def readerV40 = new PdbmlFileReader(resources[1]/* Version 40: 5A0C */, JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class))
-        def atomTranslator = new AtomTranslator()
-        def moleTranslator = new MoleculeTranslator()
-        def msTranslator = new MolecularSystemTranslator()
+    def "test if process() calls mst.translate() once"() {
+
         def processor = new PdbmlProcessor()
+        def mst = Mock(MolecularSystemTranslator)
+        def jaxb = Mock(JAXBElement)
+
         when:
-        moleTranslator.atomTranslator=atomTranslator
-        msTranslator.moleculeTranslator=moleTranslator
-        processor.mst = msTranslator
+        processor.mst = mst
+        processor.process(jaxb)
+
         then:
-        assert processor.process(readerV40.read()) instanceof MolecularSystem
-        assert processor.process(readerV42.read()) instanceof MolecularSystem
+        1 * mst.translate(_)
 
     }
 }
