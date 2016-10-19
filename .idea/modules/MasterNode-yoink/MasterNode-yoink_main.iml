@@ -10,7 +10,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-e="library" name="Gradle: org.springframework.boot:spring-boot-starter:1.4.1.RELEASE" level="project" />
+    <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:1.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.data:spring-data-neo4j:4.1.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.objenesis:objenesis:1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.4.7" level="project" />
@@ -44,7 +44,7 @@ e="library" name="Gradle: org.springframework.boot:spring-boot-starter:1.4.1.REL
     <orderEntry type="library" name="Gradle: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.6.5" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.6.5" level="project" />
-      <orderEntry type="module-library">
+     <orderEntry type="module-library">
         <library>
           <CLASSES>
             <root url="jar://$MODULE_DIR$/../../../libs/yoink-core-bootstrap-0.0.3-SNAPSHOT.jar!/" />
@@ -53,6 +53,5 @@ e="library" name="Gradle: org.springframework.boot:spring-boot-starter:1.4.1.REL
           <SOURCES />
         </library>
       </orderEntry>
-      <orderEntry typ
   </component>
 </module>
