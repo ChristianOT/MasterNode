@@ -43,7 +43,6 @@ import java.util.List;
  *
  * @author Christian Ouali Turki
  */
-@Profile("standard")
 @Configuration
 @EnableBatchProcessing
 @EnableTransactionManagement
@@ -80,7 +79,7 @@ public class BatchConfig {
      */
     @Bean
     public Job bootstrapJob() {
-        return jbf.get("bootstrapStep")
+        return jbf.get("bootstrap")
                 .incrementer(new RunIdIncrementer())
                 .flow(bootstrapStep)
                 .end()
@@ -118,7 +117,7 @@ public class BatchConfig {
         Resource[] resources;
         try {
             resources = context.getResources("file:./src/main/resources/org/*.xml");
-            System.out.println(resources.length);
+            System.out.println("Number of Files: " + resources.length);
             reader.setResources(resources);
             reader.setDelegate((ResourceAwareItemReaderItemStream) context.getBean("pdbmlFileReader"));
         } catch (IOException e) {

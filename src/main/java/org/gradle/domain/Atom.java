@@ -47,7 +47,7 @@ public class Atom {
 	public Atom() {
 	}
 
-	public Atom(String element, Double x, Double y, Double z, String index, String groupPDBx, String labelCompId) {
+	public Atom(String element, Double x, Double y, Double z, String index, String groupPDBx, String labelCompId, String chain) {
 		this.element = element;
 		this.x = x;
 		this.y = y;
@@ -55,7 +55,7 @@ public class Atom {
 		this.index = index;
 		this.groupPDBx = groupPDBx;
 		this.labelCompId = labelCompId;
-
+		this.chain = chain;
 	}
 
 	public String getElement() {

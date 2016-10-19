@@ -15,13 +15,13 @@ import javax.xml.bind.JAXBElement;
  * @author Christian Ouali Turki
  */
 @Service
-public class PdbmlProcessor implements ItemProcessor<JAXBElement<IDatablockType>, MolecularSystem> {
+public class PdbmlProcessor implements ItemProcessor<JAXBElement, MolecularSystem> {
 
     @Resource
     public MolecularSystemTransformer mst;
 
     @Override
-    public MolecularSystem process(JAXBElement<IDatablockType> item) throws Exception {
+    public MolecularSystem process(JAXBElement item) throws Exception {
         return mst.translate(item);
 
     }

@@ -21,28 +21,20 @@ public class AtomTranslator {
         int nAtoms = dt.size();
         int i = 0;
         for (i = 0; i < nAtoms; i++) {
-            Double cx = ((ICartn)dt.get(i).getCartnX().getValue()).getValue().doubleValue();
-            Double cy = ((ICartn)dt.get(i).getCartnY().getValue()).getValue().doubleValue();
-            Double cz = ((ICartn)dt.get(i).getCartnZ().getValue()).getValue().doubleValue();
-            double[] coords = {cx, cy, cz};
-
             String element = dt.get(i).getTypeSymbol();
+            Double cx = ((ICartn) dt.get(i).getCartnX().getValue()).getValue().doubleValue();
+            Double cy = ((ICartn) dt.get(i).getCartnY().getValue()).getValue().doubleValue();
+            Double cz = ((ICartn) dt.get(i).getCartnZ().getValue()).getValue().doubleValue();
             String index = dt.get(i).getId();
-            String chain = dt.get(i).getAuthAsymId();
-            String compId = dt.get(i).getLabelCompId();
             String groupPDBx = dt.get(i).getGroupPDB().getValue().toString();
+            String compId = dt.get(i).getLabelCompId();
+            String chain = dt.get(i).getAuthAsymId();
 
-            Atom atom = new Atom();
+            if (dt.get(i).getAttachedHydrogens() != null)
+                System.out.println("*******************************************");
 
-            atom.setX(cx);
-            atom.setY(cy);
-            atom.setZ(cz);
-            atom.setElement(element);
-            atom.setIndex(index);
-            atom.setChain(chain);
-            atom.setLabelCompId(compId);
-            atom.setGroupPDBx(groupPDBx);
-            atoms.add(atom);
+            atoms.add(new Atom(element, cx, cy, cz, index, groupPDBx, compId, chain));
+
         }
         return atoms;
     }
