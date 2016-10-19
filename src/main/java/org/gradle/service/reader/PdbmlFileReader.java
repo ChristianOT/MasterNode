@@ -34,9 +34,6 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBEl
         this.jaxbContext = jaxbContext;
     }
 
-    /*
-     * Implemented read method. Dynamically reads pdbml files of both formats.
-     */
     @Override
     public JAXBElement read() throws Exception {
         if (resource != null) {

@@ -1108,7 +1108,7 @@ import java.util.List;
 @XmlType(name = "atom_siteType", propOrder = {
     "atomSite"
 })
-public class AtomSiteType implements IAtomSiteType<AtomSiteType.AtomSite>{
+public class AtomSiteType implements IAtomSiteType<AtomSiteType.AtomSite> {
 
     @XmlElement(name = "atom_site")
     protected List<AtomSiteType.AtomSite> atomSite;

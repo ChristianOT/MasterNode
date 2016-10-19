@@ -13,11 +13,11 @@ class AtomTest extends Specification {
 
         when:
         def atom = new Atom()
-        def atom2 = new Atom("H",1.0,2.5,3.3,"100","ASP","HOH")
+        def atom2 = new Atom("H",1.0,2.5,3.3,"100","ASP","HOH","A")
 
         then:
         atom != null
-        atom2.toString() == "Atom [index=100, element=H, groupPDBx=ASP, labelCompId=HOH, chain=null, x=1.0, y=2.5, z=3.3]"
+        atom2.toString() == "Atom [index=100, element=H, groupPDBx=ASP, labelCompId=HOH, chain=A, x=1.0, y=2.5, z=3.3]"
     }
 
     def "test setter"() {
@@ -51,6 +51,7 @@ class AtomTest extends Specification {
         atom.setGroupPDBx("ASP")
         atom.setIndex("100")
         atom.setLabelCompId("HOH")
+        atom.setChain("A")
         atom.setX(1.0)
         atom.setY(2.5)
         atom.setZ(3.3)

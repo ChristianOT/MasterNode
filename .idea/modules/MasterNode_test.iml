@@ -78,6 +78,7 @@
     <orderEntry type="library" name="Gradle: org.apache.httpcomponents:httpcore:4.4.4" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.6.5" level="project" />
     <orderEntry type="library" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.6.5" level="project" />
+    <orderEntry type="module" module-name="MasterNode-yoink_main" scope="TEST" />
   </component>
   <component name="TestModuleProperties" production-module="MasterNode_main" />
 </module>
