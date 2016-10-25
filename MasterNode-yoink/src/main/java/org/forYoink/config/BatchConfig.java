@@ -37,7 +37,7 @@ import java.io.IOException;
 @EnableBatchProcessing
 @EnableTransactionManagement
 @EnableJms
-@ComponentScan("org.gradle")
+@ComponentScan("org.forYoink")
 public class BatchConfig {
 
     /**

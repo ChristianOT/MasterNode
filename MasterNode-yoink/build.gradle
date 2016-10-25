@@ -1,4 +1,12 @@
-version 'unspecified'
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.7.RELEASE")
+
+    }
+}
 
 apply plugin: 'groovy'
 apply plugin: 'java'
@@ -6,12 +14,20 @@ apply plugin: 'spring-boot'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+
+jar {
+    baseName = 'Main'
+    version = '0.0.1'
+}
 
 repositories {
     mavenCentral()
+    maven { url "https://m2.neo4j.org" }
+    maven { url "https://repo.spring.io/libs-release" }
 }
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 dependencies {
     compile files('../libs/yoink-core-bootstrap-0.0.3-SNAPSHOT.jar')
