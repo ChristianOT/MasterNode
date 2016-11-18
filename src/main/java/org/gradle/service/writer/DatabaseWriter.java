@@ -24,9 +24,8 @@ public class DatabaseWriter implements ItemWriter<MolecularSystem>{
 		for (MolecularSystem ms:items){
 			System.out.println("Saving " + ms.getNameOfSystem() + " in database.");
 			msr.save(ms);
-			
 		}
-		System.out.println("Done saving files.");
+		System.out.println("Done saving file.");
 	}
 
 }

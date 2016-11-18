@@ -10,6 +10,7 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/MasterNode-test" />
             <option value="$PROJECT_DIR$/MasterNode-yoink" />
           </set>
         </option>

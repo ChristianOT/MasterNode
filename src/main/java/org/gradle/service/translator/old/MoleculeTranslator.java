@@ -65,7 +65,6 @@ public class MoleculeTranslator {
                 /*
                  * Check LabelCompId
 				 */
-
                 if (atoms.get(i).getLabelCompId().matches("HOH")) {
                     Molecule solvent = new Molecule();
                     solvent.atoms.add(atoms.get(i));

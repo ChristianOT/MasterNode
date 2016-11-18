@@ -1,0 +1,19 @@
+To Do:
+- use a reader that automatically reads the next entry inside the database,
+  so DbReader doesn't have to read all files inside the database at once
+- write a script or class to download the pbd xml files from the rcsb website
+- write script or class to add hydrogen to the crystal structure,
+  perhaps by using the code in phenix, however, phenix only can handle .pdb files not .xml
+- write an interface to call the boost library for the clustering(java -> c++),
+  attempts to do so by calling phenix in yoink (java -> python -> c++) failed for various reasons,
+  i.e. using java native access (jna) failed because boost is not a native library
+- write or use a writer to write the interaction list to either a file or the database
+- clean up translateToMolecule() in PdbmlTranslator
+- select right approach for the processor (process one element (MSAdaptive) or a list of elements (MSInteraction))
+- make AdaptiveQMMMJob and MSAdaptiveQMMMJob more abstract to reduce the necessary code
+- check necessity of DbProcessor, ConsoleWriter
+- solve the issue of the PdbmlFileReader of reading one resource multiple times (instead of setting the resource to null)
+- check if SeperationScript is necessary or if the version issue can be solved by the VersionConverter,
+  if possible, get rid of remove unnecessary pdbml/v4X/generated folder
+- add understandable commentary to all added or changed files
+- make job names more intuitive

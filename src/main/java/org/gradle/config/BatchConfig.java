@@ -3,6 +3,7 @@ package org.gradle.config;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import org.gradle.service.writer.JmsMessageWriter;
 import org.springframework.batch.core.Job;
+import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -62,11 +63,9 @@ public class BatchConfig {
     @Autowired
     private StepBuilderFactory sbf;
 
-
-	/*
+    /*
      * bootstrapJob
 	 */
-
     @Autowired
     @Qualifier("bootstrapStep")
     private Step bootstrapStep;
@@ -93,7 +92,7 @@ public class BatchConfig {
      * @throws IOException
      */
     @Bean
-    public Step bootstrapStep(StepBuilderFactory sbf, ItemReader multiReader,
+    public Step bootstrapStep(ItemReader multiReader,
                               ItemProcessor pdbmlProcessor, ItemWriter databaseWriter) {
         return sbf.get("bootstrapStep").chunk(1)
                 .reader(multiReader)
@@ -117,7 +116,6 @@ public class BatchConfig {
         Resource[] resources;
         try {
             resources = context.getResources("file:./src/main/resources/org/*.xml");
-            System.out.println("Number of Files: " + resources.length);
             reader.setResources(resources);
             reader.setDelegate((ResourceAwareItemReaderItemStream) context.getBean("pdbmlFileReader"));
         } catch (IOException e) {
@@ -145,7 +143,7 @@ public class BatchConfig {
      */
     @Bean
     public Job masterJob() {
-        return jbf.get("master").incrementer(new RunIdIncrementer()).flow(masterStep).end().build();
+        return jbf.get("master").start(masterStep).build();
     }
 
     /**
@@ -155,10 +153,10 @@ public class BatchConfig {
      * @throws IOException
      */
     @Bean
-    public Step masterStep() {
-        return sbf.get("masterStep").chunk(1)
-                .reader((ItemReader<? extends Object>) context.getBean("dbReader"))
-                .writer((ItemWriter<? super Object>) context.getBean("consoleWriter"))
+    public Step masterStep(ItemReader<List<String>> dbReader, ItemWriter<List<String>> consoleWriter) {
+        return sbf.get("masterStep").<List<String>, List<String>>chunk(1)
+                .reader(dbReader)
+                .writer(consoleWriter)
                 .build();
     }
 

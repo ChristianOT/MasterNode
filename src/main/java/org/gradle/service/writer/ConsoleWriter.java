@@ -1,5 +1,6 @@
 package org.gradle.service.writer;
 
+import org.springframework.batch.core.BatchStatus;
 import org.springframework.batch.item.ItemWriter;
 import org.springframework.stereotype.Service;
 

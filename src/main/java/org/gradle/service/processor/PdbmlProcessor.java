@@ -1,8 +1,7 @@
 package org.gradle.service.processor;
 
 import org.gradle.domain.MolecularSystem;
-import org.gradle.interfaces.pdbml.IDatablockType;
-import org.gradle.service.translator.old.MolecularSystemTransformer;
+import org.gradle.service.translator.old.MolecularSystemTranslator;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +17,7 @@ import javax.xml.bind.JAXBElement;
 public class PdbmlProcessor implements ItemProcessor<JAXBElement, MolecularSystem> {
 
     @Resource
-    public MolecularSystemTransformer mst;
+    public MolecularSystemTranslator mst;
 
     @Override
     public MolecularSystem process(JAXBElement item) throws Exception {

@@ -24,9 +24,19 @@ public class Atom {
 
 	private Double z;
 
+	private Integer seqId;
+
+	public Integer getSeqId() {
+		return seqId;
+	}
+
+	public void setSeqId(Integer seqId) {
+		this.seqId = seqId;
+	}
+
 	/*
-	 * the atom id in the pdbml file
-	 */
+         * the atom id in the pdbml file
+         */
 	private String index;
 
 	/*

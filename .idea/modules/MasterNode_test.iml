@@ -22,8 +22,8 @@
     <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.4.7" level="project" />
     <orderEntry type="library" name="Gradle: org.objenesis:objenesis:1.2" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.12" level="project" />
-    <orderEntry type="library" name="Gradle: org.spockframework:spock-core:0.7-groovy-2.0" level="project" />
     <orderEntry type="library" name="Gradle: cglib:cglib-nodep:3.2.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.spockframework:spock-core:0.7-groovy-2.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-client:5.13.0" level="project" />
     <orderEntry type="library" name="Gradle: org.apache.activemq:activemq-openwire-legacy:5.13.0" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-messaging:4.2.5.RELEASE" level="project" />

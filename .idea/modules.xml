@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MasterNode.iml" filepath="$PROJECT_DIR$/.idea/modules/MasterNode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MasterNode-test/MasterNode-test.iml" filepath="$PROJECT_DIR$/.idea/modules/MasterNode-test/MasterNode-test.iml" group="MasterNode-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MasterNode-test/MasterNode-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MasterNode-test/MasterNode-test_main.iml" group="MasterNode-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/MasterNode-test/MasterNode-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MasterNode-test/MasterNode-test_test.iml" group="MasterNode-test" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MasterNode-yoink/MasterNode-yoink.iml" filepath="$PROJECT_DIR$/.idea/modules/MasterNode-yoink/MasterNode-yoink.iml" group="MasterNode-yoink" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MasterNode-yoink/MasterNode-yoink_main.iml" filepath="$PROJECT_DIR$/.idea/modules/MasterNode-yoink/MasterNode-yoink_main.iml" group="MasterNode-yoink" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/MasterNode-yoink/MasterNode-yoink_test.iml" filepath="$PROJECT_DIR$/.idea/modules/MasterNode-yoink/MasterNode-yoink_test.iml" group="MasterNode-yoink" />

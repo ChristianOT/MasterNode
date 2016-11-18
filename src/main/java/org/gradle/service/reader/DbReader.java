@@ -2,6 +2,8 @@ package org.gradle.service.reader;
 
 import org.gradle.dataBaseRepositories.MolecularSystemRepository;
 import org.gradle.domain.MolecularSystem;
+import org.springframework.batch.core.BatchStatus;
+import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,21 +17,18 @@ import java.util.List;
  * @author Christian Ouali Turki
  */
 @Service
-public class DbReader implements ItemReader<List<String>> {
+public class DbReader implements ItemReader<MolecularSystem> {
 
     @Autowired
     private MolecularSystemRepository msr;
 
-    /**
-     * Implemented read method from ItemReader interface.
-     *
-     * @return List<String> containing all ids of the database entries
-     */
     @Override
-    public List<String> read() throws Exception {
-        List<String> mss = new ArrayList<String>();
-        msr.findAll().forEach(MolecularSystem -> mss.add(MolecularSystem.getId().toString()));
-        return mss;
+    public MolecularSystem read() throws Exception {
+        List<Long> mss = new ArrayList<Long>();
+        msr.findAll().forEach(MolecularSystem -> mss.add(MolecularSystem.getId()));
+        MolecularSystem ms = msr.findOne(mss.get(0));
+        mss.remove(0);
+        return ms;
     }
 
     public List<MolecularSystem> readMSfromDb() {

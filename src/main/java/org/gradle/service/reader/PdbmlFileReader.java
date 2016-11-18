@@ -15,7 +15,6 @@ import javax.xml.bind.Unmarshaller;
  *
  * @author Christian Ouali Turki
  */
-//@Service
 public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBElement> {
 
     private Resource resource;
@@ -29,6 +28,7 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBEl
         this.jaxbContext = jaxbContext;
     }
 
+    /* constructor for groovy testing */
     public PdbmlFileReader(Resource resource, JAXBContext jaxbContext) {
         this.resource = resource;
         this.jaxbContext = jaxbContext;
@@ -38,22 +38,21 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBEl
     public JAXBElement read() throws Exception {
         if (resource != null) {
             System.out.println("Reading " + resource.getFile());
-            JAXBElement pdb =null;
+            JAXBElement pdb = null;
             try {
                 Unmarshaller jaxbUnmarshaller = this.jaxbContext.createUnmarshaller();
                 pdb = (JAXBElement) jaxbUnmarshaller.unmarshal(resource.getInputStream());
                 //resource.getFile().delete();
                 resource = null; //prevents multiple reading of the same file (perhaps other reader required)
-            }catch(UnmarshalException e){
+            } catch (UnmarshalException e) {
                 System.out.println("Incompatible pdbml version. Wrong profile selected.");
             }
             return pdb;
         } else {
-            System.out.println("No resources to read");
+            System.out.println("No resource to read");
             return null;
         }
     }
-
 
     @Override
     public void setResource(Resource resource) {

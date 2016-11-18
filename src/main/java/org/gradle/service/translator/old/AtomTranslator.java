@@ -30,9 +30,6 @@ public class AtomTranslator {
             String compId = dt.get(i).getLabelCompId();
             String chain = dt.get(i).getAuthAsymId();
 
-            if (dt.get(i).getAttachedHydrogens() != null)
-                System.out.println("*******************************************");
-
             atoms.add(new Atom(element, cx, cy, cz, index, groupPDBx, compId, chain));
 
         }
