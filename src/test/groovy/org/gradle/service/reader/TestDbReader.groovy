@@ -2,6 +2,7 @@ package org.gradle.service.reader
 
 import org.gradle.dataBaseRepositories.MolecularSystemRepository
 import org.gradle.domain.MolecularSystem
+import spock.lang.Ignore
 import spock.lang.Specification
 
 /**
@@ -9,6 +10,7 @@ import spock.lang.Specification
  */
 class TestDbReader extends Specification {
 
+    @Ignore
     def "testing reading Id from database"() {
 
         def reader = new DbReader()
@@ -23,7 +25,7 @@ class TestDbReader extends Specification {
         reader.msr = repo
 
         then:
-        assert reader.read() instanceof List<String>
+        assert reader.read() instanceof MolecularSystem
     }
 
     def " testing reading Ms from database"() {

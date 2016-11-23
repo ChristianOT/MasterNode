@@ -3,7 +3,6 @@ package org.gradle;
 import org.springframework.batch.item.ItemWriter;
 
 import java.io.FileWriter;
-import java.io.IOException;
 import java.util.List;
 
 /**
@@ -13,19 +12,24 @@ public class Writer implements ItemWriter<String> {
 
     @Override
     public void write(List<? extends String> items) {
-
         try {
-            FileWriter writer = new FileWriter("output.txt");
-            items.forEach(String -> {
+            FileWriter writer = new FileWriter("output.txt");       // output file containing the new filePaths
+            items.forEach(pdb_FileLocation -> {
                 try {
-                    writer.write(String+"\n");
-                } catch (IOException e) {
+                    writer.write(pdb_FileLocation + "\n");
+
+                    // FOR DEVELOPMENT: Zip the files back up!
+                    Process p = Runtime.getRuntime().exec("gzip " + pdb_FileLocation);
+                    p.waitFor();
+                } catch (Exception e) {
                     e.printStackTrace();
                 }
             });
             writer.close();
+
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 }

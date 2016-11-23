@@ -4,6 +4,7 @@
     <output url="file://$MODULE_DIR$/../../../MasterNode-test/build/classes/main" />
     <exclude-output />
     <content url="file://$MODULE_DIR$/../../../MasterNode-test/src/main">
+      <sourceFolder url="file://$MODULE_DIR$/../../../MasterNode-test/src/main/groovy" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../MasterNode-test/src/main/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/../../../MasterNode-test/src/main/resources" type="java-resource" />
     </content>
@@ -12,6 +13,7 @@
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter:1.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-batch:1.1.7.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: commons-io:commons-io:2.4" level="project" />
+    <orderEntry type="library" name="Gradle: org.codehaus.groovy:groovy-all:2.4.7" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot:1.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-autoconfigure:1.4.1.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework.boot:spring-boot-starter-logging:1.4.1.RELEASE" level="project" />
@@ -34,7 +36,6 @@
     <orderEntry type="library" name="Gradle: org.slf4j:jul-to-slf4j:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:log4j-over-slf4j:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: ch.qos.logback:logback-core:1.1.7" level="project" />
-    <orderEntry type="library" name="Gradle: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-context:4.3.3.RELEASE" level="project" />
     <orderEntry type="library" name="Gradle: org.slf4j:slf4j-api:1.7.21" level="project" />
     <orderEntry type="library" name="Gradle: org.springframework:spring-aop:4.3.3.RELEASE" level="project" />
