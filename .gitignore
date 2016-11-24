@@ -5,9 +5,11 @@
 
 # Package Files #
 *.jar
+!input/plugin/Yoink-0.0.1.jar./gr
 *.war
 *.ear
 *.db
+*.txt
 /build/
 /bin/
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml

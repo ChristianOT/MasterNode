@@ -1,3 +1,0 @@
-/Users/christian/IdeaProjects/MasterNode/./input/02/102d_complete.pdb
-/Users/christian/IdeaProjects/MasterNode/./input/02/102l_complete.pdb
-/Users/christian/IdeaProjects/MasterNode/./input/02/102m_complete.pdb

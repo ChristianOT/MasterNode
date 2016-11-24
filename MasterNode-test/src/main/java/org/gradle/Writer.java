@@ -13,14 +13,10 @@ public class Writer implements ItemWriter<String> {
     @Override
     public void write(List<? extends String> items) {
         try {
-            FileWriter writer = new FileWriter("output.txt");       // output file containing the new filePaths
-            items.forEach(pdb_FileLocation -> {
+            FileWriter writer = new FileWriter("processed_files.txt");       // output file containing the processed files
+            items.forEach(processed_files -> {
                 try {
-                    writer.write(pdb_FileLocation + "\n");
-
-                    // FOR DEVELOPMENT: Zip the files back up!
-                    Process p = Runtime.getRuntime().exec("gzip " + pdb_FileLocation);
-                    p.waitFor();
+                    writer.write(processed_files + "\n");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
