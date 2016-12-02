@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.forYoink.domain.TestSimpleAtom" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-11-24T14:59:34" hostname="DEN2.UNI-MUENSTER.DE" time="0.078">
+<testsuite name="org.forYoink.domain.TestSimpleAtom" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-12-02T08:49:34" hostname="DEN2.UNI-MUENSTER.DE" time="0.079">
   <properties/>
-  <testcase name="test constructor and getter" classname="org.forYoink.domain.TestSimpleAtom" time="0.078"/>
+  <testcase name="test constructor and getter" classname="org.forYoink.domain.TestSimpleAtom" time="0.079"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

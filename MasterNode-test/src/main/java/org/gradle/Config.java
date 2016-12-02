@@ -10,6 +10,7 @@ import org.springframework.batch.item.ItemWriter;
 import org.springframework.batch.item.file.MultiResourceItemReader;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -32,7 +33,8 @@ public class Config {
     @Autowired
     JobBuilderFactory jbf;
 
-    private String ent_gz_FileLocation = "file:/Users/christian/Downloads/pdb/00/*.ent.gz";
+    @Value("${pdb.file.location}")
+    public String ent_gz_FileLocation;
 
     @Bean
     Reader reader() {
@@ -51,6 +53,7 @@ public class Config {
 
     //    @Bean
     MultiResourceItemReader<String> multiResourceItemReader(String fileLocation) throws IOException, InterruptedException {
+        System.out.println(ent_gz_FileLocation);
         MultiResourceItemReader multiResourceItemReader = new MultiResourceItemReader();
         multiResourceItemReader.setResources(context.getResources(fileLocation));
         multiResourceItemReader.setDelegate(reader());

@@ -83,7 +83,7 @@ public class Processor implements ItemProcessor<String, String> {
         String fileName = pdb_FileLocation.split("/input/")[pdb_FileLocation.split("/input/").length - 1];    // if not separated from path, _complete.pdb will be overwritten!
         String fileFolder = "./input";
 
-        String cmd = "phenix.python ~/MyProject/qr-core/run_finalise.py " + fileName + " > ../output/finalise_" + fileName + ".txt";
+        String cmd = "phenix.python ~/MyProject/qr-core/run_finalise.py " + fileName + " > ../output/finalise/finalise_" + fileName + ".txt";
         try {
             printToConsole(executeOnShell(cmd, new File(fileFolder)));
             /** To Do: if it can't find fileName_updated.pdb, move fileName.pdb into failed_finalise folder! */
@@ -105,7 +105,7 @@ public class Processor implements ItemProcessor<String, String> {
         String fileName = pdb_complete_FileLocation.split("/input/")[pdb_complete_FileLocation.split("/input/").length - 1];
         String fileFolder = "./input";
 
-        String cmd = "phenix.python ~/MyProject/qr-core/run_clustering.py " + fileName + " > ../output/clustering_" + fileName + ".txt";
+        String cmd = "phenix.python ~/MyProject/qr-core/run_clustering.py " + fileName + " > ../output/clustering/clustering_" + fileName + ".txt";
         try {
             printToConsole(executeOnShell(cmd, new File(fileFolder)));
             /** To Do: if it can't find fileName_complete.pdb, move fileName.pdb into failed_clustering folder! */
