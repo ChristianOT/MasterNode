@@ -1,5 +1,6 @@
 package org.gradle.service.writer
 
+import org.gradle.domain.MolecularSystem
 import spock.lang.Specification
 
 /**
@@ -7,17 +8,16 @@ import spock.lang.Specification
  */
 class TestConsoleWriter extends Specification{
 
-    List<String> list = new ArrayList<String>()
-    ArrayList lust = new ArrayList<List<String>>()
+    def writer = new ConsoleWriter()
+    def ms = Mock(MolecularSystem)
+    def jmsWriter = Mock(JmsMessageWriter)
 
     def "test"() {
-        def writer = new ConsoleWriter()
         when:
-        list.add("hello")
-        list.add("world")
-        lust.add(list)
+        writer.jmsMessageWriter=jmsWriter
+        ms.getId()>>1L
         then:
-        writer.write(lust)
+        writer.write([ms])
     }
 
 }

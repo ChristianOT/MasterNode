@@ -12,5 +12,5 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public interface MolecularSystemRepository extends CrudRepository<MolecularSystem, Long>{
-	
+	MolecularSystem findByNameOfSystem(String nameOfSystem);
 }

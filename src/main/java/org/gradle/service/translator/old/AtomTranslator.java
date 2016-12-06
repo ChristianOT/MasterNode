@@ -16,7 +16,7 @@ public class AtomTranslator {
 
     public List<Atom> translate(JAXBElement<IDatablockType> item) {
         List<Atom> atoms = new ArrayList<Atom>();
-        System.out.println("number of Atoms: " + item.getValue().getAtomSiteCategory().getAtomSite().size());
+        System.out.println("Number of Atoms: " + item.getValue().getAtomSiteCategory().getAtomSite().size());
         List<IAtomSite> dt = item.getValue().getAtomSiteCategory().getAtomSite();
         int nAtoms = dt.size();
         int i = 0;

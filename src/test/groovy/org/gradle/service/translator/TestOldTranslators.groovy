@@ -19,7 +19,7 @@ import javax.xml.bind.JAXBContext
 class TestOldTranslators extends Specification {
 
     PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-    Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/service/reader/resources/*.xml");
+    Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/*.xml");
     def readerV42 = new PdbmlFileReader(resources[0]/* Version 42: 4Y1G */, JAXBContext.newInstance(org.gradle.pdbml.v42.generated.DatablockType.class))
     def readerV40 = new PdbmlFileReader(resources[1]/* Version 40: 5A0C */, JAXBContext.newInstance(org.gradle.pdbml.v40.generated.DatablockType.class))
     def atomTranslator = new AtomTranslator()

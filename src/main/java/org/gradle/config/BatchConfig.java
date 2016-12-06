@@ -1,14 +1,11 @@
 package org.gradle.config;
 
-import org.apache.activemq.ActiveMQConnectionFactory;
-import org.gradle.service.writer.JmsMessageWriter;
+import org.gradle.domain.MolecularSystem;
 import org.springframework.batch.core.Job;
-import org.springframework.batch.core.JobExecution;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.EnableBatchProcessing;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
 import org.springframework.batch.core.configuration.annotation.StepBuilderFactory;
-import org.springframework.batch.core.launch.support.RunIdIncrementer;
 import org.springframework.batch.item.ItemProcessor;
 import org.springframework.batch.item.ItemReader;
 import org.springframework.batch.item.ItemWriter;
@@ -16,25 +13,16 @@ import org.springframework.batch.item.file.MultiResourceItemReader;
 import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.core.io.Resource;
 import org.springframework.jms.annotation.EnableJms;
-import org.springframework.jms.annotation.JmsListener;
-import org.springframework.jms.config.JmsListenerContainerFactory;
-import org.springframework.jms.config.SimpleJmsListenerContainerFactory;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.util.FileSystemUtils;
 
-import javax.jms.ConnectionFactory;
-import javax.jms.JMSException;
-import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 /**
  * In this class all the batch jobs and steps are configured.
@@ -63,9 +51,13 @@ public class BatchConfig {
     @Autowired
     private StepBuilderFactory sbf;
 
+    @Value("${pdb.file.location}")
+    String pdbLocation;
+
     /*
      * bootstrapJob
 	 */
+
     @Autowired
     @Qualifier("bootstrapStep")
     private Step bootstrapStep;
@@ -78,11 +70,7 @@ public class BatchConfig {
      */
     @Bean
     public Job bootstrapJob() {
-        return jbf.get("bootstrap")
-                .incrementer(new RunIdIncrementer())
-                .flow(bootstrapStep)
-                .end()
-                .build();
+        return jbf.get("bootstrap").start(bootstrapStep).build();
     }
 
     /**
@@ -115,16 +103,14 @@ public class BatchConfig {
         MultiResourceItemReader reader = new MultiResourceItemReader();
         Resource[] resources;
         try {
-            resources = context.getResources("file:./src/main/resources/org/*.xml");
+            resources = context.getResources(pdbLocation);
             reader.setResources(resources);
             reader.setDelegate((ResourceAwareItemReaderItemStream) context.getBean("pdbmlFileReader"));
-        } catch (IOException e) {
+        } catch (Exception e) {
             System.out.println(e);
         }
-        //context.close();
         return reader;
     }
-
 
 	/*
      * masterJob
@@ -153,81 +139,11 @@ public class BatchConfig {
      * @throws IOException
      */
     @Bean
-    public Step masterStep(ItemReader<List<String>> dbReader, ItemWriter<List<String>> consoleWriter) {
-        return sbf.get("masterStep").<List<String>, List<String>>chunk(1)
+    public Step masterStep(ItemReader<MolecularSystem> dbReader, ItemWriter<MolecularSystem> consoleWriter) {
+        return sbf.get("masterStep").<MolecularSystem, MolecularSystem>chunk(1)
                 .reader(dbReader)
                 .writer(consoleWriter)
                 .build();
-    }
-
-    /**
-     * setting the ConnectionFactory for jms communication
-     *
-     * @return a ConnectionFactory
-     */
-    @Bean
-    private static ConnectionFactory connectionFactory() {
-        return new ActiveMQConnectionFactory("tcp://localhost:61616");
-    }
-
-    @Bean
-    public JmsListenerContainerFactory<?> myJmsContainerFactory(ConnectionFactory connectionFactory) {
-        SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
-        factory.setConnectionFactory(connectionFactory);
-        return factory;
-    }
-
-    /**
-     * Configuration of the JmsTemplate allowing interaction with jms
-     * queues. The name of the queue is set with
-     * jmsTemplate.setDefaultDestinationName("name of the queue")
-     *
-     * @return jmsTemplate
-     */
-    @Bean
-    public JmsTemplate jmsTemplate() {
-        JmsTemplate jmsTemplate = new JmsTemplate();
-        jmsTemplate.setConnectionFactory(connectionFactory());
-        jmsTemplate.setDefaultDestinationName("yoink-request");
-        return jmsTemplate;
-    }
-
-    /**
-     * Setting the ItemWriter for masterStep as a {@link org.gradle.service.writer.JmsMessageWriter}.
-     * Needs JmsTemplate to interact with jms queues.
-     *
-     * @return itemWriter
-     */
-    @Bean
-    public ItemWriter<? super List<String>> writer() {
-        JmsMessageWriter itemWriter = new JmsMessageWriter();
-        itemWriter.setJmsTemplate(jmsTemplate());
-        return itemWriter;
-    }
-
-    /**
-     * Variable for counting number of receiveMessage executions. If number equals
-     * the number of messages send, the applications context will be closed.
-     */
-    private int responseCounter = 0;
-
-    /**
-     * JmsListener, that is waiting for messages to arrive in the respond queue. The
-     * message is printed out in the console. Concurrency is set to 1, but can be increased
-     * to get more messages at once from the queue. The messages will than also be processed
-     * concurrently.
-     *
-     * @param message
-     * @throws JMSException
-     * @throws InterruptedException
-     */
-    //@JmsListener(destination = "respond", containerFactory = "myJmsContainerFactory", concurrency = "1")
-    public void receiveMessage(String message) {
-        responseCounter++;
-        System.out.println("#---------- Getting answer: " + message + ". ----------#");
-        if (responseCounter == 1)
-            context.close();
-        FileSystemUtils.deleteRecursively(new File("activemq-data"));
     }
 
 }

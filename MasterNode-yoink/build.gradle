@@ -16,7 +16,7 @@ apply plugin: 'idea'
 
 
 jar {
-    baseName = 'Main'
+    baseName = 'MasterNode-yoink'
     version = '0.0.1'
 }
 
@@ -30,9 +30,12 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencies {
-    compile files('../libs/yoink-core-bootstrap-0.0.3-SNAPSHOT.jar')
+//    compile files('../libs/yoink-core-bootstrap-0.0.3-SNAPSHOT.jar')
+    compile files('../build/libs/MasterNode-0.0.1.jar')
+    compile 'org.apache.commons:commons-math3:3.2'
     compile 'org.springframework.boot:spring-boot-starter:1.4.1.RELEASE'
-    compile group: 'org.springframework.data', name: 'spring-data-neo4j', version: '4.1.1.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-batch:1.4.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '1.4.1.RELEASE'
     compile group: 'org.objenesis', name: 'objenesis', version: '1.2'
     compile 'org.codehaus.groovy:groovy-all:2.4.7'
     testCompile 'org.spockframework:spock-core:0.7-groovy-2.0'

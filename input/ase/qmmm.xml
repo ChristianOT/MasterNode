@@ -281,7 +281,7 @@
                 <atom id="29" x3="9.388" z3="9.455" y3="-9.848" elementType="H"/>
             </atomArray>
         </molecule>
-        <molecule id="MM">
+        <molecule id="QM_CORE_FIXED">
             <atomArray>
                 <atom id="0" x3="11.518" z3="5.128" y3="-12.329" elementType="P"/>
                 <atom id="1" x3="11.889" z3="4.763" y3="-13.707" elementType="O"/>
@@ -318,7 +318,7 @@
                 <atom id="32" x3="8.726" z3="0.67" y3="-3.072" elementType="H"/>
             </atomArray>
         </molecule>
-        <molecule id="MM">
+        <molecule id="QM_CORE_FIXED">
             <atomArray>
                 <atom id="0" x3="12.244" z3="-0.414" y3="-10.723" elementType="P"/>
                 <atom id="1" x3="12.221" z3="-1.354" y3="-11.87" elementType="O"/>
@@ -762,12 +762,12 @@
                 <atom id="0" x3="-0.41" z3="5.984" y3="11.047" elementType="O"/>
             </atomArray>
         </molecule>
-        <molecule id="MM">
+        <molecule id="QM_CORE_FIXED">
             <atomArray>
                 <atom id="0" x3="14.965" z3="-1.536" y3="-12.628" elementType="O"/>
             </atomArray>
         </molecule>
-        <molecule id="MM">
+        <molecule id="QM_CORE_FIXED">
             <atomArray>
                 <atom id="0" x3="11.946" z3="0.32" y3="-14.326" elementType="O"/>
             </atomArray>
@@ -1087,7 +1087,7 @@
                 <atom id="0" x3="13.277" z3="6.34" y3="-1.574" elementType="O"/>
             </atomArray>
         </molecule>
-        <molecule id="QM_CORE_FIXED">
+        <molecule id="MM">
             <atomArray>
                 <atom id="0" x3="-2.029" z3="17.858" y3="-10.316" elementType="O"/>
             </atomArray>

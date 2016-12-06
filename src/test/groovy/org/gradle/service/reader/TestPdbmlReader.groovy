@@ -9,7 +9,7 @@ import javax.xml.bind.JAXBContext
 class TestPdbmlReader extends Specification {
 
     PathMatchingResourcePatternResolver pathMatchinResolver = new PathMatchingResourcePatternResolver();
-    Resource[] resources = pathMatchinResolver.getResources("file:./src/test/groovy/org/gradle/service/reader/resources/*.xml");
+    Resource[] resources = pathMatchinResolver.getResources("file:./src/main/resources/org/*.xml");
 
     def "testing read v40 PdbmlFiles"() {
 
@@ -22,7 +22,6 @@ class TestPdbmlReader extends Specification {
         println item.getAtomSiteCategory().getAtomSite()
         println item.getAtomSiteCategory().getAtomSite().get(0)
         println item.getAtomSiteCategory().getAtomSite().get(0).getTypeSymbol()
-        //assert reader.read().getValue() instanceof org.gradle.pdbml.v40.generated.DatablockType
     }
 
     def "testing read v42 PdbmlFiles"() {

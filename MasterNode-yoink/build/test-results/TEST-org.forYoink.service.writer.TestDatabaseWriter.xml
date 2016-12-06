@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.forYoink.service.writer.TestDatabaseWriter" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-12-02T08:49:49" hostname="DEN2.UNI-MUENSTER.DE" time="0.074">
-  <properties/>
-  <testcase name="test write to database" classname="org.forYoink.service.writer.TestDatabaseWriter" time="0.074"/>
-  <system-out><![CDATA[Saving Mock for type 'SimpleMolecularSystem' named 'item' in database.
-Done saving files.
-]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

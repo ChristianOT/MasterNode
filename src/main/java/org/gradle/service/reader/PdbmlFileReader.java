@@ -3,6 +3,7 @@ package org.gradle.service.reader;
 import org.springframework.batch.item.ExecutionContext;
 import org.springframework.batch.item.ItemStreamException;
 import org.springframework.batch.item.file.ResourceAwareItemReaderItemStream;
+import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 
 import javax.xml.bind.JAXBContext;
@@ -16,6 +17,9 @@ import javax.xml.bind.Unmarshaller;
  * @author Christian Ouali Turki
  */
 public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBElement> {
+
+    @javax.annotation.Resource
+    ApplicationContext context;
 
     private Resource resource;
 
@@ -38,6 +42,7 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBEl
     public JAXBElement read() throws Exception {
         if (resource != null) {
             System.out.println("Reading " + resource.getFile());
+//            this.resource=context.getResource(resource.getFile().getAbsolutePath().split(".gz")[0]);
             JAXBElement pdb = null;
             try {
                 Unmarshaller jaxbUnmarshaller = this.jaxbContext.createUnmarshaller();
@@ -53,6 +58,7 @@ public class PdbmlFileReader implements ResourceAwareItemReaderItemStream<JAXBEl
             return null;
         }
     }
+
 
     @Override
     public void setResource(Resource resource) {

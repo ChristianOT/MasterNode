@@ -19,6 +19,8 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="MasterNode-Clustering_main" target="1.8" />
+      <module name="MasterNode-Clustering_test" target="1.8" />
       <module name="MasterNode-test_main" target="1.8" />
       <module name="MasterNode-test_test" target="1.8" />
       <module name="MasterNode-yoink_main" target="1.8" />

@@ -24,16 +24,15 @@ public class DbReader implements ItemReader<MolecularSystem> {
 
     @Override
     public MolecularSystem read() throws Exception {
-        List<Long> mss = new ArrayList<Long>();
-        msr.findAll().forEach(MolecularSystem -> mss.add(MolecularSystem.getId()));
-        MolecularSystem ms = msr.findOne(mss.get(0));
-        mss.remove(0);
-        return ms;
+        List<MolecularSystem> mss = new ArrayList<MolecularSystem>();
+        msr.findAll().forEach(mss::add);
+        return mss.get(0);
     }
 
+    // UNUSED, except for testing
     public List<MolecularSystem> readMSfromDb() {
         List<MolecularSystem> molecularSystems = new ArrayList<>();
-        msr.findAll().forEach(MolecularSystem -> molecularSystems.add(MolecularSystem));
+        msr.findAll().forEach(molecularSystems::add);
         return molecularSystems;
     }
 }

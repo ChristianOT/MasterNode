@@ -31,13 +31,13 @@
 </td>
 <td>
 <div class="infoBox" id="ignored">
-<div class="counter">0</div>
+<div class="counter">4</div>
 <p>ignored</p>
 </div>
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">15.510s</div>
+<div class="counter">4.974s</div>
 <p>duration</p>
 </div>
 </td>
@@ -46,7 +46,7 @@
 </div>
 </td>
 <td>
-<div class="infoBox success" id="successRate">
+<div class="infoBox skipped" id="successRate">
 <div class="percent">100%</div>
 <p>successful</p>
 </div>
@@ -57,13 +57,37 @@
 <div id="tabs">
 <ul class="tabLinks">
 <li>
-<a href="#tab0">Packages</a>
+<a href="#tab0">Ignored tests</a>
 </li>
 <li>
-<a href="#tab1">Classes</a>
+<a href="#tab1">Packages</a>
+</li>
+<li>
+<a href="#tab2">Classes</a>
 </li>
 </ul>
 <div id="tab0" class="tab">
+<h2>Ignored tests</h2>
+<ul class="linkList">
+<li>
+<a href="classes/org.forYoink.molecular.translator.TestPdbmlTranslator.html">TestPdbmlTranslator</a>.
+<a href="classes/org.forYoink.molecular.translator.TestPdbmlTranslator.html#test getProperties">test getProperties</a>
+</li>
+<li>
+<a href="classes/org.forYoink.molecular.translator.TestPdbmlTranslator.html">TestPdbmlTranslator</a>.
+<a href="classes/org.forYoink.molecular.translator.TestPdbmlTranslator.html#test translate">test translate</a>
+</li>
+<li>
+<a href="classes/org.forYoink.molecular.translator.TestPdbmlTranslator.html">TestPdbmlTranslator</a>.
+<a href="classes/org.forYoink.molecular.translator.TestPdbmlTranslator.html#test translateToAtom">test translateToAtom</a>
+</li>
+<li>
+<a href="classes/org.forYoink.molecular.translator.TestPdbmlTranslator.html">TestPdbmlTranslator</a>.
+<a href="classes/org.forYoink.molecular.translator.TestPdbmlTranslator.html#test translateToMolecule">test translateToMolecule</a>
+</li>
+</ul>
+</div>
+<div id="tab1" class="tab">
 <h2>Packages</h2>
 <table>
 <thead>
@@ -79,48 +103,48 @@
 <tbody>
 <tr>
 <td class="success">
-<a href="packages/org.forYoink.domain.html">org.forYoink.domain</a>
-</td>
-<td>3</td>
-<td>0</td>
-<td>0</td>
-<td>0.085s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/org.forYoink.service.reader.html">org.forYoink.service.reader</a>
+<a href="packages/org.forYoink.database.service.reader.html">org.forYoink.database.service.reader</a>
 </td>
 <td>2</td>
 <td>0</td>
 <td>0</td>
-<td>5.428s</td>
+<td>4.880s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="success">
-<a href="packages/org.forYoink.service.translator.html">org.forYoink.service.translator</a>
-</td>
-<td>4</td>
-<td>0</td>
-<td>0</td>
-<td>9.923s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success">
-<a href="packages/org.forYoink.service.writer.html">org.forYoink.service.writer</a>
+<a href="packages/org.forYoink.database.service.writer.html">org.forYoink.database.service.writer</a>
 </td>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.074s</td>
+<td>0.081s</td>
 <td class="success">100%</td>
+</tr>
+<tr>
+<td class="success">
+<a href="packages/org.forYoink.molecular.domain.html">org.forYoink.molecular.domain</a>
+</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0.012s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="skipped">
+<a href="packages/org.forYoink.molecular.translator.html">org.forYoink.molecular.translator</a>
+</td>
+<td>4</td>
+<td>0</td>
+<td>4</td>
+<td>0.001s</td>
+<td class="skipped">-</td>
 </tr>
 </tbody>
 </table>
 </div>
-<div id="tab1" class="tab">
+<div id="tab2" class="tab">
 <h2>Classes</h2>
 <table>
 <thead>
@@ -136,48 +160,48 @@
 <tbody>
 <tr>
 <td class="success"/>
-<a href="classes/org.forYoink.domain.TestSimpleAtom.html">org.forYoink.domain.TestSimpleAtom</a>
+<a href="classes/org.forYoink.database.service.reader.TestPdbmlReader.html">org.forYoink.database.service.reader.TestPdbmlReader</a>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>4.880s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/org.forYoink.database.service.writer.TestDatabaseWriter.html">org.forYoink.database.service.writer.TestDatabaseWriter</a>
 <td>1</td>
 <td>0</td>
 <td>0</td>
-<td>0.079s</td>
+<td>0.081s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
 <td class="success"/>
-<a href="classes/org.forYoink.domain.TestSimpleMolecule.html">org.forYoink.domain.TestSimpleMolecule</a>
+<a href="classes/org.forYoink.molecular.domain.TestSimpleAtom.html">org.forYoink.molecular.domain.TestSimpleAtom</a>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0.007s</td>
+<td class="success">100%</td>
+</tr>
+<tr>
+<td class="success"/>
+<a href="classes/org.forYoink.molecular.domain.TestSimpleMolecule.html">org.forYoink.molecular.domain.TestSimpleMolecule</a>
 <td>2</td>
 <td>0</td>
 <td>0</td>
-<td>0.006s</td>
+<td>0.005s</td>
 <td class="success">100%</td>
 </tr>
 <tr>
-<td class="success"/>
-<a href="classes/org.forYoink.service.reader.TestPdbmlReader.html">org.forYoink.service.reader.TestPdbmlReader</a>
-<td>2</td>
-<td>0</td>
-<td>0</td>
-<td>5.428s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success"/>
-<a href="classes/org.forYoink.service.translator.TestTranslatorFINAL.html">org.forYoink.service.translator.TestTranslatorFINAL</a>
+<td class="skipped"/>
+<a href="classes/org.forYoink.molecular.translator.TestPdbmlTranslator.html">org.forYoink.molecular.translator.TestPdbmlTranslator</a>
 <td>4</td>
 <td>0</td>
-<td>0</td>
-<td>9.923s</td>
-<td class="success">100%</td>
-</tr>
-<tr>
-<td class="success"/>
-<a href="classes/org.forYoink.service.writer.TestDatabaseWriter.html">org.forYoink.service.writer.TestDatabaseWriter</a>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0.074s</td>
-<td class="success">100%</td>
+<td>4</td>
+<td>0.001s</td>
+<td class="skipped">-</td>
 </tr>
 </tbody>
 </table>
@@ -185,7 +209,7 @@
 </div>
 <div id="footer">
 <p>Generated by 
-<a href="http://www.gradle.org">Gradle 1.12</a> at Dec 2, 2016 9:49:49 AM</p>
+<a href="http://www.gradle.org">Gradle 1.12</a> at Dec 6, 2016 5:38:54 PM</p>
 </div>
 </div>
 </body>
